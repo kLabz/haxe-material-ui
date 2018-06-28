@@ -1,0 +1,8 @@
+# TODO: include enzyme and add tests
+-lib react:git:https://github.com/kLabz/haxe-react.git#next
+-D react_deprecated_refs
+
+-cp src
+# TODO: include files
+--js .build/test.js
+
