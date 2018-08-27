@@ -7,10 +7,9 @@ import ts.macro.RecordMacro;
 class Builder {
 	public static function buildStandardProps():ComplexType {
 		var fields = Context.getBuildFields();
-		var classesType:ComplexType;
 
-		try {
-			classesType = RecordMacro.buildRecord(
+		var classesType:ComplexType = try {
+			RecordMacro.buildRecord(
 				Context.getLocalType(),
 				macro :String,
 				true
@@ -18,12 +17,15 @@ class Builder {
 		} catch (e:String) {
 			trace('TODO: error message');
 			return null;
-		}
+		};
+
+		var pos = Context.currentPos();
 
 		fields.push({
 			kind: FVar(classesType, null),
 			name: "classes",
-			pos: Context.currentPos()
+			meta: [{name: ':optional', params: null, pos: pos}],
+			pos: pos
 		});
 
 		return TAnonymous(fields);
