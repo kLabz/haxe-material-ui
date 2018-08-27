@@ -5,7 +5,4 @@ enum abstract Color(String) {
 	var Inherit = "inherit";
 	var Primary = "primary";
 	var Secondary = "secondary";
-	var TextPrimary = "textPrimary";
-	var TextSecondary = "textSecondary";
-	var Error = "error";
 }
