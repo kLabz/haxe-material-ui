@@ -1,12 +1,30 @@
 package mui.core;
 
+import js.html.HtmlElement;
+import haxe.Constraints.Function;
 import react.ReactComponent;
+import react.ReactNode;
+import react.types.DOMAttributes.HandlerOrVoid;
+import react.types.EventHandler;
 
-// TODO !! (temp)
+import mui.core.tab.TabsClassKey;
+import mui.core.tab.ScrollButtons;
+
 typedef TabsProps = {
-	@:optional var className:String;
-	@:optional var onChange:Dynamic->String->Void;
-	var value:String;
+	> StandardProps<TabsClassKey>,
+
+	@:optional var action:Function;
+	@:optional var centered:Bool;
+	@:optional var component:ReactNode;
+	@:optional var fullWidth:Bool;
+	@:optional var indicatorColor:ThemeColor;
+	@:optional var onChange:HandlerOrVoid<FormEventHandler<HtmlElement>>;
+	@:optional var scrollable:Bool;
+	@:optional var ScrollButtonComponent:ReactNode;
+	@:optional var scrollButtons:ScrollButtons;
+	@:optional var TabIndicatorProps:Dynamic;
+	@:optional var textColor:TextColor;
+	@:optional var value:Any;
 }
 
 @:jsRequire('@material-ui/core', 'Tabs')
