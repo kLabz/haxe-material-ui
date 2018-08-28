@@ -2,7 +2,7 @@ package mui.macro;
 
 import haxe.macro.Context;
 import haxe.macro.Expr;
-import ts.macro.RecordMacro;
+import react.types.macro.RecordMacro;
 
 class Builder {
 	public static function buildStandardProps():ComplexType {

@@ -1,8 +1,10 @@
 package mui.icon;
 
-import ts.react.CSSProperties;
+import js.html.HtmlElement;
+import react.types.CSSProperties;
+import react.types.DOMAttributes;
 
-typedef IconProps = {
+extern interface IconProps extends DOMAttributes<HtmlElement> {
 	@:optional var color:String;
 	@:optional var className:String;
 	@:optional var style:CSSProperties;
