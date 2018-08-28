@@ -1,8 +1,8 @@
 package mui.core;
 
 import haxe.Constraints.Function;
-import react.React.CreateElementType;
 import react.ReactComponent;
+import react.ReactNode;
 
 import mui.core.button.ButtonBaseClassKey;
 import mui.core.button.ButtonType;
@@ -11,7 +11,7 @@ typedef ButtonBaseBaseProps = {
 	@:optional var action:Function;
 	@:optional var buttonRef:Dynamic;
 	@:optional var centerRipple:Bool;
-	@:optional var component:CreateElementType;
+	@:optional var component:ReactNode;
 	@:optional var disabled:Bool;
 	@:optional var disableRipple:Bool;
 	@:optional var disableTouchRipple:Bool;

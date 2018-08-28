@@ -1,12 +1,12 @@
 package mui.core;
 
 import react.ReactComponent;
-import react.React.CreateElementType;
+import react.ReactNode;
 
 import mui.core.paper.PaperClassKey;
 
 typedef PaperBaseProps = {
-	@:optional var component:CreateElementType;
+	@:optional var component:ReactNode;
 	@:optional var elevation:Int;
 	@:optional var square:Bool;
 }
