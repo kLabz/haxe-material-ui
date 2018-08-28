@@ -9,7 +9,10 @@ import mui.core.list.ListItemClassKey;
 typedef ListItemProps = {
 	> StandardProps<ListItemClassKey>,
 	> ButtonBaseBaseProps,
+	> ListItemBaseProps,
+}
 
+typedef ListItemBaseProps = {
 	@:optional var button:Bool;
 	@:optional var component:ReactNode;
 	@:optional var ContainerComponent:ReactNode;
