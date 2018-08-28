@@ -1,6 +1,21 @@
 package mui.core;
 
 import react.ReactComponent;
+import react.ReactNode;
+
+import mui.core.form.FormControlClassKey;
+import mui.core.form.FormControlMargin;
+
+typedef FormControlProps = {
+	> StandardProps<FormControlClassKey>,
+
+	@:optional var component:ReactNode;
+	@:optional var disabled:Bool;
+	@:optional var error:Bool;
+	@:optional var fullWidth:Bool;
+	@:optional var margin:FormControlMargin;
+	@:optional var required:Bool;
+}
 
 @:jsRequire('@material-ui/core', 'FormControl')
-extern class FormControl extends ReactComponent {}
+extern class FormControl extends ReactComponentOfProps<FormControlProps> {}
