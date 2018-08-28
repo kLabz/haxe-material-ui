@@ -17,6 +17,8 @@ typedef ButtonBaseBaseProps = {
 	@:optional var disableTouchRipple:Bool;
 	@:optional var focusRipple:Bool;
 	@:optional var focusVisibleClassName:String;
+	@:optional var href:String;
+	@:optional var title:String;
 	@:optional var onFocusVisible:Function;
 	@:optional var TouchRippleProps:Dynamic;
 	@:optional var type:ButtonType;
