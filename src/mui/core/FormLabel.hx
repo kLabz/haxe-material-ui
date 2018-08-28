@@ -7,7 +7,10 @@ import mui.core.form.FormLabelClassKey;
 
 typedef FormLabelProps = {
 	> StandardProps<FormLabelClassKey>,
+	> FormLabelBaseProps,
+}
 
+typedef FormLabelBaseProps = {
 	@:optional var component:ReactNode;
 	@:optional var disabled:Bool;
 	@:optional var error:Bool;
