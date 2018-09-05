@@ -6,7 +6,7 @@ import react.types.DOMAttributes;
 
 typedef IconProps = {
 	> DOMAttributes<HtmlElement>,
-	@:optional var color:String;
+	@:optional var color:IconColor;
 	@:optional var className:String;
 	@:optional var style:CSSProperties;
 }
