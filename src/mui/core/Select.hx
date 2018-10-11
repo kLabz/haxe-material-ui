@@ -14,6 +14,8 @@ typedef SelectProps = {
 	> StandardProps<SelectClassKey>,
 	> InputBaseProps,
 
+	var value:InputValue;
+
 	@:optional var autoWidth:Bool;
 	@:optional var displayEmpty:Bool;
 	@:optional var IconComponent:ReactNode;
@@ -27,7 +29,6 @@ typedef SelectProps = {
 	@:optional var open:Bool;
 	@:optional var renderValue:Any->ReactFragment;
 	@:optional var SelectDisplayProps:Dynamic;
-	@:optional var value:InputValue;
 }
 
 @:jsRequire('@material-ui/core', 'Select')
