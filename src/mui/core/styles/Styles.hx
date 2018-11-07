@@ -1,8 +1,8 @@
 package mui.core.styles;
 
-import react.ReactNode;
+import react.ReactType;
 
 @:jsRequire('@material-ui/core/styles')
 extern class Styles {
-	public static function withStyles(?styles:Dynamic):ReactNode->ReactNode;
+	public static function withStyles(?styles:Dynamic):ReactType->ReactType;
 }

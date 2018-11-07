@@ -2,7 +2,7 @@ package mui.core;
 
 import mui.StandardProps;
 import react.ReactComponent;
-import react.ReactNode;
+import react.ReactType;
 
 import mui.core.typography.HeadlineMapping;
 import mui.core.typography.TypographyClassKey;
@@ -13,7 +13,7 @@ typedef TypographyProps = {
 
 	@:optional var align:Align;
 	@:optional var color:TextColor;
-	@:optional var component:ReactNode;
+	@:optional var component:ReactType;
 	@:optional var gutterBottom:Bool;
 	@:optional var headlineMapping:HeadlineMapping;
 	@:optional var noWrap:Bool;

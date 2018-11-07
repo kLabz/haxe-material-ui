@@ -1,7 +1,7 @@
 package mui.core;
 
 import react.ReactComponent;
-import react.ReactNode;
+import react.ReactType;
 import react.types.CSSAlignItems;
 import react.types.CSSAlignContent;
 import react.types.CSSFlexDirection;
@@ -17,7 +17,7 @@ typedef GridProps = {
 
 	@:optional var alignContent:CSSAlignContent;
 	@:optional var alignItems:CSSAlignItems;
-	@:optional var component:ReactNode;
+	@:optional var component:ReactType;
 	@:optional var container:Bool;
 	@:optional var direction:CSSFlexDirection;
 	@:optional var item:Bool;

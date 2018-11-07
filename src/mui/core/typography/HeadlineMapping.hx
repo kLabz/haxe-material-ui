@@ -1,15 +1,15 @@
 package mui.core.typography;
 
-import react.ReactNode;
+import react.ReactType;
 
 typedef HeadlineMapping = {
-	@:optional var display1:ReactNode;
-	@:optional var display2:ReactNode;
-	@:optional var display3:ReactNode;
-	@:optional var display4:ReactNode;
-	@:optional var headline:ReactNode;
-	@:optional var title:ReactNode;
-	@:optional var subheading:ReactNode;
-	@:optional var body1:ReactNode;
-	@:optional var body2:ReactNode;
+	@:optional var display1:ReactType;
+	@:optional var display2:ReactType;
+	@:optional var display3:ReactType;
+	@:optional var display4:ReactType;
+	@:optional var headline:ReactType;
+	@:optional var title:ReactType;
+	@:optional var subheading:ReactType;
+	@:optional var body1:ReactType;
+	@:optional var body2:ReactType;
 }

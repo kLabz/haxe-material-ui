@@ -1,7 +1,7 @@
 package mui.core;
 
 import react.ReactComponent;
-import react.ReactNode;
+import react.ReactType;
 
 import mui.core.table.TableRowClassKey;
 
@@ -11,7 +11,7 @@ typedef TableRowProps = {
 	var children:ReactFragment;
 	@:optional var selected:Bool;
 	@:optional var hover:Bool;
-	@:optional var component:ReactNode;
+	@:optional var component:ReactType;
 }
 
 @:acceptsMoreProps

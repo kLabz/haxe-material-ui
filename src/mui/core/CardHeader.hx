@@ -1,7 +1,7 @@
 package mui.core;
 
 import react.ReactComponent;
-import react.ReactNode;
+import react.ReactType;
 
 import mui.core.Typography.TypographyProps;
 import mui.core.card.CardHeaderClassKey;
@@ -11,7 +11,7 @@ typedef CardHeaderProps = {
 
 	@:optional var action:ReactFragment;
 	@:optional var avatar:ReactFragment;
-	@:optional var component:ReactNode;
+	@:optional var component:ReactType;
 	@:optional var disableTypography:Bool;
 	@:optional var subheader:ReactFragment;
 	@:optional var subheaderTypographyProps:TypographyProps;

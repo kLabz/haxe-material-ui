@@ -1,7 +1,7 @@
 package mui.core;
 
 import react.ReactComponent;
-import react.ReactNode;
+import react.ReactType;
 
 import mui.core.table.TableSortDirection;
 import mui.core.table.TableCellClassKey;
@@ -12,7 +12,7 @@ typedef TableCellProps = {
 	> StandardProps<TableCellClassKey>,
 
 	@:optional var children:ReactFragment;
-	@:optional var component:ReactNode;
+	@:optional var component:ReactType;
 	@:optional var padding:TableCellPadding;
 	@:optional var scope:String;
 	@:optional var sortDirection:TableSortDirection;

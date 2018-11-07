@@ -1,7 +1,7 @@
 package mui.core;
 
 import react.ReactComponent;
-import react.ReactNode;
+import react.ReactType;
 
 import mui.core.table.TableHeadClassKey;
 
@@ -9,7 +9,7 @@ typedef TableHeadProps = {
 	> StandardProps<TableHeadClassKey>,
 
 	var children:ReactFragment;
-	@:optional var component:ReactNode;
+	@:optional var component:ReactType;
 }
 
 @:acceptsMoreProps

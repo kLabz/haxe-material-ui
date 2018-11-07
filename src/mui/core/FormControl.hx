@@ -1,7 +1,7 @@
 package mui.core;
 
 import react.ReactComponent;
-import react.ReactNode;
+import react.ReactType;
 
 import mui.core.form.FormControlClassKey;
 import mui.core.form.FormControlMargin;
@@ -9,7 +9,7 @@ import mui.core.form.FormControlMargin;
 typedef FormControlProps = {
 	> StandardProps<FormControlClassKey>,
 
-	@:optional var component:ReactNode;
+	@:optional var component:ReactType;
 	@:optional var disabled:Bool;
 	@:optional var error:Bool;
 	@:optional var fullWidth:Bool;

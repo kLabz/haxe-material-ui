@@ -3,7 +3,7 @@ package mui.core;
 import js.html.HtmlElement;
 import haxe.Constraints.Function;
 import react.ReactComponent;
-import react.ReactNode;
+import react.ReactType;
 import react.types.DOMAttributes.HandlerOrVoid;
 import react.types.EventHandler;
 
@@ -15,12 +15,12 @@ typedef TabsProps = {
 
 	@:optional var action:Function;
 	@:optional var centered:Bool;
-	@:optional var component:ReactNode;
+	@:optional var component:ReactType;
 	@:optional var fullWidth:Bool;
 	@:optional var indicatorColor:ThemeColor;
 	@:optional var onChange:HandlerOrVoid<FormEventHandler<HtmlElement>>;
 	@:optional var scrollable:Bool;
-	@:optional var ScrollButtonComponent:ReactNode;
+	@:optional var ScrollButtonComponent:ReactType;
 	@:optional var scrollButtons:ScrollButtons;
 	@:optional var TabIndicatorProps:Dynamic;
 	@:optional var textColor:TextColor;

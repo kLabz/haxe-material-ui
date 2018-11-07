@@ -1,7 +1,7 @@
 package mui.core;
 
 import react.ReactComponent;
-import react.ReactNode;
+import react.ReactType;
 
 import mui.core.ButtonBase;
 import mui.core.list.ListItemClassKey;
@@ -14,8 +14,8 @@ typedef ListItemProps = {
 
 typedef ListItemBaseProps = {
 	@:optional var button:Bool;
-	@:optional var component:ReactNode;
-	@:optional var ContainerComponent:ReactNode;
+	@:optional var component:ReactType;
+	@:optional var ContainerComponent:ReactType;
 	@:optional var ContainerProps:Dynamic;
 	@:optional var dense:Bool;
 	@:optional var disabled:Bool;

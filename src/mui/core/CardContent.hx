@@ -1,14 +1,14 @@
 package mui.core;
 
 import react.ReactComponent;
-import react.ReactNode;
+import react.ReactType;
 
 import mui.core.card.CardContentClassKey;
 
 typedef CardContentProps = {
 	> StandardProps<CardContentClassKey>,
 
-	@:optional var component:ReactNode;
+	@:optional var component:ReactType;
 }
 
 @:jsRequire('@material-ui/core', 'CardContent')

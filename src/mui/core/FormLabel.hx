@@ -1,7 +1,7 @@
 package mui.core;
 
 import react.ReactComponent;
-import react.ReactNode;
+import react.ReactType;
 
 import mui.core.form.FormLabelClassKey;
 
@@ -11,7 +11,7 @@ typedef FormLabelProps = {
 }
 
 typedef FormLabelBaseProps = {
-	@:optional var component:ReactNode;
+	@:optional var component:ReactType;
 	@:optional var disabled:Bool;
 	@:optional var error:Bool;
 	@:optional var filled:Bool;

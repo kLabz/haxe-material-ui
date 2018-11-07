@@ -1,7 +1,7 @@
 package mui.core;
 
 import react.ReactComponent;
-import react.ReactNode;
+import react.ReactType;
 
 import mui.core.input.InputAdornmentClassKey;
 import mui.core.input.InputAdornmentPosition;
@@ -9,7 +9,7 @@ import mui.core.input.InputAdornmentPosition;
 typedef InputAdornmentProps = {
 	> StandardProps<InputAdornmentClassKey>,
 
-	@:optional var component:ReactNode;
+	@:optional var component:ReactType;
 	@:optional var disableTypography:Bool;
 	@:optional var position:InputAdornmentPosition;
 }

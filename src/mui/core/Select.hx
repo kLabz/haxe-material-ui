@@ -2,7 +2,7 @@ package mui.core;
 
 import js.html.HtmlElement;
 import react.ReactComponent;
-import react.ReactNode;
+import react.ReactType;
 import react.types.DOMAttributes.HandlerOrVoid;
 import react.types.EventHandler;
 
@@ -18,7 +18,7 @@ typedef SelectProps = {
 
 	@:optional var autoWidth:Bool;
 	@:optional var displayEmpty:Bool;
-	@:optional var IconComponent:ReactNode;
+	@:optional var IconComponent:ReactType;
 	@:optional var input:ReactSingleFragment;
 	@:optional var inputProps:Dynamic;
 	@:optional var MenuProps:Dynamic;

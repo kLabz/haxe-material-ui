@@ -1,14 +1,14 @@
 package mui.core;
 
 import react.ReactComponent;
-import react.ReactNode;
+import react.ReactType;
 
 import mui.StandardProps.StandardBaseProps;
 
 typedef CssBaselineProps = {
 	> StandardBaseProps,
 
-	@:optional var children:ReactNode;
+	@:optional var children:ReactType;
 }
 
 @:jsRequire('@material-ui/core', 'CssBaseline')

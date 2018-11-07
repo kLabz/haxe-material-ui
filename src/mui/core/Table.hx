@@ -1,7 +1,7 @@
 package mui.core;
 
 import react.ReactComponent;
-import react.ReactNode;
+import react.ReactType;
 
 import mui.core.table.TableClassKey;
 import mui.core.table.TableCellPadding;
@@ -10,7 +10,7 @@ typedef TableProps = {
 	> StandardProps<TableClassKey>,
 
 	var children:ReactFragment;
-	@:optional var component:ReactNode;
+	@:optional var component:ReactType;
 	@:optional var padding:TableCellPadding;
 }
 
