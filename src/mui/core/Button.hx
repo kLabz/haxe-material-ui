@@ -19,6 +19,7 @@ typedef ButtonProps = {
 	@:optional var variant:ButtonVariant;
 }
 
+@:acceptsMoreProps
 @:jsRequire('@material-ui/core', 'Button')
 extern class Button extends ReactComponentOfProps<ButtonProps> {}
 
