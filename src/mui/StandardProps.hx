@@ -16,4 +16,5 @@ typedef StandardBaseProps = {
 	@:optional var id:String;
 	@:optional var innerRef:ReactRef<Any>;
 	@:optional var style:CSSProperties;
+	@:optional var title:String;
 }
