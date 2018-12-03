@@ -1,6 +1,6 @@
 package mui.core.typography;
 
-enum abstract TypographyClassKey(String) to String {
+@:enum abstract TypographyClassKey(String) to String {
 	var Root = "root";
 
 	// Variants

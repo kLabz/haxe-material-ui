@@ -1,6 +1,6 @@
 package mui.core.list;
 
-enum abstract ListItemClassKey(String) to String {
+@:enum abstract ListItemClassKey(String) to String {
 	var Root = "root";
 
 	var Container = "container";

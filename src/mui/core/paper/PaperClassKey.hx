@@ -1,6 +1,6 @@
 package mui.core.paper;
 
-enum abstract PaperClassKey(String) to String {
+@:enum abstract PaperClassKey(String) to String {
 	var Root = "root";
 
 	var Rounded = "rounded";

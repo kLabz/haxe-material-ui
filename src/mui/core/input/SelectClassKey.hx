@@ -1,6 +1,6 @@
 package mui.core.input;
 
-enum abstract SelectClassKey(String) to String {
+@:enum abstract SelectClassKey(String) to String {
 	var Root = "root";
 
 	var Select = "select";

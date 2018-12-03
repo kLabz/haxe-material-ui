@@ -1,6 +1,6 @@
 package mui.core.form;
 
-enum abstract FormLabelClassKey(String) to String {
+@:enum abstract FormLabelClassKey(String) to String {
 	var Root = "root";
 
 	var Focused = "focused";

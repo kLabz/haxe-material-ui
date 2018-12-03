@@ -1,6 +1,6 @@
 package mui.core.appbar;
 
-enum abstract AppBarClassKey(String) to String {
+@:enum abstract AppBarClassKey(String) to String {
 	var Root = "root";
 
 	var PositionFixed = 'positionFixed';

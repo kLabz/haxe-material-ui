@@ -1,6 +1,6 @@
 package mui.core.input;
 
-enum abstract InputClassKey(String) to String {
+@:enum abstract InputClassKey(String) to String {
 	var Root = "root";
 
 	var FormControl = "formControl";

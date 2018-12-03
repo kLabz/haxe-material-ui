@@ -1,6 +1,6 @@
 package mui.core.typography;
 
-enum abstract TypographyVariant(String) to String {
+@:enum abstract TypographyVariant(String) to String {
 	var Display1 = "display1";
 	var Display2 = "display2";
 	var Display3 = "display3";

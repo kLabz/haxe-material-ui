@@ -1,6 +1,6 @@
 package mui.core.button;
 
-enum abstract ButtonVariant(String) to String {
+@:enum abstract ButtonVariant(String) to String {
 	var Text = "text";
 	var Flat = "flat";
 	var Outlined = "outlined";

@@ -1,6 +1,6 @@
 package mui.core.tab;
 
-enum abstract TabsClassKey(String) to String {
+@:enum abstract TabsClassKey(String) to String {
 	var Root = "root";
 
 	var FlexContainer = "flexContainer";

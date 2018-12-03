@@ -1,6 +1,6 @@
 package mui.core.button;
 
-enum abstract IconButtonClassKey(String) to String {
+@:enum abstract IconButtonClassKey(String) to String {
 	var Root = "root";
 
 	var ColorInherit = "colorInherit";

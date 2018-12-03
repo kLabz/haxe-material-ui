@@ -1,6 +1,6 @@
 package mui.core.button;
 
-enum abstract ButtonClassKey(String) to String {
+@:enum abstract ButtonClassKey(String) to String {
 	var Root = "root";
 
 	var Label = "label";

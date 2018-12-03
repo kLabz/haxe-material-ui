@@ -1,6 +1,6 @@
 package mui.core.table;
 
-enum abstract TableRowClassKey(String) to String {
+@:enum abstract TableRowClassKey(String) to String {
 	var Root = "root";
 
 	/**

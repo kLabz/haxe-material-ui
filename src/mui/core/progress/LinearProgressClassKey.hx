@@ -1,6 +1,6 @@
 package mui.core.progress;
 
-enum abstract LinearProgressClassKey(String) to String {
+@:enum abstract LinearProgressClassKey(String) to String {
 	var Root = "root";
 
 	var ColorPrimary = "colorPrimary";

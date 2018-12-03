@@ -1,6 +1,6 @@
 package mui.core.list;
 
-enum abstract ListItemTextClassKey(String) to String {
+@:enum abstract ListItemTextClassKey(String) to String {
 	var Root = "root";
 
 	var Inset = "inset";

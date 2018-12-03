@@ -1,6 +1,6 @@
 package mui.core.list;
 
-enum abstract ListClassKey(String) to String {
+@:enum abstract ListClassKey(String) to String {
 	var Root = "root";
 
 	var Padding = "padding";

@@ -1,6 +1,6 @@
 package mui.core.progress;
 
-enum abstract CircularProgressClassKey(String) to String {
+@:enum abstract CircularProgressClassKey(String) to String {
 	var Root = "root";
 
 	var Static = "static";

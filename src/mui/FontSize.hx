@@ -1,6 +1,6 @@
 package mui;
 
-enum abstract FontSize(String) from String to String {
+@:enum abstract FontSize(String) from String to String {
 	var Inherit = "inherit";
 	var Default = "default";
 

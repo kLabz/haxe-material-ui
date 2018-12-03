@@ -1,6 +1,6 @@
 package mui.core.input;
 
-enum abstract InputAdornmentClassKey(String) to String {
+@:enum abstract InputAdornmentClassKey(String) to String {
 	var Root = "root";
 
 	var PositionStart = "positionStart";

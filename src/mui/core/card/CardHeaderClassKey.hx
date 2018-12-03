@@ -1,6 +1,6 @@
 package mui.core.card;
 
-enum abstract CardHeaderClassKey(String) to String {
+@:enum abstract CardHeaderClassKey(String) to String {
 	var Root = "root";
 
 	var Avatar = "avatar";

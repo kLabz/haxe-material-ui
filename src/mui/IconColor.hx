@@ -1,6 +1,6 @@
 package mui;
 
-enum abstract IconColor(String) {
+@:enum abstract IconColor(String) {
 	var Inherit = "inherit";
 	var Primary = "primary";
 	var Secondary = "secondary";

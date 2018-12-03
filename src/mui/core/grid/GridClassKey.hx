@@ -1,6 +1,6 @@
 package mui.core.grid;
 
-enum abstract GridClassKey(String) to String {
+@:enum abstract GridClassKey(String) to String {
 	var Container = "container";
 	var Item = "item";
 	var ZeroMinWidth = "zeroMinWidth";

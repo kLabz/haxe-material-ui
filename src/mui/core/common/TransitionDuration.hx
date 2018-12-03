@@ -1,6 +1,6 @@
 package mui.core.common;
 
-enum abstract ETransitionDuration(String) to String {
+@:enum abstract ETransitionDuration(String) to String {
 	var Auto = "auto";
 }
 
@@ -10,5 +10,5 @@ typedef OTransitionDuration = {
 }
 
 @:coreType
-enum abstract TransitionDuration from Int from ETransitionDuration from OTransitionDuration {}
+@:enum abstract TransitionDuration from Int from ETransitionDuration from OTransitionDuration {}
 

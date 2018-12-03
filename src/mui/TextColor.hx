@@ -1,6 +1,6 @@
 package mui;
 
-enum abstract TextColor(String) {
+@:enum abstract TextColor(String) {
 	var Default = "default";
 	var Inherit = "inherit";
 	var Primary = "primary";
