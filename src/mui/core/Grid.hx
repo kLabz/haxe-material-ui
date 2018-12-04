@@ -32,5 +32,6 @@ typedef GridProps = {
 	@:optional var zeroMinWidth:Bool;
 }
 
+@:acceptsMoreProps
 @:jsRequire('@material-ui/core', 'Grid')
 extern class Grid extends ReactComponentOfProps<GridProps> {}
