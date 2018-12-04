@@ -35,7 +35,7 @@ class ClassesBuilder {
 			case TInst(_, [TType(_.get() => _.type => TAnonymous(_.get() => {fields: fields}), _)]):
 				return TAnonymous(fields.map(function(f) return {
 					name: f.name,
-					kind: FVar(macro :react.types.CSSProperties, null),
+					kind: FVar(macro :react.types.css.Properties, null),
 					access: null,
 					doc: null,
 					meta: null,

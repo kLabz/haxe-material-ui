@@ -2,7 +2,7 @@ package mui;
 
 import js.html.HtmlElement;
 import react.ReactRef;
-import react.types.CSSProperties;
+import react.types.css.Properties;
 import react.types.DOMAttributes;
 
 @:genericBuild(mui.macro.Builder.buildStandardProps())
@@ -15,6 +15,6 @@ typedef StandardBaseProps = {
 	@:optional var className:String;
 	@:optional var id:String;
 	@:optional var innerRef:ReactRef<Any>;
-	@:optional var style:CSSProperties;
+	@:optional var style:Properties;
 	@:optional var title:String;
 }
