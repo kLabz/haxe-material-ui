@@ -1,6 +1,7 @@
 package mui.core;
 
 import react.ReactComponent;
+import react.ReactType;
 
 import mui.core.avatar.AvatarClassKey;
 
@@ -19,5 +20,3 @@ typedef AvatarProps = {
 @:acceptsMoreProps
 @:jsRequire('@material-ui/core', 'Avatar')
 extern class Avatar extends ReactComponentOfProps<AvatarProps> {}
-
-
