@@ -1,9 +1,9 @@
 package mui.core.styles;
 
 #if !macro
+import css.Properties;
 import js.Object;
 import react.ReactType;
-import react.types.css.Properties;
 #else
 import haxe.macro.Context;
 import haxe.macro.Expr;
@@ -48,7 +48,7 @@ extern class Styles {
 				for (f in fields)
 					if (f.quotes == Quoted) {
 						f.expr = {
-							expr: ECheckType(parseJssNode(f.expr), macro :react.types.css.Properties),
+							expr: ECheckType(parseJssNode(f.expr), macro :css.Properties),
 							pos: f.expr.pos
 						};
 					}

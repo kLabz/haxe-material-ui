@@ -2,11 +2,11 @@ package mui.core;
 
 import react.ReactComponent;
 import react.ReactType;
-import react.types.css.AlignItems;
-import react.types.css.AlignContent;
-import react.types.css.FlexDirection;
-import react.types.css.FlexWrap;
-import react.types.css.JustifyContent;
+import css.AlignItems;
+import css.AlignContent;
+import css.FlexDirection;
+import css.FlexWrap;
+import css.JustifyContent;
 
 import mui.core.grid.GridClassKey;
 import mui.core.grid.GridsNumber;

@@ -2,7 +2,7 @@ package mui;
 
 import js.html.HtmlElement;
 import react.ReactRef;
-import react.types.css.Properties;
+import css.Properties;
 import react.types.DOMAttributes;
 
 @:genericBuild(mui.macro.Builder.buildStandardProps())

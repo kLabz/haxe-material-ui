@@ -2,7 +2,7 @@ package mui.icon;
 
 import js.html.HtmlElement;
 
-import react.types.css.Properties;
+import css.Properties;
 import react.types.DOMAttributes;
 
 typedef IconProps = {
