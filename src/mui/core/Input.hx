@@ -2,7 +2,9 @@ package mui.core;
 
 import haxe.extern.EitherType;
 import js.html.HtmlElement;
+import js.html.InputElement;
 import react.ReactComponent;
+import react.ReactRef;
 import react.ReactType;
 import react.types.DOMAttributes.HandlerOrVoid;
 import react.types.EventHandler;
@@ -28,7 +30,7 @@ typedef InputBaseProps = {
 	@:optional var id:String;
 	@:optional var inputComponent:ReactType;
 	@:optional var inputProps:Dynamic;
-	@:optional var inputRef:Dynamic;
+	@:optional var inputRef:ReactRef<InputElement>;
 	@:optional var margin:FormControlMargin;
 	@:optional var mutliline:Bool;
 	@:optional var name:String;
