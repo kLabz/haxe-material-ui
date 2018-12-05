@@ -40,7 +40,6 @@ class ClassesBuilder {
 					doc: null,
 					meta: null,
 					pos: f.pos
-
 				}));
 
 			default:
