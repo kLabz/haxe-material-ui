@@ -1,17 +1,16 @@
 package mui.core.styles;
 
-#if macro
+#if !macro
+import js.Object;
+import react.ReactType;
+import react.types.css.Properties;
+#else
 import haxe.macro.Context;
 import haxe.macro.Expr;
 #end
 
-import mui.core.styles.Classes;
-import react.ReactType;
-
 @:jsRequire('@material-ui/core/styles')
 extern class Styles {
-	public static function withStyles(?styles:Dynamic):ReactType->ReactType;
-
 	public static inline macro function jss(styles:Expr) {
 		return switch (styles.expr) {
 			case EObjectDecl(fields):
@@ -24,13 +23,25 @@ extern class Styles {
 
 				{expr: EObjectDecl(fields), pos: styles.pos};
 
+			case EBlock([]):
+				{expr: EObjectDecl([]), pos: styles.pos};
+
 			default:
 				Context.error('Expected an inline object declaration', styles.pos);
 				macro null;
 		};
 	}
 
-	#if macro
+	#if !macro
+	public static function withStyles<TTheme, TClassesDef>(
+		?styles:TTheme->TClassesDef
+	):ReactType->ReactType;
+
+	public static inline function mergeJss(jss1:Properties, jss2:Properties):Properties {
+		return Object.assign({}, jss1, jss2);
+	}
+
+	#else
 	static function parseJssNode(styles:Expr):Expr {
 		switch (styles.expr) {
 			case EObjectDecl(fields):
