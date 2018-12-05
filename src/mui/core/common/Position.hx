@@ -5,7 +5,7 @@ typedef Position = {
 	var vertical:VerticalPosition;
 }
 
-@:enum abstract EHorizontalPosition(String) to String {
+@:enum abstract EHorizontalPosition(String) {
 	var Left = "left";
 	var Center = "center";
 	var Right = "right";
@@ -14,7 +14,7 @@ typedef Position = {
 @:coreType
 @:enum abstract HorizontalPosition from Int from EHorizontalPosition {}
 
-@:enum abstract EVerticalPosition(String) to String {
+@:enum abstract EVerticalPosition(String) {
 	var Top = "top";
 	var Center = "center";
 	var Bottom = "bottom";

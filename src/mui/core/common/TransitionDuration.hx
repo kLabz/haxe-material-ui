@@ -1,6 +1,6 @@
 package mui.core.common;
 
-@:enum abstract ETransitionDuration(String) to String {
+@:enum abstract ETransitionDuration(String) {
 	var Auto = "auto";
 }
 
