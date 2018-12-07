@@ -28,6 +28,20 @@ class Builder {
 			pos: pos
 		});
 
-		return TAnonymous(fields);
+		return TExtend(
+			[
+				{
+					name: "DOMAttributes",
+					pack: ["react", "types"],
+					params: [TPType(macro :js.html.HtmlElement)]
+				},
+				{
+					name: "StandardProps",
+					sub: "StandardBaseProps",
+					pack: ["mui"]
+				}
+			],
+			fields
+		);
 	}
 }
