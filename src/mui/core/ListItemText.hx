@@ -2,7 +2,7 @@ package mui.core;
 
 import react.ReactComponent;
 
-import mui.core.Typography.TypographyProps;
+import mui.core.Typography.TypographyBaseProps;
 import mui.core.list.ListItemTextClassKey;
 
 typedef ListItemTextProps = {
@@ -11,9 +11,9 @@ typedef ListItemTextProps = {
 	@:optional var disableTypography:Bool;
 	@:optional var inset:Bool;
 	@:optional var primary:ReactFragment;
-	@:optional var primaryTypographyProps:TypographyProps;
+	@:optional var primaryTypographyProps:TypographyBaseProps;
 	@:optional var secondary:ReactFragment;
-	@:optional var secondaryTypographyProps:TypographyProps;
+	@:optional var secondaryTypographyProps:TypographyBaseProps;
 }
 
 @:jsRequire('@material-ui/core', 'ListItemText')

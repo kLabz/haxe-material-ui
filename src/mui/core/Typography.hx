@@ -10,7 +10,10 @@ import mui.core.typography.TypographyVariant;
 
 typedef TypographyProps = {
 	> StandardProps<TypographyClassKey>,
+	> TypographyBaseProps,
+}
 
+typedef TypographyBaseProps = {
 	@:optional var align:Align;
 	@:optional var color:TextColor;
 	@:optional var component:ReactType;

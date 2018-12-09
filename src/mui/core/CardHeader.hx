@@ -3,7 +3,7 @@ package mui.core;
 import react.ReactComponent;
 import react.ReactType;
 
-import mui.core.Typography.TypographyProps;
+import mui.core.Typography.TypographyBaseProps;
 import mui.core.card.CardHeaderClassKey;
 
 typedef CardHeaderProps = {
@@ -14,9 +14,9 @@ typedef CardHeaderProps = {
 	@:optional var component:ReactType;
 	@:optional var disableTypography:Bool;
 	@:optional var subheader:ReactFragment;
-	@:optional var subheaderTypographyProps:TypographyProps;
+	@:optional var subheaderTypographyProps:TypographyBaseProps;
 	@:optional var title:ReactFragment;
-	@:optional var titleTypographyProps:TypographyProps;
+	@:optional var titleTypographyProps:TypographyBaseProps;
 }
 
 @:jsRequire('@material-ui/core', 'CardHeader')
