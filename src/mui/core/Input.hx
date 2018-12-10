@@ -4,7 +4,7 @@ import react.ReactComponent;
 import mui.core.InputBase.InputBaseBaseProps;
 import mui.core.input.InputClassKey;
 
-typedef InputProps = {
+private typedef Props = {
 	> StandardProps<InputClassKey>,
 	> InputBaseProps,
 }
@@ -16,4 +16,4 @@ typedef InputBaseProps = {
 }
 
 @:jsRequire('@material-ui/core', 'Input')
-extern class Input extends ReactComponentOfProps<InputProps> {}
+extern class Input extends ReactComponentOfProps<Props> {}
