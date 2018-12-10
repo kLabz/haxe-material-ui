@@ -7,18 +7,19 @@ import react.ReactComponent;
 import react.ReactRef;
 import react.types.DOMAttributes.HandlerOrVoid;
 import react.types.EventHandler.FormEventHandler;
-
 import mui.core.checkbox.CheckedStatus;
-import mui.core.radio.RadioClassKey;
-import mui.core.radio.RadioValue;
+import mui.core.checkbox.SwitchClassKey;
+import mui.core.input.InputType;
 
-typedef RadioProps = {
-	> StandardProps<RadioClassKey>,
+private typedef Props = {
+	> StandardProps<SwitchClassKey>,
+	> SwitchBaseProps,
+}
 
+typedef SwitchBaseProps = {
 	@:optional var children:Noise;
 	@:optional var checked:CheckedStatus;
 	@:optional var checkedIcon:ReactFragment;
-	@:optional var color:ThemeColorWithDefault;
 	@:optional var disabled:Bool;
 	@:optional var disableRipple:Bool;
 	@:optional var icon:ReactFragment;
@@ -26,10 +27,9 @@ typedef RadioProps = {
 	@:optional var inputProps:{}; // TODO
 	@:optional var inputRef:ReactRef<InputElement>;
 	@:optional var onChange:HandlerOrVoid<FormEventHandler<HtmlElement>>;
-	@:optional var type:String;
-	@:optional var value:RadioValue;
+	@:optional var type:InputType;
+	@:optional var value:String;
 }
 
-@:acceptsMoreProps
-@:jsRequire('@material-ui/core', 'Radio')
-extern class Radio extends ReactComponentOfProps<RadioProps> {}
+@:jsRequire('@material-ui/core', 'Switch')
+extern class Switch extends ReactComponentOfProps<Props> {}

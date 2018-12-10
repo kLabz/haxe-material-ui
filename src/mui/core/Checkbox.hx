@@ -5,12 +5,12 @@ import js.html.HtmlElement;
 import js.html.InputElement;
 import react.ReactComponent;
 import react.ReactRef;
-import react.ReactType;
 import react.types.DOMAttributes.HandlerOrVoid;
 import react.types.EventHandler.FormEventHandler;
 
 import mui.core.checkbox.CheckboxClassKey;
 import mui.core.checkbox.CheckedStatus;
+import mui.core.input.InputType;
 
 typedef CheckboxProps = {
 	> StandardProps<CheckboxClassKey>,
@@ -28,7 +28,7 @@ typedef CheckboxProps = {
 	@:optional var inputProps:{}; // TODO
 	@:optional var inputRef:ReactRef<InputElement>;
 	@:optional var onChange:HandlerOrVoid<FormEventHandler<HtmlElement>>;
-	@:optional var type:String;
+	@:optional var type:InputType;
 	@:optional var value:String;
 }
 
