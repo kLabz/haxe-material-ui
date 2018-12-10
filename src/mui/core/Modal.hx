@@ -1,11 +1,10 @@
 package mui.core;
 
-import haxe.extern.EitherType;
 import js.html.Event;
-import js.html.Element;
 
 import react.ReactComponent;
 import react.ReactType;
+import react.types.DOMOrCallback;
 
 import mui.core.modal.ModalClassKey;
 import mui.core.modal.ModalCloseReason;
@@ -21,7 +20,7 @@ typedef ModalBaseProps = {
 	@:optional var BackdropComponent:ReactType;
 	@:optional var BackdropProps:Dynamic;
 	@:optional var children:ReactSingleFragment;
-	@:optional var container:EitherType<Element, Void->Element>;
+	@:optional var container:DOMOrCallback;
 	@:optional var disableAutoFocus:Bool;
 	@:optional var disableBackdropClick:Bool;
 	@:optional var disableEnforceFocus:Bool;

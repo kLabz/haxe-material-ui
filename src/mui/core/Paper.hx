@@ -5,17 +5,16 @@ import react.ReactType;
 
 import mui.core.paper.PaperClassKey;
 
+private typedef Props = {
+	> StandardProps<PaperClassKey>,
+	> PaperBaseProps,
+}
+
 typedef PaperBaseProps = {
 	@:optional var component:ReactType;
 	@:optional var elevation:Int;
 	@:optional var square:Bool;
 }
 
-typedef PaperProps = {
-	> StandardProps<PaperClassKey>,
-	> PaperBaseProps,
-}
-
 @:jsRequire('@material-ui/core', 'Paper')
-extern class Paper extends ReactComponentOfProps<PaperProps> {}
-
+extern class Paper extends ReactComponentOfProps<Props> {}
