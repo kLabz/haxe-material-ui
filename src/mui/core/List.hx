@@ -5,9 +5,12 @@ import react.ReactType;
 
 import mui.core.list.ListClassKey;
 
-typedef ListProps = {
+private typedef Props = {
 	> StandardProps<ListClassKey>,
+	> ListBaseProps,
+}
 
+typedef ListBaseProps = {
 	@:optional var component:ReactType;
 	@:optional var dense:Bool;
 	@:optional var disablePadding:Bool;
@@ -15,5 +18,5 @@ typedef ListProps = {
 }
 
 @:jsRequire('@material-ui/core', 'List')
-extern class List extends ReactComponentOfProps<ListProps> {}
+extern class List extends ReactComponentOfProps<Props> {}
 
