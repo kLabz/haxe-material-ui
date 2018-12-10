@@ -1,7 +1,7 @@
 {
   "name": "material-ui",
   "description": "Material UI - React components that implement Google's Material Design",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "releasenote": "Fix classes prop generation",
   "url": "https://gitlab.com/k-labz/haxe-oss/haxe-material-ui",
   "license": "MIT",
