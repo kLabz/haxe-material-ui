@@ -12,6 +12,7 @@ import react.types.EventHandler;
 
 import mui.core.form.FormControlMargin;
 import mui.core.input.InputBaseClassKey;
+import mui.core.input.InputType;
 import mui.core.input.InputValue;
 
 private typedef Props = {
@@ -41,7 +42,7 @@ typedef InputBaseBaseProps = {
 	@:optional var rows:EitherType<String, Int>;
 	@:optional var rowsMax:EitherType<String, Int>;
 	@:optional var startAdornment:ReactFragment;
-	@:optional var type:String; // TODO: enum
+	@:optional var type:InputType;
 	@:optional var value:InputValue;
 }
 

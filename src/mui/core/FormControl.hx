@@ -6,9 +6,12 @@ import react.ReactType;
 import mui.core.form.FormControlClassKey;
 import mui.core.form.FormControlMargin;
 
-typedef FormControlProps = {
+private typedef Props = {
 	> StandardProps<FormControlClassKey>,
+	> FormControlBaseProps,
+}
 
+typedef FormControlBaseProps = {
 	@:optional var component:ReactType;
 	@:optional var disabled:Bool;
 	@:optional var error:Bool;
@@ -18,4 +21,4 @@ typedef FormControlProps = {
 }
 
 @:jsRequire('@material-ui/core', 'FormControl')
-extern class FormControl extends ReactComponentOfProps<FormControlProps> {}
+extern class FormControl extends ReactComponentOfProps<Props> {}

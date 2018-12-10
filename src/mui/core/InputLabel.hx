@@ -8,8 +8,12 @@ import mui.core.form.FormControlMargin;
 import mui.core.input.InputLabelClassKey;
 import mui.core.FormLabel.FormLabelBaseProps;
 
-typedef InputLabelProps = {
+private typedef Props = {
 	> StandardProps<InputLabelClassKey>,
+	> InputLabelBaseProps,
+}
+
+typedef InputLabelBaseProps = {
 	> FormLabelBaseProps,
 
 	@:optional var disableAnimation:Bool;
@@ -20,7 +24,9 @@ typedef InputLabelProps = {
 	@:optional var margin:FormControlMargin;
 	@:optional var required:Bool;
 	@:optional var shrink:Bool;
+
+	@:optional var htmlFor:String;
 }
 
 @:jsRequire('@material-ui/core', 'InputLabel')
-extern class InputLabel extends ReactComponent {}
+extern class InputLabel extends ReactComponentOfProps<Props> {}
