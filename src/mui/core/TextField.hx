@@ -3,9 +3,11 @@ package mui.core;
 import react.ReactComponent;
 import mui.core.FormControl.FormControlBaseProps;
 import mui.core.Input.InputBaseProps;
+import mui.core.InputBase.InputBaseBaseProps;
 import mui.core.InputLabel.InputLabelBaseProps;
 import mui.core.form.FormControlClassKey;
-import mui.core.input.TextFieldVariant;
+import mui.core.form.FormControlVariant;
+import mui.core.Select.SelectBaseProps;
 
 // TODO
 typedef FormHelperTextBaseProps = Dynamic;
@@ -17,6 +19,7 @@ private typedef Props = {
 
 typedef TextFieldBaseProps = {
 	> FormControlBaseProps,
+	> InputBaseBaseProps,
 
 	@:optional var FormHelperTextProps:FormHelperTextBaseProps;
 	@:optional var helperText:ReactFragment;
@@ -24,7 +27,7 @@ typedef TextFieldBaseProps = {
 	@:optional var InputProps:InputBaseProps;
 	@:optional var label:ReactFragment;
 	@:optional var select:Bool;
-	@:optional var variant:TextFieldVariant;
+	@:optional var SelectProps:SelectBaseProps;
 }
 
 @:jsRequire('@material-ui/core', 'TextField')

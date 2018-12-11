@@ -1,6 +1,6 @@
-package mui.core.input;
+package mui.core.form;
 
-@:enum abstract TextFieldVariant(String) {
+@:enum abstract FormControlVariant(String) {
 	var Standard = "standard";
 	var Outlined = "outlined";
 	var Filled = "filled";

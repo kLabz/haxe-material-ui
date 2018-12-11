@@ -5,6 +5,7 @@ import react.ReactType;
 
 import mui.core.form.FormControlClassKey;
 import mui.core.form.FormControlMargin;
+import mui.core.form.FormControlVariant;
 
 private typedef Props = {
 	> StandardProps<FormControlClassKey>,
@@ -18,6 +19,7 @@ typedef FormControlBaseProps = {
 	@:optional var fullWidth:Bool;
 	@:optional var margin:FormControlMargin;
 	@:optional var required:Bool;
+	@:optional var variant:FormControlVariant;
 }
 
 @:jsRequire('@material-ui/core', 'FormControl')

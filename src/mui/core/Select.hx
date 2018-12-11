@@ -10,8 +10,12 @@ import mui.core.input.InputValue;
 import mui.core.input.SelectClassKey;
 import mui.core.Input.InputBaseProps;
 
-typedef SelectProps = {
+private typedef Props = {
 	> StandardProps<SelectClassKey>,
+	> SelectBaseProps,
+}
+
+typedef SelectBaseProps = {
 	> InputBaseProps,
 
 	var value:InputValue;
@@ -32,4 +36,4 @@ typedef SelectProps = {
 }
 
 @:jsRequire('@material-ui/core', 'Select')
-extern class Select extends ReactComponentOfProps<SelectProps> {}
+extern class Select extends ReactComponentOfProps<Props> {}
