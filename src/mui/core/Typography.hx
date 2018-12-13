@@ -4,6 +4,7 @@ import mui.StandardProps;
 import react.ReactComponent;
 import react.ReactType;
 
+import mui.core.common.Align;
 import mui.core.typography.HeadlineMapping;
 import mui.core.typography.TypographyClassKey;
 import mui.core.typography.TypographyVariant;

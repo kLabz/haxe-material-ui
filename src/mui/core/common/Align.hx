@@ -1,4 +1,4 @@
-package mui;
+package mui.core.common;
 
 @:enum abstract Align(String) {
 	var Inherit = "inherit";
