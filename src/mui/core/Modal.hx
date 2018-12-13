@@ -13,13 +13,14 @@ import mui.core.modal.ModalManager;
 typedef ModalProps = {
 	> StandardProps<ModalClassKey>,
 	> ModalBaseProps,
+
+	@:optional var children:ReactSingleFragment;
 }
 
 typedef ModalBaseProps = {
 	var open:Bool;
 	@:optional var BackdropComponent:ReactType;
 	@:optional var BackdropProps:Dynamic;
-	@:optional var children:ReactSingleFragment;
 	@:optional var container:DOMOrCallback;
 	@:optional var disableAutoFocus:Bool;
 	@:optional var disableBackdropClick:Bool;
