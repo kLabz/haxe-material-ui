@@ -2,15 +2,13 @@ package mui.core;
 
 import react.ReactComponent;
 import mui.core.FormControl.FormControlBaseProps;
+import mui.core.FormHelperText.FormHelperTextBaseProps;
 import mui.core.Input.InputBaseProps;
 import mui.core.InputBase.InputBaseBaseProps;
 import mui.core.InputLabel.InputLabelBaseProps;
 import mui.core.form.FormControlClassKey;
 import mui.core.form.FormControlVariant;
 import mui.core.Select.SelectBaseProps;
-
-// TODO
-typedef FormHelperTextBaseProps = Dynamic;
 
 private typedef Props = {
 	> StandardProps<FormControlClassKey>,
