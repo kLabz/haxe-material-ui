@@ -5,21 +5,16 @@ typedef Position = {
 	var vertical:VerticalPosition;
 }
 
-@:enum abstract EHorizontalPosition(String) {
-	var Left = "left";
-	var Center = "center";
-	var Right = "right";
+@:coreType
+@:enum abstract HorizontalPosition from Int {
+	var Left = cast "left";
+	var Center = cast "center";
+	var Right = cast "right";
 }
 
 @:coreType
-@:enum abstract HorizontalPosition from Int from EHorizontalPosition {}
-
-@:enum abstract EVerticalPosition(String) {
-	var Top = "top";
-	var Center = "center";
-	var Bottom = "bottom";
+@:enum abstract VerticalPosition from Int {
+	var Top = cast "top";
+	var Center = cast "center";
+	var Bottom = cast "bottom";
 }
-
-@:coreType
-@:enum abstract VerticalPosition from Int from EVerticalPosition {}
-
