@@ -9,7 +9,7 @@ import mui.core.typography.HeadlineMapping;
 import mui.core.typography.TypographyClassKey;
 import mui.core.typography.TypographyVariant;
 
-typedef TypographyProps = {
+private typedef Props = {
 	> StandardProps<TypographyClassKey>,
 	> TypographyBaseProps,
 }
@@ -26,5 +26,5 @@ typedef TypographyBaseProps = {
 }
 
 @:jsRequire('@material-ui/core', 'Typography')
-extern class Typography extends ReactComponentOfProps<TypographyProps> {}
+extern class Typography extends ReactComponentOfProps<Props> {}
 

@@ -16,7 +16,7 @@ import mui.core.popover.PopoverClassKey;
 import mui.core.popover.AnchorPosition;
 import mui.core.popover.AnchorReference;
 
-typedef PopoverProps = {
+private typedef Props = {
 	> StandardProps<PopoverClassKey>,
 	> PopoverBaseProps,
 }
@@ -46,4 +46,4 @@ typedef PopoverBaseProps = {
 }
 
 @:jsRequire('@material-ui/core', 'Popover')
-extern class Popover extends ReactComponentOfProps<PopoverProps> {}
+extern class Popover extends ReactComponentOfProps<Props> {}

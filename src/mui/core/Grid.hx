@@ -12,9 +12,12 @@ import mui.core.grid.GridClassKey;
 import mui.core.grid.GridsNumber;
 import mui.core.grid.GridSpacing;
 
-typedef GridProps = {
+private typedef Props = {
 	> StandardProps<GridClassKey>,
+	> GridBaseProps,
+}
 
+typedef GridBaseProps = {
 	@:optional var alignContent:AlignContent;
 	@:optional var alignItems:AlignItems;
 	@:optional var component:ReactType;
@@ -34,4 +37,4 @@ typedef GridProps = {
 
 @:acceptsMoreProps
 @:jsRequire('@material-ui/core', 'Grid')
-extern class Grid extends ReactComponentOfProps<GridProps> {}
+extern class Grid extends ReactComponentOfProps<Props> {}

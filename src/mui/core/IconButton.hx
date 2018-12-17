@@ -5,7 +5,7 @@ import react.ReactComponent;
 import mui.core.button.IconButtonClassKey;
 import mui.core.ButtonBase.ButtonBaseBaseProps;
 
-typedef IconButtonProps = {
+private typedef Props = {
 	> StandardProps<IconButtonClassKey>,
 	> ButtonBaseBaseProps,
 
@@ -13,5 +13,5 @@ typedef IconButtonProps = {
 }
 
 @:jsRequire('@material-ui/core', 'IconButton')
-extern class IconButton extends ReactComponentOfProps<IconButtonProps> {}
+extern class IconButton extends ReactComponentOfProps<Props> {}
 

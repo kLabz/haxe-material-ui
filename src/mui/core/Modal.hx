@@ -10,7 +10,7 @@ import mui.core.modal.ModalClassKey;
 import mui.core.modal.ModalCloseReason;
 import mui.core.modal.ModalManager;
 
-typedef ModalProps = {
+private typedef Props = {
 	> StandardProps<ModalClassKey>,
 	> ModalBaseProps,
 
@@ -38,4 +38,4 @@ typedef ModalBaseProps = {
 }
 
 @:jsRequire('@material-ui/core', 'Modal')
-extern class Modal extends ReactComponentOfProps<ModalProps> {}
+extern class Modal extends ReactComponentOfProps<Props> {}

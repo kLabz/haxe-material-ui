@@ -5,11 +5,14 @@ import react.ReactType;
 
 import mui.core.card.CardContentClassKey;
 
-typedef CardContentProps = {
+private typedef Props = {
 	> StandardProps<CardContentClassKey>,
+	> CardContentBaseProps,
+}
 
+typedef CardContentBaseProps = {
 	@:optional var component:ReactType;
 }
 
 @:jsRequire('@material-ui/core', 'CardContent')
-extern class CardContent extends ReactComponentOfProps<CardContentProps> {}
+extern class CardContent extends ReactComponentOfProps<Props> {}

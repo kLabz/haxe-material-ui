@@ -7,6 +7,11 @@ import react.ReactType;
 import mui.core.button.ButtonBaseClassKey;
 import mui.core.button.ButtonType;
 
+private typedef Props = {
+	> StandardProps<ButtonBaseClassKey>,
+	> ButtonBaseBaseProps,
+}
+
 typedef ButtonBaseBaseProps = {
 	@:optional var action:Function;
 	@:optional var buttonRef:Dynamic;
@@ -24,11 +29,6 @@ typedef ButtonBaseBaseProps = {
 	@:optional var type:ButtonType;
 }
 
-typedef ButtonBaseProps = {
-	> StandardProps<ButtonBaseClassKey>,
-	> ButtonBaseBaseProps,
-}
-
 @:jsRequire('@material-ui/core', 'ButtonBase')
-extern class ButtonBase extends ReactComponentOfProps<ButtonBaseProps> {}
+extern class ButtonBase extends ReactComponentOfProps<Props> {}
 
