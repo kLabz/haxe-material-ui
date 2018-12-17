@@ -1,9 +1,25 @@
 package mui.core.common;
 
-@:enum abstract Position(String) {
-	var Fixed = "fixed";
-	var Absolute = "absolute";
-	var Sticky = "sticky";
-	var Static = "static";
-	var Relative = "relative";
+typedef Position = {
+	var horizontal:HorizontalPosition;
+	var vertical:VerticalPosition;
 }
+
+@:enum abstract EHorizontalPosition(String) {
+	var Left = "left";
+	var Center = "center";
+	var Right = "right";
+}
+
+@:coreType
+@:enum abstract HorizontalPosition from Int from EHorizontalPosition {}
+
+@:enum abstract EVerticalPosition(String) {
+	var Top = "top";
+	var Center = "center";
+	var Bottom = "bottom";
+}
+
+@:coreType
+@:enum abstract VerticalPosition from Int from EVerticalPosition {}
+
