@@ -15,7 +15,8 @@ class Builder {
 				true
 			);
 		} catch (e:String) {
-			trace('TODO: error message');
+			// Note: this can happen when using haxe 4 preview 4 and compilation server
+			trace('MUI: an error occured while building props.classes');
 			return null;
 		};
 
