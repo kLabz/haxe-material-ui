@@ -1,5 +1,6 @@
 package mui.core;
 
+import css.AlignItems;
 import react.ReactComponent;
 import react.ReactType;
 
@@ -13,6 +14,7 @@ typedef ListItemProps = {
 }
 
 typedef ListItemBaseProps = {
+	@:optional var alignItems:AlignItems;
 	@:optional var button:Bool;
 	@:optional var component:ReactType;
 	@:optional var ContainerComponent:ReactType;
@@ -21,6 +23,7 @@ typedef ListItemBaseProps = {
 	@:optional var disabled:Bool;
 	@:optional var disabledGutters:Bool;
 	@:optional var divider:Bool;
+	@:optional var selected:Bool;
 }
 
 @:jsRequire('@material-ui/core', 'ListItem')
