@@ -29,4 +29,3 @@ package mui.core.button;
 	var SizeLarge = "sizeLarge";
 	var FullWidth = "fullWidth";
 }
-

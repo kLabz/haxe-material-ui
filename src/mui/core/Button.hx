@@ -11,6 +11,7 @@ typedef ButtonProps = {
 	> StandardProps<ButtonClassKey>,
 	> ButtonBaseBaseProps,
 
+	var children:ReactFragment;
 	@:optional var color:Color;
 	@:optional var fullWidth:Bool;
 	@:optional var href:String;
@@ -22,4 +23,3 @@ typedef ButtonProps = {
 @:acceptsMoreProps
 @:jsRequire('@material-ui/core', 'Button')
 extern class Button extends ReactComponentOfProps<ButtonProps> {}
-

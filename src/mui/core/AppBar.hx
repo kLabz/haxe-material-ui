@@ -10,6 +10,7 @@ typedef AppBarProps = {
 	> StandardProps<AppBarClassKey>,
 	> PaperBaseProps,
 
+	var children:ReactFragment;
 	@:optional var color:Color;
 	@:optional var position:CSSPosition;
 }
