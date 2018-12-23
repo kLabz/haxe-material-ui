@@ -7,9 +7,11 @@ package mui.core.list;
 	var FocusVisible = "focusVisible";
 	var Default = "default";
 	var Dense = "dense";
+	var AlignItemsFlexStart = "alignItemsFlexStart";
 	var Disabled = "disabled";
 	var Divider = "divider";
 	var Gutters = "gutters";
 	var Button = "button";
 	var SecondaryAction = "secondaryAction";
+	var Selected = "selected";
 }

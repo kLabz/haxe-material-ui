@@ -37,4 +37,24 @@ package mui.core.table;
 		Styles applied to the root element if padding="none".
 	*/
 	var PaddingNode = "paddingNone";
+
+	/**
+		Styles applied to the root element if align="left".
+	*/
+	var AlignLeft = "alignLeft";
+
+	/**
+		Styles applied to the root element if align="center".
+	*/
+	var AlignCenter = "alignCenter";
+
+	/**
+		Styles applied to the root element if align="right".
+	*/
+	var AlignRight = "alignRight";
+
+	/**
+		Styles applied to the root element if align="justify".
+	*/
+	var AlignJustify = "alignJustify";
 }

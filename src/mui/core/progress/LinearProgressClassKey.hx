@@ -5,6 +5,8 @@ package mui.core.progress;
 
 	var ColorPrimary = "colorPrimary";
 	var ColorSecondary = "colorSecondary";
+	var Determinate = "determinate";
+	var Indeterminate = "indeterminate";
 	var Buffer = "buffer";
 	var Query = "query";
 	var Dashed = "dashed";
@@ -17,7 +19,5 @@ package mui.core.progress;
 	var Bar1Determinate = "bar1Determinate";
 	var Bar1Buffer = "bar1Buffer";
 	var Bar2Indeterminate = "bar2Indeterminate";
-	var Bar2Determinate = "bar2Determinate";
 	var Bar2Buffer = "bar2Buffer";
-
 }

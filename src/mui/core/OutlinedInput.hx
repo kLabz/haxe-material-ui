@@ -1,12 +1,15 @@
 package mui.core;
 
 import react.ReactComponent;
+import react.types.Noise;
 import mui.core.InputBase.InputBaseBaseProps;
 import mui.core.input.OutlinedInputClassKey;
 
 private typedef Props = {
 	> StandardProps<OutlinedInputClassKey>,
 	> OutlinedInputBaseProps,
+
+	@:optional var children:Noise;
 }
 
 typedef OutlinedInputBaseProps = {

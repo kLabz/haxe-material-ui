@@ -8,7 +8,7 @@ import react.ReactComponent;
 typedef MuiThemeProviderProps = {
 	var children:ReactSingleFragment;
 	var theme:EitherType<Function, Dynamic>;
-	@:optional var disableStyles:Bool;
+	@:optional var disableStylesGeneration:Bool;
 	@:optional var sheetsManager:Dynamic;
 }
 

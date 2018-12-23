@@ -13,7 +13,7 @@ import mui.core.chip.ChipVariant;
 typedef ChipProps = {
 	> StandardProps<ChipClassKey>,
 
-	var children:Noise;
+	@:optional var children:Noise;
 	@:optional var avatar:ReactFragment;
 	@:optional var clickable:Bool;
 	@:optional var color:ThemeColorWithDefault;
@@ -22,7 +22,7 @@ typedef ChipProps = {
 	@:optional var icon:ReactFragment;
 	@:optional var label:ReactFragment;
 	@:optional var onClick:HandlerOrVoid<MouseEventHandler<HtmlElement>>;
-	@:optional var onChange:HandlerOrVoid<FormEventHandler<HtmlElement>>;
+	@:optional var onDelete:Void->Void;
 	@:optional var variant:ChipVariant;
 }
 

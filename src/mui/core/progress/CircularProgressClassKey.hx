@@ -11,4 +11,5 @@ package mui.core.progress;
 	var Circle = "circle";
 	var CircleStatic = "circleStatic";
 	var CircleIndeterminate = "circleIndeterminate";
+	var CircleDisableShrink = "circleDisableShrink";
 }

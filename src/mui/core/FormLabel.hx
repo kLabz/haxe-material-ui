@@ -8,6 +8,8 @@ import mui.core.form.FormLabelClassKey;
 typedef FormLabelProps = {
 	> StandardProps<FormLabelClassKey>,
 	> FormLabelBaseProps,
+
+	@:optional var children:ReactFragment;
 }
 
 typedef FormLabelBaseProps = {
@@ -17,6 +19,7 @@ typedef FormLabelBaseProps = {
 	@:optional var filled:Bool;
 	@:optional var focused:Bool;
 	@:optional var required:Bool;
+	@:optional var htmlFor:String;
 }
 
 @:jsxRequire('@material-ui/core', 'FormLabel')

@@ -28,6 +28,7 @@ typedef DialogBaseProps = {
 	@:optional var onExit:Void->Void;
 	@:optional var onExited:Void->Void;
 	@:optional var onExiting:Void->Void;
+	@:optional var PaperComponent:ReactType;
 	@:optional var PaperProps:PaperBaseProps;
 	@:optional var scroll:DialogScrollContainer;
 	@:optional var TransitionComponent:ReactType;

@@ -20,6 +20,7 @@ typedef SwitchBaseProps = {
 	@:optional var children:Noise;
 	@:optional var checked:CheckedStatus;
 	@:optional var checkedIcon:ReactFragment;
+	@:optional var color:ThemeColorWithDefault;
 	@:optional var disabled:Bool;
 	@:optional var disableRipple:Bool;
 	@:optional var icon:ReactFragment;

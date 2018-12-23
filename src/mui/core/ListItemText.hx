@@ -8,6 +8,7 @@ import mui.core.list.ListItemTextClassKey;
 typedef ListItemTextProps = {
 	> StandardProps<ListItemTextClassKey>,
 
+	@:optional var children:ReactFragment;
 	@:optional var disableTypography:Bool;
 	@:optional var inset:Bool;
 	@:optional var primary:ReactFragment;

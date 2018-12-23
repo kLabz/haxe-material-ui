@@ -7,6 +7,7 @@ package mui.core.appbar;
 	var PositionAbsolute = 'positionAbsolute';
 	var PositionSticky = 'positionSticky';
 	var PositionStatic = 'positionStatic';
+	var PositionRelative = 'positionRelative';
 	var ColorDefault = 'colorDefault';
 	var ColorPrimary = 'colorPrimary';
 	var ColorSecondary = 'colorSecondary';

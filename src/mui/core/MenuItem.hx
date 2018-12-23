@@ -10,8 +10,8 @@ typedef MenuItemProps = {
 	> StandardProps<MenuItemClassKey>,
 	> ListItemBaseProps,
 
+	@:optional var children:ReactFragment;
 	@:optional var component:ReactType;
-	@:optional var selected:Bool;
 	@:optional var value:Any;
 }
 

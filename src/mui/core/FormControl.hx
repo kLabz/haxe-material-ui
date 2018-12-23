@@ -10,6 +10,8 @@ import mui.core.form.FormControlVariant;
 private typedef Props = {
 	> StandardProps<FormControlClassKey>,
 	> FormControlBaseProps,
+
+	@:optional var children:ReactFragment;
 }
 
 typedef FormControlBaseProps = {

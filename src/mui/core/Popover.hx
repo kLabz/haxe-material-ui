@@ -1,11 +1,11 @@
 package mui.core;
 
-import haxe.extern.EitherType;
 import js.html.Event;
 import js.html.Element;
 
 import react.ReactComponent;
 import react.ReactType;
+import react.types.DOMOrCallback;
 import react.types.Record;
 
 import mui.core.Modal.ModalBaseProps;
@@ -19,14 +19,17 @@ import mui.core.popover.AnchorReference;
 private typedef Props = {
 	> StandardProps<PopoverClassKey>,
 	> PopoverBaseProps,
+
+	@:optional var children:ReactFragment;
 }
 
 typedef PopoverBaseProps = {
 	> ModalBaseProps,
 
 	@:optional var action:Dynamic->Void;
-	@:optional var anchorEl:EitherType<Element, Void->Element>;
+	@:optional var anchorEl:DOMOrCallback;
 	@:optional var anchorOrigin:Position;
+	@:optional var anchorPosition:AnchorPosition;
 	@:optional var anchorReference:AnchorReference;
 	@:optional var elevation:Int;
 	@:optional var getContentAnchorEl:Void->Element;

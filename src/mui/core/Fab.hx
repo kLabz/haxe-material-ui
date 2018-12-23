@@ -7,7 +7,7 @@ import mui.core.button.ButtonSize;
 import mui.core.button.FabVariant;
 import mui.core.ButtonBase.ButtonBaseBaseProps;
 
-typedef Props = {
+private typedef Props = {
 	> StandardProps<FabClassKey>,
 	> FabProps,
 }

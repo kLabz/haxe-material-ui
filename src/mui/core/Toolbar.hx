@@ -9,6 +9,7 @@ import mui.core.toolbar.ToolbarVariant;
 typedef ToolbarProps = {
 	> StandardProps<ToolbarClassKey>,
 
+	@:optional var children:ReactFragment;
 	@:optional var disableGutters:Bool;
 	@:optional var variant:ToolbarVariant;
 }

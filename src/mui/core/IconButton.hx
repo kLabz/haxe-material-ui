@@ -9,6 +9,7 @@ private typedef Props = {
 	> StandardProps<IconButtonClassKey>,
 	> ButtonBaseBaseProps,
 
+	@:optional var children:ReactFragment;
 	@:optional var color:Color;
 }
 

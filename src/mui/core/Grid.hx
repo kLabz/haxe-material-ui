@@ -2,29 +2,31 @@ package mui.core;
 
 import react.ReactComponent;
 import react.ReactType;
-import css.AlignItems;
-import css.AlignContent;
 import css.FlexDirection;
 import css.FlexWrap;
-import css.JustifyContent;
 
+import mui.core.grid.GridAlignContent;
+import mui.core.grid.GridAlignItems;
 import mui.core.grid.GridClassKey;
+import mui.core.grid.GridJustifyContent;
 import mui.core.grid.GridsNumber;
 import mui.core.grid.GridSpacing;
 
 private typedef Props = {
 	> StandardProps<GridClassKey>,
 	> GridBaseProps,
+
+	@:optional var children:ReactFragment;
 }
 
 typedef GridBaseProps = {
-	@:optional var alignContent:AlignContent;
-	@:optional var alignItems:AlignItems;
+	@:optional var alignContent:GridAlignContent;
+	@:optional var alignItems:GridAlignItems;
 	@:optional var component:ReactType;
 	@:optional var container:Bool;
 	@:optional var direction:FlexDirection;
 	@:optional var item:Bool;
-	@:optional var justify:JustifyContent;
+	@:optional var justify:GridJustifyContent;
 	@:optional var lg:GridsNumber;
 	@:optional var md:GridsNumber;
 	@:optional var sm:GridsNumber;

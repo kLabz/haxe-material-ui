@@ -8,6 +8,8 @@ import mui.core.card.CardContentClassKey;
 private typedef Props = {
 	> StandardProps<CardContentClassKey>,
 	> CardContentBaseProps,
+
+	@:optional var children:ReactFragment;
 }
 
 typedef CardContentBaseProps = {

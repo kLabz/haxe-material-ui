@@ -8,6 +8,8 @@ import mui.core.list.ListClassKey;
 private typedef Props = {
 	> StandardProps<ListClassKey>,
 	> ListBaseProps,
+
+	@:optional var children:ReactFragment;
 }
 
 typedef ListBaseProps = {

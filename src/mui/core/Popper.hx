@@ -8,7 +8,7 @@ import mui.core.popper.PopperPlacement;
 typedef PopperBaseProps = {
 	var children:ReactFragment;
 	var open:Bool;
-	@:optional var anchor:DOMOrCallback;
+	@:optional var anchorEl:DOMOrCallback;
 	@:optional var container:Dynamic;
 	@:optional var disablePortal:Bool;
 	@:optional var keepMounted:Bool;

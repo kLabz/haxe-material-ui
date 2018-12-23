@@ -4,8 +4,10 @@ import js.html.HtmlElement;
 import js.html.InputElement;
 import react.ReactComponent;
 import react.ReactRef;
+import react.ReactType;
 import react.types.DOMAttributes.HandlerOrVoid;
 import react.types.EventHandler.FormEventHandler;
+import react.types.Noise;
 
 import mui.core.checkbox.CheckedStatus;
 import mui.core.form.FormControlLabelClassKey;
@@ -17,7 +19,9 @@ private typedef Props = {
 }
 
 typedef FormControlLabelBaseProps = {
+	@:optional var children:Noise;
 	@:optional var checked:CheckedStatus;
+	@:optional var control:ReactType;
 	@:optional var disabled:Bool;
 	@:optional var inputRef:ReactRef<InputElement>;
 	@:optional var label:ReactFragment;

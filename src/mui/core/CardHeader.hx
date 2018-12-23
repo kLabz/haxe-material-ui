@@ -2,6 +2,7 @@ package mui.core;
 
 import react.ReactComponent;
 import react.ReactType;
+import react.types.Noise;
 
 import mui.core.Typography.TypographyBaseProps;
 import mui.core.card.CardHeaderClassKey;
@@ -9,6 +10,7 @@ import mui.core.card.CardHeaderClassKey;
 typedef CardHeaderProps = {
 	> StandardProps<CardHeaderClassKey>,
 
+	@:optional var children:Noise;
 	@:optional var action:ReactFragment;
 	@:optional var avatar:ReactFragment;
 	@:optional var component:ReactType;

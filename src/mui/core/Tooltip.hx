@@ -3,7 +3,6 @@ package mui.core;
 import js.html.Event;
 import react.ReactComponent;
 import react.ReactType;
-import react.types.DOMOrCallback;
 
 import mui.core.Popper.PopperBaseProps;
 import mui.core.popper.PopperPlacement;
@@ -17,7 +16,6 @@ private typedef Props = {
 typedef TooltipBaseProps = {
 	var children:ReactFragment;
 	var title:ReactFragment;
-	@:optional var anchor:DOMOrCallback;
 	@:optional var container:Dynamic;
 	@:optional var disableFocusListener:Bool;
 	@:optional var disableHoverListener:Bool;

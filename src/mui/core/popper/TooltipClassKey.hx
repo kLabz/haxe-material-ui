@@ -2,6 +2,7 @@ package mui.core.popper;
 
 @:enum abstract TooltipClassKey(String) to String {
 	var Popper = "popper";
+	var PopperInteractive = "popperInteractive";
 	var Tooltip = "tooltip";
 	var Touch = "touch";
 	var TooltipPlacementLeft = "tooltipPlacementLeft";

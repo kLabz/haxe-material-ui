@@ -9,6 +9,7 @@ import react.ReactRef;
 import react.ReactType;
 import react.types.DOMAttributes.HandlerOrVoid;
 import react.types.EventHandler;
+import react.types.Noise;
 
 import mui.core.form.FormControlMargin;
 import mui.core.input.InputBaseClassKey;
@@ -18,6 +19,8 @@ import mui.core.input.InputValue;
 private typedef Props = {
 	> StandardProps<InputBaseClassKey>,
 	> InputBaseBaseProps,
+
+	@:optional var children:Noise;
 }
 
 typedef InputBaseBaseProps = {

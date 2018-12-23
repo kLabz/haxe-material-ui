@@ -12,6 +12,7 @@ typedef MenuProps = {
 	> StandardProps<MenuClassKey>,
 	> PopoverBaseProps,
 
+	@:optional var children:ReactFragment;
 	@:optional var disableAutoFocusItem:Bool;
 	@:optional var MenuListProps:Dynamic;
 	@:optional var PopoverClasses:Record<PopoverClassKey>;

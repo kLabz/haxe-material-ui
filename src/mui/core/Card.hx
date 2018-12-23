@@ -8,6 +8,8 @@ import mui.core.Paper.PaperBaseProps;
 private typedef Props = {
 	> StandardProps<CardClassKey>,
 	> CardBaseProps,
+
+	@:optional var children:ReactFragment;
 }
 
 typedef CardBaseProps = {

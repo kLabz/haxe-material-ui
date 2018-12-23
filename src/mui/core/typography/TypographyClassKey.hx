@@ -8,12 +8,24 @@ package mui.core.typography;
 	var Display2 = "display2";
 	var Display3 = "display3";
 	var Display4 = "display4";
+	var Headline = "headline";
 	var Title = "title";
 	var SubHeading = "subheading";
 	var Body1 = "body1";
 	var Body2 = "body2";
 	var Caption = "caption";
 	var Button = "button";
+
+	var H1 = "h1";
+	var H2 = "h2";
+	var H3 = "h3";
+	var H4 = "h4";
+	var H5 = "h5";
+	var H6 = "h6";
+	var Subtitle1 = "subtitle1";
+	var Subtitle2 = "subtitle2";
+	var Overline = "overline";
+	var SrOnly = "srOnly";
 
 	// Aligns
 	var AlignLeft = "alignLeft";

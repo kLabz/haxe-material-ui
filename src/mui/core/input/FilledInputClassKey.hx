@@ -6,14 +6,13 @@ package mui.core.input;
 	var Underline = "underline";
 	var Focused = "focused";
 	var Disabled = "disabled";
-	var AdornmentStart = "adornmentStart";
-	var AdornmentEnd = "adornmentEnd";
+	var AdornedStart = "adornedStart";
+	var AdornedEnd = "adornedEnd";
 	var Error = "error";
 	var Multiline = "multiline";
-	var FullWidth = "fullWidth";
 	var Input = "input";
 	var InputMarginDense = "inputMarginDense";
 	var InputMultiline = "inputMultiline";
-	var InputAdornmentStart = "inputAdornmentStart";
-	var InputAdornmentEnd = "inputAdornmentEnd";
+	var InputAdornedStart = "inputAdornedStart";
+	var InputAdornedEnd = "inputAdornedEnd";
 }

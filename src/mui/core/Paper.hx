@@ -8,6 +8,8 @@ import mui.core.paper.PaperClassKey;
 private typedef Props = {
 	> StandardProps<PaperClassKey>,
 	> PaperBaseProps,
+
+	@:optional var children:ReactFragment;
 }
 
 typedef PaperBaseProps = {
