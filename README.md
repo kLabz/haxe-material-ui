@@ -6,11 +6,10 @@
 
 This library is still not complete, some components are still missing but will
 be added in the coming weeks. All icons from [`@material-ui/icons`][mui-icons]
-(version 3.0.1) have been implemented.
+(version 3.0.1) have been implemented in version `0.8.0`.
 
-Current version of haxe-material-ui is based off [`@material-ui/core`][mui-github]
-version `3.6.x`. Updates for [`3.7.0`][mui-3.7.0-doc] will be added to upcoming
-version `0.9.0`.
+Current version (`0.9.0`) of haxe-material-ui is based off
+[`@material-ui/core`][mui-github] version [`3.7.0`][mui-3.7.0-doc].
 
 ## Usage
 
