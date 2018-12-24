@@ -18,3 +18,13 @@ typedef Position = {
 	var Center = cast "center";
 	var Bottom = cast "bottom";
 }
+
+@:enum abstract LeftOrRight(String) {
+	var Left = "left";
+	var Right = "right";
+}
+
+@:enum abstract TopOrBottom(String) {
+	var Top = "top";
+	var Bottom = "bottom";
+}
