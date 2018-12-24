@@ -1,11 +1,16 @@
-# Externs and tools for [`material-ui`][mui-github]
+<p align="center">
+  <img width="150" src="https://gitlab.com/k-labz/haxe-oss/haxe-material-ui/raw/master/logo.svg" alt="Haxe Material-UI logo"></a>
+</p>
+
+<h1 align="center">Haxe Material-UI</h1>
 
 This library is still not complete, some components are still missing but will
 be added in the coming weeks. All icons from [`@material-ui/icons`][mui-icons]
 (version 3.0.1) have been implemented.
 
-Current version of haxe-material-ui is based off `@material-ui/core` version
-`3.6.x`. Updates for [`3.7.0`][mui-3.7.0-doc] will be added to upcoming version `0.9.0`.
+Current version of haxe-material-ui is based off [`@material-ui/core`][mui-github]
+version `3.6.x`. Updates for [`3.7.0`][mui-3.7.0-doc] will be added to upcoming
+version `0.9.0`.
 
 ## Usage
 
