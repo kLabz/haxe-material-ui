@@ -46,7 +46,7 @@ on [`haxe-react`'s gitter][gitter].
 Progress is being tracked on [this google doc][gdoc], with these objectives in
 mind:
 
-* Add missing components (72/108 atm)
+* Add missing components (80/108 atm)
 * Check/rework event callbacks
 * Add more utils for theme and style
 * Improve `css-types` for better props typing
