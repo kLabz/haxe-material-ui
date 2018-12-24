@@ -5,8 +5,7 @@ be added in the coming weeks. All icons from [`@material-ui/icons`][mui-icons]
 (version 3.0.1) have been implemented.
 
 Current version of haxe-material-ui is based off `@material-ui/core` version
-`3.6.x`. Updates for `3.7.0` are being progressively added to upcoming version
-`0.9.0`.
+`3.6.x`. Updates for [`3.7.0`][mui-3.7.0-doc] will be added to upcoming version `0.9.0`.
 
 ## Usage
 
@@ -42,17 +41,18 @@ on [`haxe-react`'s gitter][gitter].
 Progress is being tracked on [this google doc][gdoc], with these objectives in
 mind:
 
-* Update existing components to version `3.7.0`
-* Add missing components (67/103 atm)
+* Add missing components (72/108 atm)
+* Check/rework event callbacks
 * Add more utils for theme and style
 * Improve `css-types` for better props typing
-* Improve this README
+* Improve this README with instructions
 * Generate documentation from current code
 * Add examples (example project + some guides)
 
 
 [mui-github]: https://github.com/mui-org/material-ui/
 [mui-icons]: https://www.npmjs.com/package/@material-ui/icons
+[mui-3.7.0-doc]: https://v3-7-0.material-ui.com/versions/
 [react-next]: https://github.com/kLabz/haxe-react
 [haxe-react]: https://github.com/massiveinteractive/haxe-react
 [open-issue]: https://gitlab.com/k-labz/haxe-oss/haxe-material-ui/issues/new

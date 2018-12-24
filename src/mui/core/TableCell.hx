@@ -9,11 +9,15 @@ import mui.core.table.TableCellClassKey;
 import mui.core.table.TableCellPadding;
 import mui.core.table.TableCellVariant;
 
-typedef TableCellProps = {
+private typedef Props = {
 	> StandardProps<TableCellClassKey>,
+	> TableCellBaseProps,
 
-	@:optional var align:Align;
 	@:optional var children:ReactFragment;
+}
+
+typedef TableCellBaseProps = {
+	@:optional var align:Align;
 	@:optional var component:ReactType;
 	@:optional var padding:TableCellPadding;
 	@:optional var scope:String;
@@ -26,4 +30,4 @@ typedef TableCellProps = {
 
 @:acceptsMoreProps
 @:jsRequire('@material-ui/core', 'TableCell')
-extern class TableCell extends ReactComponentOfProps<TableCellProps> {}
+extern class TableCell extends ReactComponentOfProps<Props> {}
