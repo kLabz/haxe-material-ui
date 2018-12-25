@@ -1,16 +1,15 @@
 package mui.core;
 
 import react.ReactComponent;
+import react.types.ForcedOverride;
 
 import mui.core.card.CardClassKey;
 import mui.core.Paper.PaperBaseProps;
 
-private typedef Props = {
-	> StandardProps<CardClassKey>,
-	> CardBaseProps,
-
-	@:optional var children:ReactFragment;
-}
+private typedef Props = ForcedOverride<
+	StandardProps<CardClassKey>,
+	CardBaseProps
+>;
 
 typedef CardBaseProps = {
 	> PaperBaseProps,

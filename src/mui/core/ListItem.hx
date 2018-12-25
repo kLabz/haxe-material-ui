@@ -2,17 +2,20 @@ package mui.core;
 
 import react.ReactComponent;
 import react.ReactType;
+import react.types.ForcedOverride;
 
 import mui.core.ButtonBase;
 import mui.core.list.ListItemClassKey;
 import mui.core.list.ListAlignItems;
 
-private typedef Props = {
-	> StandardProps<ListItemClassKey>,
+private typedef Props = ForcedOverride<
+	StandardProps<ListItemClassKey>,
+	ListItemProps
+>;
+
+private typedef ListItemProps = {
 	> ButtonBaseBaseProps,
 	> ListItemBaseProps,
-
-	@:optional var children:ReactFragment;
 }
 
 typedef ListItemBaseProps = {

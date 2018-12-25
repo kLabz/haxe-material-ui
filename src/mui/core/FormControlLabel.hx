@@ -8,17 +8,18 @@ import react.ReactType;
 import react.types.DOMAttributes.HandlerOrVoid;
 import react.types.EventHandler.FormEventHandler;
 import react.types.Noise;
+import react.types.ForcedOverride;
 
 import mui.core.checkbox.CheckedStatus;
 import mui.core.form.FormControlLabelClassKey;
 import mui.core.form.FormLabelPlacement;
 
-private typedef Props = {
-	> StandardProps<FormControlLabelClassKey>,
-	> FormControlLabelBaseProps,
-}
+private typedef Props = ForcedOverride<
+	StandardProps<FormControlLabelClassKey>,
+	FormControlLabelProps
+>;
 
-typedef FormControlLabelBaseProps = {
+typedef FormControlLabelProps = {
 	@:optional var children:Noise;
 	@:optional var checked:CheckedStatus;
 	@:optional var control:ReactType;

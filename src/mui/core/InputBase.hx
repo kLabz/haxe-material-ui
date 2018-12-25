@@ -9,6 +9,7 @@ import react.ReactRef;
 import react.ReactType;
 import react.types.DOMAttributes.HandlerOrVoid;
 import react.types.EventHandler;
+import react.types.ForcedOverride;
 import react.types.Noise;
 
 import mui.core.form.FormControlMargin;
@@ -16,8 +17,12 @@ import mui.core.input.InputBaseClassKey;
 import mui.core.input.InputType;
 import mui.core.input.InputValue;
 
-private typedef Props = {
-	> StandardProps<InputBaseClassKey>,
+private typedef Props = ForcedOverride<
+	StandardProps<InputBaseClassKey>,
+	InputBaseProps
+>;
+
+private typedef InputBaseProps = {
 	> InputBaseBaseProps,
 
 	@:optional var children:Noise;

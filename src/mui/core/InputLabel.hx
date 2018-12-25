@@ -2,6 +2,7 @@ package mui.core;
 
 import react.ReactComponent;
 import react.types.Record;
+import react.types.ForcedOverride;
 
 import mui.core.form.FormLabelClassKey;
 import mui.core.form.FormControlMargin;
@@ -9,12 +10,10 @@ import mui.core.form.FormControlVariant;
 import mui.core.input.InputLabelClassKey;
 import mui.core.FormLabel.FormLabelBaseProps;
 
-private typedef Props = {
-	> StandardProps<InputLabelClassKey>,
-	> InputLabelBaseProps,
-
-	@:optional var children:ReactFragment;
-}
+private typedef Props = ForcedOverride<
+	StandardProps<InputLabelClassKey>,
+	InputLabelBaseProps
+>;
 
 typedef InputLabelBaseProps = {
 	> FormLabelBaseProps,

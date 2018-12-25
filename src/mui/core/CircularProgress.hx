@@ -2,14 +2,18 @@ package mui.core;
 
 import haxe.extern.EitherType;
 import react.ReactComponent;
+import react.types.ForcedOverride;
 import react.types.Noise;
 
 import mui.core.progress.CircularProgressClassKey;
 import mui.core.progress.CircularProgressVariant;
 
-typedef CircularProgressProps = {
-	> StandardProps<CircularProgressClassKey>,
+private typedef Props = ForcedOverride<
+	StandardProps<CircularProgressClassKey>,
+	CircularProgressProps
+>;
 
+typedef CircularProgressProps = {
 	@:optional var children:Noise;
 	@:optional var color:ThemeColorWithInherit;
 	@:optional var disableShrink:Bool;
@@ -20,5 +24,4 @@ typedef CircularProgressProps = {
 }
 
 @:jsRequire('@material-ui/core', 'CircularProgress')
-extern class CircularProgress extends ReactComponentOfProps<CircularProgressProps> {}
-
+extern class CircularProgress extends ReactComponentOfProps<Props> {}

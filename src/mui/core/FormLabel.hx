@@ -2,15 +2,14 @@ package mui.core;
 
 import react.ReactComponent;
 import react.ReactType;
+import react.types.ForcedOverride;
 
 import mui.core.form.FormLabelClassKey;
 
-typedef FormLabelProps = {
-	> StandardProps<FormLabelClassKey>,
-	> FormLabelBaseProps,
-
-	@:optional var children:ReactFragment;
-}
+private typedef Props = ForcedOverride<
+	StandardProps<FormLabelClassKey>,
+	FormLabelBaseProps
+>;
 
 typedef FormLabelBaseProps = {
 	@:optional var component:ReactType;
@@ -23,5 +22,4 @@ typedef FormLabelBaseProps = {
 }
 
 @:jsxRequire('@material-ui/core', 'FormLabel')
-extern class FormLabel extends ReactComponentOfProps<FormLabelProps> {}
-
+extern class FormLabel extends ReactComponentOfProps<Props> {}

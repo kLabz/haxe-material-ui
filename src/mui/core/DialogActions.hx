@@ -1,16 +1,16 @@
 package mui.core;
 
 import react.ReactComponent;
+import react.types.ForcedOverride;
 
 import mui.core.dialog.DialogActionsClassKey;
 
-private typedef Props = {
-	> StandardProps<DialogActionsClassKey>,
-	> DialogActionsBaseProps,
-}
+private typedef Props = ForcedOverride<
+	StandardProps<DialogActionsClassKey>,
+	DialogActionsBaseProps
+>;
 
 typedef DialogActionsBaseProps = {
-	@:optional var children:ReactFragment;
 	@:optional var disableActionSpacing:Bool;
 }
 

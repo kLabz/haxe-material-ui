@@ -2,15 +2,16 @@ package mui.core;
 
 import react.ReactComponent;
 import react.ReactType;
+import react.types.ForcedOverride;
 import react.types.Noise;
 
 import mui.core.ButtonBase.ButtonBaseBaseProps;
 import mui.core.bottom.BottomNavigationActionClassKey;
 
-private typedef Props = {
-	> StandardProps<BottomNavigationActionClassKey>,
-	> BottomNavigationActionBaseProps,
-}
+private typedef Props = ForcedOverride<
+	StandardProps<BottomNavigationActionClassKey>,
+	BottomNavigationActionBaseProps
+>;
 
 typedef BottomNavigationActionBaseProps = {
 	> ButtonBaseBaseProps,

@@ -1,12 +1,18 @@
 package mui.core;
 
 import react.ReactComponent;
+import react.types.ForcedOverride;
 import react.types.Noise;
+
 import mui.core.InputBase.InputBaseBaseProps;
 import mui.core.input.InputClassKey;
 
-private typedef Props = {
-	> StandardProps<InputClassKey>,
+private typedef Props = ForcedOverride<
+	StandardProps<InputClassKey>,
+	InputProps
+>;
+
+private typedef InputProps = {
 	> InputBaseProps,
 
 	@:optional var children:Noise;

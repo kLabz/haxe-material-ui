@@ -2,18 +2,18 @@ package mui.core;
 
 import react.ReactComponent;
 import react.ReactType;
+import react.types.ForcedOverride;
 
 import mui.core.form.FormHelperTextClassKey;
 import mui.core.form.FormHelperTextMargin;
 import mui.core.form.FormControlVariant;
 
-private typedef Props = {
-	> StandardProps<FormHelperTextClassKey>,
-	> FormHelperTextBaseProps,
-}
+private typedef Props = ForcedOverride<
+	StandardProps<FormHelperTextClassKey>,
+	FormHelperTextBaseProps
+>;
 
 typedef FormHelperTextBaseProps = {
-	@:optional var children:ReactFragment;
 	@:optional var component:ReactType;
 	@:optional var disabled:Bool;
 	@:optional var error:Bool;

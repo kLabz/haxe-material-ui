@@ -5,6 +5,7 @@ import js.html.Element;
 import react.ReactComponent;
 import react.ReactType;
 import react.types.EventHandler;
+import react.types.ForcedOverride;
 import react.types.SyntheticEvent;
 
 import mui.core.Select.SelectBaseProps;
@@ -13,12 +14,10 @@ import mui.core.table.LabelDisplayedRowsArgs;
 import mui.core.table.TableSortDirection;
 import mui.core.table.TablePaginationClassKey;
 
-private typedef Props = {
-	> StandardProps<TablePaginationClassKey>,
-	> TablePaginationBaseProps,
-
-	@:optional var children:ReactFragment;
-}
+private typedef Props = ForcedOverride<
+	StandardProps<TablePaginationClassKey>,
+	TablePaginationBaseProps
+>;
 
 typedef TablePaginationBaseProps = {
 	> TableCellBaseProps,

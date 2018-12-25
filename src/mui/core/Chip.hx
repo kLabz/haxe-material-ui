@@ -5,14 +5,18 @@ import react.ReactComponent;
 import react.ReactType;
 import react.types.DOMAttributes.HandlerOrVoid;
 import react.types.EventHandler;
+import react.types.ForcedOverride;
 import react.types.Noise;
 
 import mui.core.chip.ChipClassKey;
 import mui.core.chip.ChipVariant;
 
-typedef ChipProps = {
-	> StandardProps<ChipClassKey>,
+private typedef Props = ForcedOverride<
+	StandardProps<ChipClassKey>,
+	ChipProps
+>;
 
+typedef ChipProps = {
 	@:optional var children:Noise;
 	@:optional var avatar:ReactFragment;
 	@:optional var clickable:Bool;
@@ -27,5 +31,4 @@ typedef ChipProps = {
 }
 
 @:jsRequire('@material-ui/core', 'Chip')
-extern class Chip extends ReactComponentOfProps<ChipProps> {}
-
+extern class Chip extends ReactComponentOfProps<Props> {}

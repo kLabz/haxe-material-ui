@@ -2,24 +2,27 @@ package mui.core;
 
 import js.html.Event;
 import react.ReactComponent;
+import react.types.ForcedOverride;
+
+import mui.core.Modal.ModalBaseProps;
+import mui.core.Paper.PaperBaseProps;
 import mui.core.common.TransitionDuration;
 import mui.core.drawer.DrawerAnchor;
 import mui.core.drawer.DrawerClassKey;
 import mui.core.drawer.DrawerVariant;
 
-private typedef Props = {
-	> StandardProps<DrawerClassKey>,
-	> DrawerBaseProps,
-}
+private typedef Props = ForcedOverride<
+	StandardProps<DrawerClassKey>,
+	DrawerBaseProps
+>;
 
 typedef DrawerBaseProps = {
 	@:optional var anchor:DrawerAnchor;
-	@:optional var children:ReactFragment;
 	@:optional var elevation:Int;
-	@:optional var ModalProps:Dynamic;
+	@:optional var ModalProps:ModalBaseProps;
 	@:optional var onClose:Event->Void;
 	@:optional var open:Bool;
-	@:optional var PaperProps:Dynamic;
+	@:optional var PaperProps:PaperBaseProps;
 	@:optional var SlideProps:Dynamic;
 	@:optional var transitionDuration:TransitionDuration;
 	@:optional var variant:DrawerVariant;

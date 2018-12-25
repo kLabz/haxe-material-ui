@@ -2,6 +2,7 @@ package mui.core;
 
 import react.ReactComponent;
 import react.ReactType;
+import react.types.ForcedOverride;
 
 import mui.core.Modal.ModalBaseProps;
 import mui.core.Paper.PaperBaseProps;
@@ -10,10 +11,10 @@ import mui.core.common.TransitionDuration;
 import mui.core.dialog.DialogClassKey;
 import mui.core.dialog.DialogScrollContainer;
 
-private typedef Props = {
-	> StandardProps<DialogClassKey>,
-	> DialogBaseProps,
-}
+private typedef Props = ForcedOverride<
+	StandardProps<DialogClassKey>,
+	DialogBaseProps
+>;
 
 typedef DialogBaseProps = {
 	> ModalBaseProps,

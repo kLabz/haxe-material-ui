@@ -1,13 +1,14 @@
 package mui.core;
 
 import react.ReactComponent;
+import react.types.ForcedOverride;
 
 import mui.core.dialog.DialogTitleClassKey;
 
-private typedef Props = {
-	> StandardProps<DialogTitleClassKey>,
-	> DialogTitleBaseProps,
-}
+private typedef Props = ForcedOverride<
+	StandardProps<DialogTitleClassKey>,
+	DialogTitleBaseProps
+>;
 
 typedef DialogTitleBaseProps = {
 	var children:ReactFragment;

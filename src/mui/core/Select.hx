@@ -5,18 +5,17 @@ import react.ReactComponent;
 import react.ReactType;
 import react.types.DOMAttributes.HandlerOrVoid;
 import react.types.EventHandler;
+import react.types.ForcedOverride;
 
 import mui.core.form.FormControlVariant;
 import mui.core.input.InputValue;
 import mui.core.input.SelectClassKey;
 import mui.core.Input.InputBaseProps;
 
-private typedef Props = {
-	> StandardProps<SelectClassKey>,
-	> SelectBaseProps,
-
-	@:optional var children:ReactFragment;
-}
+private typedef Props = ForcedOverride<
+	StandardProps<SelectClassKey>,
+	SelectBaseProps
+>;
 
 typedef SelectBaseProps = {
 	> InputBaseProps,

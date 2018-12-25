@@ -2,17 +2,16 @@ package mui.core;
 
 import react.ReactComponent;
 import react.ReactType;
+import react.types.ForcedOverride;
 
 import mui.core.form.FormControlClassKey;
 import mui.core.form.FormControlMargin;
 import mui.core.form.FormControlVariant;
 
-private typedef Props = {
-	> StandardProps<FormControlClassKey>,
-	> FormControlBaseProps,
-
-	@:optional var children:ReactFragment;
-}
+private typedef Props = ForcedOverride<
+	StandardProps<FormControlClassKey>,
+	FormControlBaseProps
+>;
 
 typedef FormControlBaseProps = {
 	@:optional var component:ReactType;

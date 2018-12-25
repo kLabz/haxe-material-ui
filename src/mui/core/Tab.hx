@@ -1,13 +1,18 @@
 package mui.core;
 
 import react.ReactComponent;
+import react.types.ForcedOverride;
 import react.types.Noise;
 
 import mui.core.ButtonBase.ButtonBaseBaseProps;
 import mui.core.tab.TabClassKey;
 
+private typedef Props = ForcedOverride<
+	StandardProps<TabClassKey>,
+	TabProps
+>;
+
 typedef TabProps = {
-	> StandardProps<TabClassKey>,
 	> ButtonBaseBaseProps,
 
 	@:optional var children:Noise;
@@ -18,5 +23,5 @@ typedef TabProps = {
 }
 
 @:jsRequire('@material-ui/core', 'Tab')
-extern class Tab extends ReactComponentOfProps<TabProps> {}
+extern class Tab extends ReactComponentOfProps<Props> {}
 

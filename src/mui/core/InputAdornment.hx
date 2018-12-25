@@ -2,14 +2,18 @@ package mui.core;
 
 import react.ReactComponent;
 import react.ReactType;
+import react.types.ForcedOverride;
 
 import mui.core.input.InputAdornmentClassKey;
 import mui.core.input.InputAdornmentPosition;
 import mui.core.form.FormControlVariant;
 
-typedef InputAdornmentProps = {
-	> StandardProps<InputAdornmentClassKey>,
+private typedef Props = ForcedOverride<
+	StandardProps<InputAdornmentClassKey>,
+	InputAdornmentProps
+>;
 
+typedef InputAdornmentProps = {
 	var children:ReactFragment;
 	@:optional var component:ReactType;
 	@:optional var disableTypography:Bool;
@@ -18,4 +22,4 @@ typedef InputAdornmentProps = {
 }
 
 @:jsRequire('@material-ui/core', 'InputAdornment')
-extern class InputAdornment extends ReactComponentOfProps<InputAdornmentProps> {}
+extern class InputAdornment extends ReactComponentOfProps<Props> {}

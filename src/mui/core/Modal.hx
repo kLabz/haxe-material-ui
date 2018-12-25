@@ -5,13 +5,18 @@ import js.html.Event;
 import react.ReactComponent;
 import react.ReactType;
 import react.types.DOMOrCallback;
+import react.types.ForcedOverride;
 
 import mui.core.modal.ModalClassKey;
 import mui.core.modal.ModalCloseReason;
 import mui.core.modal.ModalManager;
 
-private typedef Props = {
-	> StandardProps<ModalClassKey>,
+private typedef Props = ForcedOverride<
+	StandardProps<ModalClassKey>,
+	ModalProps
+>;
+
+private typedef ModalProps = {
 	> ModalBaseProps,
 
 	@:optional var children:ReactSingleFragment;

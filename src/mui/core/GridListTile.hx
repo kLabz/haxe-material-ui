@@ -2,14 +2,17 @@ package mui.core;
 
 import react.ReactComponent;
 import react.ReactType;
+import react.types.ForcedOverride;
 
 import mui.core.common.IntOrAuto;
 import mui.core.grid.GridListTileClassKey;
 
-private typedef Props = {
-	> StandardProps<GridListTileClassKey>,
+private typedef Props = ForcedOverride<
+	StandardProps<GridListTileClassKey>,
+	GridListTileProps
+>;
 
-	@:optional var children:ReactFragment;
+typedef GridListTileProps = {
 	@:optional var cols:Int;
 	@:optional var component:ReactType;
 	@:optional var rows:Int;

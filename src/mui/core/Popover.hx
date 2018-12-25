@@ -7,6 +7,7 @@ import react.ReactComponent;
 import react.ReactType;
 import react.types.DOMOrCallback;
 import react.types.Record;
+import react.types.ForcedOverride;
 
 import mui.core.Modal.ModalBaseProps;
 import mui.core.common.Position;
@@ -16,12 +17,10 @@ import mui.core.popover.PopoverClassKey;
 import mui.core.popover.AnchorPosition;
 import mui.core.popover.AnchorReference;
 
-private typedef Props = {
-	> StandardProps<PopoverClassKey>,
-	> PopoverBaseProps,
-
-	@:optional var children:ReactFragment;
-}
+private typedef Props = ForcedOverride<
+	StandardProps<PopoverClassKey>,
+	PopoverBaseProps
+>;
 
 typedef PopoverBaseProps = {
 	> ModalBaseProps,

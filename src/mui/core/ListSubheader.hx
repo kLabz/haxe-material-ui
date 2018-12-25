@@ -2,13 +2,16 @@ package mui.core;
 
 import react.ReactComponent;
 import react.ReactType;
+import react.types.ForcedOverride;
 
 import mui.core.list.ListSubheaderClassKey;
 
-private typedef Props = {
-	> StandardProps<ListSubheaderClassKey>,
+private typedef Props = ForcedOverride<
+	StandardProps<ListSubheaderClassKey>,
+	ListSubheaderProps
+>;
 
-	@:optional var children:ReactFragment;
+typedef ListSubheaderProps = {
 	@:optional var color:ThemeColorWithInherit;
 	@:optional var component:ReactType;
 	@:optional var disableGutters:Bool;
@@ -18,4 +21,3 @@ private typedef Props = {
 
 @:jsRequire('@material-ui/core', 'ListSubheader')
 extern class ListSubheader extends ReactComponentOfProps<Props> {}
-

@@ -3,15 +3,16 @@ package mui.core;
 import js.html.Event;
 import react.ReactComponent;
 import react.ReactType;
+import react.types.ForcedOverride;
 
 import mui.core.Popper.PopperBaseProps;
 import mui.core.popper.PopperPlacement;
 import mui.core.popper.TooltipClassKey;
 
-private typedef Props = {
-	> StandardProps<TooltipClassKey>,
-	> TooltipBaseProps,
-}
+private typedef Props = ForcedOverride<
+	StandardProps<TooltipClassKey>,
+	TooltipBaseProps
+>;
 
 typedef TooltipBaseProps = {
 	var children:ReactFragment;

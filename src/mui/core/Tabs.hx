@@ -6,13 +6,17 @@ import react.ReactComponent;
 import react.ReactType;
 import react.types.DOMAttributes.HandlerOrVoid;
 import react.types.EventHandler;
+import react.types.ForcedOverride;
 
 import mui.core.tab.TabsClassKey;
 import mui.core.tab.ScrollButtons;
 
-typedef TabsProps = {
-	> StandardProps<TabsClassKey>,
+private typedef Props = ForcedOverride<
+	StandardProps<TabsClassKey>,
+	TabsProps
+>;
 
+typedef TabsProps = {
 	@:optional var action:Function;
 	@:optional var centered:Bool;
 	@:optional var component:ReactType;
@@ -28,5 +32,4 @@ typedef TabsProps = {
 }
 
 @:jsRequire('@material-ui/core', 'Tabs')
-extern class Tabs extends ReactComponentOfProps<TabsProps> {}
-
+extern class Tabs extends ReactComponentOfProps<Props> {}

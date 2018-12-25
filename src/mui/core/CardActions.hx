@@ -1,16 +1,18 @@
 package mui.core;
 
 import react.ReactComponent;
+import react.types.ForcedOverride;
 
 import mui.core.card.CardActionsClassKey;
 
-typedef CardActionsProps = {
-	> StandardProps<CardActionsClassKey>,
+private typedef Props = ForcedOverride<
+	StandardProps<CardActionsClassKey>,
+	CardActionsProps
+>;
 
-	@:optional var children:ReactFragment;
+typedef CardActionsProps = {
 	@:optional var disableActionSpacing:Bool;
 }
 
-@:acceptsMoreProps
 @:jsRequire('@material-ui/core', 'CardActions')
-extern class CardActions extends ReactComponentOfProps<CardActionsProps> {}
+extern class CardActions extends ReactComponentOfProps<Props> {}

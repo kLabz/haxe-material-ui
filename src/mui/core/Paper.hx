@@ -2,15 +2,14 @@ package mui.core;
 
 import react.ReactComponent;
 import react.ReactType;
+import react.types.ForcedOverride;
 
 import mui.core.paper.PaperClassKey;
 
-private typedef Props = {
-	> StandardProps<PaperClassKey>,
-	> PaperBaseProps,
-
-	@:optional var children:ReactFragment;
-}
+private typedef Props = ForcedOverride<
+	StandardProps<PaperClassKey>,
+	PaperBaseProps
+>;
 
 typedef PaperBaseProps = {
 	@:optional var component:ReactType;

@@ -2,15 +2,16 @@ package mui.core;
 
 import react.ReactComponent;
 import react.ReactType;
+import react.types.ForcedOverride;
 import react.types.Noise;
 
 import mui.core.list.DividerClassKey;
 import mui.core.list.DividerVariant;
 
-private typedef Props = {
-	> StandardProps<DividerClassKey>,
-	> DividerBaseProps,
-}
+private typedef Props = ForcedOverride<
+	StandardProps<DividerClassKey>,
+	DividerBaseProps
+>;
 
 typedef DividerBaseProps = {
 	@:optional var children:Noise;

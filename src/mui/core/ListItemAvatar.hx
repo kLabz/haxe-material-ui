@@ -1,12 +1,16 @@
 package mui.core;
 
 import react.ReactComponent;
+import react.types.ForcedOverride;
 
 import mui.core.list.ListItemAvatarClassKey;
 
-private typedef Props = {
-	> StandardProps<ListItemAvatarClassKey>,
+private typedef Props = ForcedOverride<
+	StandardProps<ListItemAvatarClassKey>,
+	ListItemAvatarProps
+>;
 
+typedef ListItemAvatarProps = {
 	var children:ReactFragment;
 }
 

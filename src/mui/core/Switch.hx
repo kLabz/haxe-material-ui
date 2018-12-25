@@ -1,20 +1,22 @@
 package mui.core;
 
-import react.types.Noise;
 import js.html.HtmlElement;
 import js.html.InputElement;
 import react.ReactComponent;
 import react.ReactRef;
 import react.types.DOMAttributes.HandlerOrVoid;
 import react.types.EventHandler.FormEventHandler;
+import react.types.ForcedOverride;
+import react.types.Noise;
+
 import mui.core.checkbox.CheckedStatus;
 import mui.core.checkbox.SwitchClassKey;
 import mui.core.input.InputType;
 
-private typedef Props = {
-	> StandardProps<SwitchClassKey>,
-	> SwitchBaseProps,
-}
+private typedef Props = ForcedOverride<
+	StandardProps<SwitchClassKey>,
+	SwitchBaseProps
+>;
 
 typedef SwitchBaseProps = {
 	@:optional var children:Noise;

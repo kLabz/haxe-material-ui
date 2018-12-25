@@ -2,14 +2,17 @@ package mui.core;
 
 import react.ReactComponent;
 import react.ReactType;
+import react.types.ForcedOverride;
 
 import mui.core.table.TableSortDirection;
 import mui.core.table.TableSortLabelClassKey;
 
-private typedef Props = {
-	> StandardProps<TableSortLabelClassKey>,
+private typedef Props = ForcedOverride<
+	StandardProps<TableSortLabelClassKey>,
+	TableSortLabelProps
+>;
 
-	@:optional var children:ReactFragment;
+typedef TableSortLabelProps = {
 	@:optional var active:Bool;
 	@:optional var direction:TableSortDirection;
 	@:optional var hideSortIcon:Bool;

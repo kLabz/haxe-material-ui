@@ -1,16 +1,17 @@
 package mui.core;
 
 import react.ReactComponent;
+import react.types.ForcedOverride;
 
 import mui.core.button.FabClassKey;
 import mui.core.button.ButtonSize;
 import mui.core.button.FabVariant;
 import mui.core.ButtonBase.ButtonBaseBaseProps;
 
-private typedef Props = {
-	> StandardProps<FabClassKey>,
-	> FabProps,
-}
+private typedef Props = ForcedOverride<
+	StandardProps<FabClassKey>,
+	FabProps
+>;
 
 typedef FabProps = {
 	> ButtonBaseBaseProps,

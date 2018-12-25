@@ -1,13 +1,18 @@
 package mui.core;
 
 import react.ReactComponent;
+import react.types.ForcedOverride;
 
 import mui.core.appbar.AppBarClassKey;
 import mui.core.common.CSSPosition;
 import mui.core.Paper.PaperBaseProps;
 
+private typedef Props = ForcedOverride<
+	StandardProps<AppBarClassKey>,
+	AppBarProps
+>;
+
 typedef AppBarProps = {
-	> StandardProps<AppBarClassKey>,
 	> PaperBaseProps,
 
 	var children:ReactFragment;
@@ -16,4 +21,4 @@ typedef AppBarProps = {
 }
 
 @:jsRequire('@material-ui/core', 'AppBar')
-extern class AppBar extends ReactComponentOfProps<AppBarProps> {}
+extern class AppBar extends ReactComponentOfProps<Props> {}

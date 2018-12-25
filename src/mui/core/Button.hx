@@ -1,14 +1,19 @@
 package mui.core;
 
 import react.ReactComponent;
+import react.types.ForcedOverride;
 
 import mui.core.button.ButtonClassKey;
 import mui.core.button.ButtonSize;
 import mui.core.button.ButtonVariant;
 import mui.core.ButtonBase.ButtonBaseBaseProps;
 
+private typedef Props = ForcedOverride<
+	StandardProps<ButtonClassKey>,
+	ButtonProps
+>;
+
 typedef ButtonProps = {
-	> StandardProps<ButtonClassKey>,
 	> ButtonBaseBaseProps,
 
 	var children:ReactFragment;
@@ -20,6 +25,5 @@ typedef ButtonProps = {
 	@:optional var variant:ButtonVariant;
 }
 
-@:acceptsMoreProps
 @:jsRequire('@material-ui/core', 'Button')
-extern class Button extends ReactComponentOfProps<ButtonProps> {}
+extern class Button extends ReactComponentOfProps<Props> {}

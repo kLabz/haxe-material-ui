@@ -3,18 +3,17 @@ package mui.core;
 import mui.StandardProps;
 import react.ReactComponent;
 import react.ReactType;
+import react.types.ForcedOverride;
 
 import mui.core.common.Align;
 import mui.core.typography.HeadlineMapping;
 import mui.core.typography.TypographyClassKey;
 import mui.core.typography.TypographyVariant;
 
-private typedef Props = {
-	> StandardProps<TypographyClassKey>,
-	> TypographyBaseProps,
-
-	@:optional var children:ReactFragment;
-}
+private typedef Props = ForcedOverride<
+	StandardProps<TypographyClassKey>,
+	TypographyBaseProps
+>;
 
 typedef TypographyBaseProps = {
 	@:optional var align:Align;

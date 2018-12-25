@@ -4,17 +4,16 @@ import haxe.Constraints.Function;
 import react.ReactRef;
 import react.ReactComponent;
 import react.ReactType;
+import react.types.ForcedOverride;
 
 import mui.core.button.ButtonBaseActions;
 import mui.core.button.ButtonBaseClassKey;
 import mui.core.button.ButtonType;
 
-private typedef Props = {
-	> StandardProps<ButtonBaseClassKey>,
-	> ButtonBaseBaseProps,
-
-	@:optional var children:ReactFragment;
-}
+private typedef Props = ForcedOverride<
+	StandardProps<ButtonBaseClassKey>,
+	ButtonBaseBaseProps
+>;
 
 typedef ButtonBaseBaseProps = {
 	@:optional var action:ButtonBaseActions->Void;
@@ -29,12 +28,7 @@ typedef ButtonBaseBaseProps = {
 	@:optional var onFocusVisible:Function;
 	@:optional var TouchRippleProps:Dynamic;
 	@:optional var type:ButtonType;
-
-	// Other common props than would be passed to the native element
-	@:optional var href:String;
-	@:optional var title:String;
 }
 
 @:jsRequire('@material-ui/core', 'ButtonBase')
 extern class ButtonBase extends ReactComponentOfProps<Props> {}
-

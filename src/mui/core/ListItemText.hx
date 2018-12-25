@@ -1,14 +1,17 @@
 package mui.core;
 
 import react.ReactComponent;
+import react.types.ForcedOverride;
 
 import mui.core.Typography.TypographyBaseProps;
 import mui.core.list.ListItemTextClassKey;
 
-typedef ListItemTextProps = {
-	> StandardProps<ListItemTextClassKey>,
+private typedef Props = ForcedOverride<
+	StandardProps<ListItemTextClassKey>,
+	ListItemTextProps
+>;
 
-	@:optional var children:ReactFragment;
+typedef ListItemTextProps = {
 	@:optional var disableTypography:Bool;
 	@:optional var inset:Bool;
 	@:optional var primary:ReactFragment;
@@ -18,5 +21,4 @@ typedef ListItemTextProps = {
 }
 
 @:jsRequire('@material-ui/core', 'ListItemText')
-extern class ListItemText extends ReactComponentOfProps<ListItemTextProps> {}
-
+extern class ListItemText extends ReactComponentOfProps<Props> {}

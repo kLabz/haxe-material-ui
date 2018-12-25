@@ -1,13 +1,16 @@
 package mui.core;
 
 import react.ReactComponent;
+import react.types.ForcedOverride;
 
 import mui.core.exppanel.ExpansionPanelSummaryClassKey;
 
-private typedef Props = {
-	> StandardProps<ExpansionPanelSummaryClassKey>,
+private typedef Props = ForcedOverride<
+	StandardProps<ExpansionPanelSummaryClassKey>,
+	ExpansionPanelSummaryProps
+>;
 
-	@:optional var children:ReactFragment;
+typedef ExpansionPanelSummaryProps = {
 	@:optional var expandIcon:ReactFragment;
 	@:optional var IconButtonProps:Dynamic; // TODO
 }

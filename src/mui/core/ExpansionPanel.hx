@@ -4,20 +4,20 @@ import js.html.HtmlElement;
 import react.ReactComponent;
 import react.types.DOMAttributes.HandlerOrVoid;
 import react.types.EventHandler.FormEventHandler;
+import react.types.ForcedOverride;
 
 import mui.core.Paper.PaperBaseProps;
 import mui.core.exppanel.ExpansionPanelClassKey;
 
-private typedef Props = {
-	> StandardProps<ExpansionPanelClassKey>,
-	> ExpansionPanelBaseProps,
-
-	var children:ReactFragment;
-}
+private typedef Props = ForcedOverride<
+	StandardProps<ExpansionPanelClassKey>,
+	ExpansionPanelBaseProps
+>;
 
 typedef ExpansionPanelBaseProps = {
 	> PaperBaseProps,
 
+	var children:ReactFragment;
 	@:optional var CollapseProps:Dynamic; // TODO
 	@:optional var defaultExpanded:Bool;
 	@:optional var disabled:Bool;

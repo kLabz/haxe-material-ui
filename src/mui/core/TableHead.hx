@@ -2,16 +2,19 @@ package mui.core;
 
 import react.ReactComponent;
 import react.ReactType;
+import react.types.ForcedOverride;
 
 import mui.core.table.TableHeadClassKey;
 
-typedef TableHeadProps = {
-	> StandardProps<TableHeadClassKey>,
+private typedef Props = ForcedOverride<
+	StandardProps<TableHeadClassKey>,
+	TableHeadProps
+>;
 
+typedef TableHeadProps = {
 	var children:ReactFragment;
 	@:optional var component:ReactType;
 }
 
-@:acceptsMoreProps
 @:jsRequire('@material-ui/core', 'TableHead')
-extern class TableHead extends ReactComponentOfProps<TableHeadProps> {}
+extern class TableHead extends ReactComponentOfProps<Props> {}
