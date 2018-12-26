@@ -18,12 +18,13 @@ private typedef Props = ForcedOverride<
 	{
 		> ModalBaseProps,
 
+		var open:Bool;
 		@:optional var children:ReactSingleFragment;
 	}
 >;
 
 typedef ModalBaseProps = {
-	var open:Bool;
+	@:optional var open:Bool;
 	@:optional var BackdropComponent:ReactType;
 	@:optional var BackdropProps:BackdropBaseProps;
 	@:optional var container:DOMOrCallback;
