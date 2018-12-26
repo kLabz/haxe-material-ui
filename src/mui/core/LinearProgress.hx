@@ -10,10 +10,10 @@ import mui.core.progress.LinearProgressVariant;
 
 private typedef Props = ForcedOverride<
 	StandardProps<LinearProgressClassKey>,
-	LinearProgressProps
+	LinearProgressBaseProps
 >;
 
-typedef LinearProgressProps = {
+typedef LinearProgressBaseProps = {
 	@:optional var children:Noise;
 	@:optional var color:ColorPS;
 	@:optional var value:Float;
