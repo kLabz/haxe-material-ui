@@ -1,9 +1,9 @@
 package mui.core;
 
-import haxe.Constraints.Function;
 import react.ReactRef;
 import react.ReactComponent;
 import react.ReactType;
+import react.types.DOMAttributes;
 import react.types.ForcedOverride;
 
 import mui.core.button.ButtonBaseActions;
@@ -25,7 +25,7 @@ typedef ButtonBaseBaseProps = {
 	@:optional var disableTouchRipple:Bool;
 	@:optional var focusRipple:Bool;
 	@:optional var focusVisibleClassName:String;
-	@:optional var onFocusVisible:Function;
+	@:optional var onFocusVisible:HandlerOrVoid<ClassicHandler>;
 	@:optional var TouchRippleProps:Dynamic;
 	@:optional var type:ButtonType;
 }

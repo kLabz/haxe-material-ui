@@ -1,10 +1,9 @@
 package mui.core;
 
-import js.html.HtmlElement;
+import js.html.Event;
 import react.ReactComponent;
 import react.ReactType;
 import react.types.DOMAttributes.HandlerOrVoid;
-import react.types.EventHandler;
 import react.types.ForcedOverride;
 
 import mui.core.bottom.BottomNavigationClassKey;
@@ -16,7 +15,7 @@ private typedef Props = ForcedOverride<
 
 typedef BottomNavigationProps = {
 	var children:ReactFragment;
-	@:optional var onChange:HandlerOrVoid<FormEventHandler<HtmlElement>>;
+	@:optional var onChange:HandlerOrVoid<Event->Any->Void>;
 	@:optional var showLabels:Bool;
 	@:optional var value:Any;
 }

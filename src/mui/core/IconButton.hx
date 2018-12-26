@@ -8,10 +8,10 @@ import mui.core.ButtonBase.ButtonBaseBaseProps;
 
 private typedef Props = ForcedOverride<
 	StandardProps<IconButtonClassKey>,
-	IconButtonProps
+	IconButtonBaseProps
 >;
 
-typedef IconButtonProps = {
+typedef IconButtonBaseProps = {
 	> ButtonBaseBaseProps,
 
 	@:optional var color:Color;

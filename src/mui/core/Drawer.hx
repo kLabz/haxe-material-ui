@@ -2,6 +2,7 @@ package mui.core;
 
 import js.html.Event;
 import react.ReactComponent;
+import react.types.DOMAttributes;
 import react.types.ForcedOverride;
 
 import mui.core.Modal.ModalBaseProps;
@@ -20,7 +21,7 @@ typedef DrawerBaseProps = {
 	@:optional var anchor:DrawerAnchor;
 	@:optional var elevation:Int;
 	@:optional var ModalProps:ModalBaseProps;
-	@:optional var onClose:Event->Void;
+	@:optional var onClose:HandlerOrVoid<ClassicHandler>;
 	@:optional var open:Bool;
 	@:optional var PaperProps:PaperBaseProps;
 	@:optional var SlideProps:Dynamic;

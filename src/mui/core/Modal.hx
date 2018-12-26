@@ -4,28 +4,28 @@ import js.html.Event;
 
 import react.ReactComponent;
 import react.ReactType;
+import react.types.DOMAttributes;
 import react.types.DOMOrCallback;
 import react.types.ForcedOverride;
 
+import mui.core.Backdrop.BackdropBaseProps;
 import mui.core.modal.ModalClassKey;
 import mui.core.modal.ModalCloseReason;
 import mui.core.modal.ModalManager;
 
 private typedef Props = ForcedOverride<
 	StandardProps<ModalClassKey>,
-	ModalProps
+	{
+		> ModalBaseProps,
+
+		@:optional var children:ReactSingleFragment;
+	}
 >;
-
-private typedef ModalProps = {
-	> ModalBaseProps,
-
-	@:optional var children:ReactSingleFragment;
-}
 
 typedef ModalBaseProps = {
 	var open:Bool;
 	@:optional var BackdropComponent:ReactType;
-	@:optional var BackdropProps:Dynamic;
+	@:optional var BackdropProps:BackdropBaseProps;
 	@:optional var container:DOMOrCallback;
 	@:optional var disableAutoFocus:Bool;
 	@:optional var disableBackdropClick:Bool;
@@ -36,10 +36,10 @@ typedef ModalBaseProps = {
 	@:optional var hideBackdrop:Bool;
 	@:optional var keepMounted:Bool;
 	@:optional var manager:ModalManager;
-	@:optional var onBackdropClick:Void->Void;
-	@:optional var onClose:Event->ModalCloseReason->Void;
-	@:optional var onEscapeKeyDown:Void->Void;
-	@:optional var onRendered:Void->Void;
+	@:optional var onBackdropClick:HandlerOrVoid<ClassicHandler>;
+	@:optional var onClose:HandlerOrVoid<Event->ModalCloseReason->Void>;
+	@:optional var onEscapeKeyDown:HandlerOrVoid<ClassicHandler>;
+	@:optional var onRendered:HandlerOrVoid<ClassicHandler>;
 }
 
 @:jsRequire('@material-ui/core', 'Modal')

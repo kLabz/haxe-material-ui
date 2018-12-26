@@ -1,11 +1,10 @@
 package mui.core;
 
-import js.html.HtmlElement;
+import js.html.Event;
 import js.html.InputElement;
 import react.ReactComponent;
 import react.ReactRef;
-import react.types.DOMAttributes.HandlerOrVoid;
-import react.types.EventHandler.FormEventHandler;
+import react.types.DOMAttributes;
 import react.types.ForcedOverride;
 import react.types.Noise;
 
@@ -29,7 +28,7 @@ typedef SwitchBaseProps = {
 	@:optional var id:String;
 	@:optional var inputProps:{}; // TODO
 	@:optional var inputRef:ReactRef<InputElement>;
-	@:optional var onChange:HandlerOrVoid<FormEventHandler<HtmlElement>>;
+	@:optional var onChange:HandlerOrVoid<Event->Bool->Void>;
 	@:optional var type:InputType;
 	@:optional var value:String;
 }

@@ -1,12 +1,11 @@
 package mui.core;
 
-import js.html.HtmlElement;
+import js.html.Event;
 import js.html.InputElement;
 import react.ReactComponent;
 import react.ReactRef;
 import react.ReactType;
-import react.types.DOMAttributes.HandlerOrVoid;
-import react.types.EventHandler.FormEventHandler;
+import react.types.DOMAttributes;
 import react.types.Noise;
 import react.types.ForcedOverride;
 
@@ -28,7 +27,7 @@ typedef FormControlLabelProps = {
 	@:optional var label:ReactFragment;
 	@:optional var labelPlacement:FormLabelPlacement;
 	@:optional var name:String;
-	@:optional var onChange:HandlerOrVoid<FormEventHandler<HtmlElement>>;
+	@:optional var onChange:HandlerOrVoid<Event->Bool->Void>;
 	@:optional var value:String;
 }
 

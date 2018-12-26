@@ -1,10 +1,8 @@
 package mui.core;
 
-import js.html.HtmlElement;
 import react.ReactComponent;
 import react.ReactType;
-import react.types.DOMAttributes.HandlerOrVoid;
-import react.types.EventHandler;
+import react.types.DOMAttributes;
 import react.types.ForcedOverride;
 import react.types.Noise;
 
@@ -25,8 +23,8 @@ typedef ChipProps = {
 	@:optional var deleteIcon:ReactFragment;
 	@:optional var icon:ReactFragment;
 	@:optional var label:ReactFragment;
-	@:optional var onClick:HandlerOrVoid<MouseEventHandler<HtmlElement>>;
-	@:optional var onDelete:Void->Void;
+	@:optional var onClick:HandlerOrVoid<ClassicHandler>;
+	@:optional var onDelete:HandlerOrVoid<ClassicHandler>;
 	@:optional var variant:ChipVariant;
 }
 

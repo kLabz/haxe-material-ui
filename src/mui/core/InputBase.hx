@@ -1,16 +1,14 @@
 package mui.core;
 
-import haxe.extern.EitherType;
-import js.html.HtmlElement;
 import js.html.InputElement;
 
 import react.ReactComponent;
 import react.ReactRef;
 import react.ReactType;
-import react.types.DOMAttributes.HandlerOrVoid;
-import react.types.EventHandler;
+import react.types.DOMAttributes;
 import react.types.ForcedOverride;
 import react.types.Noise;
+import react.types.StringOrInt;
 
 import mui.core.form.FormControlMargin;
 import mui.core.input.InputBaseClassKey;
@@ -19,14 +17,12 @@ import mui.core.input.InputValue;
 
 private typedef Props = ForcedOverride<
 	StandardProps<InputBaseClassKey>,
-	InputBaseProps
+	{
+		> InputBaseBaseProps,
+
+		@:optional var children:Noise;
+	}
 >;
-
-private typedef InputBaseProps = {
-	> InputBaseBaseProps,
-
-	@:optional var children:Noise;
-}
 
 typedef InputBaseBaseProps = {
 	@:optional var autoComplete:String;
@@ -43,12 +39,12 @@ typedef InputBaseBaseProps = {
 	@:optional var margin:FormControlMargin;
 	@:optional var mutliline:Bool;
 	@:optional var name:String;
-	@:optional var onChange:HandlerOrVoid<FormEventHandler<HtmlElement>>;
+	@:optional var onChange:HandlerOrVoid<ClassicHandler>;
 	@:optional var placeholder:String;
 	@:optional var readOnly:Bool;
 	@:optional var required:Bool;
-	@:optional var rows:EitherType<String, Int>;
-	@:optional var rowsMax:EitherType<String, Int>;
+	@:optional var rows:StringOrInt;
+	@:optional var rowsMax:StringOrInt;
 	@:optional var startAdornment:ReactFragment;
 	@:optional var type:InputType;
 	@:optional var value:InputValue;

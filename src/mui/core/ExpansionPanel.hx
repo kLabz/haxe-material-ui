@@ -1,9 +1,8 @@
 package mui.core;
 
-import js.html.HtmlElement;
+import js.html.Event;
 import react.ReactComponent;
-import react.types.DOMAttributes.HandlerOrVoid;
-import react.types.EventHandler.FormEventHandler;
+import react.types.DOMAttributes;
 import react.types.ForcedOverride;
 
 import mui.core.Paper.PaperBaseProps;
@@ -22,7 +21,7 @@ typedef ExpansionPanelBaseProps = {
 	@:optional var defaultExpanded:Bool;
 	@:optional var disabled:Bool;
 	@:optional var expanded:Bool;
-	@:optional var onChange:HandlerOrVoid<FormEventHandler<HtmlElement>>; // TODO: second argument
+	@:optional var onChange:HandlerOrVoid<Event->Bool->Void>;
 }
 
 @:jsRequire('@material-ui/core', 'ExpansionPanel')

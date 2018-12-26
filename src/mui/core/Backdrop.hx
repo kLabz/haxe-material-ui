@@ -10,10 +10,10 @@ import mui.core.popover.BackdropClassKey;
 
 private typedef Props = ForcedOverride<
 	StandardProps<BackdropClassKey>,
-	BackdropProps
+	BackdropBaseProps
 >;
 
-typedef BackdropProps = {
+typedef BackdropBaseProps = {
 	var open:Bool;
 	@:optional var children:Noise;
 	@:optional var invisible:Bool;

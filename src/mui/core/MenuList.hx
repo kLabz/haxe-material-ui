@@ -8,8 +8,10 @@ import mui.core.list.ListClassKey;
 
 private typedef Props = ForcedOverride<
 	StandardProps<ListClassKey>,
-	ListBaseProps
+	MenuListBaseProps
 >;
+
+typedef MenuListBaseProps = ListBaseProps;
 
 @:jsRequire('@material-ui/core', 'MenuList')
 extern class MenuList extends ReactComponentOfProps<Props> {}

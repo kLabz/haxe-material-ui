@@ -2,6 +2,7 @@ package mui.core;
 
 import react.ReactComponent;
 import react.ReactType;
+import react.types.DOMAttributes;
 import react.types.ForcedOverride;
 
 import mui.core.Modal.ModalBaseProps;
@@ -23,12 +24,12 @@ typedef DialogBaseProps = {
 	@:optional var fullScreen:Bool;
 	@:optional var fullWidth:Bool;
 	@:optional var maxWidth:ShirtSizeOrFalse;
-	@:optional var onEnter:Void->Void;
-	@:optional var onEntered:Void->Void;
-	@:optional var onEntering:Void->Void;
-	@:optional var onExit:Void->Void;
-	@:optional var onExited:Void->Void;
-	@:optional var onExiting:Void->Void;
+	@:optional var onEnter:HandlerOrVoid<ClassicHandler>;
+	@:optional var onEntered:HandlerOrVoid<ClassicHandler>;
+	@:optional var onEntering:HandlerOrVoid<ClassicHandler>;
+	@:optional var onExit:HandlerOrVoid<ClassicHandler>;
+	@:optional var onExited:HandlerOrVoid<ClassicHandler>;
+	@:optional var onExiting:HandlerOrVoid<ClassicHandler>;
 	@:optional var PaperComponent:ReactType;
 	@:optional var PaperProps:PaperBaseProps;
 	@:optional var scroll:DialogScrollContainer;

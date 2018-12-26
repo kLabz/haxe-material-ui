@@ -1,10 +1,9 @@
 package mui.core;
 
+import js.html.Event;
 import js.html.HtmlElement;
 import react.ReactComponent;
-import react.types.DOMAttributes.HandlerOrVoid;
 import react.types.DOMAttributes;
-import react.types.EventHandler.FormEventHandler;
 import react.types.ForcedOverride;
 
 import mui.StandardProps.StandardBaseProps;
@@ -21,7 +20,7 @@ typedef RadioGroupProps = {
 	> FormGroupBaseProps,
 
 	@:optional var name:String;
-	@:optional var onChange:HandlerOrVoid<FormEventHandler<HtmlElement>>;
+	@:optional var onChange:HandlerOrVoid<Event->String->Void>;
 	@:optional var value:RadioValue;
 }
 

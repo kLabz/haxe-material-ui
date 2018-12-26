@@ -1,13 +1,12 @@
 package mui.core;
 
-import js.html.HtmlElement;
-import haxe.Constraints.Function;
+import js.html.Event;
 import react.ReactComponent;
 import react.ReactType;
-import react.types.DOMAttributes.HandlerOrVoid;
-import react.types.EventHandler;
+import react.types.DOMAttributes;
 import react.types.ForcedOverride;
 
+import mui.core.tab.TabsActions;
 import mui.core.tab.TabsClassKey;
 import mui.core.tab.ScrollButtons;
 
@@ -17,12 +16,12 @@ private typedef Props = ForcedOverride<
 >;
 
 typedef TabsProps = {
-	@:optional var action:Function;
+	@:optional var action:TabsActions->Void;
 	@:optional var centered:Bool;
 	@:optional var component:ReactType;
 	@:optional var fullWidth:Bool;
 	@:optional var indicatorColor:ThemeColor;
-	@:optional var onChange:HandlerOrVoid<FormEventHandler<HtmlElement>>;
+	@:optional var onChange:HandlerOrVoid<Event->Int->Void>;
 	@:optional var scrollable:Bool;
 	@:optional var ScrollButtonComponent:ReactType;
 	@:optional var scrollButtons:ScrollButtons;

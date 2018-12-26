@@ -1,8 +1,8 @@
 package mui.core;
 
-import js.html.Event;
 import react.ReactComponent;
 import react.ReactType;
+import react.types.DOMAttributes;
 import react.types.ForcedOverride;
 
 import mui.core.Popper.PopperBaseProps;
@@ -17,7 +17,6 @@ private typedef Props = ForcedOverride<
 typedef TooltipBaseProps = {
 	var children:ReactFragment;
 	var title:ReactFragment;
-	@:optional var container:Dynamic;
 	@:optional var disableFocusListener:Bool;
 	@:optional var disableHoverListener:Bool;
 	@:optional var disableTouchListener:Bool;
@@ -27,8 +26,8 @@ typedef TooltipBaseProps = {
 	@:optional var interactive:Bool;
 	@:optional var leaveDelay:Int;
 	@:optional var leaveTouchDelay:Int;
-	@:optional var onClose:Event->Void;
-	@:optional var onOpen:Event->Void;
+	@:optional var onClose:HandlerOrVoid<ClassicHandler>;
+	@:optional var onOpen:HandlerOrVoid<ClassicHandler>;
 	@:optional var open:Bool;
 	@:optional var placement:PopperPlacement;
 	@:optional var PopperProps:PopperBaseProps;
