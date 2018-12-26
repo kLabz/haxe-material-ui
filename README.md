@@ -8,8 +8,8 @@ This library is still not complete, some components are still missing but will
 be added in the coming weeks. All icons from [`@material-ui/icons`][mui-icons]
 (version 3.0.1) have been implemented in version `0.8.0`.
 
-Current version (`0.9.0`) of haxe-material-ui is based off
-[`@material-ui/core`][mui-github] version [`3.7.0`][mui-3.7.0-doc].
+Versions `0.9.0` and later (currently `0.10.0`) of haxe-material-ui are based
+off [`@material-ui/core`][mui-github] version [`3.7.0`][mui-3.7.0-doc].
 
 ## Usage
 
@@ -27,10 +27,16 @@ but it is not being intensively tested with this version of Haxe. Please
 
 ### Installation
 
-Using haxelib
+Using haxelib:
 
 ```
 haxelib install material-ui
+```
+
+Install npm dependencies:
+
+```
+npm i --save-exact @material-ui/core@3.7.0 @material-ui/icons@3.0.1
 ```
 
 ## Roadmap
@@ -45,8 +51,7 @@ on [`haxe-react`'s gitter][gitter].
 Progress is being tracked on [this google doc][gdoc], with these objectives in
 mind:
 
-* Add missing components (80/108 atm)
-* Check/rework event callbacks
+* Add missing components (98/108 atm, including dependencies)
 * Add more utils for theme and style
 * Improve `css-types` for better props typing
 * Improve this README with instructions
