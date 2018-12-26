@@ -4,6 +4,7 @@ import react.ReactComponent;
 import react.ReactType;
 import react.types.ForcedOverride;
 
+import mui.Color;
 import mui.core.list.ListSubheaderClassKey;
 
 private typedef Props = ForcedOverride<
@@ -12,7 +13,7 @@ private typedef Props = ForcedOverride<
 >;
 
 typedef ListSubheaderProps = {
-	@:optional var color:ThemeColorWithInherit;
+	@:optional var color:ColorDPI;
 	@:optional var component:ReactType;
 	@:optional var disableGutters:Bool;
 	@:optional var disableSticky:Bool;

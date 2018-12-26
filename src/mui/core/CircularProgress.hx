@@ -5,6 +5,7 @@ import react.ReactComponent;
 import react.types.ForcedOverride;
 import react.types.Noise;
 
+import mui.Color;
 import mui.core.progress.CircularProgressClassKey;
 import mui.core.progress.CircularProgressVariant;
 
@@ -15,7 +16,7 @@ private typedef Props = ForcedOverride<
 
 typedef CircularProgressProps = {
 	@:optional var children:Noise;
-	@:optional var color:ThemeColorWithInherit;
+	@:optional var color:ColorPSI;
 	@:optional var disableShrink:Bool;
 	@:optional var size:EitherType<String, Float>;
 	@:optional var thickness:Float;

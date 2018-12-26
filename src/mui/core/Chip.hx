@@ -6,6 +6,7 @@ import react.types.DOMAttributes;
 import react.types.ForcedOverride;
 import react.types.Noise;
 
+import mui.Color;
 import mui.core.chip.ChipClassKey;
 import mui.core.chip.ChipVariant;
 
@@ -18,7 +19,7 @@ typedef ChipProps = {
 	@:optional var children:Noise;
 	@:optional var avatar:ReactFragment;
 	@:optional var clickable:Bool;
-	@:optional var color:ThemeColorWithDefault;
+	@:optional var color:ColorDPS;
 	@:optional var component:ReactType;
 	@:optional var deleteIcon:ReactFragment;
 	@:optional var icon:ReactFragment;

@@ -8,6 +8,7 @@ import react.types.DOMAttributes;
 import react.types.ForcedOverride;
 import react.types.Noise;
 
+import mui.Color;
 import mui.core.checkbox.CheckedStatus;
 import mui.core.input.InputType;
 import mui.core.radio.RadioClassKey;
@@ -22,7 +23,7 @@ typedef RadioProps = {
 	@:optional var children:Noise;
 	@:optional var checked:CheckedStatus;
 	@:optional var checkedIcon:ReactFragment;
-	@:optional var color:ThemeColorWithDefault;
+	@:optional var color:ColorDPS;
 	@:optional var disabled:Bool;
 	@:optional var disableRipple:Bool;
 	@:optional var icon:ReactFragment;
