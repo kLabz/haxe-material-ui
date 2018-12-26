@@ -6,6 +6,7 @@ import react.ReactType;
 import react.types.DOMAttributes;
 import react.types.ForcedOverride;
 
+import mui.core.ClickAwayListener.ClickAwayListenerBaseProps;
 import mui.core.SnackbarContent.SnackbarContentBaseProps;
 import mui.core.common.Position;
 import mui.core.common.TransitionDuration;
@@ -21,7 +22,7 @@ typedef SnackbarBaseProps = {
 	@:optional var action:ReactFragment;
 	@:optional var anchorOrigin:Position;
 	@:optional var autoHideDuration:Int;
-	@:optional var ClickAwayListenerProps:Dynamic;
+	@:optional var ClickAwayListenerProps:ClickAwayListenerBaseProps;
 	@:optional var ContentProps:SnackbarContentBaseProps;
 	@:optional var disableWindowBlurListener:Bool;
 	@:optional var message:ReactFragment;

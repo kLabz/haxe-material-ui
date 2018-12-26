@@ -1,7 +1,7 @@
 # TODO: include enzyme and add tests
 -lib react-next
 -lib react-types
--D react_deprecated_refs
+-lib react-event-listener
 
 -cp src
 --macro include('mui.core', true)
