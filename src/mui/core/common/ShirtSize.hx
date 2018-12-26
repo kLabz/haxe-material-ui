@@ -8,6 +8,14 @@ package mui.core.common;
 	var XL = 'xl';
 }
 
+@:enum abstract ShirtSizeOrArray(Dynamic) from Array<ShirtSize> {
+	var XS = 'xs';
+	var SM = 'sm';
+	var MD = 'md';
+	var LG = 'lg';
+	var XL = 'xl';
+}
+
 @:enum abstract ShirtSizeOrFalse(Dynamic) {
 	var None = false;
 	var XS = 'xs';
