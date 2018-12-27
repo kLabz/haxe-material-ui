@@ -5,6 +5,7 @@ import react.ReactComponent;
 import react.types.ForcedOverride;
 import react.types.HandlerOrVoid;
 
+import mui.core.Collapse.CollapseBaseProps;
 import mui.core.Paper.PaperBaseProps;
 import mui.core.exppanel.ExpansionPanelClassKey;
 
@@ -17,7 +18,7 @@ typedef ExpansionPanelBaseProps = {
 	> PaperBaseProps,
 
 	var children:ReactFragment;
-	@:optional var CollapseProps:Dynamic; // TODO
+	@:optional var CollapseProps:CollapseBaseProps;
 	@:optional var defaultExpanded:Bool;
 	@:optional var disabled:Bool;
 	@:optional var expanded:Bool;
