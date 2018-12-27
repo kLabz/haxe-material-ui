@@ -2,6 +2,7 @@ package mui.core;
 
 import react.ReactComponent;
 import react.ReactType;
+import react.transition.Transition;
 import react.types.ForcedOverride;
 import react.types.HandlerOrVoid;
 
@@ -35,7 +36,7 @@ typedef DialogBaseProps = {
 	@:optional var scroll:DialogScrollContainer;
 	@:optional var TransitionComponent:ReactType;
 	@:optional var transitionDuration:TransitionDuration;
-	@:optional var TransitionProps:Dynamic;
+	@:optional var TransitionProps:TransitionProps<Any>;
 }
 
 @:jsRequire('@material-ui/core', 'Dialog')

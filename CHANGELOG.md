@@ -2,9 +2,10 @@
 
 ## 0.11.0 - XXXX-XX-XX
 
+* EventListener externs [`react-event-listener`](https://github.com/kLabz/haxe-react-event-listener)
 * [TODO] Transition externs (`react-transition-group`)
-* [TODO] EventListener externs (`react-event-listener`)
-* [TODO] Transition-related components
+* [TODO] Fix Transition-related callback props
+* [TODO] Last missing components: transition-related components
 
 ## 0.10.0 - 2018-12-26
 

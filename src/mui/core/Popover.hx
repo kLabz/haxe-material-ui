@@ -5,6 +5,7 @@ import js.html.Element;
 
 import react.ReactComponent;
 import react.ReactType;
+import react.transition.Transition;
 import react.types.DOMOrCallback;
 import react.types.ForcedOverride;
 import react.types.HandlerOrVoid;
@@ -47,7 +48,7 @@ typedef PopoverBaseProps = {
 	@:optional var transformOrigin:Position;
 	@:optional var TransitionComponent:ReactType;
 	@:optional var transitionDuration:TransitionDuration;
-	@:optional var TransitionProps:Dynamic;
+	@:optional var TransitionProps:TransitionProps<Any>;
 }
 
 @:jsRequire('@material-ui/core', 'Popover')

@@ -11,7 +11,8 @@
     "css-types": "",
     "js-object": "",
     "react-types": "0.7.0",
-    "react-event-listener": ""
+    "react-event-listener": "",
+    "react-transition-group": ""
   },
   "contributors": [
     "klabz"

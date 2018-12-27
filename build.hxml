@@ -2,6 +2,7 @@
 -lib react-next
 -lib react-types
 -lib react-event-listener
+-lib react-transition-group
 
 -cp src
 --macro include('mui.core', true)

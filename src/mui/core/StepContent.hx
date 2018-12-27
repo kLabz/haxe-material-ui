@@ -2,6 +2,7 @@ package mui.core;
 
 import react.ReactComponent;
 import react.ReactType;
+import react.transition.Transition;
 import react.types.ForcedOverride;
 
 import mui.core.common.TransitionDuration;
@@ -15,7 +16,7 @@ private typedef Props = ForcedOverride<
 typedef StepContentBaseProps = {
 	@:optional var TransitionComponent:ReactType;
 	@:optional var transitionDuration:TransitionDuration;
-	@:optional var TransitionProps:Dynamic;
+	@:optional var TransitionProps:TransitionProps<Any>;
 }
 
 @:jsRequire('@material-ui/core', 'StepContent')
