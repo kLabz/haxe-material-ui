@@ -4,17 +4,19 @@
 
 <h1 align="center">Haxe Material-UI</h1>
 
-This library is still not complete, some components are still missing but will
-be added in the coming weeks. All icons from [`@material-ui/icons`][mui-icons]
-(version 3.0.1) have been implemented in version `0.8.0`.
+This library includes Haxe externs for all components from
+[`@material-ui/core`][mui-core], and all icons from
+[`@material-ui/icons`][mui-icons] (version 3.0.1).
 
-Versions `0.9.0` and later (currently `0.10.0`) of haxe-material-ui are based
+Versions `0.9.0` and later (currently `0.11.0`) of `haxe-material-ui` are based
 off [`@material-ui/core`][mui-github] version [`3.7.0`][mui-3.7.0-doc].
 
 ## Usage
 
 This library is mostly used with [`react-next`][react-next] and Haxe 4 preview
-4.
+4. It is meant to be used with latest versions of `react-next` and `react-types`
+since it is using their latest features (helpers for writing correctly typed
+externs).
 
 Compatibility with current version of [`react`][haxe-react] should be
 possible by remapping `ReactType` to `CreateElementType` and `ReactFragment` to
@@ -51,7 +53,6 @@ on [`haxe-react`'s gitter][gitter].
 Progress is being tracked on [this google doc][gdoc], with these objectives in
 mind:
 
-* Add missing components (98/108 atm, including dependencies)
 * Add more utils for theme and style
 * Improve `css-types` for better props typing
 * Improve this README with instructions
@@ -59,8 +60,9 @@ mind:
 * Add examples (example project + some guides)
 
 
-[mui-github]: https://github.com/mui-org/material-ui/
+[mui-core]: https://www.npmjs.com/package/@material-ui/core
 [mui-icons]: https://www.npmjs.com/package/@material-ui/icons
+[mui-github]: https://github.com/mui-org/material-ui/
 [mui-3.7.0-doc]: https://v3-7-0.material-ui.com/versions/
 [react-next]: https://github.com/kLabz/haxe-react
 [haxe-react]: https://github.com/massiveinteractive/haxe-react
