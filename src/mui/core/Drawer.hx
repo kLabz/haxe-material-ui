@@ -7,6 +7,7 @@ import react.types.HandlerOrVoid;
 
 import mui.core.Modal.ModalBaseProps;
 import mui.core.Paper.PaperBaseProps;
+import mui.core.Slide.SlideBaseProps;
 import mui.core.common.TransitionDuration;
 import mui.core.drawer.DrawerAnchor;
 import mui.core.drawer.DrawerClassKey;
@@ -24,7 +25,7 @@ typedef DrawerBaseProps = {
 	@:optional var onClose:HandlerOrVoid<ClassicHandler>;
 	@:optional var open:Bool;
 	@:optional var PaperProps:PaperBaseProps;
-	@:optional var SlideProps:Dynamic;
+	@:optional var SlideProps:SlideBaseProps;
 	@:optional var transitionDuration:TransitionDuration;
 	@:optional var variant:DrawerVariant;
 }
