@@ -1,17 +1,17 @@
 {
   "name": "material-ui",
   "description": "Material UI - React components that implement Google's Material Design",
-  "version": "0.10.0",
-  "releasenote": "Add most missing components, rewrite props (html attributes, event handlers, colors)",
+  "version": "0.10.1",
+  "releasenote": "Update for react-types 0.7.0 (See CHANGELOG.md)",
   "url": "https://gitlab.com/k-labz/haxe-oss/haxe-material-ui",
   "license": "MIT",
   "tags": [],
   "classPath": "src",
   "dependencies": {
     "css-types": "",
-    "react-types": "",
-    "react-event-listener": "",
-    "js-object": ""
+    "js-object": "",
+    "react-types": "0.7.0",
+    "react-event-listener": ""
   },
   "contributors": [
     "klabz"

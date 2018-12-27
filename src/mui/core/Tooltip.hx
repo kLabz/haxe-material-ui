@@ -2,8 +2,8 @@ package mui.core;
 
 import react.ReactComponent;
 import react.ReactType;
-import react.types.DOMAttributes;
 import react.types.ForcedOverride;
+import react.types.HandlerOrVoid;
 
 import mui.core.Popper.PopperBaseProps;
 import mui.core.popper.PopperPlacement;

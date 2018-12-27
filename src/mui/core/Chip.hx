@@ -2,8 +2,8 @@ package mui.core;
 
 import react.ReactComponent;
 import react.ReactType;
-import react.types.DOMAttributes;
 import react.types.ForcedOverride;
+import react.types.HandlerOrVoid;
 import react.types.Noise;
 
 import mui.Color;

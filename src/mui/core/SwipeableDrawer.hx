@@ -4,6 +4,7 @@ import js.html.HtmlElement;
 import react.ReactComponent;
 import react.types.DOMAttributes;
 import react.types.ForcedOverride;
+import react.types.HandlerOrVoid;
 
 import mui.StandardProps.StandardBaseProps;
 import mui.core.Drawer.DrawerBaseProps;

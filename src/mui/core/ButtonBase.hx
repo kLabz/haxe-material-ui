@@ -3,8 +3,8 @@ package mui.core;
 import react.ReactRef;
 import react.ReactComponent;
 import react.ReactType;
-import react.types.DOMAttributes;
 import react.types.ForcedOverride;
+import react.types.HandlerOrVoid;
 
 import mui.core.button.ButtonBaseActions;
 import mui.core.button.ButtonBaseClassKey;

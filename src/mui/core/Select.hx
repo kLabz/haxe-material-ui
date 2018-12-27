@@ -4,8 +4,8 @@ import js.html.Event;
 import js.html.Element;
 import react.ReactComponent;
 import react.ReactType;
-import react.types.DOMAttributes;
 import react.types.ForcedOverride;
+import react.types.HandlerOrVoid;
 
 import mui.core.Input.InputBaseProps;
 import mui.core.Menu.MenuBaseProps;

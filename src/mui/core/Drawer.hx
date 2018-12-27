@@ -2,8 +2,8 @@ package mui.core;
 
 import js.html.Event;
 import react.ReactComponent;
-import react.types.DOMAttributes;
 import react.types.ForcedOverride;
+import react.types.HandlerOrVoid;
 
 import mui.core.Modal.ModalBaseProps;
 import mui.core.Paper.PaperBaseProps;

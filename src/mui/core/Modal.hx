@@ -4,9 +4,9 @@ import js.html.Event;
 
 import react.ReactComponent;
 import react.ReactType;
-import react.types.DOMAttributes;
 import react.types.DOMOrCallback;
 import react.types.ForcedOverride;
+import react.types.HandlerOrVoid;
 
 import mui.core.Backdrop.BackdropBaseProps;
 import mui.core.modal.ModalClassKey;

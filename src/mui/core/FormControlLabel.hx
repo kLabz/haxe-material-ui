@@ -5,9 +5,9 @@ import js.html.InputElement;
 import react.ReactComponent;
 import react.ReactRef;
 import react.ReactType;
-import react.types.DOMAttributes;
-import react.types.Noise;
 import react.types.ForcedOverride;
+import react.types.HandlerOrVoid;
+import react.types.Noise;
 
 import mui.core.checkbox.CheckedStatus;
 import mui.core.form.FormControlLabelClassKey;

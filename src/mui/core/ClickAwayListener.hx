@@ -2,7 +2,7 @@ package mui.core;
 
 import react.ReactComponent;
 import react.event.EventListener.EventListenerTarget;
-import react.types.DOMAttributes;
+import react.types.HandlerOrVoid;
 
 typedef ClickAwayListenerBaseProps = {
 	var children:ReactFragment;

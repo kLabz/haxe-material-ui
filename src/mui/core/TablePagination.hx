@@ -4,9 +4,9 @@ import js.html.ButtonElement;
 import js.html.Element;
 import react.ReactComponent;
 import react.ReactType;
-import react.types.DOMAttributes;
 import react.types.EventHandler;
 import react.types.ForcedOverride;
+import react.types.HandlerOrVoid;
 import react.types.SyntheticEvent;
 
 import mui.core.IconButton.IconButtonBaseProps;

@@ -3,8 +3,8 @@ package mui.core;
 import js.html.Event;
 import react.ReactComponent;
 import react.ReactType;
-import react.types.DOMAttributes;
 import react.types.ForcedOverride;
+import react.types.HandlerOrVoid;
 
 import mui.core.ClickAwayListener.ClickAwayListenerBaseProps;
 import mui.core.SnackbarContent.SnackbarContentBaseProps;

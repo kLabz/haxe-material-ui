@@ -4,8 +4,8 @@ import js.html.Event;
 import js.html.InputElement;
 import react.ReactComponent;
 import react.ReactRef;
-import react.types.DOMAttributes;
 import react.types.ForcedOverride;
+import react.types.HandlerOrVoid;
 import react.types.Noise;
 
 import mui.Color;

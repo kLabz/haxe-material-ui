@@ -5,10 +5,10 @@ import js.html.Element;
 
 import react.ReactComponent;
 import react.ReactType;
-import react.types.DOMAttributes;
 import react.types.DOMOrCallback;
-import react.types.Record;
 import react.types.ForcedOverride;
+import react.types.HandlerOrVoid;
+import react.types.Record;
 
 import mui.core.Modal.ModalBaseProps;
 import mui.core.Paper.PaperBaseProps;
