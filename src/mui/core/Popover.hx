@@ -1,14 +1,14 @@
 package mui.core;
 
 import js.html.Event;
-import js.html.Element;
+import js.html.HtmlElement;
 
 import react.ReactComponent;
 import react.ReactType;
 import react.transition.Transition;
+import react.types.CallbackOrVoid;
 import react.types.DOMOrCallback;
 import react.types.ForcedOverride;
-import react.types.HandlerOrVoid;
 import react.types.Record;
 
 import mui.core.Modal.ModalBaseProps;
@@ -35,15 +35,15 @@ typedef PopoverBaseProps = {
 	@:optional var anchorPosition:AnchorPosition;
 	@:optional var anchorReference:AnchorReference;
 	@:optional var elevation:Int;
-	@:optional var getContentAnchorEl:Void->Element;
+	@:optional var getContentAnchorEl:Void->HtmlElement;
 	@:optional var marginThreshold:Int;
 	@:optional var ModalClasses:Record<ModalClassKey>;
-	@:optional var onEnter:HandlerOrVoid<ClassicHandler>;
-	@:optional var onEntered:HandlerOrVoid<ClassicHandler>;
-	@:optional var onEntering:HandlerOrVoid<ClassicHandler>;
-	@:optional var onExit:HandlerOrVoid<ClassicHandler>;
-	@:optional var onExited:HandlerOrVoid<ClassicHandler>;
-	@:optional var onExiting:HandlerOrVoid<ClassicHandler>;
+	@:optional var onEnter:CallbackOrVoid<HtmlElement->Bool->Void>;
+	@:optional var onEntering:CallbackOrVoid<HtmlElement->Bool->Void>;
+	@:optional var onEntered:CallbackOrVoid<HtmlElement->Bool->Void>;
+	@:optional var onExit:CallbackOrVoid<HtmlElement->Void>;
+	@:optional var onExiting:CallbackOrVoid<HtmlElement->Void>;
+	@:optional var onExited:CallbackOrVoid<HtmlElement->Void>;
 	@:optional var PaperProps:PaperBaseProps;
 	@:optional var transformOrigin:Position;
 	@:optional var TransitionComponent:ReactType;

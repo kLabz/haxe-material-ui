@@ -1,9 +1,12 @@
 package mui.core;
 
 import js.html.Event;
+import js.html.HtmlElement;
+
 import react.ReactComponent;
 import react.ReactType;
 import react.transition.Transition;
+import react.types.CallbackOrVoid;
 import react.types.ForcedOverride;
 import react.types.HandlerOrVoid;
 
@@ -28,12 +31,12 @@ typedef SnackbarBaseProps = {
 	@:optional var disableWindowBlurListener:Bool;
 	@:optional var message:ReactFragment;
 	@:optional var onClose:HandlerOrVoid<Event->SnackbarCloseReason->Void>;
-	@:optional var onEnter:HandlerOrVoid<ClassicHandler>;
-	@:optional var onEntered:HandlerOrVoid<ClassicHandler>;
-	@:optional var onEntering:HandlerOrVoid<ClassicHandler>;
-	@:optional var onExit:HandlerOrVoid<ClassicHandler>;
-	@:optional var onExited:HandlerOrVoid<ClassicHandler>;
-	@:optional var onExiting:HandlerOrVoid<ClassicHandler>;
+	@:optional var onEnter:CallbackOrVoid<HtmlElement->Bool->Void>;
+	@:optional var onEntering:CallbackOrVoid<HtmlElement->Bool->Void>;
+	@:optional var onEntered:CallbackOrVoid<HtmlElement->Bool->Void>;
+	@:optional var onExit:CallbackOrVoid<HtmlElement->Void>;
+	@:optional var onExiting:CallbackOrVoid<HtmlElement->Void>;
+	@:optional var onExited:CallbackOrVoid<HtmlElement->Void>;
 	@:optional var open:Bool;
 	@:optional var resumeHideDuration:Int;
 	@:optional var TransitionComponent:ReactType;
