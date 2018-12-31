@@ -9,6 +9,7 @@ import react.types.HandlerOrVoid;
 import mui.Color;
 import mui.core.tab.TabsActions;
 import mui.core.tab.TabsClassKey;
+import mui.core.tab.TabsVariant;
 import mui.core.tab.ScrollButtons;
 
 private typedef Props = ForcedOverride<
@@ -20,15 +21,16 @@ typedef TabsProps = {
 	@:optional var action:TabsActions->Void;
 	@:optional var centered:Bool;
 	@:optional var component:ReactType;
-	@:optional var fullWidth:Bool;
+	@:deprecated @:optional var fullWidth:Bool;
 	@:optional var indicatorColor:ColorPS;
 	@:optional var onChange:HandlerOrVoid<Event->Int->Void>;
-	@:optional var scrollable:Bool;
+	@:deprecated @:optional var scrollable:Bool;
 	@:optional var ScrollButtonComponent:ReactType;
 	@:optional var scrollButtons:ScrollButtons;
 	@:optional var TabIndicatorProps:Dynamic;
 	@:optional var textColor:ColorPSI;
 	@:optional var value:Any;
+	@:optional var variant:TabsVariant;
 }
 
 @:jsRequire('@material-ui/core', 'Tabs')

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.12.0 - 2018-12-31
+
+* Compatibility with [`@material-ui/core 3.8.0`](https://v3-8-0.material-ui.com/versions/)
+* Renamed some icons to avoid type shadowing (added `Icon` suffix to `Class`, `Event`, `Input`, `Map`, `Tab`)
+
 ## 0.11.0 - 2018-12-27
 
 * EventListener externs [`react-event-listener`](https://github.com/kLabz/haxe-react-event-listener)
