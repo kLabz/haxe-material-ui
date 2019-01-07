@@ -11,7 +11,11 @@ private typedef Props = ForcedOverride<
 	MenuListBaseProps
 >;
 
-typedef MenuListBaseProps = ListBaseProps;
+typedef MenuListBaseProps = {
+	> ListBaseProps,
+
+	@:optional var disableListWrap:Bool;
+}
 
 @:jsRequire('@material-ui/core', 'MenuList')
 extern class MenuList extends ReactComponentOfProps<Props> {}
