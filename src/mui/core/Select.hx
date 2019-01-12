@@ -32,6 +32,7 @@ typedef SelectBaseProps = ForcedOverride<InputBaseProps, {
 	@:optional var open:Bool;
 	@:optional var renderValue:Any->ReactFragment;
 	@:optional var SelectDisplayProps:Dynamic;
+	@:optional var value:Any;
 	@:optional var variant:FormControlVariant;
 }>;
 
