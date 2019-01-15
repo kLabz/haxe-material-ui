@@ -10,15 +10,16 @@ This library includes Haxe externs for all components from
 
 ## Compatibility table
 
-Current version (`0.12.0`) of `haxe-material-ui` is based
-off `@material-ui/core` version [`3.8.1`][mui-3.8.0-doc] and
-`@material-ui/icons` version `3.0.1`.
+Current version (`0.13.0`) of `haxe-material-ui` is based
+off `@material-ui/core` version [`3.9.0`][mui-3.9.0-doc] and
+`@material-ui/icons` version `3.0.2`.
 
 | Haxe Material UI    | `@material-ui/core`        | `@material-ui/icons` |
 |:-------------------:|:--------------------------:|:--------------------:|
-| < `0.9.0`           | ± [`3.6.x`][mui-3.6.0-doc] |              `3.0.1` |
-| `0.9.0` - `0.11.0`  |   [`3.7.x`][mui-3.7.0-doc] |              `3.0.1` |
-| `0.12.0` - ???      |   [`3.8.x`][mui-3.8.0-doc] |              `3.0.1` |
+| < `0.9.0`           | ± [`3.6.x`][mui-3.6.0-doc] |              `3.0.x` |
+| `0.9.0` - `0.11.0`  |   [`3.7.x`][mui-3.7.0-doc] |              `3.0.x` |
+| `0.12.x`            |   [`3.8.x`][mui-3.8.0-doc] |              `3.0.x` |
+| `0.13.x`- ???       |   [`3.9.x`][mui-3.9.0-doc] |              `3.0.x` |
 
 ## Usage
 
@@ -75,6 +76,7 @@ mind:
 [mui-3.6.0-doc]: https://v3-6-0.material-ui.com/versions/
 [mui-3.7.0-doc]: https://v3-7-0.material-ui.com/versions/
 [mui-3.8.0-doc]: https://v3-8-0.material-ui.com/versions/
+[mui-3.9.0-doc]: https://v3-9-0.material-ui.com/versions/
 [react-next]: https://github.com/kLabz/haxe-react
 [haxe-react]: https://github.com/massiveinteractive/haxe-react
 [open-issue]: https://gitlab.com/k-labz/haxe-oss/haxe-material-ui/issues/new

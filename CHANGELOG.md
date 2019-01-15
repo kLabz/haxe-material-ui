@@ -1,9 +1,15 @@
 # Changelog
 
+## 0.13.0 - 2019-01-15
+
+* Compatibility with [`@material-ui/core 3.9.0`](https://v3-9-0.material-ui.com/versions/)
+* Add new `Link` component
+* Update `Badge` and `InputAdornment`
+
 ## 0.12.0 - 2018-12-31
 
 * Compatibility with [`@material-ui/core 3.8.0`](https://v3-8-0.material-ui.com/versions/)
-* Renamed some icons to avoid type shadowing (added `Icon` suffix to `Class`, `Event`, `Input`, `Map`, `Tab`)
+* Rename some icons to avoid type shadowing (added `Icon` suffix to `Class`, `Event`, `Input`, `Map`, `Tab`)
 
 ### 0.12.1
 
