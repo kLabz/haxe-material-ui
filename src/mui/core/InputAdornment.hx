@@ -16,6 +16,7 @@ private typedef Props = ForcedOverride<
 typedef InputAdornmentProps = {
 	var children:ReactFragment;
 	@:optional var component:ReactType;
+	@:optional var disablePointerEvents:Bool;
 	@:optional var disableTypography:Bool;
 	@:optional var position:InputAdornmentPosition;
 	@:optional var variant:FormControlVariant;
