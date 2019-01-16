@@ -48,7 +48,7 @@ haxelib install material-ui
 Install npm dependencies:
 
 ```
-npm i --save-exact @material-ui/core@3.8.1 @material-ui/icons@3.0.1
+npm i --save-exact @material-ui/core@3.9.0 @material-ui/icons@3.0.2
 ```
 
 ## Roadmap
