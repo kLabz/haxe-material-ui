@@ -27,6 +27,7 @@ typedef ModalBaseProps = {
 	@:optional var open:Bool;
 	@:optional var BackdropComponent:ReactType;
 	@:optional var BackdropProps:BackdropBaseProps;
+	@:optional var closeAfterTransition:Bool;
 	@:optional var container:DOMOrCallback;
 	@:optional var disableAutoFocus:Bool;
 	@:optional var disableBackdropClick:Bool;
