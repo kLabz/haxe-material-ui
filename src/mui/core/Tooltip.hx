@@ -16,7 +16,7 @@ private typedef Props = ForcedOverride<
 >;
 
 typedef TooltipBaseProps = {
-	var children:ReactFragment;
+	var children:ReactElement;
 	var title:ReactFragment;
 	@:optional var disableFocusListener:Bool;
 	@:optional var disableHoverListener:Bool;
