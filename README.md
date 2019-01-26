@@ -10,8 +10,8 @@ This library includes Haxe externs for all components from
 
 ## Compatibility table
 
-Current version (`0.13.0`) of `haxe-material-ui` is based
-off `@material-ui/core` version [`3.9.0`][mui-3.9.0-doc] and
+Current version (`0.13.1`) of `haxe-material-ui` is based
+off `@material-ui/core` version [`3.9.1`][mui-3.9.0-doc] and
 `@material-ui/icons` version `3.0.2`.
 
 | Haxe Material UI    | `@material-ui/core`        | `@material-ui/icons` |
@@ -48,7 +48,7 @@ haxelib install material-ui
 Install npm dependencies:
 
 ```
-npm i --save-exact @material-ui/core@3.9.0 @material-ui/icons@3.0.2
+npm i --save-exact @material-ui/core@3.9.1 @material-ui/icons@3.0.2
 ```
 
 ## Roadmap

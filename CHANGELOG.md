@@ -6,6 +6,12 @@
 * Add new `Link` component
 * Update `Badge` and `InputAdornment`
 
+### 0.13.1
+
+* Compatibility with [`@material-ui/core 3.9.1`](https://v3-9-1.material-ui.com/versions/)
+* Tooltip: use `ReactElement` instead of `ReactFragment` for `children` prop
+* TextField: use `Partial` for `InputProps` prop
+
 ## 0.12.0 - 2018-12-31
 
 * Compatibility with [`@material-ui/core 3.8.0`](https://v3-8-0.material-ui.com/versions/)
