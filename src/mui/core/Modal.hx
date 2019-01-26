@@ -36,7 +36,7 @@ typedef ModalBaseProps = {
 	@:optional var disableRestoreFocus:Bool;
 	@:optional var hideBackdrop:Bool;
 	@:optional var keepMounted:Bool;
-	@:optional var manager:ModalManager;
+	@:optional var manager:ModalManager; // You probably shouldn't use this prop
 	@:optional var onBackdropClick:HandlerOrVoid<ClassicHandler>;
 	@:optional var onClose:HandlerOrVoid<Event->ModalCloseReason->Void>;
 	@:optional var onEscapeKeyDown:HandlerOrVoid<ClassicHandler>;
