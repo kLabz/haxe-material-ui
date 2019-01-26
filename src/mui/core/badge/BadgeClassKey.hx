@@ -7,4 +7,5 @@ package mui.core.badge;
 	var ColorSecondary = "colorSecondary";
 	var ColorError = "colorError";
 	var Invisible = "invisible";
+	var Dot = "dot";
 }
