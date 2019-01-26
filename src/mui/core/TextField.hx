@@ -1,5 +1,6 @@
 package mui.core;
 
+import react.Partial;
 import react.ReactComponent;
 import react.types.ForcedOverride;
 import react.types.Noise;
@@ -31,7 +32,7 @@ typedef TextFieldBaseProps = {
 	@:optional var FormHelperTextProps:FormHelperTextBaseProps;
 	@:optional var helperText:ReactFragment;
 	@:optional var InputLabelProps:InputLabelBaseProps;
-	@:optional var InputProps:InputBaseProps;
+	@:optional var InputProps:Partial<InputBaseProps>;
 	@:optional var label:ReactFragment;
 	@:optional var select:Bool;
 	@:optional var SelectProps:SelectBaseProps;
