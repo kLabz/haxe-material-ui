@@ -19,7 +19,7 @@ off `@material-ui/core` version [`3.9.1`][mui-3.9.0-doc] and
 | < `0.9.0`           | ± [`3.6.x`][mui-3.6.0-doc] |              `3.0.x` |
 | `0.9.0` - `0.11.0`  |   [`3.7.x`][mui-3.7.0-doc] |              `3.0.x` |
 | `0.12.x`            |   [`3.8.x`][mui-3.8.0-doc] |              `3.0.x` |
-| `0.13.x`- ???       |   [`3.9.x`][mui-3.9.0-doc] |              `3.0.x` |
+| `0.13.x` - ???      |   [`3.9.x`][mui-3.9.0-doc] |              `3.0.x` |
 
 ## Usage
 
@@ -29,9 +29,9 @@ since it is using their latest features (helpers for writing correctly typed
 externs).
 
 Compatibility with current version of [`react`][haxe-react] should be
-possible by remapping `ReactType` to `CreateElementType` and `ReactFragment` to
-`ReactElement`. This would not be 100% accurate, but since current version of
-`react` doesn't check props types, this could work.
+possible using [`react-next-compat`](https://github.com/kLabz/haxe-react-next-compat).
+This would not be 100% accurate, but since current version of `react` doesn't
+check props types, this should work.
 
 This library should work with Haxe `3.4.7`, and fixes will be made if necessary,
 but it is not being intensively tested with this version of Haxe. Please
