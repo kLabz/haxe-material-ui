@@ -1,14 +1,9 @@
 package mui.core;
 
-import js.html.HtmlElement;
-import react.ReactComponent;
-import react.types.DOMAttributes;
-
-import mui.StandardProps.StandardBaseProps;
-
 typedef CssBaselineProps = {
-	> StandardBaseProps,
-	> DOMAttributes<HtmlElement>,
+	> StandardDOMAttributes,
+
+	@:optional var children:ReactFragment;
 }
 
 @:jsRequire('@material-ui/core', 'CssBaseline')

@@ -1,29 +1,14 @@
 package mui.core;
 
-import react.ReactComponent;
-import react.types.ForcedOverride;
-import react.types.Noise;
-
-import mui.core.InputBase.InputBaseBaseProps;
+import mui.core.InputBase.InputBaseProps;
 import mui.core.input.OutlinedInputClassKey;
 
-private typedef Props = ForcedOverride<
-	StandardProps<OutlinedInputClassKey>,
-	OutlinedInputProps
->;
-
-private typedef OutlinedInputProps = {
-	> OutlinedInputBaseProps,
-
-	@:optional var children:Noise;
-}
-
-typedef OutlinedInputBaseProps = {
-	> InputBaseBaseProps,
-
+typedef OutlinedInputProps = ForcedOverride<InputBaseProps, {
 	var labelWidth:Int;
+	@:optional var children:Noise;
+	@:optional var classes:Record<OutlinedInputClassKey>;
 	@:optional var notched:Bool;
-}
+}>;
 
 @:jsRequire('@material-ui/core', 'OutlinedInput')
-extern class OutlinedInput extends ReactComponentOfProps<Props> {}
+extern class OutlinedInput extends ReactComponentOfProps<OutlinedInputProps> {}

@@ -1,15 +1,13 @@
 package mui.core;
 
-import js.html.HtmlElement;
-import react.ReactComponent;
-import react.types.DOMAttributes;
-
 import mui.core.list.ListItemSecondaryActionClassKey;
 
-private typedef Props = {
-	> StandardProps<ListItemSecondaryActionClassKey>,
-	> DOMAttributes<HtmlElement>,
+typedef ListItemSecondaryActionProps = {
+	> StandardDOMAttributes,
+
+	@:optional var children:ReactFragment;
+	@:optional var classes:Record<ListItemSecondaryActionClassKey>;
 }
 
 @:jsRequire('@material-ui/core', 'ListItemSecondaryAction')
-extern class ListItemSecondaryAction extends ReactComponentOfProps<Props> {}
+extern class ListItemSecondaryAction extends ReactComponentOfProps<ListItemSecondaryActionProps> {}

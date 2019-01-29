@@ -1,27 +1,18 @@
 package mui.core;
 
-import react.ReactComponent;
-import react.types.ForcedOverride;
-
 import mui.core.button.FabClassKey;
 import mui.core.button.ButtonSize;
 import mui.core.button.FabVariant;
-import mui.core.ButtonBase.ButtonBaseBaseProps;
+import mui.core.ButtonBase.ButtonBaseProps;
 
-private typedef Props = ForcedOverride<
-	StandardProps<FabClassKey>,
-	FabProps
->;
-
-typedef FabProps = {
-	> ButtonBaseBaseProps,
-
+typedef FabProps = ForcedOverride<ButtonBaseProps, {
 	var children:ReactFragment;
+	@:optional var classes:Record<FabClassKey>;
 	@:optional var color:Color;
 	@:optional var href:String;
 	@:optional var size:ButtonSize;
 	@:optional var variant:FabVariant;
-}
+}>;
 
 @:jsRequire('@material-ui/core', 'Fab')
-extern class Fab extends ReactComponentOfProps<Props> {}
+extern class Fab extends ReactComponentOfProps<FabProps> {}

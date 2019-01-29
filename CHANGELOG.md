@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.14.0 - 2019-01-29
+
+* Rewrite base props for all components to avoid some blocking issues
+* Fix `ClassKey`-related props (by fixing `Record<T>` in `react-types`)
+* Now requires `react-types` version `0.9.0`
+
 ## 0.13.0 - 2019-01-15
 
 * Compatibility with [`@material-ui/core 3.9.0`](https://v3-9-0.material-ui.com/versions/)

@@ -1,23 +1,13 @@
 package mui.core;
 
-import react.ReactComponent;
-import react.types.ForcedOverride;
-import react.types.Noise;
-
-import mui.core.InputBase.InputBaseBaseProps;
+import mui.core.InputBase.InputBaseProps;
 import mui.core.input.FilledInputClassKey;
 
-private typedef Props = ForcedOverride<
-	StandardProps<FilledInputClassKey>,
-	FilledInputBaseProps
->;
-
-typedef FilledInputBaseProps = {
-	> InputBaseBaseProps,
-
+typedef FilledInputProps = ForcedOverride<InputBaseProps, {
 	@:optional var children:Noise;
+	@:optional var classes:Record<FilledInputClassKey>;
 	@:optional var disableUnderline:Bool;
-}
+}>;
 
 @:jsRequire('@material-ui/core', 'FilledInput')
-extern class FilledInput extends ReactComponentOfProps<Props> {}
+extern class FilledInput extends ReactComponentOfProps<FilledInputProps> {}

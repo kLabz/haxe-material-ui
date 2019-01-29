@@ -1,33 +1,24 @@
 package mui.core;
 
-import js.html.Event;
-import js.html.HtmlElement;
-
-import react.ReactComponent;
-import react.ReactType;
 import react.transition.Transition;
-import react.types.CallbackOrVoid;
-import react.types.ForcedOverride;
-import react.types.HandlerOrVoid;
 
-import mui.core.ClickAwayListener.ClickAwayListenerBaseProps;
-import mui.core.SnackbarContent.SnackbarContentBaseProps;
+import mui.core.ClickAwayListener.ClickAwayListenerProps;
+import mui.core.SnackbarContent.SnackbarContentProps;
 import mui.core.common.Position;
 import mui.core.common.TransitionDuration;
 import mui.core.snackbar.SnackbarClassKey;
 import mui.core.snackbar.SnackbarCloseReason;
 
-private typedef Props = ForcedOverride<
-	StandardProps<SnackbarClassKey>,
-	SnackbarBaseProps
->;
+typedef SnackbarProps = {
+	> StandardDOMAttributes,
 
-typedef SnackbarBaseProps = {
 	@:optional var action:ReactFragment;
 	@:optional var anchorOrigin:Position;
 	@:optional var autoHideDuration:Int;
-	@:optional var ClickAwayListenerProps:ClickAwayListenerBaseProps;
-	@:optional var ContentProps:SnackbarContentBaseProps;
+	@:optional var children:ReactFragment;
+	@:optional var classes:Record<SnackbarClassKey>;
+	@:optional var ClickAwayListenerProps:Partial<ClickAwayListenerProps>;
+	@:optional var ContentProps:Partial<SnackbarContentProps>;
 	@:optional var disableWindowBlurListener:Bool;
 	@:optional var message:ReactFragment;
 	@:optional var onClose:HandlerOrVoid<Event->SnackbarCloseReason->Void>;
@@ -45,4 +36,4 @@ typedef SnackbarBaseProps = {
 }
 
 @:jsRequire('@material-ui/core', 'Snackbar')
-extern class Snackbar extends ReactComponentOfProps<Props> {}
+extern class Snackbar extends ReactComponentOfProps<SnackbarProps> {}

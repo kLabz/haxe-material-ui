@@ -1,18 +1,14 @@
 package mui.core;
 
-import react.ReactComponent;
-import react.types.ForcedOverride;
-
 import mui.core.dialog.DialogActionsClassKey;
 
-private typedef Props = ForcedOverride<
-	StandardProps<DialogActionsClassKey>,
-	DialogActionsBaseProps
->;
+typedef DialogActionsProps = {
+	> StandardDOMAttributes,
 
-typedef DialogActionsBaseProps = {
+	@:optional var children:ReactFragment;
+	@:optional var classes:Record<DialogActionsClassKey>;
 	@:optional var disableActionSpacing:Bool;
 }
 
 @:jsRequire('@material-ui/core', 'DialogActions')
-extern class DialogActions extends ReactComponentOfProps<Props> {}
+extern class DialogActions extends ReactComponentOfProps<DialogActionsProps> {}

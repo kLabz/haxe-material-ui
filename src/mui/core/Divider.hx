@@ -1,21 +1,14 @@
 package mui.core;
 
-import react.ReactComponent;
-import react.ReactType;
-import react.types.ForcedOverride;
-import react.types.Noise;
-
 import mui.core.list.DividerClassKey;
 import mui.core.list.DividerVariant;
 
-private typedef Props = ForcedOverride<
-	StandardProps<DividerClassKey>,
-	DividerBaseProps
->;
+typedef DividerProps = {
+	> StandardDOMAttributes,
 
-typedef DividerBaseProps = {
-	@:optional var children:Noise;
 	@:optional var absolute:Bool;
+	@:optional var children:Noise;
+	@:optional var classes:Record<DividerClassKey>;
 	@:optional var component:ReactType;
 	@:optional var inset:Bool;
 	@:optional var light:Bool;
@@ -23,4 +16,4 @@ typedef DividerBaseProps = {
 }
 
 @:jsRequire('@material-ui/core', 'Divider')
-extern class Divider extends ReactComponentOfProps<Props> {}
+extern class Divider extends ReactComponentOfProps<DividerProps> {}

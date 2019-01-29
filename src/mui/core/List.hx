@@ -1,17 +1,12 @@
 package mui.core;
 
-import react.ReactComponent;
-import react.ReactType;
-import react.types.ForcedOverride;
-
 import mui.core.list.ListClassKey;
 
-private typedef Props = ForcedOverride<
-	StandardProps<ListClassKey>,
-	ListBaseProps
->;
+typedef ListProps = {
+	> StandardDOMAttributes,
 
-typedef ListBaseProps = {
+	@:optional var children:ReactFragment;
+	@:optional var classes:Record<ListClassKey>;
 	@:optional var component:ReactType;
 	@:optional var dense:Bool;
 	@:optional var disablePadding:Bool;
@@ -19,4 +14,4 @@ typedef ListBaseProps = {
 }
 
 @:jsRequire('@material-ui/core', 'List')
-extern class List extends ReactComponentOfProps<Props> {}
+extern class List extends ReactComponentOfProps<ListProps> {}

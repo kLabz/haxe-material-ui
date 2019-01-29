@@ -1,12 +1,6 @@
 package mui.core;
 
-import js.html.Event;
 import js.html.InputElement;
-import react.ReactComponent;
-import react.ReactRef;
-import react.types.ForcedOverride;
-import react.types.HandlerOrVoid;
-import react.types.Noise;
 
 import mui.Color;
 import mui.core.checkbox.CheckedStatus;
@@ -14,15 +8,11 @@ import mui.core.input.InputType;
 import mui.core.radio.RadioClassKey;
 import mui.core.radio.RadioValue;
 
-private typedef Props = ForcedOverride<
-	StandardProps<RadioClassKey>,
-	RadioProps
->;
-
-typedef RadioProps = {
+typedef RadioProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var children:Noise;
 	@:optional var checked:CheckedStatus;
 	@:optional var checkedIcon:ReactFragment;
+	@:optional var classes:Record<RadioClassKey>;
 	@:optional var color:ColorDPS;
 	@:optional var disabled:Bool;
 	@:optional var disableRipple:Bool;
@@ -33,7 +23,7 @@ typedef RadioProps = {
 	@:optional var onChange:HandlerOrVoid<Event->Bool->Void>;
 	@:optional var type:InputType;
 	@:optional var value:RadioValue;
-}
+}>;
 
 @:jsRequire('@material-ui/core', 'Radio')
-extern class Radio extends ReactComponentOfProps<Props> {}
+extern class Radio extends ReactComponentOfProps<RadioProps> {}

@@ -1,10 +1,13 @@
 package mui.core;
 
-import react.ReactComponent;
-
 import mui.core.dialog.DialogContentClassKey;
 
-private typedef Props = StandardProps<DialogContentClassKey>;
+typedef DialogContentProps = {
+	> StandardDOMAttributes,
+
+	@:optional var children:ReactFragment;
+	@:optional var classes:Record<DialogContentClassKey>;
+}
 
 @:jsRequire('@material-ui/core', 'DialogContent')
-extern class DialogContent extends ReactComponentOfProps<Props> {}
+extern class DialogContent extends ReactComponentOfProps<DialogContentProps> {}

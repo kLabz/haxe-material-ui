@@ -1,30 +1,14 @@
 package mui.core;
 
-import js.html.Event;
-import js.html.HtmlElement;
-import react.ReactComponent;
-import react.types.DOMAttributes;
-import react.types.ForcedOverride;
-import react.types.HandlerOrVoid;
-
-import mui.StandardProps.StandardBaseProps;
 import mui.core.radio.RadioValue;
-import mui.core.FormGroup.FormGroupBaseProps;
+import mui.core.FormGroup.FormGroupProps;
 
-private typedef Props = ForcedOverride<
-	DOMAttributes<HtmlElement>,
-	RadioGroupProps
->;
-
-typedef RadioGroupProps = {
-	> StandardBaseProps,
-	> FormGroupBaseProps,
-
+typedef RadioGroupProps = ForcedOverride<FormGroupProps, {
 	@:optional var name:String;
 	@:optional var onChange:HandlerOrVoid<Event->String->Void>;
 	@:optional var value:RadioValue;
 	@:optional var defaultValue:RadioValue;
-}
+}>;
 
 @:jsRequire('@material-ui/core', 'RadioGroup')
-extern class RadioGroup extends ReactComponentOfProps<Props> {}
+extern class RadioGroup extends ReactComponentOfProps<RadioGroupProps> {}

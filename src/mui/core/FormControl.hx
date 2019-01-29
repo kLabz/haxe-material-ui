@@ -1,19 +1,14 @@
 package mui.core;
 
-import react.ReactComponent;
-import react.ReactType;
-import react.types.ForcedOverride;
-
 import mui.core.form.FormControlClassKey;
 import mui.core.form.FormControlMargin;
 import mui.core.form.FormControlVariant;
 
-private typedef Props = ForcedOverride<
-	StandardProps<FormControlClassKey>,
-	FormControlBaseProps
->;
+typedef FormControlProps = {
+	> StandardDOMAttributes,
 
-typedef FormControlBaseProps = {
+	@:optional var children:ReactFragment;
+	@:optional var classes:Record<FormControlClassKey>;
 	@:optional var component:ReactType;
 	@:optional var disabled:Bool;
 	@:optional var error:Bool;
@@ -24,4 +19,4 @@ typedef FormControlBaseProps = {
 }
 
 @:jsRequire('@material-ui/core', 'FormControl')
-extern class FormControl extends ReactComponentOfProps<Props> {}
+extern class FormControl extends ReactComponentOfProps<FormControlProps> {}

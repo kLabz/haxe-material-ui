@@ -1,42 +1,25 @@
 package mui.core;
 
-import react.Partial;
-import react.ReactComponent;
-import react.types.ForcedOverride;
-import react.types.Noise;
-
-import mui.core.FormControl.FormControlBaseProps;
-import mui.core.FormHelperText.FormHelperTextBaseProps;
-import mui.core.Input.InputBaseProps;
-import mui.core.InputBase.InputBaseBaseProps;
-import mui.core.InputLabel.InputLabelBaseProps;
-import mui.core.form.FormControlClassKey;
+import mui.core.FormControl.FormControlProps;
+import mui.core.FormHelperText.FormHelperTextProps;
+import mui.core.Input.InputProps;
+import mui.core.InputBase.InputBaseCommonProps;
+import mui.core.InputLabel.InputLabelProps;
 import mui.core.form.FormControlVariant;
-import mui.core.Select.SelectBaseProps;
+import mui.core.Select.SelectProps;
 
-private typedef Props = ForcedOverride<
-	StandardProps<FormControlClassKey>,
-	TextFieldProps
->;
-
-private typedef TextFieldProps = {
-	> TextFieldBaseProps,
+typedef TextFieldProps = ForcedOverride<FormControlProps, {
+	> InputBaseCommonProps,
 
 	@:optional var children:Noise;
-}
-
-typedef TextFieldBaseProps = {
-	> FormControlBaseProps,
-	> InputBaseBaseProps,
-
-	@:optional var FormHelperTextProps:FormHelperTextBaseProps;
+	@:optional var FormHelperTextProps:Partial<FormHelperTextProps>;
 	@:optional var helperText:ReactFragment;
-	@:optional var InputLabelProps:InputLabelBaseProps;
-	@:optional var InputProps:Partial<InputBaseProps>;
+	@:optional var InputLabelProps:Partial<InputLabelProps>;
+	@:optional var InputProps:Partial<InputProps>;
 	@:optional var label:ReactFragment;
 	@:optional var select:Bool;
-	@:optional var SelectProps:SelectBaseProps;
-}
+	@:optional var SelectProps:Partial<SelectProps>;
+}>;
 
 @:jsRequire('@material-ui/core', 'TextField')
-extern class TextField extends ReactComponentOfProps<Props> {}
+extern class TextField extends ReactComponentOfProps<TextFieldProps> {}

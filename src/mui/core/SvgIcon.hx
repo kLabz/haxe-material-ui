@@ -1,18 +1,12 @@
 package mui.core;
 
-import react.ReactComponent;
-import react.ReactType;
-import react.types.ForcedOverride;
-
 import mui.core.icon.SvgIconClassKey;
 
-private typedef Props = ForcedOverride<
-	StandardProps<SvgIconClassKey>,
-	SvgIconProps
->;
-
 typedef SvgIconProps = {
+	> StandardDOMAttributes,
+
 	var children:ReactFragment;
+	@:optional var classes:Record<SvgIconClassKey>;
 	@:optional var color:IconColor;
 	@:optional var component:ReactType;
 	@:optional var fontSize:FontSize;
@@ -23,4 +17,4 @@ typedef SvgIconProps = {
 }
 
 @:jsRequire('@material-ui/core', 'SvgIcon')
-extern class SvgIcon extends ReactComponentOfProps<Props> {}
+extern class SvgIcon extends ReactComponentOfProps<SvgIconProps> {}

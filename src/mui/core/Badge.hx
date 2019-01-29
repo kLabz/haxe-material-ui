@@ -1,21 +1,15 @@
 package mui.core;
 
-import react.ReactComponent;
-import react.ReactType;
-import react.types.ForcedOverride;
-
 import mui.Color;
 import mui.core.badge.BadgeClassKey;
 import mui.core.badge.BadgeVariant;
 import mui.core.common.TransitionDuration;
 
-private typedef Props = ForcedOverride<
-	StandardProps<BadgeClassKey>,
-	BadgeProps
->;
-
 typedef BadgeProps = {
+	> StandardDOMAttributes,
+
 	var children:ReactFragment;
+	@:optional var classes:Record<BadgeClassKey>;
 	@:optional var badgeContent:ReactFragment;
 	@:optional var color:ColorDPSE;
 	@:optional var component:ReactType;
@@ -26,4 +20,4 @@ typedef BadgeProps = {
 }
 
 @:jsRequire('@material-ui/core', 'Badge')
-extern class Badge extends ReactComponentOfProps<Props> {}
+extern class Badge extends ReactComponentOfProps<BadgeProps> {}

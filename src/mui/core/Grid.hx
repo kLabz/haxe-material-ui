@@ -3,10 +3,6 @@ package mui.core;
 import css.FlexDirection;
 import css.FlexWrap;
 
-import react.ReactComponent;
-import react.ReactType;
-import react.types.ForcedOverride;
-
 import mui.core.grid.GridAlignContent;
 import mui.core.grid.GridAlignItems;
 import mui.core.grid.GridClassKey;
@@ -14,14 +10,13 @@ import mui.core.grid.GridJustifyContent;
 import mui.core.grid.GridsNumber;
 import mui.core.grid.GridSpacing;
 
-private typedef Props = ForcedOverride<
-	StandardProps<GridClassKey>,
-	GridBaseProps
->;
+typedef GridProps = {
+	> StandardDOMAttributes,
 
-typedef GridBaseProps = {
 	@:optional var alignContent:GridAlignContent;
 	@:optional var alignItems:GridAlignItems;
+	@:optional var children:ReactFragment;
+	@:optional var classes:Record<GridClassKey>;
 	@:optional var component:ReactType;
 	@:optional var container:Bool;
 	@:optional var direction:FlexDirection;
@@ -38,4 +33,4 @@ typedef GridBaseProps = {
 }
 
 @:jsRequire('@material-ui/core', 'Grid')
-extern class Grid extends ReactComponentOfProps<Props> {}
+extern class Grid extends ReactComponentOfProps<GridProps> {}

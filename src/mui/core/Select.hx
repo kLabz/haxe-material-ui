@@ -1,29 +1,18 @@
 package mui.core;
 
-import js.html.Event;
-import js.html.Element;
-import react.ReactComponent;
-import react.ReactType;
-import react.types.ForcedOverride;
-import react.types.HandlerOrVoid;
-
-import mui.core.Input.InputBaseProps;
-import mui.core.Menu.MenuBaseProps;
+import mui.core.Input.InputProps;
+import mui.core.Menu.MenuProps;
 import mui.core.form.FormControlVariant;
 import mui.core.input.InputValue;
 import mui.core.input.SelectClassKey;
 
-private typedef Props = ForcedOverride<
-	StandardProps<SelectClassKey>,
-	SelectBaseProps
->;
-
-typedef SelectBaseProps = ForcedOverride<InputBaseProps, {
+typedef SelectProps = ForcedOverride<InputProps, {
 	@:optional var autoWidth:Bool;
+	@:optional var classes:Record<SelectClassKey>;
 	@:optional var displayEmpty:Bool;
 	@:optional var IconComponent:ReactType;
 	@:optional var input:ReactSingleFragment;
-	@:optional var MenuProps:MenuBaseProps;
+	@:optional var MenuProps:Partial<MenuProps>;
 	@:optional var multiple:Bool;
 	@:optional var native:Bool;
 	@:optional var onChange:HandlerOrVoid<Event->ReactElement->Void>;
@@ -37,4 +26,4 @@ typedef SelectBaseProps = ForcedOverride<InputBaseProps, {
 }>;
 
 @:jsRequire('@material-ui/core', 'Select')
-extern class Select extends ReactComponentOfProps<Props> {}
+extern class Select extends ReactComponentOfProps<SelectProps> {}

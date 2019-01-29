@@ -1,18 +1,13 @@
 package mui.core;
 
-import react.ReactComponent;
-import react.types.ForcedOverride;
-
 import mui.core.list.ListItemAvatarClassKey;
 
-private typedef Props = ForcedOverride<
-	StandardProps<ListItemAvatarClassKey>,
-	ListItemAvatarProps
->;
-
 typedef ListItemAvatarProps = {
+	> StandardDOMAttributes,
+
 	var children:ReactFragment;
+	@:optional var classes:Record<ListItemAvatarClassKey>;
 }
 
 @:jsRequire('@material-ui/core', 'ListItemAvatar')
-extern class ListItemAvatar extends ReactComponentOfProps<Props> {}
+extern class ListItemAvatar extends ReactComponentOfProps<ListItemAvatarProps> {}

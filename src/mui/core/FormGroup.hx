@@ -1,18 +1,14 @@
 package mui.core;
 
-import react.ReactComponent;
-import react.types.ForcedOverride;
-
 import mui.core.form.FormGroupClassKey;
 
-private typedef Props = ForcedOverride<
-	StandardProps<FormGroupClassKey>,
-	FormGroupBaseProps
->;
+typedef FormGroupProps = {
+	> StandardDOMAttributes,
 
-typedef FormGroupBaseProps = {
+	@:optional var children:ReactFragment;
+	@:optional var classes:Record<FormGroupClassKey>;
 	@:optional var row:Bool;
 }
 
 @:jsRequire('@material-ui/core', 'FormGroup')
-extern class FormGroup extends ReactComponentOfProps<Props> {}
+extern class FormGroup extends ReactComponentOfProps<FormGroupProps> {}

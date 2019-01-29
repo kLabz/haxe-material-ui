@@ -1,27 +1,17 @@
 package mui.core;
 
-import js.html.Event;
 import js.html.InputElement;
-import react.ReactComponent;
-import react.ReactRef;
-import react.types.ForcedOverride;
-import react.types.HandlerOrVoid;
-import react.types.Noise;
 
 import mui.Color;
 import mui.core.checkbox.CheckboxClassKey;
 import mui.core.checkbox.CheckedStatus;
 import mui.core.input.InputType;
 
-private typedef Props = ForcedOverride<
-	StandardProps<CheckboxClassKey>,
-	CheckboxProps
->;
-
-typedef CheckboxProps = {
+typedef CheckboxProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var children:Noise;
 	@:optional var checked:CheckedStatus;
 	@:optional var checkedIcon:ReactFragment;
+	@:optional var classes:Record<CheckboxClassKey>;
 	@:optional var color:ColorDPS;
 	@:optional var disabled:Bool;
 	@:optional var disableRipple:Bool;
@@ -34,7 +24,7 @@ typedef CheckboxProps = {
 	@:optional var onChange:HandlerOrVoid<Event->Bool->Void>;
 	@:optional var type:InputType;
 	@:optional var value:String;
-}
+}>;
 
 @:jsRequire('@material-ui/core', 'Checkbox')
-extern class Checkbox extends ReactComponentOfProps<Props> {}
+extern class Checkbox extends ReactComponentOfProps<CheckboxProps> {}

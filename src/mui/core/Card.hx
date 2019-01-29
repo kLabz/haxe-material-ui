@@ -1,21 +1,12 @@
 package mui.core;
 
-import react.ReactComponent;
-import react.types.ForcedOverride;
-
 import mui.core.card.CardClassKey;
-import mui.core.Paper.PaperBaseProps;
+import mui.core.Paper.PaperProps;
 
-private typedef Props = ForcedOverride<
-	StandardProps<CardClassKey>,
-	CardBaseProps
->;
-
-typedef CardBaseProps = {
-	> PaperBaseProps,
-
+typedef CardProps = ForcedOverride<PaperProps, {
+	@:optional var classes:Record<CardClassKey>;
 	@:optional var raised:Bool;
-}
+}>;
 
 @:jsRequire('@material-ui/core', 'Card')
-extern class Card extends ReactComponentOfProps<Props> {}
+extern class Card extends ReactComponentOfProps<CardProps> {}

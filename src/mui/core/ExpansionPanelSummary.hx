@@ -1,21 +1,16 @@
 package mui.core;
 
-import react.ReactComponent;
-import react.types.ForcedOverride;
-
-import mui.core.TouchRipple.TouchRippleBaseProps;
+import mui.core.TouchRipple.TouchRippleProps;
 import mui.core.exppanel.ExpansionPanelSummaryClassKey;
 
-private typedef Props = ForcedOverride<
-	StandardProps<ExpansionPanelSummaryClassKey>,
-	ExpansionPanelSummaryProps
->;
-
 typedef ExpansionPanelSummaryProps = {
+	> StandardDOMAttributes,
+
+	@:optional var children:ReactFragment;
+	@:optional var classes:Record<ExpansionPanelSummaryClassKey>;
 	@:optional var expandIcon:ReactFragment;
-	@:optional var IconButtonProps:TouchRippleBaseProps;
+	@:optional var IconButtonProps:Partial<TouchRippleProps>;
 }
 
 @:jsRequire('@material-ui/core', 'ExpansionPanelSummary')
-extern class ExpansionPanelSummary extends ReactComponentOfProps<Props> {}
-
+extern class ExpansionPanelSummary extends ReactComponentOfProps<ExpansionPanelSummaryProps> {}

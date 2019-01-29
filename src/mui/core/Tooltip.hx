@@ -1,23 +1,15 @@
 package mui.core;
 
-import react.ReactComponent;
-import react.ReactType;
 import react.transition.Transition;
-import react.types.ForcedOverride;
-import react.types.HandlerOrVoid;
 
-import mui.core.Popper.PopperBaseProps;
+import mui.core.Popper.PopperProps;
 import mui.core.popper.PopperPlacement;
 import mui.core.popper.TooltipClassKey;
 
-private typedef Props = ForcedOverride<
-	StandardProps<TooltipClassKey>,
-	TooltipBaseProps
->;
-
-typedef TooltipBaseProps = {
+typedef TooltipProps = ForcedOverride<StandardDOMAttributes, {
 	var children:ReactElement;
 	var title:ReactFragment;
+	@:optional var classes:Record<TooltipClassKey>;
 	@:optional var disableFocusListener:Bool;
 	@:optional var disableHoverListener:Bool;
 	@:optional var disableTouchListener:Bool;
@@ -31,10 +23,10 @@ typedef TooltipBaseProps = {
 	@:optional var onOpen:HandlerOrVoid<ClassicHandler>;
 	@:optional var open:Bool;
 	@:optional var placement:PopperPlacement;
-	@:optional var PopperProps:PopperBaseProps;
+	@:optional var PopperProps:Partial<PopperProps>;
 	@:optional var TransitionComponent:ReactType;
 	@:optional var TransitionProps:TransitionProps<Any>;
-}
+}>;
 
 @:jsRequire('@material-ui/core', 'Tooltip')
-extern class Tooltip extends ReactComponentOfProps<Props> {}
+extern class Tooltip extends ReactComponentOfProps<TooltipProps> {}

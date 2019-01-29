@@ -1,22 +1,13 @@
 package mui.core;
 
-import react.ReactComponent;
-import react.types.ForcedOverride;
-
-import mui.core.Paper.PaperBaseProps;
+import mui.core.Paper.PaperProps;
 import mui.core.snackbar.SnackbarContentClassKey;
 
-private typedef Props = ForcedOverride<
-	StandardProps<SnackbarContentClassKey>,
-	SnackbarContentBaseProps
->;
-
-typedef SnackbarContentBaseProps = {
-	> PaperBaseProps,
-
+typedef SnackbarContentProps = ForcedOverride<PaperProps, {
+	@:optional var classes:Record<SnackbarContentClassKey>;
 	@:optional var action:ReactFragment;
 	@:optional var message:ReactFragment;
-}
+}>;
 
 @:jsRequire('@material-ui/core', 'SnackbarContent')
-extern class SnackbarContent extends ReactComponentOfProps<Props> {}
+extern class SnackbarContent extends ReactComponentOfProps<SnackbarContentProps> {}

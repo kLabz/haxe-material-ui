@@ -1,14 +1,13 @@
 package mui.core;
 
-import react.ReactComponent;
-import react.types.ForcedOverride;
-import react.types.Noise;
-
 import mui.core.stepper.StepConnectorClassKey;
 
-private typedef Props = ForcedOverride<StandardProps<StepConnectorClassKey>, {
+typedef StepConnectorProps = {
+	> StandardDOMAttributes,
+
 	@:optional var children:Noise;
-}>;
+	@:optional var classes:Record<StepConnectorClassKey>;
+}
 
 @:jsRequire('@material-ui/core', 'StepConnector')
-extern class StepConnector extends ReactComponentOfProps<Props> {}
+extern class StepConnector extends ReactComponentOfProps<StepConnectorProps> {}

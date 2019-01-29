@@ -1,15 +1,11 @@
 package mui.core;
 
-import react.ReactComponent;
-import react.types.ForcedOverride;
-
 import mui.core.card.CardActionAreaClassKey;
-import mui.core.ButtonBase.ButtonBaseBaseProps;
+import mui.core.ButtonBase.ButtonBaseProps;
 
-private typedef Props = ForcedOverride<
-	StandardProps<CardActionAreaClassKey>,
-	ButtonBaseBaseProps
->;
+typedef CardActionAreaProps = ForcedOverride<ButtonBaseProps, {
+	@:optional var classes:Record<CardActionAreaClassKey>;
+}>;
 
 @:jsRequire('@material-ui/core', 'CardActionArea')
-extern class CardActionArea extends ReactComponentOfProps<Props> {}
+extern class CardActionArea extends ReactComponentOfProps<CardActionAreaProps> {}

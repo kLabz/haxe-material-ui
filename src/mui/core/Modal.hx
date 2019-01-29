@@ -1,32 +1,18 @@
 package mui.core;
 
-import js.html.Event;
-
-import react.ReactComponent;
-import react.ReactType;
-import react.types.DOMOrCallback;
-import react.types.ForcedOverride;
-import react.types.HandlerOrVoid;
-
-import mui.core.Backdrop.BackdropBaseProps;
+import mui.core.Backdrop.BackdropProps;
 import mui.core.modal.ModalClassKey;
 import mui.core.modal.ModalCloseReason;
 import mui.core.modal.ModalManager;
 
-private typedef Props = ForcedOverride<
-	StandardProps<ModalClassKey>,
-	{
-		> ModalBaseProps,
+typedef ModalProps = {
+	> StandardDOMAttributes,
 
-		var open:Bool;
-		@:optional var children:ReactSingleFragment;
-	}
->;
-
-typedef ModalBaseProps = {
-	@:optional var open:Bool;
+	var open:Bool;
 	@:optional var BackdropComponent:ReactType;
-	@:optional var BackdropProps:BackdropBaseProps;
+	@:optional var BackdropProps:Partial<BackdropProps>;
+	@:optional var children:ReactSingleFragment;
+	@:optional var classes:Record<ModalClassKey>;
 	@:optional var closeAfterTransition:Bool;
 	@:optional var container:DOMOrCallback;
 	@:optional var disableAutoFocus:Bool;
@@ -45,4 +31,4 @@ typedef ModalBaseProps = {
 }
 
 @:jsRequire('@material-ui/core', 'Modal')
-extern class Modal extends ReactComponentOfProps<Props> {}
+extern class Modal extends ReactComponentOfProps<ModalProps> {}

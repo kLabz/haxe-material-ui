@@ -1,23 +1,10 @@
 package mui.core;
 
-import js.html.HtmlElement;
-import react.ReactComponent;
-import react.types.DOMAttributes;
-import react.types.ForcedOverride;
-import react.types.HandlerOrVoid;
-
-import mui.StandardProps.StandardBaseProps;
-import mui.core.Drawer.DrawerBaseProps;
+import mui.core.Drawer.DrawerProps;
 import mui.core.common.TransitionDuration;
 
-private typedef Props = ForcedOverride<
-	DOMAttributes<HtmlElement>,
-	SwipeableDrawerBaseProps
->;
-
-typedef SwipeableDrawerBaseProps = {
-	> StandardBaseProps,
-	> DrawerBaseProps,
+typedef SwipeableDrawerProps = {
+	> DrawerProps,
 
 	var open:Bool;
 	var onClose:HandlerOrVoid<ClassicHandler>;
@@ -33,4 +20,4 @@ typedef SwipeableDrawerBaseProps = {
 }
 
 @:jsRequire('@material-ui/core', 'SwipeableDrawer')
-extern class SwipeableDrawer extends ReactComponentOfProps<Props> {}
+extern class SwipeableDrawer extends ReactComponentOfProps<SwipeableDrawerProps> {}

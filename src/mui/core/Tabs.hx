@@ -1,25 +1,16 @@
 package mui.core;
 
-import js.html.Event;
-import react.ReactComponent;
-import react.ReactType;
-import react.types.ForcedOverride;
-import react.types.HandlerOrVoid;
-
 import mui.Color;
 import mui.core.tab.TabsActions;
 import mui.core.tab.TabsClassKey;
 import mui.core.tab.TabsVariant;
 import mui.core.tab.ScrollButtons;
 
-private typedef Props = ForcedOverride<
-	StandardProps<TabsClassKey>,
-	TabsProps
->;
-
-typedef TabsProps = {
+typedef TabsProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var action:TabsActions->Void;
 	@:optional var centered:Bool;
+	@:optional var children:ReactFragment;
+	@:optional var classes:Record<TabsClassKey>;
 	@:optional var component:ReactType;
 	@:deprecated @:optional var fullWidth:Bool;
 	@:optional var indicatorColor:ColorPS;
@@ -31,7 +22,7 @@ typedef TabsProps = {
 	@:optional var textColor:ColorPSI;
 	@:optional var value:Any;
 	@:optional var variant:TabsVariant;
-}
+}>;
 
 @:jsRequire('@material-ui/core', 'Tabs')
-extern class Tabs extends ReactComponentOfProps<Props> {}
+extern class Tabs extends ReactComponentOfProps<TabsProps> {}

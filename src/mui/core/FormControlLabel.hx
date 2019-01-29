@@ -1,25 +1,14 @@
 package mui.core;
 
-import js.html.Event;
 import js.html.InputElement;
-import react.ReactComponent;
-import react.ReactRef;
-import react.ReactType;
-import react.types.ForcedOverride;
-import react.types.HandlerOrVoid;
-import react.types.Noise;
 
 import mui.core.checkbox.CheckedStatus;
 import mui.core.form.FormControlLabelClassKey;
 import mui.core.form.FormLabelPlacement;
 
-private typedef Props = ForcedOverride<
-	StandardProps<FormControlLabelClassKey>,
-	FormControlLabelProps
->;
-
-typedef FormControlLabelProps = {
+typedef FormControlLabelProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var children:Noise;
+	@:optional var classes:Record<FormControlLabelClassKey>;
 	@:optional var checked:CheckedStatus;
 	@:optional var control:ReactType;
 	@:optional var disabled:Bool;
@@ -29,7 +18,7 @@ typedef FormControlLabelProps = {
 	@:optional var name:String;
 	@:optional var onChange:HandlerOrVoid<Event->Bool->Void>;
 	@:optional var value:String;
-}
+}>;
 
 @:jsRequire('@material-ui/core', 'FormControlLabel')
-extern class FormControlLabel extends ReactComponentOfProps<Props> {}
+extern class FormControlLabel extends ReactComponentOfProps<FormControlLabelProps> {}

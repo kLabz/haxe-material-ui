@@ -1,15 +1,11 @@
 package mui.core;
 
-import react.ReactComponent;
-import react.types.ForcedOverride;
-
-import mui.core.Typography.TypographyBaseProps;
+import mui.core.Typography.TypographyProps;
 import mui.core.dialog.DialogContentTextClassKey;
 
-private typedef Props = ForcedOverride<
-	StandardProps<DialogContentTextClassKey>,
-	TypographyBaseProps
->;
+typedef DialogContentTextProps = ForcedOverride<TypographyProps, {
+	@:optional var classes:Record<DialogContentTextClassKey>;
+}>;
 
 @:jsRequire('@material-ui/core', 'DialogContentText')
-extern class DialogContentText extends ReactComponentOfProps<Props> {}
+extern class DialogContentText extends ReactComponentOfProps<DialogContentTextProps> {}

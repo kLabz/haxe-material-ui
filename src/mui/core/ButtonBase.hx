@@ -1,24 +1,17 @@
 package mui.core;
 
-import react.ReactRef;
-import react.ReactComponent;
-import react.ReactType;
-import react.types.ForcedOverride;
-import react.types.HandlerOrVoid;
-
 import mui.core.button.ButtonBaseActions;
 import mui.core.button.ButtonBaseClassKey;
 import mui.core.button.ButtonType;
 
-private typedef Props = ForcedOverride<
-	StandardProps<ButtonBaseClassKey>,
-	ButtonBaseBaseProps
->;
+typedef ButtonBaseProps = {
+	> StandardDOMAttributes,
 
-typedef ButtonBaseBaseProps = {
 	@:optional var action:ButtonBaseActions->Void;
 	@:optional var buttonRef:ReactRef<Any>;
 	@:optional var centerRipple:Bool;
+	@:optional var children:ReactFragment;
+	@:optional var classes:Record<ButtonBaseClassKey>;
 	@:optional var component:ReactType;
 	@:optional var disabled:Bool;
 	@:optional var disableRipple:Bool;
@@ -31,4 +24,4 @@ typedef ButtonBaseBaseProps = {
 }
 
 @:jsRequire('@material-ui/core', 'ButtonBase')
-extern class ButtonBase extends ReactComponentOfProps<Props> {}
+extern class ButtonBase extends ReactComponentOfProps<ButtonBaseProps> {}

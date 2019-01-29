@@ -1,25 +1,20 @@
 package mui.core;
 
-import react.ReactComponent;
-import react.ReactType;
-import react.types.ForcedOverride;
-
-import mui.core.StepIcon.StepIconBaseProps;
+import mui.core.StepIcon.StepIconProps;
 import mui.core.stepper.StepLabelClassKey;
 
-private typedef Props = ForcedOverride<
-	StandardProps<StepLabelClassKey>,
-	StepLabelBaseProps
->;
+typedef StepLabelProps = {
+	> StandardDOMAttributes,
 
-typedef StepLabelBaseProps = {
+	@:optional var children:ReactFragment;
+	@:optional var classes:Record<StepLabelClassKey>;
 	@:optional var disabled:Bool;
 	@:optional var error:Bool;
 	@:optional var icon:ReactFragment;
 	@:optional var optional:ReactFragment;
 	@:optional var StepIconComponent:ReactType;
-	@:optional var StepIconProps:StepIconBaseProps;
+	@:optional var StepIconProps:Partial<StepIconProps>;
 }
 
 @:jsRequire('@material-ui/core', 'StepLabel')
-extern class StepLabel extends ReactComponentOfProps<Props> {}
+extern class StepLabel extends ReactComponentOfProps<StepLabelProps> {}

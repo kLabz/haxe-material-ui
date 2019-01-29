@@ -1,18 +1,14 @@
 package mui.core;
 
-import react.ReactComponent;
-import react.types.ForcedOverride;
-
 import mui.core.touch.TouchRippleClassKey;
 
-private typedef Props = ForcedOverride<
-	StandardProps<TouchRippleClassKey>,
-	TouchRippleBaseProps
->;
+typedef TouchRippleProps = {
+	> StandardDOMAttributes,
 
-typedef TouchRippleBaseProps = {
 	@:optional var center:Bool;
+	@:optional var children:ReactFragment;
+	@:optional var classes:Record<TouchRippleClassKey>;
 }
 
 @:jsRequire('@material-ui/core', 'TouchRipple')
-extern class TouchRipple extends ReactComponentOfProps<Props> {}
+extern class TouchRipple extends ReactComponentOfProps<TouchRippleProps> {}

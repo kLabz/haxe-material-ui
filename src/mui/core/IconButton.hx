@@ -1,21 +1,12 @@
 package mui.core;
 
-import react.ReactComponent;
-import react.types.ForcedOverride;
-
 import mui.core.button.IconButtonClassKey;
-import mui.core.ButtonBase.ButtonBaseBaseProps;
+import mui.core.ButtonBase.ButtonBaseProps;
 
-private typedef Props = ForcedOverride<
-	StandardProps<IconButtonClassKey>,
-	IconButtonBaseProps
->;
-
-typedef IconButtonBaseProps = {
-	> ButtonBaseBaseProps,
-
+typedef IconButtonProps = ForcedOverride<ButtonBaseProps, {
+	@:optional var classes:Record<IconButtonClassKey>;
 	@:optional var color:Color;
-}
+}>;
 
 @:jsRequire('@material-ui/core', 'IconButton')
-extern class IconButton extends ReactComponentOfProps<Props> {}
+extern class IconButton extends ReactComponentOfProps<IconButtonProps> {}

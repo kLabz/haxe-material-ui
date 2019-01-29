@@ -1,19 +1,14 @@
 package mui.core;
 
-import react.ReactComponent;
-import react.ReactType;
-import react.types.ForcedOverride;
-
 import mui.core.form.FormHelperTextClassKey;
 import mui.core.form.FormHelperTextMargin;
 import mui.core.form.FormControlVariant;
 
-private typedef Props = ForcedOverride<
-	StandardProps<FormHelperTextClassKey>,
-	FormHelperTextBaseProps
->;
+typedef FormHelperTextProps = {
+	> StandardDOMAttributes,
 
-typedef FormHelperTextBaseProps = {
+	@:optional var children:ReactFragment;
+	@:optional var classes:Record<FormHelperTextClassKey>;
 	@:optional var component:ReactType;
 	@:optional var disabled:Bool;
 	@:optional var error:Bool;
@@ -25,4 +20,4 @@ typedef FormHelperTextBaseProps = {
 }
 
 @:jsRequire('@material-ui/core', 'FormHelperText')
-extern class FormHelperText extends ReactComponentOfProps<Props> {}
+extern class FormHelperText extends ReactComponentOfProps<FormHelperTextProps> {}
