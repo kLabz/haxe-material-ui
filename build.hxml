@@ -6,5 +6,6 @@
 
 -cp src
 --macro include('mui.core', true)
+--macro include('mui.lab', true)
 -js .build/test.js
 

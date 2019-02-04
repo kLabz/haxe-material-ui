@@ -8,8 +8,8 @@ import mui.core.typography.TypographyClassKey;
 
 typedef LinkProps = ForcedOverride<TypographyProps, {
 	var children:ReactFragment;
-	@:optional var classes:Record<LinkClassKey>;
 	@:optional var block:Bool;
+	@:optional var classes:Record<LinkClassKey>;
 	@:optional var target:LinkTarget;
 	@:optional var TypographyClasses:Record<TypographyClassKey>;
 	@:optional var underline:LinkUnderline;
