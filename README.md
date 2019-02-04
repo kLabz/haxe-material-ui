@@ -10,8 +10,8 @@ This library includes Haxe externs for all components from
 
 ## Compatibility table
 
-Current version (`0.13.1`) of `haxe-material-ui` is based
-off `@material-ui/core` version [`3.9.1`][mui-3.9.0-doc] and
+Current version (`0.14.0`) of `haxe-material-ui` is based
+off `@material-ui/core` version [`3.9.2`][mui-3.9.0-doc] and
 `@material-ui/icons` version `3.0.2`.
 
 | Haxe Material UI    | `@material-ui/core`        | `@material-ui/icons` |
@@ -48,7 +48,7 @@ haxelib install material-ui
 Install npm dependencies:
 
 ```
-npm i --save-exact @material-ui/core@3.9.1 @material-ui/icons@3.0.2
+npm i --save-exact @material-ui/core@3.9.2 @material-ui/icons@3.0.2
 ```
 
 ## Roadmap
@@ -63,9 +63,11 @@ on [`haxe-react`'s gitter][gitter].
 Progress is being tracked on [this google doc][gdoc], with these objectives in
 mind:
 
-* Add more utils for theme and style
+* Add [Lab](https://material-ui.com/lab/about/) components
 * Add externs to existing utils in `@material-ui/core` and `@material-ui/icons`
-* Improve `css-types` for better props typing
+* Add more utils for theme and style
+* ~~Improve `css-types` for better props typing~~
+* Improve (with enums) and switch to `tink_domspec`
 * Improve this README with instructions
 * Generate documentation from current code
 * Add examples (example project + some guides)
