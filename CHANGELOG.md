@@ -6,6 +6,11 @@
 * Fix `ClassKey`-related props (by fixing `Record<T>` in `react-types`)
 * Now requires `react-types` version `0.9.0`
 
+### 0.14.1
+
+* Compatibility with [`@material-ui/core 3.9.2`](https://v3-9-2.material-ui.com/versions/) (nothing to do)
+* Add [Lab](https://material-ui.com/lab/about/) components in `mui.lab`: `Breadcrumbs`, `Slider`, `SpeedDial`, `ToggleButton`
+
 ## 0.13.0 - 2019-01-15
 
 * Compatibility with [`@material-ui/core 3.9.0`](https://v3-9-0.material-ui.com/versions/)
