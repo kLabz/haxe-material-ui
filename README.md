@@ -60,10 +60,6 @@ on [`haxe-react`'s gitter][gitter].
 
 ### Current objectives
 
-Progress is being tracked on [this google doc][gdoc], with these objectives in
-mind:
-
-* Add [Lab](https://material-ui.com/lab/about/) components
 * Add externs to existing utils in `@material-ui/core` and `@material-ui/icons`
 * Add more utils for theme and style
 * ~~Improve `css-types` for better props typing~~
