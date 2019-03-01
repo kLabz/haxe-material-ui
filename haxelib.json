@@ -1,8 +1,8 @@
 {
   "name": "material-ui",
   "description": "Material UI - React components that implement Google's Material Design",
-  "version": "0.14.1",
-  "releasenote": "Add Lab components (See CHANGELOG.md)",
+  "version": "0.14.2",
+  "releasenote": "Update SvgIcon and Icon typing (See CHANGELOG.md)",
   "url": "https://gitlab.com/k-labz/haxe-oss/haxe-material-ui",
   "license": "MIT",
   "tags": [],

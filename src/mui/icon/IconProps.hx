@@ -3,6 +3,7 @@ package mui.icon;
 import js.html.HtmlElement;
 
 import css.Properties;
+import mui.core.icon.SvgIconFontSize;
 import react.ReactType;
 import react.types.DOMAttributes;
 import react.types.ForcedOverride;
@@ -15,5 +16,5 @@ typedef IconProps = ForcedOverride<
 typedef IconBaseProps = {
 	@:optional var component:ReactType;
 	@:optional var color:IconColor;
-	@:optional var fontSize:FontSize;
+	@:optional var fontSize:SvgIconFontSize;
 }

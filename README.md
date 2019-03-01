@@ -10,7 +10,7 @@ This library includes Haxe externs for all components from
 
 ## Compatibility table
 
-Current version (`0.14.1`) of `haxe-material-ui` is based
+Current version (`0.14.2`) of `haxe-material-ui` is based
 off `@material-ui/core` version [`3.9.2`][mui-3.9.0-doc] and
 `@material-ui/icons` version `3.0.2`.
 

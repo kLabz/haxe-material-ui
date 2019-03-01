@@ -1,6 +1,7 @@
 package mui.core;
 
 import mui.core.icon.SvgIconClassKey;
+import mui.core.icon.SvgIconFontSize;
 
 typedef SvgIconProps = {
 	> StandardDOMAttributes,
@@ -9,7 +10,7 @@ typedef SvgIconProps = {
 	@:optional var classes:Record<SvgIconClassKey>;
 	@:optional var color:IconColor;
 	@:optional var component:ReactType;
-	@:optional var fontSize:FontSize;
+	@:optional var fontSize:SvgIconFontSize;
 	@:optional var nativeColor:String;
 	@:optional var shapeRendering:String;
 	@:optional var titleAccess:String;
