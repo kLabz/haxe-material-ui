@@ -32,7 +32,7 @@ typedef InputBaseCommonProps = {
 	@:optional var inputProps:Dynamic;
 	@:optional var inputRef:ReactRef<InputElement>;
 	@:optional var margin:FormControlMargin;
-	@:optional var mutliline:Bool;
+	@:optional var multiline:Bool;
 	@:optional var onChange:HandlerOrVoid<ClassicHandler>;
 	@:optional var placeholder:String;
 	@:optional var rows:StringOrInt;
