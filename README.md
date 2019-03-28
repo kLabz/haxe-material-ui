@@ -11,7 +11,7 @@ This library includes Haxe externs for all components from
 ## Compatibility table
 
 Current version (`0.14.3`) of `haxe-material-ui` is based
-off `@material-ui/core` version [`3.9.2`][mui-3.9.0-doc] and
+off `@material-ui/core` version [`3.9.3`][mui-3.9.0-doc] and
 `@material-ui/icons` version `3.0.2`.
 
 | Haxe Material UI    | `@material-ui/core`        | `@material-ui/icons` |
@@ -23,10 +23,10 @@ off `@material-ui/core` version [`3.9.2`][mui-3.9.0-doc] and
 
 ## Usage
 
-This library is mostly used with [`react-next`][react-next] and Haxe 4 preview
-4. It is meant to be used with latest versions of `react-next` and `react-types`
-since it is using their latest features (helpers for writing correctly typed
-externs).
+This library is mostly used with [`react-next`][react-next] and Haxe 4 (at least
+preview 4). It is meant to be used with latest versions of `react-next` and
+`react-types` since it is using their latest features (helpers for writing
+correctly typed externs).
 
 Compatibility with current version of [`react`][haxe-react] should be
 possible using [`react-next-compat`](https://github.com/kLabz/haxe-react-next-compat).
