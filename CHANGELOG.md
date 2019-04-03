@@ -19,6 +19,10 @@
 
 * Fix a typo in `InputBase` for `multiline` prop
 
+### 0.14.4
+
+* Fix a typing mistake in `FormControlLabel` for `control` prop
+
 ## 0.13.0 - 2019-01-15
 
 * Compatibility with [`@material-ui/core 3.9.0`](https://v3-9-0.material-ui.com/versions/)

@@ -10,7 +10,7 @@ typedef FormControlLabelProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var children:Noise;
 	@:optional var classes:Record<FormControlLabelClassKey>;
 	@:optional var checked:CheckedStatus;
-	@:optional var control:ReactType;
+	@:optional var control:ReactFragment;
 	@:optional var disabled:Bool;
 	@:optional var inputRef:ReactRef<InputElement>;
 	@:optional var label:ReactFragment;
