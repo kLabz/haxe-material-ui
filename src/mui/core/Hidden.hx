@@ -19,6 +19,7 @@ private typedef Props = {
 	@:optional var xlUp:Bool;
 	@:optional var xsDown:Bool;
 	@:optional var xsUp:Bool;
+	@:optional var className:String;
 }
 
 @:jsRequire('@material-ui/core', 'Hidden')
