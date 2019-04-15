@@ -15,5 +15,5 @@ typedef LinkProps = ForcedOverride<TypographyProps, {
 	@:optional var underline:LinkUnderline;
 }>;
 
-@:jsxRequire('@material-ui/core', 'Link')
+@:jsRequire('@material-ui/core', 'Link')
 extern class Link extends ReactComponentOfProps<LinkProps> {}

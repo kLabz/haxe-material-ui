@@ -16,5 +16,5 @@ typedef FormLabelProps = {
 	@:optional var htmlFor:String;
 }
 
-@:jsxRequire('@material-ui/core', 'FormLabel')
+@:jsRequire('@material-ui/core', 'FormLabel')
 extern class FormLabel extends ReactComponentOfProps<FormLabelProps> {}

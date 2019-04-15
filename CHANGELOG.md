@@ -27,6 +27,10 @@
 
 * Add `className` prop to `Hidden`
 
+### 0.14.6
+
+* Fix `@:jsRequire` for `Link` and `FormLabel`
+
 ## 0.13.0 - 2019-01-15
 
 * Compatibility with [`@material-ui/core 3.9.0`](https://v3-9-0.material-ui.com/versions/)
