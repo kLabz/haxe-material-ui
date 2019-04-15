@@ -5,9 +5,11 @@ import mui.core.Menu.MenuProps;
 import mui.core.form.FormControlVariant;
 import mui.core.input.InputValue;
 import mui.core.input.SelectClassKey;
+import react.ReactComponent.ReactFragment;
 
 typedef SelectProps = ForcedOverride<InputProps, {
 	@:optional var autoWidth:Bool;
+	@:optional var children:ReactFragment;
 	@:optional var classes:Record<SelectClassKey>;
 	@:optional var displayEmpty:Bool;
 	@:optional var IconComponent:ReactType;
