@@ -32,6 +32,9 @@ typedef ButtonProps = {
 	@:optional var onFocusVisible:HandlerOrVoid<ClassicHandler>;
 	@:optional var TouchRippleProps:Dynamic;
 	@:optional var type:ButtonType;
+
+	// Some useful html attributes
+	@:optional var tabIndex:Int;
 }
 
 @:jsRequire('@material-ui/core', 'Button')
