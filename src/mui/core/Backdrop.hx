@@ -7,7 +7,7 @@ typedef BackdropProps = {
 	> StandardDOMAttributes,
 
 	var open:Bool;
-	@:optional var children:Noise;
+	@:optional var children:ReactFragment; // TODO: check if really enabled
 	@:optional var classes:Record<BackdropClassKey>;
 	@:optional var invisible:Bool;
 	@:optional var transitionDuration:TransitionDuration;
