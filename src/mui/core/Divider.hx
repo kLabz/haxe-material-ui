@@ -1,6 +1,7 @@
 package mui.core;
 
 import mui.core.list.DividerClassKey;
+import mui.core.list.DividerOrientation;
 import mui.core.list.DividerVariant;
 
 typedef DividerProps = {
@@ -10,8 +11,8 @@ typedef DividerProps = {
 	@:optional var children:Noise;
 	@:optional var classes:Record<DividerClassKey>;
 	@:optional var component:ReactType;
-	@:optional var inset:Bool;
 	@:optional var light:Bool;
+	@:optional var orientation:DividerOrientation;
 	@:optional var variant:DividerVariant;
 }
 
