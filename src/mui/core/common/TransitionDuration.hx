@@ -1,6 +1,7 @@
 package mui.core.common;
 
 typedef OTransitionDuration = {
+	@:optional var appear:Int;
 	@:optional var enter:Int;
 	@:optional var exit:Int;
 }

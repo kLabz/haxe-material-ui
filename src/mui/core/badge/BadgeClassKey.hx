@@ -6,6 +6,14 @@ package mui.core.badge;
 	var ColorPrimary = "colorPrimary";
 	var ColorSecondary = "colorSecondary";
 	var ColorError = "colorError";
-	var Invisible = "invisible";
 	var Dot = "dot";
+	var AnchorOriginTopRightRectangle = "anchorOriginTopRightRectangle";
+	var AnchorOriginBottomRightRectangle = "anchorOriginBottomRightRectangle";
+	var AnchorOriginTopLeftRectangle = "anchorOriginTopLeftRectangle";
+	var AnchorOriginBottomLeftRectangle = "anchorOriginBottomLeftRectangle";
+	var AnchorOriginTopRightCircle = "anchorOriginTopRightCircle";
+	var AnchorOriginBottomRightCircle = "anchorOriginBottomRightCircle";
+	var AnchorOriginTopLeftCircle = "anchorOriginTopLeftCircle";
+	var AnchorOriginBottomLeftCircle = "anchorOriginBottomLeftCircle";
+	var Invisible = "invisible";
 }
