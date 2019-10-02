@@ -5,7 +5,7 @@ import mui.core.list.ListItemAvatarClassKey;
 typedef ListItemAvatarProps = {
 	> StandardDOMAttributes,
 
-	var children:ReactFragment;
+	var children:ReactElement;
 	@:optional var classes:Record<ListItemAvatarClassKey>;
 }
 
