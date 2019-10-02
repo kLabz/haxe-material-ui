@@ -15,7 +15,6 @@ typedef ButtonProps = {
 	@:optional var color:Color;
 	@:optional var fullWidth:Bool;
 	@:optional var href:String;
-	@:optional var mini:Bool;
 	@:optional var size:ButtonSize;
 	@:optional var variant:ButtonVariant;
 
