@@ -31,6 +31,8 @@ typedef ButtonProps = {
 	@:optional var onFocusVisible:HandlerOrVoid<ClassicHandler>;
 	@:optional var TouchRippleProps:Dynamic;
 	@:optional var type:ButtonType;
+	@:optional var startIcon:ReactFragment;
+	@:optional var endIcon:ReactFragment;
 
 	// Some useful html attributes
 	@:optional var tabIndex:Int;
