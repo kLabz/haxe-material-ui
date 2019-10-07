@@ -13,8 +13,11 @@ typedef ButtonProps = {
 	var children:ReactFragment;
 	@:optional var classes:Record<ButtonClassKey>;
 	@:optional var color:Color;
+	@:optional var disableFocusRipple:Bool;
+	@:optional var endIcon:ReactFragment;
 	@:optional var fullWidth:Bool;
 	@:optional var href:String;
+	@:optional var startIcon:ReactFragment;
 	@:optional var size:ButtonSize;
 	@:optional var variant:ButtonVariant;
 
@@ -31,8 +34,6 @@ typedef ButtonProps = {
 	@:optional var onFocusVisible:HandlerOrVoid<ClassicHandler>;
 	@:optional var TouchRippleProps:Dynamic;
 	@:optional var type:ButtonType;
-	@:optional var startIcon:ReactFragment;
-	@:optional var endIcon:ReactFragment;
 
 	// Some useful html attributes
 	@:optional var tabIndex:Int;
