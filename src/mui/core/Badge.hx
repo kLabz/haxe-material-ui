@@ -2,6 +2,7 @@ package mui.core;
 
 import mui.Color;
 import mui.core.badge.BadgeClassKey;
+import mui.core.badge.BadgeOverlap;
 import mui.core.badge.BadgeVariant;
 import mui.core.common.Position;
 import mui.core.common.TransitionDuration;
@@ -17,7 +18,7 @@ typedef BadgeProps = {
 	@:optional var component:ReactType;
 	@:optional var invisible:Bool;
 	@:optional var max:Int;
-	@:optional var overlap:String; // TODO: enum ('circle' | 'rectangle')
+	@:optional var overlap:BadgeOverlap;
 	@:optional var showZero:Bool;
 	@:optional var variant:BadgeVariant;
 }
