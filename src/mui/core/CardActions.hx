@@ -7,7 +7,7 @@ typedef CardActionsProps = {
 
 	@:optional var children:ReactFragment;
 	@:optional var classes:Record<CardActionsClassKey>;
-	@:optional var disableActionSpacing:Bool;
+	@:optional var disableSpacing:Bool;
 }
 
 @:jsRequire('@material-ui/core', 'CardActions')

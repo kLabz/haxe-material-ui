@@ -1,11 +1,8 @@
 package mui.core;
 
-import react.event.EventListener.EventListenerTarget;
-
 typedef ClickAwayListenerProps = {
 	var children:ReactFragment;
 	var onClickAway:HandlerOrVoid<ClassicHandler>;
-	@:optional var target:EventListenerTarget;
 	@:optional var mouseEvent:ClickAwayMouseEvent;
 	@:optional var touchEvent:ClickAwayTouchEvent;
 }
@@ -23,6 +20,5 @@ typedef ClickAwayListenerProps = {
 	var None = false;
 }
 
-@:acceptsMoreProps('react_event_EventListener_validator')
 @:jsRequire('@material-ui/core', 'ClickAwayListener')
 extern class ClickAwayListener extends ReactComponentOfProps<ClickAwayListenerProps> {}

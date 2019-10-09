@@ -2,6 +2,7 @@ package mui.core;
 
 import mui.Color;
 import mui.core.chip.ChipClassKey;
+import mui.core.chip.ChipSize;
 import mui.core.chip.ChipVariant;
 
 typedef ChipProps = ForcedOverride<StandardDOMAttributes, {
@@ -12,10 +13,12 @@ typedef ChipProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var color:ColorDPS;
 	@:optional var component:ReactType;
 	@:optional var deleteIcon:ReactFragment;
+	@:optional var disabled:Bool;
 	@:optional var icon:ReactFragment;
 	@:optional var label:ReactFragment;
 	@:optional var onClick:HandlerOrVoid<ClassicHandler>;
 	@:optional var onDelete:HandlerOrVoid<ClassicHandler>;
+	@:optional var size:ChipSize;
 	@:optional var variant:ChipVariant;
 }>;
 
