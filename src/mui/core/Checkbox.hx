@@ -3,11 +3,12 @@ package mui.core;
 import js.html.InputElement;
 
 import mui.Color;
+import mui.core.IconButton.IconButtonProps;
 import mui.core.checkbox.CheckboxClassKey;
 import mui.core.checkbox.CheckedStatus;
 import mui.core.input.InputType;
 
-typedef CheckboxProps = ForcedOverride<StandardDOMAttributes, {
+typedef CheckboxProps = ForcedOverride<IconButtonProps, {
 	@:optional var children:Noise;
 	@:optional var checked:CheckedStatus;
 	@:optional var checkedIcon:ReactFragment;
@@ -22,6 +23,7 @@ typedef CheckboxProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var inputProps:{}; // TODO
 	@:optional var inputRef:ReactRef<InputElement>;
 	@:optional var onChange:HandlerOrVoid<Event->Bool->Void>;
+	@:optional var required:Bool;
 	@:optional var type:InputType;
 	@:optional var value:String;
 }>;
