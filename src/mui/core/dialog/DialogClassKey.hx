@@ -8,6 +8,7 @@ package mui.core.dialog;
 	var Paper = "paper";
 	var PaperScrollPaper = "paperScrollPaper";
 	var PaperScrollBody = "paperScrollBody";
+	var PaperWidthFalse = "paperWidthFalse";
 	var PaperWidthXS = "paperWidthXs";
 	var PaperWidthSM = "paperWidthSm";
 	var PaperWidthMD = "paperWidthMd";

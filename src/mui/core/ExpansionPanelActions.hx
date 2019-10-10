@@ -7,6 +7,7 @@ typedef ExpansionPanelActionsProps = {
 
 	@:optional var children:ReactFragment;
 	@:optional var classes:Record<ExpansionPanelActionsClassKey>;
+	@:optional var disableSpacing:Bool;
 }
 
 @:jsRequire('@material-ui/core', 'ExpansionPanelActions')

@@ -7,4 +7,5 @@ package mui.core.list;
 	var Inset = "inset";
 	var Light = "light";
 	var Middle = "middle";
+	var Vertical = "vertical";
 }

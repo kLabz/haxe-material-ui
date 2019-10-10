@@ -7,6 +7,7 @@ typedef DialogContentProps = {
 
 	@:optional var children:ReactFragment;
 	@:optional var classes:Record<DialogContentClassKey>;
+	@:optional var dividers:Bool;
 }
 
 @:jsRequire('@material-ui/core', 'DialogContent')
