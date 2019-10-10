@@ -7,7 +7,7 @@ typedef DialogActionsProps = {
 
 	@:optional var children:ReactFragment;
 	@:optional var classes:Record<DialogActionsClassKey>;
-	@:optional var disableActionSpacing:Bool;
+	@:optional var disableSpacing:Bool;
 }
 
 @:jsRequire('@material-ui/core', 'DialogActions')

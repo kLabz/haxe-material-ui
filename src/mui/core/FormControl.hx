@@ -13,6 +13,7 @@ typedef FormControlProps = {
 	@:optional var disabled:Bool;
 	@:optional var error:Bool;
 	@:optional var fullWidth:Bool;
+	@:optional var hiddenLabel:Bool;
 	@:optional var margin:FormControlMargin;
 	@:optional var required:Bool;
 	@:optional var variant:FormControlVariant;
