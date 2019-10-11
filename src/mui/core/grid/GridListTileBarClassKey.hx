@@ -7,6 +7,7 @@ package mui.core.grid;
 	var RootSubtitle = "rootSubtitle";
 	var TitleWrap = "titleWrap";
 	var TitleWrapActionPosLeft = "titleWrapActionPosLeft";
+	var TitleWrapActionPosRight = "titleWrapActionPosRight";
 	var Title = "title";
 	var Subtitle = "subtitle";
 	var ActionIcon = "actionIcon";

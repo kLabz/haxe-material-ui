@@ -13,6 +13,5 @@ package mui.core.input;
 	var Input = "input";
 	var InputMarginDense = "inputMarginDense";
 	var InputMultiline = "inputMultiline";
-	var InputType = "inputType";
 	var InputTypeSearch = "inputTypeSearch";
 }

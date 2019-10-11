@@ -7,6 +7,7 @@ package mui.core.input;
 	var Disabled = "disabled";
 	var Error = "error";
 	var Required = "required";
+	var Asterisk = "asterisk";
 	var FormControl = "formControl";
 	var MarginDense = "marginDense";
 	var Shrink = "shrink";

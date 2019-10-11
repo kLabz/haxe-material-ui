@@ -24,6 +24,7 @@ typedef InputBaseCommonProps = {
 	@:optional var autoComplete:String;
 	@:optional var autoFocus:Bool;
 	@:optional var children:Noise;
+	@:optional var className:String;
 	@:optional var defaultValue:InputValue;
 	@:optional var disabled:Bool;
 	@:optional var error:Bool;
@@ -31,12 +32,13 @@ typedef InputBaseCommonProps = {
 	@:optional var id:String;
 	@:optional var inputProps:Dynamic;
 	@:optional var inputRef:ReactRef<InputElement>;
-	@:optional var margin:FormControlMargin;
+	@:optional var margin:FormControlMargin; //!\ only Dense/None for InputBase
 	@:optional var multiline:Bool;
 	@:optional var onChange:HandlerOrVoid<ClassicHandler>;
 	@:optional var placeholder:String;
 	@:optional var rows:StringOrInt;
 	@:optional var rowsMax:StringOrInt;
+	@:optional var select:Bool;
 	@:optional var type:InputType;
 	@:optional var value:InputValue;
 }
