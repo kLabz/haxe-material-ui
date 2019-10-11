@@ -14,9 +14,10 @@ package mui.core.input;
 	var FullWidth = "fullWidth";
 	var Input = "input";
 	var InputMarginDense = "inputMarginDense";
+	var InputSelect = "inputSelect";
 	var InputMultiline = "inputMultiline";
-	var InputType = "inputType";
 	var InputTypeSearch = "inputTypeSearch";
 	var InputAdornedStart = "inputAdornedStart";
 	var InputAdornedEnd = "inputAdornedEnd";
+	var InputHiddenLabel = "inputHiddenLabel";
 }

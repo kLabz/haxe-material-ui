@@ -6,5 +6,7 @@ package mui.core.input;
 	var PositionStart = "positionStart";
 	var PositionEnd = "positionEnd";
 	var DisablePointerEvents = "disablePointerEvents";
+	var HiddenLabel = "hiddenLabel";
+	var MarginDense = "marginDense";
 }
 

@@ -1,6 +1,5 @@
 package mui.core;
 
-import mui.core.common.IntOrAuto;
 import mui.core.grid.GridListTileClassKey;
 
 typedef GridListTileProps = {

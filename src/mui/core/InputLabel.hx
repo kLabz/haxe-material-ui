@@ -10,7 +10,7 @@ typedef InputLabelProps = ForcedOverride<FormLabelProps, {
 	@:optional var classes:Record<InputLabelClassKey>;
 	@:optional var disableAnimation:Bool;
 	@:optional var FormLabelClasses:Record<FormLabelClassKey>;
-	@:optional var margin:FormControlMargin;
+	@:optional var margin:FormControlMargin; //!\ Only support Dense?
 	@:optional var shrink:Bool;
 	@:optional var variant:FormControlVariant;
 }>;

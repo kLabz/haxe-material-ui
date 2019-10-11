@@ -1,6 +1,7 @@
 package mui.core.grid;
 
 @:enum abstract GridClassKey(String) to String {
+	var Root = "root";
 	var Container = "container";
 	var Item = "item";
 	var ZeroMinWidth = "zeroMinWidth";
@@ -23,11 +24,16 @@ package mui.core.grid;
 	var JustifyXSSpaceBetween = "justify-xs-space-between";
 	var JustifyXSSpaceAround = "justify-xs-space-around";
 	var JustifyXSSpaceEvenly = "justify-xs-space-evenly";
+	var SpacingXS1 = "spacing-xs-1";
+	var SpacingXS2 = "spacing-xs-2";
+	var SpacingXS3 = "spacing-xs-3";
+	var SpacingXS4 = "spacing-xs-4";
+	var SpacingXS5 = "spacing-xs-5";
+	var SpacingXS6 = "spacing-xs-6";
+	var SpacingXS7 = "spacing-xs-7";
 	var SpacingXS8 = "spacing-xs-8";
-	var SpacingXS16 = "spacing-xs-16";
-	var SpacingXS24 = "spacing-xs-24";
-	var SpacingXS32 = "spacing-xs-32";
-	var SpacingXS40 = "spacing-xs-40";
+	var SpacingXS9 = "spacing-xs-9";
+	var SpacingXS10 = "spacing-xs-10";
 	var GridXSAuto = "grid-xs-auto";
 	var GridXSTrue = "grid-xs-true";
 	var GridXS1 = "grid-xs-1";
