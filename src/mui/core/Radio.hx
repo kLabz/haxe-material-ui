@@ -3,12 +3,13 @@ package mui.core;
 import js.html.InputElement;
 
 import mui.Color;
+import mui.core.IconButton.IconButtonProps;
 import mui.core.checkbox.CheckedStatus;
 import mui.core.input.InputType;
 import mui.core.radio.RadioClassKey;
 import mui.core.radio.RadioValue;
 
-typedef RadioProps = ForcedOverride<StandardDOMAttributes, {
+typedef RadioProps = ForcedOverride<IconButtonProps, {
 	@:optional var children:Noise;
 	@:optional var checked:CheckedStatus;
 	@:optional var checkedIcon:ReactFragment;
@@ -21,6 +22,7 @@ typedef RadioProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var inputProps:{}; // TODO
 	@:optional var inputRef:ReactRef<InputElement>;
 	@:optional var onChange:HandlerOrVoid<Event->Bool->Void>;
+	@:optional var required:Bool;
 	@:optional var type:InputType;
 	@:optional var value:RadioValue;
 }>;

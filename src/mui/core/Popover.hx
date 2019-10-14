@@ -18,6 +18,7 @@ typedef PopoverProps = ForcedOverride<ModalProps, {
 	@:optional var anchorOrigin:Position;
 	@:optional var anchorPosition:AnchorPosition;
 	@:optional var anchorReference:AnchorReference;
+	@:optional var children:ReactFragment;
 	@:optional var classes:Record<PopoverClassKey>;
 	@:optional var elevation:Int;
 	@:optional var getContentAnchorEl:Void->HtmlElement;
