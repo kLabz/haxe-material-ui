@@ -8,9 +8,9 @@ import mui.core.stepper.MobileStepperVariant;
 
 typedef MobileStepperProps = ForcedOverride<PaperProps, {
 	var steps:Int;
-	@:optional var classes:Record<MobileStepperClassKey>;
 	@:optional var activeStep:Int;
 	@:optional var backButton:ReactFragment;
+	@:optional var classes:Record<MobileStepperClassKey>;
 	@:optional var LinearProgressProps:Partial<LinearProgressProps>;
 	@:optional var nextButton:ReactFragment;
 	@:optional var position:MobileStepperPosition;

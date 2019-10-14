@@ -1,18 +1,16 @@
 package mui.core;
 
 import mui.core.Backdrop.BackdropProps;
-import mui.core.modal.ModalClassKey;
 import mui.core.modal.ModalCloseReason;
 import mui.core.modal.ModalManager;
 
 typedef ModalProps = {
 	> StandardDOMAttributes,
 
+	var children:ReactSingleFragment;
 	var open:Bool;
 	@:optional var BackdropComponent:ReactType;
 	@:optional var BackdropProps:Partial<BackdropProps>;
-	@:optional var children:ReactSingleFragment;
-	@:optional var classes:Record<ModalClassKey>;
 	@:optional var closeAfterTransition:Bool;
 	@:optional var container:DOMOrCallback;
 	@:optional var disableAutoFocus:Bool;
@@ -21,6 +19,7 @@ typedef ModalProps = {
 	@:optional var disableEscapeKeyDown:Bool;
 	@:optional var disablePortal:Bool;
 	@:optional var disableRestoreFocus:Bool;
+	@:optional var disableScrollLock:Bool;
 	@:optional var hideBackdrop:Bool;
 	@:optional var keepMounted:Bool;
 	@:optional var manager:ModalManager; // You probably shouldn't use this prop

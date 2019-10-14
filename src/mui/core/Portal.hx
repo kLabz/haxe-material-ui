@@ -3,8 +3,8 @@ package mui.core;
 import react.ReactComponent;
 
 private typedef Props = {
-	var children:ReactFragment;
-	@:optional var container:Dynamic;
+	@:optional var children:ReactFragment;
+	@:optional var container:Dynamic; // This prop is a mess..
 	@:optional var disablePortal:Bool;
 	@:optional var onRendered:Void->Void;
 }

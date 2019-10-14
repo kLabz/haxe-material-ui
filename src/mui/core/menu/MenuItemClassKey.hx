@@ -4,4 +4,5 @@ package mui.core.menu;
 	var Root = "root";
 	var Gutters = "gutters";
 	var Selected = "selected";
+	var Dense = "dense";
 }

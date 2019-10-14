@@ -6,6 +6,7 @@ import mui.core.list.ListAlignItems;
 
 typedef ListItemProps = ForcedOverride<ButtonBaseProps, {
 	@:optional var alignItems:ListAlignItems;
+	@:optional var autoFocus:Bool;
 	@:optional var button:Bool;
 	@:optional var classes:Record<ListItemClassKey>;
 	@:optional var component:ReactType;

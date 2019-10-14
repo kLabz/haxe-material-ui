@@ -6,4 +6,5 @@ package mui.core.link;
 	var UnderlineHover = "underlineHover";
 	var UnderlineAlways = "underlineAlways";
 	var Button = "button";
+	var FocusVisible = "focusVisible";
 }

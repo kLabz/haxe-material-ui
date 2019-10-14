@@ -7,6 +7,7 @@ typedef OutlinedInputProps = ForcedOverride<InputBaseProps, {
 	var labelWidth:Int;
 	@:optional var children:Noise;
 	@:optional var classes:Record<OutlinedInputClassKey>;
+	@:optional var labelWidth:Int;
 	@:optional var notched:Bool;
 }>;
 

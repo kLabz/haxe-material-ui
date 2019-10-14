@@ -5,7 +5,6 @@ package mui.core.list;
 
 	var Container = "container";
 	var FocusVisible = "focusVisible";
-	var Default = "default";
 	var Dense = "dense";
 	var AlignItemsFlexStart = "alignItemsFlexStart";
 	var Disabled = "disabled";
