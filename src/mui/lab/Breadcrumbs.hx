@@ -1,4 +1,7 @@
 package mui.lab;
 
 @:deprecated
-typedef BreadcrumbsProps = mui.core.Breadcrumbs;
+typedef Breadcrumbs = mui.core.Breadcrumbs;
+
+@:deprecated
+typedef BreadcrumbsProps = mui.core.Breadcrumbs.BreadcrumbsProps;
