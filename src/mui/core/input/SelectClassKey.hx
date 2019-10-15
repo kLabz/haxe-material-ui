@@ -9,4 +9,6 @@ package mui.core.input;
 	var SelectMenu = "selectMenu";
 	var Disabled = "disabled";
 	var Icon = "icon";
+	var IconFilled = "iconFilled";
+	var IconOutlined = "iconOutlined";
 }
