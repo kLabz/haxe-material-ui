@@ -22,12 +22,12 @@ typedef SnackbarProps = {
 	@:optional var disableWindowBlurListener:Bool;
 	@:optional var message:ReactFragment;
 	@:optional var onClose:HandlerOrVoid<Event->SnackbarCloseReason->Void>;
-	@:optional var onEnter:CallbackOrVoid<HtmlElement->Bool->Void>;
-	@:optional var onEntering:CallbackOrVoid<HtmlElement->Bool->Void>;
-	@:optional var onEntered:CallbackOrVoid<HtmlElement->Bool->Void>;
-	@:optional var onExit:CallbackOrVoid<HtmlElement->Void>;
-	@:optional var onExiting:CallbackOrVoid<HtmlElement->Void>;
-	@:optional var onExited:CallbackOrVoid<HtmlElement->Void>;
+	@:optional var onEnter:CallbackOrVoid<Element->Bool->Void>;
+	@:optional var onEntering:CallbackOrVoid<Element->Bool->Void>;
+	@:optional var onEntered:CallbackOrVoid<Element->Bool->Void>;
+	@:optional var onExit:CallbackOrVoid<Element->Void>;
+	@:optional var onExiting:CallbackOrVoid<Element->Void>;
+	@:optional var onExited:CallbackOrVoid<Element->Void>;
 	@:optional var open:Bool;
 	@:optional var resumeHideDuration:Int;
 	@:optional var TransitionComponent:ReactType;

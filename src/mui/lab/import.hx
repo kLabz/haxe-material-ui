@@ -2,7 +2,7 @@ package mui.lab;
 
 #if !macro
 import js.html.Event;
-import js.html.HtmlElement;
+import js.html.Element;
 
 import react.Partial;
 import react.ReactComponent;
