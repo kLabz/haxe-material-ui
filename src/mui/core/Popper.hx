@@ -5,11 +5,11 @@ import react.transition.Transition;
 
 typedef PopperRenderProps = {
 	var placement:PopperPlacement;
-	@:optional var TransitionProps:Partial<TransitionProps>;
+	@:optional var TransitionProps:TransitionProps<Any>;
 }
 
 @:pure @:coreType abstract PopperRenderProp
-	from PopperRenderProps->RenderFragment
+	from PopperRenderProps->ReactFragment
 	from ReactFragment
 	from ReactSingleFragment
 	from Array<ReactFragment>

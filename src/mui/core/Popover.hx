@@ -6,7 +6,6 @@ import mui.core.Modal.ModalProps;
 import mui.core.Paper.PaperProps;
 import mui.core.common.Position;
 import mui.core.common.TransitionDuration;
-import mui.core.modal.ModalClassKey;
 import mui.core.popover.PopoverActions;
 import mui.core.popover.PopoverClassKey;
 import mui.core.popover.AnchorPosition;
