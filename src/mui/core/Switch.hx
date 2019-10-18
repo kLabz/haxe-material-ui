@@ -5,6 +5,7 @@ import js.html.InputElement;
 import mui.Color;
 import mui.core.checkbox.CheckedStatus;
 import mui.core.checkbox.SwitchClassKey;
+import mui.core.checkbox.SwitchSize;
 import mui.core.input.InputType;
 
 typedef SwitchProps = ForcedOverride<StandardDOMAttributes, {
@@ -20,6 +21,8 @@ typedef SwitchProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var inputProps:{}; // TODO
 	@:optional var inputRef:ReactRef<InputElement>;
 	@:optional var onChange:HandlerOrVoid<Event->Bool->Void>;
+	@:optional var required:Bool;
+	@:optional var size:SwitchSize;
 	@:optional var type:InputType;
 	@:optional var value:String;
 }>;
