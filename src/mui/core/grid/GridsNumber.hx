@@ -2,7 +2,6 @@ package mui.core.grid;
 
 @:enum abstract GridsNumber(Dynamic) from Bool from Int {
 	var True = true;
-	var False = false;
 	var Auto = "auto";
 
 	var Grids_1 = 1;
