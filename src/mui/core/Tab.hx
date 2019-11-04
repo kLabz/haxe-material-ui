@@ -10,6 +10,7 @@ typedef TabProps = ForcedOverride<ButtonBaseProps, {
 	@:optional var icon:ReactFragment;
 	@:optional var label:ReactFragment;
 	@:optional var value:Any;
+	@:optional var wrapped:Bool;
 }>;
 
 @:jsRequire('@material-ui/core', 'Tab')
