@@ -3,6 +3,7 @@ package mui.core;
 import mui.Color;
 import mui.core.tab.TabsActions;
 import mui.core.tab.TabsClassKey;
+import mui.core.tab.TabsOrientation;
 import mui.core.tab.TabsVariant;
 import mui.core.tab.ScrollButtons;
 
@@ -15,6 +16,7 @@ typedef TabsProps = ForcedOverride<StandardDOMAttributes, {
 	@:deprecated @:optional var fullWidth:Bool;
 	@:optional var indicatorColor:ColorPS;
 	@:optional var onChange:HandlerOrVoid<Event->Int->Void>;
+	@:optional var orientation:TabsOrientation;
 	@:deprecated @:optional var scrollable:Bool;
 	@:optional var ScrollButtonComponent:ReactType;
 	@:optional var scrollButtons:ScrollButtons;
