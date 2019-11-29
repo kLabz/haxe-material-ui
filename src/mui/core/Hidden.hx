@@ -1,14 +1,14 @@
 package mui.core;
 
 import react.ReactComponent;
-import mui.core.common.ShirtSize;
+import mui.core.common.Breakpoint;
 import mui.core.hidden.Implementation;
 
 private typedef Props = {
 	@:optional var children:ReactFragment;
 	@:optional var implementation:Implementation;
-	@:optional var initialWidth:ShirtSize;
-	@:optional var only:ShirtSizeOrArray;
+	@:optional var initialWidth:Breakpoint;
+	@:optional var only:BreakpointOrArray;
 	@:optional var lgDown:Bool;
 	@:optional var lgUp:Bool;
 	@:optional var mdDown:Bool;

@@ -1,6 +1,6 @@
 package mui.core;
 
-import mui.core.common.ShirtSize;
+import mui.core.common.Breakpoint;
 import mui.core.container.ContainerClassKey;
 
 typedef ContainerProps = {
@@ -10,7 +10,7 @@ typedef ContainerProps = {
 	@:optional var classes:Record<ContainerClassKey>;
 	@:optional var component:ReactType;
 	@:optional var fixed:Bool;
-	@:optional var maxWidth:ShirtSizeOrFalse;
+	@:optional var maxWidth:BreakpointOrFalse;
 };
 
 @:jsRequire('@material-ui/core', 'Container')
