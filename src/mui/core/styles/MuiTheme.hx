@@ -253,7 +253,7 @@ interface MuiPaletteText {
 
 @:structInit
 interface MuiMixins {
-	@:deprecated
+	// @:deprecated
 	var gutters:Properties->Properties;
 
 	var toolbar:{
