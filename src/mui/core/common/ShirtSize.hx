@@ -1,26 +1,7 @@
 package mui.core.common;
 
-@:enum abstract ShirtSize(String) to String {
-	var XS = 'xs';
-	var SM = 'sm';
-	var MD = 'md';
-	var LG = 'lg';
-	var XL = 'xl';
-}
+import mui.core.common.Breakpoint;
 
-@:enum abstract ShirtSizeOrArray(Dynamic) from Array<ShirtSize> {
-	var XS = 'xs';
-	var SM = 'sm';
-	var MD = 'md';
-	var LG = 'lg';
-	var XL = 'xl';
-}
-
-@:enum abstract ShirtSizeOrFalse(Dynamic) {
-	var None = false;
-	var XS = 'xs';
-	var SM = 'sm';
-	var MD = 'md';
-	var LG = 'lg';
-	var XL = 'xl';
-}
+@:deprecated typedef ShirtSize = Breakpoint;
+@:deprecated typedef ShirtSizeOrArray = BreakpointOrArray;
+@:deprecated typedef ShirtSizeOrFalse = BreakpointOrFalse;

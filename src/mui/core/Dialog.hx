@@ -4,7 +4,7 @@ import react.transition.Transition;
 
 import mui.core.Modal.ModalProps;
 import mui.core.Paper.PaperProps;
-import mui.core.common.ShirtSize;
+import mui.core.common.Breakpoint;
 import mui.core.common.TransitionDuration;
 import mui.core.dialog.DialogClassKey;
 import mui.core.dialog.DialogScrollContainer;
@@ -14,7 +14,7 @@ typedef DialogProps = ForcedOverride<ModalProps, {
 	@:optional var classes:Record<DialogClassKey>;
 	@:optional var fullScreen:Bool;
 	@:optional var fullWidth:Bool;
-	@:optional var maxWidth:ShirtSizeOrFalse;
+	@:optional var maxWidth:BreakpointOrFalse;
 	@:optional var onEnter:CallbackOrVoid<Element->Bool->Void>;
 	@:optional var onEntering:CallbackOrVoid<Element->Bool->Void>;
 	@:optional var onEntered:CallbackOrVoid<Element->Bool->Void>;
