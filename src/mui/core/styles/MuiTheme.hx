@@ -1,10 +1,37 @@
 package mui.core.styles;
 
+import haxe.extern.EitherType;
 import css.Properties;
 import mui.core.common.Breakpoint;
 
+#if macro
+import haxe.macro.Context;
+import haxe.macro.Expr;
+import haxe.macro.TypeTools;
+#end
+
+class MuiTheme {
+	#if macro
+	static var DefaultThemeCT = macro :mui.core.styles.MuiTheme.DefaultTheme;
+	#end
+
+	public static macro function createMuiTheme(overrides:Expr):Expr {
+		var expectedType = switch (Context.getExpectedType()) {
+			case TMono(_):
+				DefaultThemeCT;
+
+			case t: TypeTools.toComplexType(t);
+		};
+
+		return macro mui.core.styles.MuiTheme.MuiThemeExtern.createMuiTheme(
+			($overrides:$expectedType)
+		);
+	}
+}
+
 @:jsRequire('@material-ui/core/styles')
-extern class MuiTheme {
+extern class MuiThemeExtern {
+	#if !macro
 	public static function createMuiTheme<
 		TBreakpoints:MuiBreakpoints,
 		TMixins:MuiMixins,
@@ -42,11 +69,34 @@ extern class MuiTheme {
 			TTransitions,
 			TZIndexes
 		>
-	>(options:TTheme):TTheme;
+	>(overrides:TTheme):TTheme;
+
+	public static function createUntypedTheme<T, TOverrides>(
+		overrides:TOverrides
+	):T;
+	#end
 }
 
-@:structInit
-interface Theme<
+typedef DefaultTheme = {
+	> Theme<
+		MuiBreakpoints,
+		MuiMixins,
+		MuiOverrides,
+		MuiPaletteAction,
+		MuiPaletteCommon,
+		MuiPaletteBackground,
+		MuiPaletteGrey,
+		MuiPaletteText,
+		DefaultPalette,
+		MuiProps,
+		MuiTypography,
+		MuiShape,
+		MuiTransitions,
+		MuiZIndexes
+	>,
+}
+
+typedef Theme<
 	TBreakpoints:MuiBreakpoints,
 	TMixins:MuiMixins,
 	TOverrides:MuiOverrides,
@@ -67,59 +117,7 @@ interface Theme<
 	TShape:MuiShape,
 	TTransitions:MuiTransitions,
 	TZIndexes:MuiZIndexes
-> {
-	@:optional var breakpoints:TBreakpoints;
-	@:optional var direction:Direction;
-	@:optional var mixins:TMixins;
-	@:optional var overrides:TOverrides;
-	@:optional var palette:TPalette;
-	@:optional var props:TProps;
-	@:optional var shadows:Array<String>;
-	@:optional var typography:TTypography;
-	@:optional var spacing:Float->Float;
-	@:optional var shape:TShape;
-	@:optional var transitions:TTransitions;
-	@:optional var zIndex:TZIndexes;
-}
-
-@:publicFields
-class BaseTheme<
-	TBreakpoints:MuiBreakpoints,
-	TMixins:MuiMixins,
-	TOverrides:MuiOverrides,
-	TPaletteAction:MuiPaletteAction,
-	TPaletteCommon:MuiPaletteCommon,
-	TPaletteBackground:MuiPaletteBackground,
-	TPaletteGrey:MuiPaletteGrey,
-	TPaletteText:MuiPaletteText,
-	TPalette:MuiPalette<
-		TPaletteAction,
-		TPaletteCommon,
-		TPaletteBackground,
-		TPaletteGrey,
-		TPaletteText
-	>,
-	TProps:MuiProps,
-	TTypography:MuiTypography,
-	TShape:MuiShape,
-	TTransitions:MuiTransitions,
-	TZIndexes:MuiZIndexes
-> implements Theme<
-	TBreakpoints,
-	TMixins,
-	TOverrides,
-	TPaletteAction,
-	TPaletteCommon,
-	TPaletteBackground,
-	TPaletteGrey,
-	TPaletteText,
-	TPalette,
-	TProps,
-	TTypography,
-	TShape,
-	TTransitions,
-	TZIndexes
-> {
+> = {
 	@:optional var breakpoints:TBreakpoints;
 	@:optional var direction:Direction;
 	@:optional var mixins:TMixins;
@@ -163,48 +161,52 @@ typedef PaletteIntention = {
 	@:optional var light:Color;
 }
 
-@:structInit
-interface MuiOverrides {}
+typedef MuiOverrides = {}
+typedef MuiProps = {}
 
-@:structInit
-interface MuiProps {}
-
-@:structInit
-interface MuiShape {
+typedef MuiShape = {
 	var borderRadius:Float;
 }
 
-@:structInit
-interface MuiPalette<
+typedef DefaultPalette = {
+	> MuiPalette<
+		MuiPaletteAction,
+		MuiPaletteCommon,
+		MuiPaletteBackground,
+		MuiPaletteGrey,
+		MuiPaletteText
+	>,
+}
+
+typedef MuiPalette<
 	TAction:MuiPaletteAction,
 	TCommon:MuiPaletteCommon,
 	TBackground:MuiPaletteBackground,
 	TGrey:MuiPaletteGrey,
 	TText:MuiPaletteText
-> {
-	var type:PaletteType; // Light
-	var contrastThreshold:Float; // 3
-	var tonalOffset:Float; // 0.2
-	var shadows:Array<String>;
+> = {
+	@:optional var type:PaletteType; // Light
+	@:optional var contrastThreshold:Float; // 3
+	@:optional var tonalOffset:Float; // 0.2
+	@:optional var shadows:Array<String>;
 
-	var getContrastText:(background:Color)->Float;
-	var augmentColor:(color:PaletteIntention,?mainShade:Int,?lightShade:Int,?darkShade:Int)->PaletteIntention;
+	@:optional var getContrastText:(background:Color)->Float;
+	@:optional var augmentColor:(color:PaletteIntention,?mainShade:Int,?lightShade:Int,?darkShade:Int)->PaletteIntention;
 
-	var primary:PaletteIntention;
-	var secondary:PaletteIntention;
-	var error:PaletteIntention;
+	@:optional var primary:PaletteIntention;
+	@:optional var secondary:PaletteIntention;
+	@:optional var error:PaletteIntention;
 
-	var action:TAction;
-	var divider:Color;
+	@:optional var action:TAction;
+	@:optional var divider:Color;
 
-	var common:TCommon;
-	var background:TBackground;
-	var grey:TGrey;
-	var text:TText;
+	@:optional var common:TCommon;
+	@:optional var background:TBackground;
+	@:optional var grey:TGrey;
+	@:optional var text:TText;
 }
 
-@:structInit
-interface MuiPaletteAction {
+typedef MuiPaletteAction = {
 	var active:Color;
 	var hover:Color;
 	var hoverOpacity:Float;
@@ -213,8 +215,7 @@ interface MuiPaletteAction {
 	var disabledBackground:Color;
 }
 
-@:structInit
-interface MuiPaletteCommon {
+typedef MuiPaletteCommon = {
 	var black:Color;
 	var white:Color;
 }
@@ -243,36 +244,34 @@ interface MuiPaletteGrey {
 	var A700:Color;
 }
 
-@:structInit
-interface MuiPaletteText {
+typedef MuiPaletteText = {
 	var primary:Color;
 	var secondary:Color;
 	var disabled:Color;
 	var hint:Color;
 }
 
-@:structInit
-interface MuiMixins {
+typedef MuiMixins = {
 	// @:deprecated
 	var gutters:Properties->Properties;
-
-	var toolbar:{
-		> ToolbarProperties,
-
-		@:native("@media (min-width:0px) and (orientation: landscape)")
-		var landscape:ToolbarProperties;
-
-		@:native("@media (min-width:600px)")
-		var sm:ToolbarProperties;
-	};
+	var toolbar:MuiToolbarMixin;
 }
 
-typedef ToolbarProperties = {
+@:structInit
+interface MuiToolbarMixin extends ToolbarProperties {
+	@:native("@media (min-width:0px) and (orientation: landscape)")
+	var landscape:ToolbarProperties;
+
+	@:native("@media (min-width:600px)")
+	var sm:ToolbarProperties;
+}
+
+@:structInit
+interface ToolbarProperties {
 	var minHeight:Int;
 }
 
-@:structInit
-interface MuiBreakpoints {
+typedef MuiBreakpoints = {
 	var keys:Array<String>; // ["xs", "sm", "md", "lg", "xl"]
 	var values:{
 		var xs:Int; // 0
@@ -289,51 +288,47 @@ interface MuiBreakpoints {
 	var width:(key:Breakpoint)->Int;
 }
 
-@:structInit
-interface MuiTypography {
-	var htmlFontSize:Int;
-	var pxToRem:Int->Float; // TODO: check signature
-	var round:Float->Int; // TODO: check signature
-	var fontFamily:String;
-	var fontSize:Int;
-	var fontWeightLight:Int;
-	var fontWeightRegular:Int;
-	var fontWeightMedium:Int;
-	var fontWeightBold:Int;
+typedef MuiTypography = {
+	@:optional var htmlFontSize:Int;
+	@:optional var pxToRem:Int->Float; // TODO: check signature
+	@:optional var round:Float->Int; // TODO: check signature
+	@:optional var fontFamily:EitherType<String, Array<String>>;
+	@:optional var fontSize:Int;
+	@:optional var fontWeightLight:Int;
+	@:optional var fontWeightRegular:Int;
+	@:optional var fontWeightMedium:Int;
+	@:optional var fontWeightBold:Int;
 
-	var h1:Properties;
-	var h2:Properties;
-	var h3:Properties;
-	var h4:Properties;
-	var h5:Properties;
-	var h6:Properties;
-	var subtitle1:Properties;
-	var subtitle2:Properties;
-	var body1:Properties;
-	var body2:Properties;
-	var button:Properties;
-	var caption:Properties;
-	var overline:Properties;
+	@:optional var h1:Properties;
+	@:optional var h2:Properties;
+	@:optional var h3:Properties;
+	@:optional var h4:Properties;
+	@:optional var h5:Properties;
+	@:optional var h6:Properties;
+	@:optional var subtitle1:Properties;
+	@:optional var subtitle2:Properties;
+	@:optional var body1:Properties;
+	@:optional var body2:Properties;
+	@:optional var button:Properties;
+	@:optional var caption:Properties;
+	@:optional var overline:Properties;
 }
 
-@:structInit
-interface MuiTransitions {
+typedef MuiTransitions = {
 	var create:()->String;
 	@:optional var getAutoHeightDuration:Float->Float; // TODO: check vs Int
 	@:optional var easing:MuiTransitionsEasing;
 	@:optional var duration:MuiTransitionsDuration;
 }
 
-@:structInit
-interface MuiTransitionsEasing {
+typedef MuiTransitionsEasing = {
 	var easeInOut:String;
 	var easeOut:String;
 	var easeIn:String;
 	var sharp:String;
 }
 
-@:structInit
-interface MuiTransitionsDuration {
+typedef MuiTransitionsDuration = {
 	var shortest:Int;
 	var shorter:Int;
 	var short:Int;
@@ -343,8 +338,7 @@ interface MuiTransitionsDuration {
 	var leavingScreen:Int;
 }
 
-@:structInit
-interface MuiZIndexes {
+typedef MuiZIndexes = {
 	var mobileStepper:Int; // 1000
 	var speedDial:Int; // 1050
 	var appBar:Int; // 1100
