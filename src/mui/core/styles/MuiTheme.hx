@@ -154,6 +154,7 @@ enum abstract Color(String) from String to String {
 	}
 }
 
+// TODO: helpers
 typedef PaletteIntention = {
 	var main:Color;
 	@:optional var contrastText:Color;
