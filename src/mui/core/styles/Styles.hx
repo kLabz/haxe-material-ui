@@ -1,6 +1,7 @@
 package mui.core.styles;
 
 #if !macro
+import haxe.extern.EitherType;
 import css.Properties;
 import js.Object;
 import react.ReactType;
@@ -33,9 +34,26 @@ extern class Styles {
 	}
 
 	#if !macro
+	public static function createGenerateClassName(
+		options:{?disableGlobal:Bool, ?productionPrefix:String, ?seed:String}
+	):haxe.Constraints.Function; // TODO
+
+	// Note: wrap the return value in `Styles.jss()` to use typing
+	// TODO: constraint for TTheme?
 	public static function withStyles<TTheme, TClassesDef>(
-		?styles:TTheme->TClassesDef
+		styles:EitherType<TClassesDef, TTheme->TClassesDef>,
+		?options:StylesOptions<TTheme>
 	):ReactType->ReactType;
+
+	// TODO: constraint for TTheme?
+	public static function styled<TTheme>(component:ReactType):(
+		styles:EitherType<Properties, {theme:TTheme}->Properties>,
+		?options:StylesOptions<TTheme>
+	)->ReactType;
+
+	// Provide the theme object as a property of the input component so it can
+	// be used in the render method.
+	public static function withTheme():ReactType->ReactType;
 
 	public static inline function mergeJss(jss1:Properties, jss2:Properties):Properties {
 		return Object.assign({}, jss1, jss2);
@@ -59,4 +77,24 @@ extern class Styles {
 		return styles;
 	}
 	#end
+}
+
+typedef JssCreateStyleSheetOptions = {
+	@:optional var media:String;
+	@:optional var meta:Dynamic;
+	@:optional var link:Any; // TODO
+	@:optional var element:Any; // TODO
+	@:optional var index:Int;
+	@:optional var generateId:haxe.Constraints.Function; // TODO
+	@:optional var classNamePrefix:String;
+}
+
+// TODO: constraint for TTheme?
+typedef StylesOptions<TTheme> = {
+	> JssCreateStyleSheetOptions,
+
+	@:optional var defaultTheme:TTheme;
+	@:optional var withTheme:Bool;
+	@:optional var name:String;
+	@:optional var flip:Bool;
 }

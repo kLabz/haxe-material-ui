@@ -7,11 +7,9 @@ import react.ReactComponent;
 
 typedef MuiThemeProviderProps = {
 	var children:ReactSingleFragment;
-	var theme:EitherType<Function, Dynamic>;
-	@:optional var disableStylesGeneration:Bool;
-	@:optional var sheetsManager:Dynamic;
+	var theme:EitherType<Function, Dynamic>; // TODO
 }
 
-@:jsRequire('@material-ui/core/styles', 'MuiThemeProvider')
+@:jsRequire('@material-ui/core/styles', 'ThemeProvider')
 extern class MuiThemeProvider extends ReactComponentOfProps<MuiThemeProviderProps> {}
 
