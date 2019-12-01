@@ -10,9 +10,9 @@ import mui.core.common.TransitionDuration;
 typedef BadgeProps = {
 	> StandardDOMAttributes,
 
-	var children:ReactFragment; // TODO: check if still mandatory
-	@:optional var anchorOrigin:Position;
+	@:optional var anchorOrigin:PositionWitoutCenter;
 	@:optional var badgeContent:ReactFragment;
+	@:optional var children:ReactFragment;
 	@:optional var classes:Record<BadgeClassKey>;
 	@:optional var color:ColorDPSE;
 	@:optional var component:ReactType;
