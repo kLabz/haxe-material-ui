@@ -1,6 +1,7 @@
 package mui.core;
 
 import mui.core.avatar.AvatarClassKey;
+import mui.core.avatar.AvatarVariant;
 
 typedef AvatarProps = {
 	> StandardDOMAttributes,
@@ -13,6 +14,7 @@ typedef AvatarProps = {
 	@:optional var sizes:String;
 	@:optional var src:String;
 	@:optional var srcSet:String;
+	@:optional var variant:AvatarVariant;
 }
 
 @:jsRequire('@material-ui/core', 'Avatar')
