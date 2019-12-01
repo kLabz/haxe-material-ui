@@ -5,6 +5,11 @@ typedef Position = {
 	var vertical:VerticalPosition;
 }
 
+typedef PositionWithoutCenter = {
+	var horizontal:LeftOrRight;
+	var vertical:TopOrBottom;
+}
+
 @:coreType
 @:enum abstract HorizontalPosition from Int {
 	var Left = cast "left";
