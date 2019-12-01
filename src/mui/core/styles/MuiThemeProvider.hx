@@ -10,6 +10,7 @@ typedef MuiThemeProviderProps = {
 	var theme:EitherType<Function, Dynamic>; // TODO
 }
 
-@:jsRequire('@material-ui/core/styles', 'ThemeProvider')
+// Note: ThemeProvider for mui v5
+@:jsRequire('@material-ui/core/styles', 'MuiThemeProvider')
 extern class MuiThemeProvider extends ReactComponentOfProps<MuiThemeProviderProps> {}
 
