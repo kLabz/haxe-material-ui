@@ -3,6 +3,7 @@ package mui.core;
 import js.html.InputElement;
 
 import mui.Color;
+import mui.core.button.IconButtonEdge;
 import mui.core.checkbox.CheckedStatus;
 import mui.core.checkbox.SwitchClassKey;
 import mui.core.checkbox.SwitchSize;
@@ -16,6 +17,7 @@ typedef SwitchProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var color:ColorDPS;
 	@:optional var disabled:Bool;
 	@:optional var disableRipple:Bool;
+	@:optional var edge:IconButtonEdge;
 	@:optional var icon:ReactFragment;
 	@:optional var id:String;
 	@:optional var inputProps:{}; // TODO

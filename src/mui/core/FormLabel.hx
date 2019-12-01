@@ -1,5 +1,6 @@
 package mui.core;
 
+import mui.Color;
 import mui.core.form.FormLabelClassKey;
 
 typedef FormLabelProps = {
@@ -7,6 +8,7 @@ typedef FormLabelProps = {
 
 	@:optional var children:ReactFragment;
 	@:optional var classes:Record<FormLabelClassKey>;
+	@:optional var color:ColorPS;
 	@:optional var component:ReactType;
 	@:optional var disabled:Bool;
 	@:optional var error:Bool;

@@ -5,6 +5,7 @@ import react.types.SyntheticEvent;
 
 import mui.core.common.FloatOrArray;
 import mui.core.common.OnOffAuto;
+import mui.core.divider.DividerOrientation as Orientation;
 import mui.core.slider.SliderClassKey;
 import mui.core.slider.SliderMark;
 
@@ -23,6 +24,7 @@ typedef SliderProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var name:String;
 	@:optional var onChange:HandlerOrVoid<ChangeEvent<Element>->FloatOrArray->Void>;
 	@:optional var onChangeCommitted:HandlerOrVoid<ChangeEvent<Element>->FloatOrArray->Void>;
+	@:optional var orientation:Orientation;
 	@:optional var step:Float;
 	@:optional var ThumbComponent:ReactType;
 	@:optional var track:SliderTrackType;

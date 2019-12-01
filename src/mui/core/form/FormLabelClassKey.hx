@@ -3,6 +3,7 @@ package mui.core.form;
 @:enum abstract FormLabelClassKey(String) to String {
 	var Root = "root";
 
+	var ColorSecondary = "colorSecondary";
 	var Focused = "focused";
 	var Disabled = "disabled";
 	var Error = "error";

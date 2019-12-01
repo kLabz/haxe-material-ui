@@ -1,7 +1,7 @@
 package mui.core;
 
-import mui.core.common.Position as Orientation;
 import mui.core.Paper.PaperProps;
+import mui.core.divider.DividerOrientation as Orientation;
 import mui.core.stepper.StepperClassKey;
 
 typedef StepperProps = ForcedOverride<PaperProps, {

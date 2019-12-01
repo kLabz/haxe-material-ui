@@ -32,7 +32,7 @@ typedef InputBaseCommonProps = {
 	@:optional var id:String;
 	@:optional var inputProps:Dynamic;
 	@:optional var inputRef:ReactRef<InputElement>;
-	@:optional var margin:FormControlMargin; //!\ only Dense/None for InputBase
+	@:optional var margin:FormControlMarginNoneDense;
 	@:optional var multiline:Bool;
 	@:optional var onChange:HandlerOrVoid<ClassicHandler>;
 	@:optional var placeholder:String;

@@ -5,7 +5,8 @@ import mui.core.card.CardMediaClassKey;
 typedef CardMediaProps = {
 	> StandardDOMAttributes,
 
-	@:optional var children:Noise;
+	@:optional var children:ReactFragment;
+	@:optional var component:ReactType;
 	@:optional var classes:Record<CardMediaClassKey>;
 	@:optional var image:String;
 	@:optional var src:String;

@@ -16,6 +16,7 @@ typedef FormControlLabelProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var label:ReactFragment;
 	@:optional var labelPlacement:FormLabelPlacement;
 	@:optional var name:String;
+	// Notel second argument will depend on control component
 	@:optional var onChange:HandlerOrVoid<Event->Bool->Void>;
 	@:optional var value:String;
 }>;

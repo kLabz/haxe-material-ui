@@ -3,7 +3,7 @@ package mui.core;
 import mui.core.bottom.BottomNavigationClassKey;
 
 typedef BottomNavigationProps = ForcedOverride<StandardDOMAttributes, {
-	var children:ReactFragment; // TODO: check if still mandatory
+	var children:ReactFragment;
 	@:optional var classes:Record<BottomNavigationClassKey>;
 	@:optional var component:ReactType;
 	@:optional var onChange:HandlerOrVoid<Event->Any->Void>;

@@ -1,4 +1,4 @@
 package mui.lab.breadcrumbs;
 
 @:deprecated
-typedef BreadcrumsClassKey = mui.core.breadcrumbs.BreadcrumbsClassKey;
+typedef BreadcrumbsClassKey = mui.core.breadcrumbs.BreadcrumbsClassKey;

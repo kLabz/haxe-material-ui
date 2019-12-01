@@ -1,7 +1,7 @@
 package mui.core;
 
 import mui.core.form.FormHelperTextClassKey;
-import mui.core.form.FormHelperTextMargin;
+import mui.core.form.FormControlMargin;
 import mui.core.form.FormControlVariant;
 
 typedef FormHelperTextProps = {
@@ -14,7 +14,7 @@ typedef FormHelperTextProps = {
 	@:optional var error:Bool;
 	@:optional var filled:Bool;
 	@:optional var focused:Bool;
-	@:optional var margin:FormHelperTextMargin;
+	@:optional var margin:FormControlMarginDense;
 	@:optional var required:Bool;
 	@:optional var variant:FormControlVariant;
 }
