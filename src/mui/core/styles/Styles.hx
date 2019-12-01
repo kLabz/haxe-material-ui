@@ -2,8 +2,10 @@ package mui.core.styles;
 
 #if !macro
 import haxe.extern.EitherType;
-import css.Properties;
 import js.Object;
+import js.html.StyleElement;
+
+import css.Properties;
 import react.ReactType;
 #else
 import haxe.macro.Context;
@@ -36,7 +38,7 @@ extern class Styles {
 	#if !macro
 	public static function createGenerateClassName(
 		options:{?disableGlobal:Bool, ?productionPrefix:String, ?seed:String}
-	):haxe.Constraints.Function; // TODO
+	):GenerateId;
 
 	// Note: wrap the return value in `Styles.jss()` to use typing
 	// TODO: constraint for TTheme?
@@ -81,11 +83,11 @@ extern class Styles {
 
 typedef JssCreateStyleSheetOptions = {
 	@:optional var media:String;
-	@:optional var meta:Dynamic;
-	@:optional var link:Any; // TODO
-	@:optional var element:Any; // TODO
+	@:optional var meta:String;
+	@:optional var link:Bool;
+	@:optional var element:StyleElement;
 	@:optional var index:Int;
-	@:optional var generateId:haxe.Constraints.Function; // TODO
+	@:optional var generateId:GenerateId;
 	@:optional var classNamePrefix:String;
 }
 
@@ -98,3 +100,7 @@ typedef StylesOptions<TTheme> = {
 	@:optional var name:String;
 	@:optional var flip:Bool;
 }
+
+typedef GenerateId = (rule:Rule, ?sheet:Stylesheet)->String;
+typedef Rule = Dynamic; // TODO (Jss types)
+typedef Stylesheet = Dynamic; // TODO (Jss types)
