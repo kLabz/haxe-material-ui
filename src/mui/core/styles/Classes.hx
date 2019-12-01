@@ -4,6 +4,8 @@ package mui.core.styles;
 import haxe.macro.Context;
 import haxe.macro.Expr;
 import haxe.macro.ExprTools;
+
+import react.types.macro.RecordMacro;
 #end
 
 #if !macro
@@ -31,9 +33,11 @@ class ClassesBuilder {
 	}
 
 	public static function buildDef() {
-		switch (Context.getLocalType()) {
+		var localType = Context.getLocalType();
+
+		return switch (localType) {
 			case TInst(_, [TType(_.get() => _.type => TAnonymous(_.get() => {fields: fields}), _)]):
-				return TAnonymous(fields.map(function(f) return {
+				TAnonymous(fields.map(function(f) return {
 					name: f.name,
 					kind: FVar(macro :css.Properties, null),
 					access: null,
@@ -42,11 +46,12 @@ class ClassesBuilder {
 					pos: f.pos
 				}));
 
+			case TInst(_, [TAbstract(_, _)]):
+				RecordMacro.buildRecord(localType, macro :css.Properties, true);
+
 			default:
 				Context.error("Error building JSS classes def", Context.currentPos());
-		}
-
-		return null;
+		};
 	}
 
 	static function buildClasses(classesExpr:Expr) {
