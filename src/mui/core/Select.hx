@@ -14,6 +14,7 @@ typedef SelectProps = ForcedOverride<InputProps, {
 	@:optional var displayEmpty:Bool;
 	@:optional var IconComponent:ReactType;
 	@:optional var input:ReactSingleFragment;
+	@:optional var labelId:String;
 	@:optional var labelWidth:Int;
 	@:optional var MenuProps:Partial<MenuProps>;
 	@:optional var multiple:Bool;

@@ -1,5 +1,6 @@
 package mui.core;
 
+import mui.Color;
 import mui.core.form.FormControlClassKey;
 import mui.core.form.FormControlMargin;
 import mui.core.form.FormControlVariant;
@@ -9,6 +10,7 @@ typedef FormControlProps = {
 
 	@:optional var children:ReactFragment;
 	@:optional var classes:Record<FormControlClassKey>;
+	@:optional var color:ColorPS;
 	@:optional var component:ReactType;
 	@:optional var disabled:Bool;
 	@:optional var error:Bool;

@@ -11,7 +11,7 @@ typedef SvgIconProps = {
 	@:optional var color:IconColor;
 	@:optional var component:ReactType;
 	@:optional var fontSize:SvgIconFontSize;
-	@:optional var nativeColor:String;
+	@:optional var htmlColor:String;
 	@:optional var shapeRendering:String;
 	@:optional var titleAccess:String;
 	@:optional var viewBox:String;
