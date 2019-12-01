@@ -13,6 +13,7 @@ typedef MuiStylesProviderProps = {
 	@:optional var jss:Dynamic; // TODO
 }
 
-@:jsRequire('@material-ui/core/styles', 'StylesProvider')
+// Note: StylesProvider for mui v5
+@:jsRequire('@material-ui/core/styles', 'MuiStylesProvider')
 extern class MuiStylesProvider extends ReactComponentOfProps<MuiStylesProviderProps> {}
 
