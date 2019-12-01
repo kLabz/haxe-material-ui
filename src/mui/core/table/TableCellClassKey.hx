@@ -19,14 +19,9 @@ package mui.core.table;
 	var Footer = "footer";
 
 	/**
-		Styles applied to the root element if numeric={true}.
+		Styles applied to the root element if size="small".
 	*/
-	var Numeric = "numeric";
-
-	/**
-		Styles applied to the root element if padding="dense".
-	*/
-	var PaddingDense = "paddingDense";
+	var SizeSmall = "sizeSmall";
 
 	/**
 		Styles applied to the root element if padding="checkbox".
@@ -57,4 +52,9 @@ package mui.core.table;
 		Styles applied to the root element if align="justify".
 	*/
 	var AlignJustify = "alignJustify";
+
+	/**
+		Styles applied to the root element if context.table.stickyHeader={true}.
+	*/
+	var StickyHeader = "stickyHeader";
 }

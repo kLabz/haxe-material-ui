@@ -5,4 +5,6 @@ package mui.lab.toggle;
 	var Disabled = "disabled";
 	var Selected = "selected";
 	var Label = "label";
+	var SizeSmall = "sizeSmall";
+	var SizeLarge = "sizeLarge";
 }

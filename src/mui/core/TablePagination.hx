@@ -18,10 +18,12 @@ typedef TablePaginationProps = ForcedOverride<TableCellProps, {
 	var rowsPerPage:Int;
 	@:optional var ActionsComponent:ReactType;
 	@:optional var backIconButtonProps:Partial<IconButtonProps>;
+	@:optional var backIconButtonText:String;
 	@:optional var classes:Record<TablePaginationClassKey>;
 	@:optional var labelDisplayedRows:LabelDisplayedRowsArgs->ReactFragment;
 	@:optional var labelRowsPerPage:ReactFragment;
 	@:optional var nextIconButtonProps:Partial<IconButtonProps>;
+	@:optional var nextIconButtonText:String;
 	@:optional var onChangeRowsPerPage:HandlerOrVoid<ChangeEventHandler<Element>>;
 	@:optional var rowsPerPageOptions:Array<Int>;
 	@:optional var SelectProps:Partial<SelectProps>;
