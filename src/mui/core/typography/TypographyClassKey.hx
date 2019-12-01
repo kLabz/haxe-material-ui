@@ -4,13 +4,6 @@ package mui.core.typography;
 	var Root = "root";
 
 	// Variants
-	var Display1 = "display1";
-	var Display2 = "display2";
-	var Display3 = "display3";
-	var Display4 = "display4";
-	var Headline = "headline";
-	var Title = "title";
-	var SubHeading = "subheading";
 	var Body1 = "body1";
 	var Body2 = "body2";
 	var Caption = "caption";
@@ -45,5 +38,7 @@ package mui.core.typography;
 	// Other
 	var GutterBottom = "gutterBottom";
 	var Paragraph = "paragraph";
+	var DisplayInline = "displayInline";
+	var DisplayBlock = "displayBlock";
 }
 

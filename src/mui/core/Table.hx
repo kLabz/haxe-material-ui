@@ -12,6 +12,7 @@ typedef TableProps = {
 	@:optional var component:ReactType;
 	@:optional var padding:TableCellPadding;
 	@:optional var size:TableSize;
+	@:optional var stickyHeader:Bool;
 }
 
 @:jsRequire('@material-ui/core', 'Table')

@@ -5,6 +5,7 @@ import mui.core.table.TableSortDirection;
 import mui.core.table.TableCellClassKey;
 import mui.core.table.TableCellPadding;
 import mui.core.table.TableCellVariant;
+import mui.core.table.TableSize;
 
 typedef TableCellProps = {
 	> StandardDOMAttributes,
@@ -15,11 +16,9 @@ typedef TableCellProps = {
 	@:optional var component:ReactType;
 	@:optional var padding:TableCellPadding;
 	@:optional var scope:String;
+	@:optional var size:TableSize;
 	@:optional var sortDirection:TableSortDirection;
 	@:optional var variant:TableCellVariant;
-
-	@:deprecated("Use the `align` property instead.")
-	@:optional var numeric:Bool;
 }
 
 @:jsRequire('@material-ui/core', 'TableCell')

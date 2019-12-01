@@ -13,11 +13,9 @@ typedef TabsProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var children:ReactFragment;
 	@:optional var classes:Record<TabsClassKey>;
 	@:optional var component:ReactType;
-	@:deprecated @:optional var fullWidth:Bool;
 	@:optional var indicatorColor:ColorPS;
 	@:optional var onChange:HandlerOrVoid<Event->Int->Void>;
 	@:optional var orientation:TabsOrientation;
-	@:deprecated @:optional var scrollable:Bool;
 	@:optional var ScrollButtonComponent:ReactType;
 	@:optional var scrollButtons:ScrollButtons;
 	@:optional var TabIndicatorProps:Dynamic;

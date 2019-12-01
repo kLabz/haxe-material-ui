@@ -10,8 +10,6 @@ package mui.core.tab;
 	var Selected = "selected";
 	var Disabled = "disabled";
 	var FullWidth = "fullWidth";
+	var Wrapped = "wrapped";
 	var Wrapper = "wrapper";
-	var LabelContainer = "labelContainer";
-	var Label = "label";
-	var LabelWrapped = "labelWrapped";
 }
