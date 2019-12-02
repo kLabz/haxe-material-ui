@@ -2,6 +2,8 @@ package mui.core.styles;
 
 import haxe.extern.EitherType;
 import css.Properties;
+
+import mui.Colors;
 import mui.core.common.Breakpoint;
 
 #if macro
@@ -39,13 +41,11 @@ extern class MuiThemeExtern {
 		TPaletteAction:MuiPaletteAction,
 		TPaletteCommon:MuiPaletteCommon,
 		TPaletteBackground:MuiPaletteBackground,
-		TPaletteGrey:MuiPaletteGrey,
 		TPaletteText:MuiPaletteText,
 		TPalette:MuiPalette<
 			TPaletteAction,
 			TPaletteCommon,
 			TPaletteBackground,
-			TPaletteGrey,
 			TPaletteText
 		>,
 		TProps:MuiProps,
@@ -60,7 +60,6 @@ extern class MuiThemeExtern {
 			TPaletteAction,
 			TPaletteCommon,
 			TPaletteBackground,
-			TPaletteGrey,
 			TPaletteText,
 			TPalette,
 			TProps,
@@ -85,7 +84,6 @@ typedef DefaultTheme = {
 		MuiPaletteAction,
 		MuiPaletteCommon,
 		MuiPaletteBackground,
-		MuiPaletteGrey,
 		MuiPaletteText,
 		DefaultPalette,
 		MuiProps,
@@ -103,13 +101,11 @@ typedef Theme<
 	TPaletteAction:MuiPaletteAction,
 	TPaletteCommon:MuiPaletteCommon,
 	TPaletteBackground:MuiPaletteBackground,
-	TPaletteGrey:MuiPaletteGrey,
 	TPaletteText:MuiPaletteText,
 	TPalette:MuiPalette<
 		TPaletteAction,
 		TPaletteCommon,
 		TPaletteBackground,
-		TPaletteGrey,
 		TPaletteText
 	>,
 	TProps:MuiProps,
@@ -137,29 +133,14 @@ enum abstract PaletteType(String) from String to String {
 	var Dark = "dark";
 }
 
-enum EColor {
-	RGB(r:Int, g:Int, b:Int);
-	RGBA(r:Int, g:Int, b:Int, a:Float);
-	// TODO: other flavors
-}
-
-enum abstract Color(String) from String to String {
-	@:from
-	public static function fromEnum(e:EColor):Color {
-		return switch (e) {
-			case RGB(r, g, b): 'rgb($r,$g,$b)';
-			case RGBA(r, g, b, a): 'rgb($r,$g,$b,$a)';
-			// TODO: other flavors
-		};
-	}
-}
+typedef Color = mui.Colors.ColorString;
 
 // TODO: helpers
 typedef PaletteIntention = {
-	var main:Color;
-	@:optional var contrastText:Color;
-	@:optional var dark:Color;
-	@:optional var light:Color;
+	var main:ColorString;
+	@:optional var contrastText:ColorString;
+	@:optional var dark:ColorString;
+	@:optional var light:ColorString;
 }
 
 typedef MuiOverrides = {}
@@ -174,7 +155,6 @@ typedef DefaultPalette = {
 		MuiPaletteAction,
 		MuiPaletteCommon,
 		MuiPaletteBackground,
-		MuiPaletteGrey,
 		MuiPaletteText
 	>,
 }
@@ -183,7 +163,6 @@ typedef MuiPalette<
 	TAction:MuiPaletteAction,
 	TCommon:MuiPaletteCommon,
 	TBackground:MuiPaletteBackground,
-	TGrey:MuiPaletteGrey,
 	TText:MuiPaletteText
 > = {
 	@:optional var type:PaletteType; // Light
@@ -191,7 +170,7 @@ typedef MuiPalette<
 	@:optional var tonalOffset:Float; // 0.2
 	@:optional var shadows:Array<String>;
 
-	@:optional var getContrastText:(background:Color)->Float;
+	@:optional var getContrastText:(background:ColorString)->Float;
 	@:optional var augmentColor:(color:PaletteIntention,?mainShade:Int,?lightShade:Int,?darkShade:Int)->PaletteIntention;
 
 	@:optional var primary:PaletteIntention;
@@ -199,57 +178,39 @@ typedef MuiPalette<
 	@:optional var error:PaletteIntention;
 
 	@:optional var action:TAction;
-	@:optional var divider:Color;
+	@:optional var divider:ColorString;
 
 	@:optional var common:TCommon;
 	@:optional var background:TBackground;
-	@:optional var grey:TGrey;
+	@:optional var grey:ColorDefinition;
 	@:optional var text:TText;
 }
 
 typedef MuiPaletteAction = {
-	var active:Color;
-	var hover:Color;
+	var active:ColorString;
+	var hover:ColorString;
 	var hoverOpacity:Float;
-	var selected:Color;
-	var disabled:Color;
-	var disabledBackground:Color;
+	var selected:ColorString;
+	var disabled:ColorString;
+	var disabledBackground:ColorString;
 }
 
 typedef MuiPaletteCommon = {
-	var black:Color;
-	var white:Color;
+	var black:ColorString;
+	var white:ColorString;
 }
 
 @:structInit
 interface MuiPaletteBackground {
-	var paper:Color;
-	@:native("default") var _default:Color;
-}
-
-@:structInit
-interface MuiPaletteGrey {
-	@:native("50") var _50:Color;
-	@:native("100") var _100:Color;
-	@:native("200") var _200:Color;
-	@:native("300") var _300:Color;
-	@:native("400") var _400:Color;
-	@:native("500") var _500:Color;
-	@:native("600") var _600:Color;
-	@:native("700") var _700:Color;
-	@:native("800") var _800:Color;
-	@:native("900") var _900:Color;
-	var A100:Color;
-	var A200:Color;
-	var A400:Color;
-	var A700:Color;
+	var paper:ColorString;
+	@:native("default") var _default:ColorString;
 }
 
 typedef MuiPaletteText = {
-	var primary:Color;
-	var secondary:Color;
-	var disabled:Color;
-	var hint:Color;
+	var primary:ColorString;
+	var secondary:ColorString;
+	var disabled:ColorString;
+	var hint:ColorString;
 }
 
 typedef MuiMixins = {

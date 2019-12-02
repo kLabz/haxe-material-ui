@@ -81,6 +81,7 @@ extern class Styles {
 	#end
 }
 
+#if !macro
 typedef JssCreateStyleSheetOptions = {
 	@:optional var media:String;
 	@:optional var meta:String;
@@ -104,3 +105,4 @@ typedef StylesOptions<TTheme> = {
 typedef GenerateId = (rule:Rule, ?sheet:Stylesheet)->String;
 typedef Rule = Dynamic; // TODO (Jss types)
 typedef Stylesheet = Dynamic; // TODO (Jss types)
+#end
