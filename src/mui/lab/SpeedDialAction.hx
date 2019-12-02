@@ -1,7 +1,7 @@
 package mui.lab;
 
 import mui.lab.speeddial.SpeedDialActionClassKey;
-import mui.core.Button.ButtonProps;
+import mui.core.Fab.FabProps;
 import mui.core.Popper.PopperProps;
 import mui.core.popper.PopperPlacement;
 import mui.core.popper.TooltipClassKey;
@@ -11,15 +11,15 @@ typedef SpeedDialActionProps = {
 	> StandardDOMAttributes,
 
 	// SpeedDialAction props
-	var icon:ReactSingleFragment;
-	var tooltipTitle:ReactFragment;
-	@:optional var ButtonProps:Partial<ButtonProps>;
 	@:optional var children:Noise;
 	@:optional var classes:Record<SpeedDialActionClassKey>;
 	@:optional var delay:Int;
+	@:optional var FabProps:Partial<FabProps>;
+	@:optional var icon:ReactSingleFragment;
 	@:optional var TooltipClasses:Record<TooltipClassKey>;
 	@:optional var tooltipOpen:Bool;
 	@:optional var tooltipPlacement:PopperPlacement;
+	@:optional var tooltipTitle:ReactFragment;
 
 	// mui.core.TooltipProps
 	@:optional var disableFocusListener:Bool;
