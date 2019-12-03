@@ -2,6 +2,7 @@ package mui.core;
 
 import mui.core.table.TableSortDirection;
 import mui.core.table.TableSortLabelClassKey;
+import mui.core.styles.Classes;
 
 typedef TableSortLabelProps = {
 	> StandardDOMAttributes,
@@ -15,4 +16,12 @@ typedef TableSortLabelProps = {
 }
 
 @:jsRequire('@material-ui/core', 'TableSortLabel')
-extern class TableSortLabel extends ReactComponentOfProps<TableSortLabelProps> {}
+extern class TableSortLabel extends ReactComponentOfProps<TableSortLabelProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<TableSortLabelClassKey>
+		return TableSortLabelStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/TableSortLabel/TableSortLabel.js')
+extern class TableSortLabelStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<TableSortLabelClassKey>;
+}

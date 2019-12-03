@@ -1,11 +1,13 @@
 package mui.core;
 
+import react.ReactComponent.ReactFragment;
+
 import mui.core.Input.InputProps;
 import mui.core.Menu.MenuProps;
 import mui.core.form.FormControlVariant;
 import mui.core.input.InputValue;
 import mui.core.input.SelectClassKey;
-import react.ReactComponent.ReactFragment;
+import mui.core.styles.Classes;
 
 typedef SelectProps = ForcedOverride<InputProps, {
 	@:optional var autoWidth:Bool;
@@ -30,4 +32,12 @@ typedef SelectProps = ForcedOverride<InputProps, {
 }>;
 
 @:jsRequire('@material-ui/core', 'Select')
-extern class Select extends ReactComponentOfProps<SelectProps> {}
+extern class Select extends ReactComponentOfProps<SelectProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<SelectClassKey>
+		return SelectStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/Select/Select.js')
+extern class SelectStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<SelectClassKey>;
+}

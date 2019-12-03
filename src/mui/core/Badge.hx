@@ -6,11 +6,12 @@ import mui.core.badge.BadgeOverlap;
 import mui.core.badge.BadgeVariant;
 import mui.core.common.Position;
 import mui.core.common.TransitionDuration;
+import mui.core.styles.Classes;
 
 typedef BadgeProps = {
 	> StandardDOMAttributes,
 
-	@:optional var anchorOrigin:PositionWitoutCenter;
+	@:optional var anchorOrigin:PositionWithoutCenter;
 	@:optional var badgeContent:ReactFragment;
 	@:optional var children:ReactFragment;
 	@:optional var classes:Record<BadgeClassKey>;
@@ -24,4 +25,12 @@ typedef BadgeProps = {
 }
 
 @:jsRequire('@material-ui/core', 'Badge')
-extern class Badge extends ReactComponentOfProps<BadgeProps> {}
+extern class Badge extends ReactComponentOfProps<BadgeProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<BadgeClassKey>
+		return BadgeStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/Badge/Badge.js')
+extern class BadgeStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<BadgeClassKey>;
+}

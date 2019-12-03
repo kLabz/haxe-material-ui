@@ -4,6 +4,7 @@ import react.transition.Transition;
 
 import mui.core.Paper.PaperProps;
 import mui.core.exppanel.ExpansionPanelClassKey;
+import mui.core.styles.Classes;
 
 typedef ExpansionPanelProps = ForcedOverride<PaperProps, {
 	var children:ReactFragment;
@@ -17,4 +18,12 @@ typedef ExpansionPanelProps = ForcedOverride<PaperProps, {
 }>;
 
 @:jsRequire('@material-ui/core', 'ExpansionPanel')
-extern class ExpansionPanel extends ReactComponentOfProps<ExpansionPanelProps> {}
+extern class ExpansionPanel extends ReactComponentOfProps<ExpansionPanelProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<ExpansionPanelClassKey>
+		return ExpansionPanelStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/ExpansionPanel/ExpansionPanel.js')
+extern class ExpansionPanelStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<ExpansionPanelClassKey>;
+}

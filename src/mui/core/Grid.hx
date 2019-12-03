@@ -9,6 +9,7 @@ import mui.core.grid.GridClassKey;
 import mui.core.grid.GridJustifyContent;
 import mui.core.grid.GridsNumber;
 import mui.core.grid.GridSpacing;
+import mui.core.styles.Classes;
 
 typedef GridProps = {
 	> StandardDOMAttributes,
@@ -33,4 +34,12 @@ typedef GridProps = {
 }
 
 @:jsRequire('@material-ui/core', 'Grid')
-extern class Grid extends ReactComponentOfProps<GridProps> {}
+extern class Grid extends ReactComponentOfProps<GridProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<GridClassKey>
+		return GridStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/Grid/Grid.js')
+extern class GridStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<GridClassKey>;
+}

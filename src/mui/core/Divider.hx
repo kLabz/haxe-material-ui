@@ -1,8 +1,9 @@
 package mui.core;
 
+import mui.core.common.Orientation;
 import mui.core.list.DividerClassKey;
-import mui.core.list.DividerOrientation;
 import mui.core.list.DividerVariant;
+import mui.core.styles.Classes;
 
 typedef DividerProps = {
 	> StandardDOMAttributes,
@@ -12,9 +13,17 @@ typedef DividerProps = {
 	@:optional var classes:Record<DividerClassKey>;
 	@:optional var component:ReactType;
 	@:optional var light:Bool;
-	@:optional var orientation:DividerOrientation;
+	@:optional var orientation:Orientation;
 	@:optional var variant:DividerVariant;
 }
 
 @:jsRequire('@material-ui/core', 'Divider')
-extern class Divider extends ReactComponentOfProps<DividerProps> {}
+extern class Divider extends ReactComponentOfProps<DividerProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<DividerClassKey>
+		return DividerStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/Divider/Divider.js')
+extern class DividerStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<DividerClassKey>;
+}

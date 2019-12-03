@@ -7,6 +7,7 @@ import mui.core.IconButton.IconButtonProps;
 import mui.core.checkbox.CheckboxClassKey;
 import mui.core.checkbox.CheckedStatus;
 import mui.core.input.InputType;
+import mui.core.styles.Classes;
 
 typedef CheckboxProps = ForcedOverride<IconButtonProps, {
 	@:optional var children:Noise;
@@ -29,4 +30,12 @@ typedef CheckboxProps = ForcedOverride<IconButtonProps, {
 }>;
 
 @:jsRequire('@material-ui/core', 'Checkbox')
-extern class Checkbox extends ReactComponentOfProps<CheckboxProps> {}
+extern class Checkbox extends ReactComponentOfProps<CheckboxProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<CheckboxClassKey>
+		return CheckboxStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/Checkbox/Checkbox.js')
+extern class CheckboxStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<CheckboxClassKey>;
+}

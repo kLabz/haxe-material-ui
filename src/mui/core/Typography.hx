@@ -6,6 +6,7 @@ import mui.core.typography.TypographyClassKey;
 import mui.core.typography.TypographyDisplay;
 import mui.core.typography.TypographyVariant;
 import mui.core.typography.TypographyVariantMapping;
+import mui.core.styles.Classes;
 
 typedef TypographyProps = {
 	> StandardDOMAttributes,
@@ -25,5 +26,12 @@ typedef TypographyProps = {
 }
 
 @:jsRequire('@material-ui/core', 'Typography')
-extern class Typography extends ReactComponentOfProps<TypographyProps> {}
+extern class Typography extends ReactComponentOfProps<TypographyProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<TypographyClassKey>
+		return TypographyStyles.styles(theme);
+}
 
+@:jsRequire('@material-ui/core/Typography/Typography.js')
+extern class TypographyStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<TypographyClassKey>;
+}

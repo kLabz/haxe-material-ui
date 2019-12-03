@@ -3,6 +3,7 @@ package mui.core;
 import mui.core.input.InputAdornmentClassKey;
 import mui.core.input.InputAdornmentPosition;
 import mui.core.form.FormControlVariant;
+import mui.core.styles.Classes;
 
 typedef InputAdornmentProps = {
 	> StandardDOMAttributes,
@@ -17,4 +18,12 @@ typedef InputAdornmentProps = {
 }
 
 @:jsRequire('@material-ui/core', 'InputAdornment')
-extern class InputAdornment extends ReactComponentOfProps<InputAdornmentProps> {}
+extern class InputAdornment extends ReactComponentOfProps<InputAdornmentProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<InputAdornmentClassKey>
+		return InputAdornmentStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/InputAdornment/InputAdornment.js')
+extern class InputAdornmentStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<InputAdornmentClassKey>;
+}

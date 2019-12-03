@@ -4,6 +4,7 @@ import mui.Color;
 import mui.core.form.FormControlClassKey;
 import mui.core.form.FormControlMargin;
 import mui.core.form.FormControlVariant;
+import mui.core.styles.Classes;
 
 typedef FormControlProps = {
 	> StandardDOMAttributes,
@@ -22,4 +23,12 @@ typedef FormControlProps = {
 }
 
 @:jsRequire('@material-ui/core', 'FormControl')
-extern class FormControl extends ReactComponentOfProps<FormControlProps> {}
+extern class FormControl extends ReactComponentOfProps<FormControlProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<FormControlClassKey>
+		return FormControlStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/FormControl/FormControl.js')
+extern class FormControlStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<FormControlClassKey>;
+}

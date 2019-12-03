@@ -1,4 +1,4 @@
-package mui.lab.slider;
+package mui.core.slider;
 
 @:enum abstract SliderClassKey(String) to String {
 	var Root = "root";

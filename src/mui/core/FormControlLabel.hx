@@ -5,6 +5,7 @@ import js.html.InputElement;
 import mui.core.checkbox.CheckedStatus;
 import mui.core.form.FormControlLabelClassKey;
 import mui.core.form.FormLabelPlacement;
+import mui.core.styles.Classes;
 
 typedef FormControlLabelProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var children:Noise;
@@ -22,4 +23,12 @@ typedef FormControlLabelProps = ForcedOverride<StandardDOMAttributes, {
 }>;
 
 @:jsRequire('@material-ui/core', 'FormControlLabel')
-extern class FormControlLabel extends ReactComponentOfProps<FormControlLabelProps> {}
+extern class FormControlLabel extends ReactComponentOfProps<FormControlLabelProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<FormControlLabelClassKey>
+		return FormControlLabelStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/FormControlLabel/FormControlLabel.js')
+extern class FormControlLabelStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<FormControlLabelClassKey>;
+}

@@ -5,6 +5,7 @@ import mui.core.button.ButtonClassKey;
 import mui.core.button.ButtonSize;
 import mui.core.button.ButtonType;
 import mui.core.button.ButtonVariant;
+import mui.core.styles.Classes;
 
 typedef ButtonProps = {
 	> StandardDOMAttributes,
@@ -40,4 +41,12 @@ typedef ButtonProps = {
 }
 
 @:jsRequire('@material-ui/core', 'Button')
-extern class Button extends ReactComponentOfProps<ButtonProps> {}
+extern class Button extends ReactComponentOfProps<ButtonProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<ButtonClassKey>
+		return ButtonStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/Button/Button.js')
+extern class ButtonStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<ButtonClassKey>;
+}

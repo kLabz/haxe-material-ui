@@ -2,6 +2,7 @@ package mui.core;
 
 import mui.core.toolbar.ToolbarClassKey;
 import mui.core.toolbar.ToolbarVariant;
+import mui.core.styles.Classes;
 
 typedef ToolbarProps = {
 	> StandardDOMAttributes,
@@ -13,4 +14,12 @@ typedef ToolbarProps = {
 }
 
 @:jsRequire('@material-ui/core', 'Toolbar')
-extern class Toolbar extends ReactComponentOfProps<ToolbarProps> {}
+extern class Toolbar extends ReactComponentOfProps<ToolbarProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<ToolbarClassKey>
+		return ToolbarStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/Toolbar/Toolbar.js')
+extern class ToolbarStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<ToolbarClassKey>;
+}

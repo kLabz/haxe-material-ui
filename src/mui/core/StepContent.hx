@@ -4,6 +4,7 @@ import react.transition.Transition;
 
 import mui.core.common.TransitionDuration;
 import mui.core.stepper.StepContentClassKey;
+import mui.core.styles.Classes;
 
 typedef StepContentProps = {
 	> StandardDOMAttributes,
@@ -16,4 +17,12 @@ typedef StepContentProps = {
 }
 
 @:jsRequire('@material-ui/core', 'StepContent')
-extern class StepContent extends ReactComponentOfProps<StepContentProps> {}
+extern class StepContent extends ReactComponentOfProps<StepContentProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<StepContentClassKey>
+		return StepContentStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/StepContent/StepContent.js')
+extern class StepContentStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<StepContentClassKey>;
+}
