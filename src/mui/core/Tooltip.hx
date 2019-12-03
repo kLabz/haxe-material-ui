@@ -5,6 +5,7 @@ import react.transition.Transition;
 import mui.core.Popper.PopperProps;
 import mui.core.popper.PopperPlacement;
 import mui.core.popper.TooltipClassKey;
+import mui.core.styles.Classes;
 
 typedef TooltipProps = ForcedOverride<StandardDOMAttributes, {
 	var children:ReactElement;
@@ -29,4 +30,12 @@ typedef TooltipProps = ForcedOverride<StandardDOMAttributes, {
 }>;
 
 @:jsRequire('@material-ui/core', 'Tooltip')
-extern class Tooltip extends ReactComponentOfProps<TooltipProps> {}
+extern class Tooltip extends ReactComponentOfProps<TooltipProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<TooltipClassKey>
+		return TooltipStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/Tooltip/Tooltip.js')
+extern class TooltipStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<TooltipClassKey>;
+}

@@ -1,11 +1,12 @@
 package mui.core;
 
 import mui.Color;
+import mui.core.common.Orientation;
 import mui.core.tab.TabsActions;
 import mui.core.tab.TabsClassKey;
-import mui.core.tab.TabsOrientation;
 import mui.core.tab.TabsVariant;
 import mui.core.tab.ScrollButtons;
+import mui.core.styles.Classes;
 
 typedef TabsProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var action:TabsActions->Void;
@@ -15,7 +16,7 @@ typedef TabsProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var component:ReactType;
 	@:optional var indicatorColor:ColorPS;
 	@:optional var onChange:HandlerOrVoid<Event->Int->Void>;
-	@:optional var orientation:TabsOrientation;
+	@:optional var orientation:Orientation;
 	@:optional var ScrollButtonComponent:ReactType;
 	@:optional var scrollButtons:ScrollButtons;
 	@:optional var TabIndicatorProps:Dynamic;
@@ -25,4 +26,12 @@ typedef TabsProps = ForcedOverride<StandardDOMAttributes, {
 }>;
 
 @:jsRequire('@material-ui/core', 'Tabs')
-extern class Tabs extends ReactComponentOfProps<TabsProps> {}
+extern class Tabs extends ReactComponentOfProps<TabsProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<TabsClassKey>
+		return TabsStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/Tabs/Tabs.js')
+extern class TabsStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<TabsClassKey>;
+}

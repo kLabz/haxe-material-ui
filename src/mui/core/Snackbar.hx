@@ -8,6 +8,7 @@ import mui.core.common.Position;
 import mui.core.common.TransitionDuration;
 import mui.core.snackbar.SnackbarClassKey;
 import mui.core.snackbar.SnackbarCloseReason;
+import mui.core.styles.Classes;
 
 typedef SnackbarProps = {
 	> StandardDOMAttributes,
@@ -36,4 +37,12 @@ typedef SnackbarProps = {
 }
 
 @:jsRequire('@material-ui/core', 'Snackbar')
-extern class Snackbar extends ReactComponentOfProps<SnackbarProps> {}
+extern class Snackbar extends ReactComponentOfProps<SnackbarProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<SnackbarClassKey>
+		return SnackbarStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/Snackbar/Snackbar.js')
+extern class SnackbarStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<SnackbarClassKey>;
+}

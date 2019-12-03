@@ -1,6 +1,7 @@
 package mui.core;
 
 import mui.core.list.ListClassKey;
+import mui.core.styles.Classes;
 
 typedef ListProps = {
 	> StandardDOMAttributes,
@@ -14,4 +15,12 @@ typedef ListProps = {
 }
 
 @:jsRequire('@material-ui/core', 'List')
-extern class List extends ReactComponentOfProps<ListProps> {}
+extern class List extends ReactComponentOfProps<ListProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<ListClassKey>
+		return ListStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/List/List.js')
+extern class ListStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<ListClassKey>;
+}

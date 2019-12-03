@@ -4,6 +4,7 @@ import mui.Color;
 import mui.core.chip.ChipClassKey;
 import mui.core.chip.ChipSize;
 import mui.core.chip.ChipVariant;
+import mui.core.styles.Classes;
 
 typedef ChipProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var avatar:ReactFragment;
@@ -23,4 +24,12 @@ typedef ChipProps = ForcedOverride<StandardDOMAttributes, {
 }>;
 
 @:jsRequire('@material-ui/core', 'Chip')
-extern class Chip extends ReactComponentOfProps<ChipProps> {}
+extern class Chip extends ReactComponentOfProps<ChipProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<ChipClassKey>
+		return ChipStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/Chip/Chip.js')
+extern class ChipStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<ChipClassKey>;
+}

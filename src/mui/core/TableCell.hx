@@ -6,6 +6,7 @@ import mui.core.table.TableCellClassKey;
 import mui.core.table.TableCellPadding;
 import mui.core.table.TableCellVariant;
 import mui.core.table.TableSize;
+import mui.core.styles.Classes;
 
 typedef TableCellProps = {
 	> StandardDOMAttributes,
@@ -22,4 +23,12 @@ typedef TableCellProps = {
 }
 
 @:jsRequire('@material-ui/core', 'TableCell')
-extern class TableCell extends ReactComponentOfProps<TableCellProps> {}
+extern class TableCell extends ReactComponentOfProps<TableCellProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<TableCellClassKey>
+		return TableCellStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/TableCell/TableCell.js')
+extern class TableCellStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<TableCellClassKey>;
+}

@@ -1,6 +1,7 @@
 package mui.core;
 
 import mui.core.grid.GridListTileClassKey;
+import mui.core.styles.Classes;
 
 typedef GridListTileProps = {
 	> StandardDOMAttributes,
@@ -13,4 +14,12 @@ typedef GridListTileProps = {
 }
 
 @:jsRequire('@material-ui/core', 'GridListTile')
-extern class GridListTile extends ReactComponentOfProps<GridListTileProps> {}
+extern class GridListTile extends ReactComponentOfProps<GridListTileProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<GridListTileClassKey>
+		return GridListTileStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/GridListTile/GridListTile.js')
+extern class GridListTileStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<GridListTileClassKey>;
+}

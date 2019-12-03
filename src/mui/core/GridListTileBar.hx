@@ -2,6 +2,7 @@ package mui.core;
 
 import mui.core.common.Position;
 import mui.core.grid.GridListTileBarClassKey;
+import mui.core.styles.Classes;
 
 typedef GridListTileBarProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var children:Noise;
@@ -14,4 +15,12 @@ typedef GridListTileBarProps = ForcedOverride<StandardDOMAttributes, {
 }>;
 
 @:jsRequire('@material-ui/core', 'GridListTileBar')
-extern class GridListTileBar extends ReactComponentOfProps<GridListTileBarProps> {}
+extern class GridListTileBar extends ReactComponentOfProps<GridListTileBarProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<GridListTileBarClassKey>
+		return GridListTileBarStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/GridListTileBar/GridListTileBar.js')
+extern class GridListTileBarStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<GridListTileBarClassKey>;
+}

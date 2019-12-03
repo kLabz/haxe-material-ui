@@ -3,6 +3,7 @@ package mui.core;
 import mui.core.button.ButtonGroupClassKey;
 import mui.core.button.ButtonSize;
 import mui.core.button.ButtonVariant;
+import mui.core.styles.Classes;
 
 typedef ButtonGroupProps = {
 	> StandardDOMAttributes,
@@ -20,4 +21,12 @@ typedef ButtonGroupProps = {
 }
 
 @:jsRequire('@material-ui/core', 'ButtonGroup')
-extern class ButtonGroup extends ReactComponentOfProps<ButtonGroupProps> {}
+extern class ButtonGroup extends ReactComponentOfProps<ButtonGroupProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<ButtonGroupClassKey>
+		return ButtonGroupStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/ButtonGroup/ButtonGroup.js')
+extern class ButtonGroupStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<ButtonGroupClassKey>;
+}

@@ -2,6 +2,7 @@ package mui.core;
 
 import mui.core.Typography.TypographyProps;
 import mui.core.card.CardHeaderClassKey;
+import mui.core.styles.Classes;
 
 typedef CardHeaderProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var children:Noise;
@@ -17,4 +18,12 @@ typedef CardHeaderProps = ForcedOverride<StandardDOMAttributes, {
 }>;
 
 @:jsRequire('@material-ui/core', 'CardHeader')
-extern class CardHeader extends ReactComponentOfProps<CardHeaderProps> {}
+extern class CardHeader extends ReactComponentOfProps<CardHeaderProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<CardHeaderClassKey>
+		return CardHeaderStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/CardHeader/CardHeader.js')
+extern class CardHeaderStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<CardHeaderClassKey>;
+}

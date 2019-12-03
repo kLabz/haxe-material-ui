@@ -2,6 +2,7 @@ package mui.core;
 
 import mui.core.avatar.AvatarClassKey;
 import mui.core.avatar.AvatarVariant;
+import mui.core.styles.Classes;
 
 typedef AvatarProps = {
 	> StandardDOMAttributes,
@@ -18,4 +19,12 @@ typedef AvatarProps = {
 }
 
 @:jsRequire('@material-ui/core', 'Avatar')
-extern class Avatar extends ReactComponentOfProps<AvatarProps> {}
+extern class Avatar extends ReactComponentOfProps<AvatarProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<AvatarClassKey>
+		return AvatarStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/Avatar/Avatar.js')
+extern class AvatarStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<AvatarClassKey>;
+}

@@ -1,6 +1,7 @@
 package mui.core;
 
 import mui.core.stepper.StepIconClassKey;
+import mui.core.styles.Classes;
 
 typedef StepIconProps = {
 	> StandardDOMAttributes,
@@ -14,4 +15,12 @@ typedef StepIconProps = {
 }
 
 @:jsRequire('@material-ui/core', 'StepIcon')
-extern class StepIcon extends ReactComponentOfProps<StepIconProps> {}
+extern class StepIcon extends ReactComponentOfProps<StepIconProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<StepIconClassKey>
+		return StepIconStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/StepIcon/StepIcon.js')
+extern class StepIconStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<StepIconClassKey>;
+}

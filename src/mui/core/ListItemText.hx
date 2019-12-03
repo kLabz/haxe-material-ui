@@ -2,6 +2,7 @@ package mui.core;
 
 import mui.core.Typography.TypographyProps;
 import mui.core.list.ListItemTextClassKey;
+import mui.core.styles.Classes;
 
 typedef ListItemTextProps = {
 	> StandardDOMAttributes,
@@ -17,4 +18,12 @@ typedef ListItemTextProps = {
 }
 
 @:jsRequire('@material-ui/core', 'ListItemText')
-extern class ListItemText extends ReactComponentOfProps<ListItemTextProps> {}
+extern class ListItemText extends ReactComponentOfProps<ListItemTextProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<ListItemTextClassKey>
+		return ListItemTextStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/ListItemText/ListItemText.js')
+extern class ListItemTextStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<ListItemTextClassKey>;
+}

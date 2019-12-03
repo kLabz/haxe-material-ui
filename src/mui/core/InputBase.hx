@@ -7,6 +7,7 @@ import mui.core.form.FormControlMargin;
 import mui.core.input.InputBaseClassKey;
 import mui.core.input.InputType;
 import mui.core.input.InputValue;
+import mui.core.styles.Classes;
 
 typedef InputBaseProps = ForcedOverride<StandardDOMAttributes, {
 	> InputBaseCommonProps,
@@ -44,4 +45,12 @@ typedef InputBaseCommonProps = {
 }
 
 @:jsRequire('@material-ui/core', 'InputBase')
-extern class InputBase extends ReactComponentOfProps<InputBaseProps> {}
+extern class InputBase extends ReactComponentOfProps<InputBaseProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<InputBaseClassKey>
+		return InputBaseStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/InputBase/InputBase.js')
+extern class InputBaseStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<InputBaseClassKey>;
+}

@@ -4,6 +4,7 @@ import mui.Color;
 import mui.core.progress.CircularProgressClassKey;
 import mui.core.progress.CircularProgressSize;
 import mui.core.progress.CircularProgressVariant;
+import mui.core.styles.Classes;
 
 typedef CircularProgressProps = {
 	> StandardDOMAttributes,
@@ -19,4 +20,12 @@ typedef CircularProgressProps = {
 }
 
 @:jsRequire('@material-ui/core', 'CircularProgress')
-extern class CircularProgress extends ReactComponentOfProps<CircularProgressProps> {}
+extern class CircularProgress extends ReactComponentOfProps<CircularProgressProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<CircularProgressClassKey>
+		return CircularProgressStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/CircularProgress/CircularProgress.js')
+extern class CircularProgressStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<CircularProgressClassKey>;
+}

@@ -1,8 +1,9 @@
 package mui.core;
 
 import mui.core.Paper.PaperProps;
-import mui.core.divider.DividerOrientation as Orientation;
+import mui.core.common.Orientation;
 import mui.core.stepper.StepperClassKey;
+import mui.core.styles.Classes;
 
 typedef StepperProps = ForcedOverride<PaperProps, {
 	var children:ReactFragment;
@@ -15,4 +16,12 @@ typedef StepperProps = ForcedOverride<PaperProps, {
 }>;
 
 @:jsRequire('@material-ui/core', 'Stepper')
-extern class Stepper extends ReactComponentOfProps<StepperProps> {}
+extern class Stepper extends ReactComponentOfProps<StepperProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<StepperClassKey>
+		return StepperStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/Stepper/Stepper.js')
+extern class StepperStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<StepperClassKey>;
+}

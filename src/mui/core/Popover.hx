@@ -10,6 +10,7 @@ import mui.core.popover.PopoverActions;
 import mui.core.popover.PopoverClassKey;
 import mui.core.popover.AnchorPosition;
 import mui.core.popover.AnchorReference;
+import mui.core.styles.Classes;
 
 typedef PopoverProps = ForcedOverride<ModalProps, {
 	@:optional var action:PopoverActions->Void;
@@ -36,4 +37,12 @@ typedef PopoverProps = ForcedOverride<ModalProps, {
 }>;
 
 @:jsRequire('@material-ui/core', 'Popover')
-extern class Popover extends ReactComponentOfProps<PopoverProps> {}
+extern class Popover extends ReactComponentOfProps<PopoverProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<PopoverClassKey>
+		return PopoverStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/Popover/Popover.js')
+extern class PopoverStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<PopoverClassKey>;
+}

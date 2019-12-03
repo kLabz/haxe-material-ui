@@ -5,6 +5,7 @@ import mui.core.Popover.PopoverProps;
 import mui.core.popover.PopoverClassKey;
 import mui.core.menu.MenuClassKey;
 import mui.core.menu.MenuVariant;
+import mui.core.styles.Classes;
 
 typedef MenuProps = ForcedOverride<PopoverProps, {
 	@:optional var classes:Record<MenuClassKey>;
@@ -16,4 +17,12 @@ typedef MenuProps = ForcedOverride<PopoverProps, {
 }>;
 
 @:jsRequire('@material-ui/core', 'Menu')
-extern class Menu extends ReactComponentOfProps<MenuProps> {}
+extern class Menu extends ReactComponentOfProps<MenuProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<MenuClassKey>
+		return MenuStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/Menu/Menu.js')
+extern class MenuStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<MenuClassKey>;
+}

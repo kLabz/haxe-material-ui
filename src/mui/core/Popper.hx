@@ -1,7 +1,8 @@
 package mui.core;
 
-import mui.core.popper.PopperPlacement;
 import react.transition.Transition;
+
+import mui.core.popper.PopperPlacement;
 
 typedef PopperRenderProps = {
 	var placement:PopperPlacement;
