@@ -1,6 +1,6 @@
 package mui.core;
 
-import mui.core.TouchRipple.TouchRippleProps;
+import mui.core.IconButton.IconButtonProps;
 import mui.core.exppanel.ExpansionPanelSummaryClassKey;
 import mui.core.styles.Classes;
 
@@ -10,7 +10,7 @@ typedef ExpansionPanelSummaryProps = {
 	@:optional var children:ReactFragment;
 	@:optional var classes:Record<ExpansionPanelSummaryClassKey>;
 	@:optional var expandIcon:ReactFragment;
-	@:optional var IconButtonProps:Partial<TouchRippleProps>;
+	@:optional var IconButtonProps:Partial<IconButtonProps>;
 }
 
 @:jsRequire('@material-ui/core', 'ExpansionPanelSummary')

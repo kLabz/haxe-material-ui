@@ -1,7 +1,6 @@
 package mui.core.styles;
 
 import haxe.Constraints.Function;
-import haxe.extern.EitherType;
 
 import react.ReactComponent;
 
@@ -14,6 +13,6 @@ typedef MuiStylesProviderProps = {
 }
 
 // Note: StylesProvider for mui v5
-@:jsRequire('@material-ui/core/styles', 'MuiStylesProvider')
+@:jsRequire('@material-ui/core/styles', 'StylesProvider')
 extern class MuiStylesProvider extends ReactComponentOfProps<MuiStylesProviderProps> {}
 
