@@ -1,7 +1,8 @@
 {
+  "name": "haxe-material-ui-tests",
   "scripts": {
     "postinstall": "haxelib newrepo && haxelib install --always --skip-dependencies install.hxml",
-    "test": "haxe build.hxml && node .build/test.js"
+    "test": "haxe test.hxml"
   },
   "dependencies": {
     "@material-ui/core": "4.7.1",

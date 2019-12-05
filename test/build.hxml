@@ -17,5 +17,3 @@
 
 -main Tests
 -js .build/test.js
-
--cmd node .build/test.js
