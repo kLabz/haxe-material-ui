@@ -66,7 +66,7 @@ npm i --save-exact @material-ui/lab@4.0.0-alpha.34
 This library is under heavy development and is still missing a lot of things to
 be used comfortably by other teams. I try to be as reactive as possible when
 you have issues or need specific components not yet implemented. You can find me
-on [`haxe-react`'s gitter][gitter].
+on [`haxe-react`'s gitter][gitter] or haxe discord ([invitation link][discord]).
 
 ### Current objectives
 
@@ -91,4 +91,5 @@ on [`haxe-react`'s gitter][gitter].
 [haxe-react]: https://github.com/massiveinteractive/haxe-react
 [open-issue]: https://gitlab.com/k-labz/haxe-oss/haxe-material-ui/issues/new
 [gitter]: https://gitter.im/haxe-react/Lobby
+[discord]: https://discord.gg/K3gHWK
 [gdoc]: https://docs.google.com/spreadsheets/d/1qniNk_cEH-YGHVP7u14aGHbOtMxtGcK5cRnN52Kbh5E/edit?usp=sharing
