@@ -1,5 +1,24 @@
 # Changelog
 
+## 4.0.0 - 2019-12-06
+
+* Update existing core components and API to `4.7.1`
+* Update existing lab components to `4.7.1`
+* Update icons (add 4500 more, including proxies)
+* Promote some components from `lab` to `core`
+* Add MuiTheme types and providers
+* Add style API (`createGenerateClassName`, `styled`, `withTheme`)
+* Expose `styles` for core and lab components
+* Add color manipulation API / tools
+* Add CI to test compilation of all components
+* Add `ButtonGroup` component
+* Add `Container` component
+* Add `TextareaAutosize` component
+* Add `Autocomplete` component (lab)
+* Add `Rating` component (lab)
+* Add `Skeleton` component (lab)
+* Add `TreeView` / `TreeItem` components (lab)
+
 ## 3.9.0 - 2019-12-05
 
 * Add `tabIndex` prop to `Button`
