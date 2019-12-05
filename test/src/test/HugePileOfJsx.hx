@@ -36,6 +36,8 @@ class HugePileOfJsx extends SingleSuite {
 							<SpeedDialIcon />
 							<ToggleButton children={null} value={null} />
 							<ToggleButtonGroup children={null} />
+							<TreeItem nodeId="" />
+							<TreeView />
 						</>
 					</MuiStylesProvider>
 
