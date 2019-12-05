@@ -125,8 +125,8 @@ class ComponentsStyleAPI extends SingleSuite {
 				mui.lab.SpeedDialIcon.styles.should.not.be(null);
 				mui.lab.ToggleButton.styles.should.not.be(null);
 				mui.lab.ToggleButtonGroup.styles.should.not.be(null);
-				// mui.lab.TreeItem.styles.should.not.be(null);
-				// mui.lab.TreeView.styles.should.not.be(null);
+				mui.lab.TreeItem.styles.should.not.be(null);
+				mui.lab.TreeView.styles.should.not.be(null);
 			});
 		});
 	}
