@@ -1,0 +1,50 @@
+name: Haxe 4.0.x
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-16.04
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install nodejs
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: Install neko
+      run: |
+        sudo add-apt-repository ppa:haxe/snapshots -y
+        sudo apt-get update
+        sudo apt install neko -y
+    - name: Neko version
+      run: |
+        neko -version
+    - name: Install haxe
+      run: |
+        cd /opt
+        git clone https://github.com/kLabz/haxe-manager.git haxe && cd haxe
+        SKIP_DEFAULTS=1 sh install.sh
+        hx-download 4.0.3
+      env:
+        PATH: /opt/hostedtoolcache/node/12.13.1/x64/bin:/usr/share/rust/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/opt/haxe/bin
+    - name: Select haxe version
+      run: |
+        hx-select 4.0.3
+      env:
+        PATH: /opt/hostedtoolcache/node/12.13.1/x64/bin:/usr/share/rust/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/opt/haxe/bin
+    - name: Install haxe + javascript dependencies
+      run: |
+        cd test
+        npm i
+      env:
+        PATH: /opt/hostedtoolcache/node/12.13.1/x64/bin:/usr/share/rust/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/opt/haxe/bin
+        HAXE_STD_PATH: /opt/haxe/std
+    - name: Run tests
+      run: |
+        cd test
+        npm test
+      env:
+        CI: true
+        PATH: /opt/hostedtoolcache/node/12.13.1/x64/bin:/usr/share/rust/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/opt/haxe/bin
+        HAXE_STD_PATH: /opt/haxe/std
+
