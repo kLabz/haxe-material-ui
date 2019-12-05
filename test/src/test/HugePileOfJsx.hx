@@ -28,6 +28,7 @@ class HugePileOfJsx extends SingleSuite {
 				var ret = jsx(<>
 					<MuiStylesProvider>
 						<>
+							<Autocomplete renderInput={(_) -> elt} />
 							<Skeleton />
 							<SpeedDial ariaLabel="" open />
 							<SpeedDialAction />
