@@ -2,6 +2,7 @@ package mui.lab;
 
 import react.types.StringOrInt;
 
+import mui.core.styles.Classes;
 import mui.lab.skeleton.SkeletonClassKey;
 import mui.lab.skeleton.SkeletonVariant;
 
@@ -18,4 +19,12 @@ typedef SkeletonProps = {
 }
 
 @:jsRequire('@material-ui/lab', 'Skeleton')
-extern class Skeleton extends ReactComponentOfProps<SkeletonProps> {}
+extern class Skeleton extends ReactComponentOfProps<SkeletonProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<SkeletonClassKey>
+		return SkeletonStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/lab/Skeleton/Skeleton.js')
+extern class SkeletonStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<SkeletonClassKey>;
+}

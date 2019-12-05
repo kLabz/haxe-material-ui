@@ -23,7 +23,7 @@ class ComponentsStyleAPI extends SingleSuite {
 			});
 
 			// TODO: split and check classes
-			it("Other components should expose MyComponent.styles", {
+			it("Other core components should expose MyComponent.styles", {
 				mui.core.Avatar.styles.should.not.be(null);
 				mui.core.Backdrop.styles.should.not.be(null);
 				mui.core.Badge.styles.should.not.be(null);
@@ -113,6 +113,20 @@ class ComponentsStyleAPI extends SingleSuite {
 				mui.core.Toolbar.styles.should.not.be(null);
 				mui.core.Tooltip.styles.should.not.be(null);
 				mui.core.Typography.styles.should.not.be(null);
+			});
+
+			// TODO: split and check classes
+			it("Lab components should expose MyComponent.styles", {
+				// mui.lab.Autocomplete.styles.should.not.be(null);
+				// mui.lab.Rating.styles.should.not.be(null);
+				mui.lab.Skeleton.styles.should.not.be(null);
+				mui.lab.SpeedDial.styles.should.not.be(null);
+				mui.lab.SpeedDialAction.styles.should.not.be(null);
+				mui.lab.SpeedDialIcon.styles.should.not.be(null);
+				mui.lab.ToggleButton.styles.should.not.be(null);
+				mui.lab.ToggleButtonGroup.styles.should.not.be(null);
+				// mui.lab.TreeItem.styles.should.not.be(null);
+				// mui.lab.TreeView.styles.should.not.be(null);
 			});
 		});
 	}

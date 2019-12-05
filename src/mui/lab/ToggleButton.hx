@@ -1,6 +1,7 @@
 package mui.lab;
 
 import mui.core.ButtonBase.ButtonBaseProps;
+import mui.core.styles.Classes;
 import mui.lab.toggle.ToggleButtonClassKey;
 
 typedef ToggleButtonProps = ForcedOverride<ButtonBaseProps, {
@@ -17,7 +18,7 @@ extern class ToggleButton extends ReactComponentOfProps<ToggleButtonProps> {
 		return ToggleButtonStyles.styles(theme);
 }
 
-@:jsRequire('@material-ui/core/ToggleButton/ToggleButton.js')
+@:jsRequire('@material-ui/lab/ToggleButton/ToggleButton.js')
 extern class ToggleButtonStyles {
 	static function styles<TTheme>(theme:TTheme):ClassesDef<ToggleButtonClassKey>;
 }
