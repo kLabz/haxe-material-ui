@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.9.0 - 2019-12-05
+
+* Add `tabIndex` prop to `Button`
+* Start branch `version/3.x` to continue development for v3
+
 ## 0.14.0 - 2019-01-29
 
 * Rewrite base props for all components to avoid some blocking issues
