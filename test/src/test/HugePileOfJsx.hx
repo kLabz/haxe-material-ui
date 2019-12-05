@@ -29,6 +29,7 @@ class HugePileOfJsx extends SingleSuite {
 					<MuiStylesProvider>
 						<>
 							<Autocomplete renderInput={(_) -> elt} />
+							<Rating />
 							<Skeleton />
 							<SpeedDial ariaLabel="" open />
 							<SpeedDialAction />

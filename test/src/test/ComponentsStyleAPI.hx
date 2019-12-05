@@ -118,7 +118,7 @@ class ComponentsStyleAPI extends SingleSuite {
 			// TODO: split and check classes
 			it("Lab components should expose MyComponent.styles", {
 				mui.lab.Autocomplete.styles.should.not.be(null);
-				// mui.lab.Rating.styles.should.not.be(null);
+				mui.lab.Rating.styles.should.not.be(null);
 				mui.lab.Skeleton.styles.should.not.be(null);
 				mui.lab.SpeedDial.styles.should.not.be(null);
 				mui.lab.SpeedDialAction.styles.should.not.be(null);
