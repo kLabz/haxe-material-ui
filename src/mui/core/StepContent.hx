@@ -12,7 +12,7 @@ typedef StepContentProps = {
 	@:optional var children:ReactFragment;
 	@:optional var classes:Record<StepContentClassKey>;
 	@:optional var TransitionComponent:ReactType;
-	@:optional var transitionDuration:TransitionDuration;
+	@:optional var transitionDuration:TransitionDurationOrAuto;
 	@:optional var TransitionProps:TransitionProps<Any>;
 }
 

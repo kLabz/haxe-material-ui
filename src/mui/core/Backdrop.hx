@@ -11,7 +11,7 @@ typedef BackdropProps = {
 	@:optional var children:ReactFragment;
 	@:optional var classes:Record<BackdropClassKey>;
 	@:optional var invisible:Bool;
-	@:optional var transitionDuration:TransitionDuration;
+	@:optional var transitionDuration:TimeoutTransitionDuration;
 }
 
 @:jsRequire('@material-ui/core', 'Backdrop')
