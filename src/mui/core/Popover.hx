@@ -32,7 +32,7 @@ typedef PopoverProps = ForcedOverride<ModalProps, {
 	@:optional var PaperProps:Partial<PaperProps>;
 	@:optional var transformOrigin:Position;
 	@:optional var TransitionComponent:ReactType;
-	@:optional var transitionDuration:TransitionDuration;
+	@:optional var transitionDuration:TransitionDurationOrAuto;
 	@:optional var TransitionProps:TransitionProps<Any>;
 }>;
 
