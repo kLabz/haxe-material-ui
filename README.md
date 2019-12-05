@@ -10,9 +10,9 @@ This library includes Haxe externs for all components from
 
 ## Compatibility table
 
-Current version (`0.14.5`) of `haxe-material-ui` is based
-off `@material-ui/core` version [`3.9.3`][mui-3.9.0-doc] and
-`@material-ui/icons` version `3.0.2`.
+Current version (`4.0.0`) of `haxe-material-ui` is based
+off `@material-ui/core` version [`4.7.1`][mui-4.7.x-doc] and
+`@material-ui/icons` version `4.5.1`.
 
 | Haxe Material UI    | `@material-ui/core`        | `@material-ui/icons` |
 |:-------------------:|:--------------------------:|:--------------------:|
@@ -20,13 +20,17 @@ off `@material-ui/core` version [`3.9.3`][mui-3.9.0-doc] and
 | `0.9.0` - `0.11.0`  |   [`3.7.x`][mui-3.7.0-doc] |              `3.0.x` |
 | `0.12.x`            |   [`3.8.x`][mui-3.8.0-doc] |              `3.0.x` |
 | `0.13.x` - ???      |   [`3.9.x`][mui-3.9.0-doc] |              `3.0.x` |
+| `3.9.x`             |   [`3.9.x`][mui-3.9.0-doc] |              `3.0.x` |
+| `4.x.x`             | ≥ [`4.7.0`][mui-4.7.x-doc] |              `4.5.x` |
 
 ## Usage
 
-This library is mostly used with [`react-next`][react-next] and Haxe 4 (at least
-preview 4). It is meant to be used with latest versions of `react-next` and
-`react-types` since it is using their latest features (helpers for writing
-correctly typed externs).
+This library is mostly used with [`react-next`][react-next] and Haxe 4. It is
+meant to be used with latest versions of `react-next` and `react-types` since it
+is using their latest features (helpers for writing correctly typed externs).
+
+See [`test/install.hxml`](test/install.hxml) for recommended versions for
+haxelib dependencies.
 
 Compatibility with current version of [`react`][haxe-react] should be
 possible using [`react-next-compat`](https://github.com/kLabz/haxe-react-next-compat).
@@ -48,7 +52,13 @@ haxelib install material-ui
 Install npm dependencies:
 
 ```
-npm i --save-exact @material-ui/core@3.9.2 @material-ui/icons@3.0.2
+npm i --save-exact @material-ui/core@4.7.1 @material-ui/icons@4.5.1
+```
+
+Optionally, install lab components too:
+
+```
+npm i --save-exact @material-ui/lab@4.0.0-alpha.34
 ```
 
 ## Roadmap
@@ -61,12 +71,13 @@ on [`haxe-react`'s gitter][gitter].
 ### Current objectives
 
 * Add externs to existing utils in `@material-ui/core` and `@material-ui/icons`
-* Add more utils for theme and style
-* ~~Improve `css-types` for better props typing~~
-* Improve (with enums) and switch to `tink_domspec`
 * Improve this README with instructions
 * Generate documentation from current code
 * Add examples (example project + some guides)
+* Improve CI with more complete tests
+* Add CI for haxe 3.4.7, fix what needs to be fixed
+* Add CI to `version/3.x` branch
+* Cherry pick some fixes and improvements from 4.x.x to `version/3.x` branch
 
 
 [mui-core]: https://www.npmjs.com/package/@material-ui/core
@@ -75,6 +86,7 @@ on [`haxe-react`'s gitter][gitter].
 [mui-3.7.0-doc]: https://v3-7-0.material-ui.com/versions/
 [mui-3.8.0-doc]: https://v3-8-0.material-ui.com/versions/
 [mui-3.9.0-doc]: https://v3-9-0.material-ui.com/versions/
+[mui-4.7.x-doc]: https://material-ui.com/versions/
 [react-next]: https://github.com/kLabz/haxe-react
 [haxe-react]: https://github.com/massiveinteractive/haxe-react
 [open-issue]: https://gitlab.com/k-labz/haxe-oss/haxe-material-ui/issues/new
