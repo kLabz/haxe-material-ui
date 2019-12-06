@@ -1,0 +1,19 @@
+# Testing libs
+-lib buddy
+
+# Material UI dependencies
+-lib react-next
+-lib js-object
+-lib css-types
+-lib react-types
+-lib react-event-listener
+-lib react-transition-group
+
+-cp ../src/
+-cp src
+
+-D nodejs
+-D buddy-colors
+
+-main Tests
+-js .build/test.js
