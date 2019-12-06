@@ -1,0 +1,2 @@
+build.hxml
+-cmd node .build/test.js
