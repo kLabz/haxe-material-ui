@@ -2,7 +2,7 @@
 
 ## Material UI v4.x
 
-## 4.0.0 - 2019-12-05
+### 4.0.0 - 2019-12-05
 
 * Update existing core components and API to `4.7.1`
 * Update existing lab components to `4.7.1`
@@ -21,7 +21,7 @@
 * Add `Skeleton` component (lab)
 * Add `TreeView` / `TreeItem` components (lab)
 
-### 4.0.1
+#### 4.0.1
 
 * Fix compatibility with haxe 3.4.7
 * Add CI for haxe 3.4.7
