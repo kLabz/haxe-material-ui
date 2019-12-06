@@ -21,10 +21,15 @@
 * Add `Skeleton` component (lab)
 * Add `TreeView` / `TreeItem` components (lab)
 
+
+<details>
+  <summary>Patch versions</summary>
+
 #### 4.0.1
 
 * Fix compatibility with haxe 3.4.7
 * Add CI for haxe 3.4.7
+</details>
 
 ## Material UI v3.x
 
@@ -39,6 +44,8 @@
 * Fix `ClassKey`-related props (by fixing `Record<T>` in `react-types`)
 * Now requires `react-types` version `0.9.0`
 
+<details>
+  <summary>Patch versions</summary>
 #### 0.14.1
 
 * Compatibility with [`@material-ui/core 3.9.2`](https://v3-9-2.material-ui.com/versions/) (nothing to do)
@@ -67,6 +74,7 @@
 #### 0.14.7
 
 * Allow `children` prop for `Select`
+</details>
 
 ### 0.13.0 - 2019-01-15
 
@@ -74,17 +82,22 @@
 * Add new `Link` component
 * Update `Badge` and `InputAdornment`
 
+<details>
+  <summary>Patch versions</summary>
 #### 0.13.1
 
 * Compatibility with [`@material-ui/core 3.9.1`](https://v3-9-1.material-ui.com/versions/)
 * Tooltip: use `ReactElement` instead of `ReactFragment` for `children` prop
 * TextField: use `Partial` for `InputProps` prop
+</details>
 
 ### 0.12.0 - 2018-12-31
 
 * Compatibility with [`@material-ui/core 3.8.0`](https://v3-8-0.material-ui.com/versions/)
 * Rename some icons to avoid type shadowing (added `Icon` suffix to `Class`, `Event`, `Input`, `Map`, `Tab`)
 
+<details>
+  <summary>Patch versions</summary>
 #### 0.12.1
 
 * Compatibility with [`@material-ui/core 3.8.2`](https://v3-8-2.material-ui.com/versions/)
@@ -92,6 +105,7 @@
 #### 0.12.2
 
 * Select: use Any for `props.value` type
+</details>
 
 ### 0.11.0 - 2018-12-27
 
