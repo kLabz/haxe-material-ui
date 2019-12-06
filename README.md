@@ -70,7 +70,6 @@ on [`haxe-react`'s gitter][gitter] or haxe discord ([invitation link][discord]).
 * Generate documentation from current code
 * Add examples (example project + some guides)
 * Improve CI with more complete tests
-* Add CI to `version/3.x` branch
 * Cherry pick some fixes and improvements from 4.x.x to `version/3.x` branch
 
 
