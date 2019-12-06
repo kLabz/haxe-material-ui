@@ -128,7 +128,7 @@ typedef Theme<
 	@:optional var zIndex:TZIndexes;
 }
 
-enum abstract PaletteType(String) from String to String {
+@:enum abstract PaletteType(String) from String to String {
 	var Light = "light";
 	var Dark = "dark";
 }
@@ -170,8 +170,13 @@ typedef MuiPalette<
 	@:optional var tonalOffset:Float; // 0.2
 	@:optional var shadows:Array<String>;
 
+	#if haxe4
 	@:optional var getContrastText:(background:ColorString)->Float;
 	@:optional var augmentColor:(color:PaletteIntention,?mainShade:Int,?lightShade:Int,?darkShade:Int)->PaletteIntention;
+	#else
+	@:optional var getContrastText:ColorString->Float;
+	@:optional var augmentColor:PaletteIntention->?Int->?Int->?Int->PaletteIntention;
+	#end
 
 	@:optional var primary:PaletteIntention;
 	@:optional var secondary:PaletteIntention;
@@ -243,11 +248,19 @@ typedef MuiBreakpoints = {
 		var xl:Int; // 1920
 	};
 
+	#if haxe4
 	var up:(key:BreakpointOrNumber)->String;
 	var down:(key:BreakpointOrNumber)->String;
 	var between:(start:Breakpoint, end:Breakpoint)->String;
 	var only:(key:Breakpoint)->String;
 	var width:(key:Breakpoint)->Int;
+	#else
+	var up:BreakpointOrNumber->String;
+	var down:BreakpointOrNumber->String;
+	var between:Breakpoint->Breakpoint->String;
+	var only:Breakpoint->String;
+	var width:Breakpoint->Int;
+	#end
 }
 
 typedef MuiTypography = {
@@ -277,7 +290,7 @@ typedef MuiTypography = {
 }
 
 typedef MuiTransitions = {
-	var create:()->String;
+	var create:Void->String;
 	@:optional var getAutoHeightDuration:Float->Float; // TODO: check vs Int
 	@:optional var easing:MuiTransitionsEasing;
 	@:optional var duration:MuiTransitionsDuration;
@@ -310,7 +323,7 @@ typedef MuiZIndexes = {
 	var tooltip:Int; // 1500
 }
 
-enum abstract Direction(String) {
+@:enum abstract Direction(String) {
 	var Ltr = "ltr";
 	var Rtl = "rtl";
 	// ?

@@ -31,7 +31,7 @@ enum EColor {
 	// TODO: other flavors
 }
 
-enum abstract ColorString(String) from String to String {
+@:enum abstract ColorString(String) from String to String {
 	@:from
 	public static function fromEnum(e:EColor):ColorString {
 		return switch (e) {
