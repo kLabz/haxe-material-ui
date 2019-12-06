@@ -4,6 +4,6 @@ import buddy.Buddy;
 import test.*;
 
 class Tests implements Buddy<[
-	ComponentsStyleAPI,
+	// ComponentsStyleAPI,
 	HugePileOfJsx
 ]> {}

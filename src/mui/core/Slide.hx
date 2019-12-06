@@ -1,12 +1,12 @@
 package mui.core;
 
 import react.transition.Transition;
-import mui.core.slide.SlideDirection;
+import mui.core.common.Direction;
 
 typedef SlideProps = ForcedOverride<TransitionProps<Any>, {
 	> StandardDOMAttributes,
 
-	@:optional var direction:SlideDirection;
+	@:optional var direction:Direction;
 }>;
 
 @:acceptsMoreProps('react.transition.Transition')

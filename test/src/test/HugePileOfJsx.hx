@@ -7,7 +7,6 @@ import react.ReactMacro.jsx;
 
 import mui.lab.*;
 import mui.core.*; // After lab to overwrite proxies
-import mui.core.styles.MuiStylesProvider;
 import mui.core.styles.MuiTheme;
 import mui.core.styles.MuiThemeProvider;
 
@@ -23,37 +22,19 @@ class HugePileOfJsx extends SingleSuite {
 
 		describe("Material UI components", {
 			// TODO: split up and use more props
-			// TODO: add lab components: Autocomplete, Rating, TreeItem, TreeView
 			it("can be included in jsx", {
 				var ret = jsx('<>
-					<MuiStylesProvider>
-						<>
-							<Autocomplete renderInput={function(_) return elt} />
-							<Rating />
-							<Skeleton />
-							<SpeedDial ariaLabel="" open />
-							<SpeedDialAction />
-							<SpeedDialIcon />
-							<ToggleButton children={null} value={null} />
-							<ToggleButtonGroup children={null} />
-							<TreeItem nodeId="" />
-							<TreeView />
-						</>
-					</MuiStylesProvider>
-
 					<MuiThemeProvider theme={defaultTheme}>
 						<>
 							<CssBaseline />
 							<AppBar children={null} />
 							<Avatar />
 							<Backdrop open />
-							<Badge />
 							<BottomNavigation children={null} />
 							<BottomNavigationAction />
 							<Breadcrumbs children={null} />
 							<Button children={null} />
 							<ButtonBase />
-							<ButtonGroup children={null} />
 							<Card />
 							<CardActionArea />
 							<CardActions />
@@ -65,7 +46,6 @@ class HugePileOfJsx extends SingleSuite {
 							<CircularProgress />
 							<ClickAwayListener children={elt} onClickAway={noop} />
 							<Collapse />
-							<Container children={null} />
 							<Dialog children={null} open />
 							<DialogActions />
 							<DialogContent />
@@ -116,13 +96,13 @@ class HugePileOfJsx extends SingleSuite {
 							<Paper />
 							<Popover open />
 							<Popper children=${jsx('<Grid />')} open={false} />
-							<Portal />
+							<Portal children=${elt} />
 							<Radio />
 							<RadioGroup />
 							<RootRef children=${jsx('<Grid />')} rootRef={React.createRef()} />
 							<Select />
 							<Slide />
-							<Slider />
+							<Slider value={null} />
 							<Snackbar />
 							<SnackbarContent />
 							<Step />
@@ -145,8 +125,9 @@ class HugePileOfJsx extends SingleSuite {
 							<TableRow children={null} />
 							<TableSortLabel />
 							<Tabs />
-							<TextareaAutosize />
 							<TextField />
+							<ToggleButton children={null} value={null} />
+							<ToggleButtonGroup children={null} />
 							<Toolbar />
 							<Tooltip children={null} title="title" />
 							<Typography />
