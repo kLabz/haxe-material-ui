@@ -46,6 +46,7 @@
 
 <details>
   <summary>Patch versions</summary>
+
 #### 0.14.1
 
 * Compatibility with [`@material-ui/core 3.9.2`](https://v3-9-2.material-ui.com/versions/) (nothing to do)
@@ -84,6 +85,7 @@
 
 <details>
   <summary>Patch versions</summary>
+
 #### 0.13.1
 
 * Compatibility with [`@material-ui/core 3.9.1`](https://v3-9-1.material-ui.com/versions/)
@@ -98,6 +100,7 @@
 
 <details>
   <summary>Patch versions</summary>
+
 #### 0.12.1
 
 * Compatibility with [`@material-ui/core 3.8.2`](https://v3-8-2.material-ui.com/versions/)
