@@ -16,10 +16,6 @@ off `@material-ui/core` version [`4.7.1`][mui-4.7.x-doc] and
 
 | Haxe Material UI    | `@material-ui/core`        | `@material-ui/icons` |
 |:-------------------:|:--------------------------:|:--------------------:|
-| < `0.9.0`           | ± [`3.6.x`][mui-3.6.0-doc] |              `3.0.x` |
-| `0.9.0` - `0.11.0`  |   [`3.7.x`][mui-3.7.0-doc] |              `3.0.x` |
-| `0.12.x`            |   [`3.8.x`][mui-3.8.0-doc] |              `3.0.x` |
-| `0.13.x` - ???      |   [`3.9.x`][mui-3.9.0-doc] |              `3.0.x` |
 | `3.9.x`             |   [`3.9.x`][mui-3.9.0-doc] |              `3.0.x` |
 | `4.x.x`             | ≥ [`4.7.0`][mui-4.7.x-doc] |              `4.5.x` |
 
@@ -37,9 +33,8 @@ possible using [`react-next-compat`](https://github.com/kLabz/haxe-react-next-co
 This would not be 100% accurate, but since current version of `react` doesn't
 check props types, this should work.
 
-This library should work with Haxe `3.4.7`, and fixes will be made if necessary,
-but it is not being intensively tested with this version of Haxe. Please
-[open an issue][open-issue] if you have trouble using it with Haxe 3.4.7.
+Compatibility with Haxe `3.4.7` is now enforced in CI and should be kept at
+least until Haxe `4.1.0` is released.
 
 ### Installation
 
@@ -82,9 +77,6 @@ on [`haxe-react`'s gitter][gitter] or haxe discord ([invitation link][discord]).
 
 [mui-core]: https://www.npmjs.com/package/@material-ui/core
 [mui-icons]: https://www.npmjs.com/package/@material-ui/icons
-[mui-3.6.0-doc]: https://v3-6-0.material-ui.com/versions/
-[mui-3.7.0-doc]: https://v3-7-0.material-ui.com/versions/
-[mui-3.8.0-doc]: https://v3-8-0.material-ui.com/versions/
 [mui-3.9.0-doc]: https://v3-9-0.material-ui.com/versions/
 [mui-4.7.x-doc]: https://material-ui.com/versions/
 [react-next]: https://github.com/kLabz/haxe-react
