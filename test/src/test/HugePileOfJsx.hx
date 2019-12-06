@@ -18,17 +18,17 @@ class HugePileOfJsx extends SingleSuite {
 		JsdomSetup.init();
 
 		var defaultTheme = MuiTheme.createMuiTheme({});
-		var noop = (?_) -> {};
-		var elt = jsx(<div />);
+		var noop = function(?_) {};
+		var elt = jsx('<div />');
 
 		describe("Material UI components", {
 			// TODO: split up and use more props
 			// TODO: add lab components: Autocomplete, Rating, TreeItem, TreeView
 			it("can be included in jsx", {
-				var ret = jsx(<>
+				var ret = jsx('<>
 					<MuiStylesProvider>
 						<>
-							<Autocomplete renderInput={(_) -> elt} />
+							<Autocomplete renderInput={function(_) return elt} />
 							<Rating />
 							<Skeleton />
 							<SpeedDial ariaLabel="" open />
@@ -109,17 +109,17 @@ class HugePileOfJsx extends SingleSuite {
 							<MenuItem />
 							<MenuList />
 							<MobileStepper steps={1} />
-							<Modal children={<Grid />} open />
+							<Modal children=${jsx('<Grid />')} open />
 							<NativeSelect />
 							<NoSsr children={elt} />
 							<OutlinedInput labelWidth={0} />
 							<Paper />
 							<Popover open />
-							<Popper children={<Grid />} open={false} />
+							<Popper children=${jsx('<Grid />')} open={false} />
 							<Portal />
 							<Radio />
 							<RadioGroup />
-							<RootRef children={<Grid />} rootRef={React.createRef()} />
+							<RootRef children=${jsx('<Grid />')} rootRef={React.createRef()} />
 							<Select />
 							<Slide />
 							<Slider />
@@ -154,7 +154,7 @@ class HugePileOfJsx extends SingleSuite {
 
 						</>
 					</MuiThemeProvider>
-				</>);
+				</>');
 
 				ret.should.not.be(null);
 			});
