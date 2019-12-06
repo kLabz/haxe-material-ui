@@ -36,6 +36,7 @@ jobs:
       run: |
         cd test
         npm i
+        npm run init:4.0.x
       env:
         PATH: /opt/hostedtoolcache/node/12.13.1/x64/bin:/usr/share/rust/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/opt/haxe/bin
         HAXE_STD_PATH: /opt/haxe/std
