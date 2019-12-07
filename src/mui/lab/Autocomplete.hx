@@ -35,6 +35,7 @@ typedef AutocompleteProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var freeSolo:Bool;
 	@:optional var getOptionDisabled:Any->Bool;
 	@:optional var getOptionLabel:Any->String; // ReactFragment?
+	@:optional var getOptionSelected:Any->Any->Bool; // (option, value) => isSelected
 	@:optional var groupBy:Any->String;
 	@:optional var id:String;
 	@:optional var includeInputInList:Bool;
