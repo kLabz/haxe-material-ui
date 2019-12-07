@@ -29,6 +29,14 @@
 
 * Fix compatibility with haxe 3.4.7
 * Add CI for haxe 3.4.7
+
+#### 4.0.2
+
+* Update for `4.7.2` release of `@material-ui/core`
+* [Lab] Autocomplete: add getOptionSelected() prop
+* Avatar: add fallback classkey
+* Add size prop to form control components
+
 </details>
 
 ## Material UI v3.x
@@ -75,6 +83,7 @@
 #### 0.14.7
 
 * Allow `children` prop for `Select`
+
 </details>
 
 ### 0.13.0 - 2019-01-15
@@ -91,6 +100,7 @@
 * Compatibility with [`@material-ui/core 3.9.1`](https://v3-9-1.material-ui.com/versions/)
 * Tooltip: use `ReactElement` instead of `ReactFragment` for `children` prop
 * TextField: use `Partial` for `InputProps` prop
+
 </details>
 
 ### 0.12.0 - 2018-12-31
@@ -108,6 +118,7 @@
 #### 0.12.2
 
 * Select: use Any for `props.value` type
+
 </details>
 
 ### 0.11.0 - 2018-12-27
