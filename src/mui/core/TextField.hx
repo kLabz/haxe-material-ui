@@ -5,6 +5,7 @@ import mui.core.FormHelperText.FormHelperTextProps;
 import mui.core.Input.InputProps;
 import mui.core.InputBase.InputBaseCommonProps;
 import mui.core.InputLabel.InputLabelProps;
+import mui.core.form.FormControlSize;
 import mui.core.form.FormControlVariant;
 import mui.core.Select.SelectProps;
 
@@ -19,6 +20,7 @@ typedef TextFieldProps = ForcedOverride<FormControlProps, {
 	@:optional var label:ReactFragment;
 	@:optional var select:Bool;
 	@:optional var SelectProps:Partial<SelectProps>;
+	@:optional var size:FormControlSize;
 }>;
 
 @:jsRequire('@material-ui/core', 'TextField')

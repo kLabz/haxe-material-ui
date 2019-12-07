@@ -4,7 +4,7 @@ package mui.lab.autocomplete;
 	var Root = "root";
 	var Focused = "focused";
 	var Tag = "tag";
-	var TagSizeSmall = "tagSizeSmall"; // Note: not released yet as of 4.7.1
+	var TagSizeSmall = "tagSizeSmall";
 	var InputRoot = "inputRoot";
 	var Input = "input";
 	var InputFocused = "inputFocused";

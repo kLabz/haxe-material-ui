@@ -3,6 +3,7 @@ package mui.core;
 import mui.Color;
 import mui.core.form.FormControlClassKey;
 import mui.core.form.FormControlMargin;
+import mui.core.form.FormControlSize;
 import mui.core.form.FormControlVariant;
 import mui.core.styles.Classes;
 
@@ -19,6 +20,7 @@ typedef FormControlProps = {
 	@:optional var hiddenLabel:Bool;
 	@:optional var margin:FormControlMargin;
 	@:optional var required:Bool;
+	@:optional var size:FormControlSize;
 	@:optional var variant:FormControlVariant;
 }
 

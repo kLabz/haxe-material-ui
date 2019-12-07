@@ -8,6 +8,7 @@ package mui.core.input;
 	var Disabled = "disabled";
 	var Underline = "underline";
 	var Error = "error";
+	var MarginDense = "marginDense";
 	var Multiline = "multiline";
 	var FullWidth = "fullWidth";
 	var Input = "input";

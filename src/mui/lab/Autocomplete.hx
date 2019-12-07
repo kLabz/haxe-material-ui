@@ -57,7 +57,7 @@ typedef AutocompleteProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var renderGroup:RenderGroupParams->ReactFragment;
 	@:optional var renderOption:Any->RenderOptionState->ReactFragment;
 	@:optional var renderTags:InputValue->GetTagProps->ReactFragment;
-	@:optional var size:AutocompleteSize; // Note: not released yet as of 4.7.1
+	@:optional var size:AutocompleteSize;
 	@:optional var value:InputValue;
 }>;
 
