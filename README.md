@@ -10,7 +10,7 @@ This library includes Haxe externs for all components from
 
 ## Compatibility table
 
-Current version (`4.0.0`) of `haxe-material-ui` is based
+Current version (`4.0.3`) of `haxe-material-ui` is based
 off `@material-ui/core` version [`4.7.2`][mui-4.7.x-doc] and
 `@material-ui/icons` version `4.5.1`.
 
@@ -53,7 +53,7 @@ npm i --save-exact @material-ui/core@4.7.2 @material-ui/icons@4.5.1
 Optionally, install lab components too:
 
 ```
-npm i --save-exact @material-ui/lab@4.0.0-alpha.34
+npm i --save-exact @material-ui/lab@4.0.0-alpha.35
 ```
 
 ## Roadmap

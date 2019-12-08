@@ -37,6 +37,12 @@
 * Avatar: add fallback classkey
 * Add size prop to form control components
 
+#### 4.0.3
+
+* Auto-generated tests to ensure classkeys and `Component.styles()` are up-to-date
+* Fix `Component.styles()` API for components not using the theme
+* Fix classkeys for some components
+
 </details>
 
 ## Material UI v3.x
