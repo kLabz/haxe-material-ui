@@ -1,8 +1,8 @@
 {
   "name": "material-ui",
   "description": "Material UI - React components that implement Google's Material Design",
-  "version": "3.9.0",
-  "releasenote": "Prepare for 4.0.0 (See CHANGELOG.md)",
+  "version": "3.9.1",
+  "releasenote": "Add all icons from mui-icons 3.0.2 (See CHANGELOG.md)",
   "url": "https://gitlab.com/k-labz/haxe-oss/haxe-material-ui",
   "license": "MIT",
   "tags": [],

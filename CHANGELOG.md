@@ -5,6 +5,10 @@
 * Add `tabIndex` prop to `Button`
 * Start branch `version/3.x` to continue development for v3
 
+### 3.9.1
+
+* Add all icons from `@material-ui/icons` version `3.0.2`
+
 ## 0.14.0 - 2019-01-29
 
 * Rewrite base props for all components to avoid some blocking issues
