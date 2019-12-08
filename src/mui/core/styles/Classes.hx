@@ -4,6 +4,8 @@ package mui.core.styles;
 import haxe.macro.Context;
 import haxe.macro.Expr;
 import haxe.macro.ExprTools;
+
+import react.types.macro.RecordMacro;
 #end
 
 #if !macro
@@ -30,10 +32,14 @@ class ClassesBuilder {
 		return null;
 	}
 
+	static var defCache:Map<String, ComplexType> = new Map();
+
 	public static function buildDef() {
-		switch (Context.getLocalType()) {
+		var localType = Context.getLocalType();
+
+		return switch (localType) {
 			case TInst(_, [TType(_.get() => _.type => TAnonymous(_.get() => {fields: fields}), _)]):
-				return TAnonymous(fields.map(function(f) return {
+				TAnonymous(fields.map(function(f) return {
 					name: f.name,
 					kind: FVar(macro :css.Properties, null),
 					access: null,
@@ -42,11 +48,44 @@ class ClassesBuilder {
 					pos: f.pos
 				}));
 
+			case TInst(_, [TAbstract(_.toString() => ref, [])]) if (defCache.exists(ref)): defCache.get(ref);
+
+			case TInst(_, [TAbstract(ref, [])]):
+				var record = RecordMacro.buildRecord(localType, macro :css.Properties, true);
+				var a = ref.get();
+				var name = "ClassesDef_" + a.name;
+				var pos = Context.currentPos();
+				var ck = TPath({name: a.name, pack: a.pack, params: []});
+
+				Context.defineType({
+					fields: (macro class {
+						public function resolve(key:$ck):css.Properties {
+							return Reflect.field(this, key);
+						}
+					}).fields,
+					kind: TDAbstract(record, [], [record]),
+					meta: [{
+						name: ":forward",
+						pos: pos
+					}],
+					name: name,
+					pack: a.pack,
+					params: [],
+					pos: pos
+				});
+
+				var ret = TPath({
+					name: name,
+					pack: a.pack,
+					params: []
+				});
+
+				defCache.set(ref.toString(), ret);
+				ret;
+
 			default:
 				Context.error("Error building JSS classes def", Context.currentPos());
-		}
-
-		return null;
+		};
 	}
 
 	static function buildClasses(classesExpr:Expr) {
