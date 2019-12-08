@@ -4,4 +4,3 @@ import react.ReactComponent;
 
 @:jsRequire('@material-ui/icons', 'Error')
 extern class ErrorCircle extends ReactComponentOfProps<IconProps> {}
-
