@@ -1292,7 +1292,7 @@ class ComponentsStyleAPI extends SingleSuite {
 				}
 			});
 
-			it("ButtonBase should expose ButtonBase.styles", {
+			xit("ButtonBase should expose ButtonBase.styles", {
 				var styles = mui.core.ButtonBase.styles(defaultTheme);
 
 				styles.root.should.not.be(null);
