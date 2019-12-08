@@ -23,7 +23,6 @@ class HugePileOfJsx extends SingleSuite {
 
 		describe("Material UI components", {
 			// TODO: split up and use more props
-			// TODO: add lab components: Autocomplete, Rating, TreeItem, TreeView
 			it("can be included in jsx", {
 				var ret = jsx('<>
 					<MuiStylesProvider>
