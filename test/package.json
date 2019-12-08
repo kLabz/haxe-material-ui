@@ -1,9 +1,8 @@
 {
   "name": "haxe-material-ui-tests",
   "scripts": {
-    "postinstall": "haxelib newrepo",
-    "init:4.0.x": "haxelib install --always --skip-dependencies --quiet install.hxml",
-    "init:3.4.7": "haxelib install --always --quiet install.hxml",
+    "init:4.0.x": "haxelib newrepo && haxelib install --always --skip-dependencies --quiet install.hxml",
+    "init:3.4.7": "haxelib newrepo && haxelib install --always --quiet install.hxml",
     "test": "haxe test.hxml"
   },
   "dependencies": {
@@ -11,7 +10,7 @@
     "@material-ui/icons": "4.5.1",
     "@material-ui/lab": "4.0.0-alpha.35",
     "jsdom": "15.2.1",
-    "react": "16.12.0",
-    "react-dom": "16.12.0"
+    "react": "16.8.0",
+    "react-dom": "16.8.0"
   }
 }
