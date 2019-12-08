@@ -10,15 +10,15 @@ class ComponentsStyleAPI extends SingleSuite {
 		var defaultTheme = MuiTheme.createMuiTheme({});
 
 		describe("Core components style API", {
-
+			
 			it("Checkbox should expose Checkbox.styles", {
 				var styles = mui.core.Checkbox.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Checked).should.not.be(null);
 				untyped __js__("delete {0}[\"checked\"]", styles);
 				styles.resolve(Disabled).should.not.be(null);
@@ -37,15 +37,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Switch should expose Switch.styles", {
 				var styles = mui.core.Switch.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(EdgeStart).should.not.be(null);
 				untyped __js__("delete {0}[\"edgeStart\"]", styles);
 				styles.resolve(EdgeEnd).should.not.be(null);
@@ -76,15 +76,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Collapse should expose Collapse.styles", {
 				var styles = mui.core.Collapse.styles(defaultTheme);
-
+		
 				styles.container.should.not.be(null);
 				styles.resolve(Container).should.not.be(null);
 				styles.resolve(Container).should.be(styles.container);
 				untyped __js__("delete {0}[\"container\"]", styles);
-
+			
 				styles.resolve(Entered).should.not.be(null);
 				untyped __js__("delete {0}[\"entered\"]", styles);
 				styles.resolve(Hidden).should.not.be(null);
@@ -101,15 +101,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Paper should expose Paper.styles", {
 				var styles = mui.core.Paper.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Rounded).should.not.be(null);
 				untyped __js__("delete {0}[\"rounded\"]", styles);
 				styles.resolve(Elevation_0).should.not.be(null);
@@ -170,15 +170,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Chip should expose Chip.styles", {
 				var styles = mui.core.Chip.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(SizeSmall).should.not.be(null);
 				untyped __js__("delete {0}[\"sizeSmall\"]", styles);
 				styles.resolve(ColorPrimary).should.not.be(null);
@@ -245,15 +245,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("Breadcrumbs should expose Breadcrumbs.styles", {
+		
+			it("Breadcrumbs should expose Breadcrumbs.styles", {
 				var styles = mui.core.Breadcrumbs.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Ol).should.not.be(null);
 				untyped __js__("delete {0}[\"ol\"]", styles);
 				styles.resolve(Li).should.not.be(null);
@@ -268,15 +268,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Slider should expose Slider.styles", {
 				var styles = mui.core.Slider.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(ColorPrimary).should.not.be(null);
 				untyped __js__("delete {0}[\"colorPrimary\"]", styles);
 				styles.resolve(ColorSecondary).should.not.be(null);
@@ -323,15 +323,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("Backdrop should expose Backdrop.styles", {
+		
+			it("Backdrop should expose Backdrop.styles", {
 				var styles = mui.core.Backdrop.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Invisible).should.not.be(null);
 				untyped __js__("delete {0}[\"invisible\"]", styles);
 				var remainingFields = Reflect.fields(styles);
@@ -342,15 +342,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("Popover should expose Popover.styles", {
+		
+			it("Popover should expose Popover.styles", {
 				var styles = mui.core.Popover.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Paper).should.not.be(null);
 				untyped __js__("delete {0}[\"paper\"]", styles);
 				var remainingFields = Reflect.fields(styles);
@@ -361,15 +361,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("FilledInput should expose FilledInput.styles", {
 				var styles = mui.core.FilledInput.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(ColorSecondary).should.not.be(null);
 				untyped __js__("delete {0}[\"colorSecondary\"]", styles);
 				styles.resolve(Underline).should.not.be(null);
@@ -408,15 +408,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("InputLabel should expose InputLabel.styles", {
 				var styles = mui.core.InputLabel.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Focused).should.not.be(null);
 				untyped __js__("delete {0}[\"focused\"]", styles);
 				styles.resolve(Disabled).should.not.be(null);
@@ -447,15 +447,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("NativeSelect should expose NativeSelect.styles", {
 				var styles = mui.core.NativeSelect.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Select).should.not.be(null);
 				untyped __js__("delete {0}[\"select\"]", styles);
 				styles.resolve(Filled).should.not.be(null);
@@ -482,15 +482,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("OutlinedInput should expose OutlinedInput.styles", {
 				var styles = mui.core.OutlinedInput.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(ColorSecondary).should.not.be(null);
 				untyped __js__("delete {0}[\"colorSecondary\"]", styles);
 				styles.resolve(Focused).should.not.be(null);
@@ -527,15 +527,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("InputBase should expose InputBase.styles", {
 				var styles = mui.core.InputBase.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(FormControl).should.not.be(null);
 				untyped __js__("delete {0}[\"formControl\"]", styles);
 				styles.resolve(Focused).should.not.be(null);
@@ -578,15 +578,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Input should expose Input.styles", {
 				var styles = mui.core.Input.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(FormControl).should.not.be(null);
 				untyped __js__("delete {0}[\"formControl\"]", styles);
 				styles.resolve(Focused).should.not.be(null);
@@ -621,15 +621,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("InputAdornment should expose InputAdornment.styles", {
+		
+			it("InputAdornment should expose InputAdornment.styles", {
 				var styles = mui.core.InputAdornment.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Filled).should.not.be(null);
 				untyped __js__("delete {0}[\"filled\"]", styles);
 				styles.resolve(PositionStart).should.not.be(null);
@@ -650,15 +650,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Select should expose Select.styles", {
 				var styles = mui.core.Select.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Select).should.not.be(null);
 				untyped __js__("delete {0}[\"select\"]", styles);
 				styles.resolve(Filled).should.not.be(null);
@@ -685,15 +685,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Container should expose Container.styles", {
 				var styles = mui.core.Container.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Fixed).should.not.be(null);
 				untyped __js__("delete {0}[\"fixed\"]", styles);
 				styles.resolve(MaxWidthXs).should.not.be(null);
@@ -714,15 +714,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Tooltip should expose Tooltip.styles", {
 				var styles = mui.core.Tooltip.styles(defaultTheme);
-
+		
 				styles.popper.should.not.be(null);
 				styles.resolve(Popper).should.not.be(null);
 				styles.resolve(Popper).should.be(styles.popper);
 				untyped __js__("delete {0}[\"popper\"]", styles);
-
+			
 				styles.resolve(PopperInteractive).should.not.be(null);
 				untyped __js__("delete {0}[\"popperInteractive\"]", styles);
 				styles.resolve(PopperArrow).should.not.be(null);
@@ -751,15 +751,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("AppBar should expose AppBar.styles", {
 				var styles = mui.core.AppBar.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(PositionFixed).should.not.be(null);
 				untyped __js__("delete {0}[\"positionFixed\"]", styles);
 				styles.resolve(PositionAbsolute).should.not.be(null);
@@ -784,15 +784,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("CardMedia should expose CardMedia.styles", {
+		
+			it("CardMedia should expose CardMedia.styles", {
 				var styles = mui.core.CardMedia.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Media).should.not.be(null);
 				untyped __js__("delete {0}[\"media\"]", styles);
 				styles.resolve(Img).should.not.be(null);
@@ -805,15 +805,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("CardActionArea should expose CardActionArea.styles", {
 				var styles = mui.core.CardActionArea.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(FocusVisible).should.not.be(null);
 				untyped __js__("delete {0}[\"focusVisible\"]", styles);
 				styles.resolve(FocusHighlight).should.not.be(null);
@@ -826,15 +826,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("CardHeader should expose CardHeader.styles", {
+		
+			it("CardHeader should expose CardHeader.styles", {
 				var styles = mui.core.CardHeader.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Avatar).should.not.be(null);
 				untyped __js__("delete {0}[\"avatar\"]", styles);
 				styles.resolve(Action).should.not.be(null);
@@ -853,15 +853,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("CardContent should expose CardContent.styles", {
+		
+			it("CardContent should expose CardContent.styles", {
 				var styles = mui.core.CardContent.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				var remainingFields = Reflect.fields(styles);
 				if (remainingFields.length > 0) {
 					for (f in remainingFields) {
@@ -870,15 +870,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("CardActions should expose CardActions.styles", {
+		
+			it("CardActions should expose CardActions.styles", {
 				var styles = mui.core.CardActions.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Spacing).should.not.be(null);
 				untyped __js__("delete {0}[\"spacing\"]", styles);
 				var remainingFields = Reflect.fields(styles);
@@ -889,15 +889,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("Card should expose Card.styles", {
+		
+			it("Card should expose Card.styles", {
 				var styles = mui.core.Card.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				var remainingFields = Reflect.fields(styles);
 				if (remainingFields.length > 0) {
 					for (f in remainingFields) {
@@ -906,15 +906,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("Link should expose Link.styles", {
+		
+			it("Link should expose Link.styles", {
 				var styles = mui.core.Link.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(UnderlineNone).should.not.be(null);
 				untyped __js__("delete {0}[\"underlineNone\"]", styles);
 				styles.resolve(UnderlineHover).should.not.be(null);
@@ -933,15 +933,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Badge should expose Badge.styles", {
 				var styles = mui.core.Badge.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Badge).should.not.be(null);
 				untyped __js__("delete {0}[\"badge\"]", styles);
 				styles.resolve(ColorPrimary).should.not.be(null);
@@ -978,15 +978,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("FormLabel should expose FormLabel.styles", {
 				var styles = mui.core.FormLabel.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(ColorSecondary).should.not.be(null);
 				untyped __js__("delete {0}[\"colorSecondary\"]", styles);
 				styles.resolve(Focused).should.not.be(null);
@@ -1009,15 +1009,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("FormGroup should expose FormGroup.styles", {
+		
+			it("FormGroup should expose FormGroup.styles", {
 				var styles = mui.core.FormGroup.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Row).should.not.be(null);
 				untyped __js__("delete {0}[\"row\"]", styles);
 				var remainingFields = Reflect.fields(styles);
@@ -1028,15 +1028,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("FormControl should expose FormControl.styles", {
+		
+			it("FormControl should expose FormControl.styles", {
 				var styles = mui.core.FormControl.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(MarginNormal).should.not.be(null);
 				untyped __js__("delete {0}[\"marginNormal\"]", styles);
 				styles.resolve(MarginDense).should.not.be(null);
@@ -1051,15 +1051,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("FormHelperText should expose FormHelperText.styles", {
 				var styles = mui.core.FormHelperText.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Error).should.not.be(null);
 				untyped __js__("delete {0}[\"error\"]", styles);
 				styles.resolve(Disabled).should.not.be(null);
@@ -1082,15 +1082,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("FormControlLabel should expose FormControlLabel.styles", {
 				var styles = mui.core.FormControlLabel.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(LabelPlacementStart).should.not.be(null);
 				untyped __js__("delete {0}[\"labelPlacementStart\"]", styles);
 				styles.resolve(LabelPlacementTop).should.not.be(null);
@@ -1109,15 +1109,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("IconButton should expose IconButton.styles", {
 				var styles = mui.core.IconButton.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(EdgeStart).should.not.be(null);
 				untyped __js__("delete {0}[\"edgeStart\"]", styles);
 				styles.resolve(EdgeEnd).should.not.be(null);
@@ -1142,15 +1142,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("ButtonGroup should expose ButtonGroup.styles", {
 				var styles = mui.core.ButtonGroup.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Contained).should.not.be(null);
 				untyped __js__("delete {0}[\"contained\"]", styles);
 				styles.resolve(FullWidth).should.not.be(null);
@@ -1185,15 +1185,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Button should expose Button.styles", {
 				var styles = mui.core.Button.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Label).should.not.be(null);
 				untyped __js__("delete {0}[\"label\"]", styles);
 				styles.resolve(Text).should.not.be(null);
@@ -1256,15 +1256,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Fab should expose Fab.styles", {
 				var styles = mui.core.Fab.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Label).should.not.be(null);
 				untyped __js__("delete {0}[\"label\"]", styles);
 				styles.resolve(Primary).should.not.be(null);
@@ -1291,15 +1291,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("ButtonBase should expose ButtonBase.styles", {
+		
+			it("ButtonBase should expose ButtonBase.styles", {
 				var styles = mui.core.ButtonBase.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Disabled).should.not.be(null);
 				untyped __js__("delete {0}[\"disabled\"]", styles);
 				styles.resolve(FocusVisible).should.not.be(null);
@@ -1312,15 +1312,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Toolbar should expose Toolbar.styles", {
 				var styles = mui.core.Toolbar.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Gutters).should.not.be(null);
 				untyped __js__("delete {0}[\"gutters\"]", styles);
 				styles.resolve(Regular).should.not.be(null);
@@ -1335,15 +1335,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("TableFooter should expose TableFooter.styles", {
+		
+			it("TableFooter should expose TableFooter.styles", {
 				var styles = mui.core.TableFooter.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				var remainingFields = Reflect.fields(styles);
 				if (remainingFields.length > 0) {
 					for (f in remainingFields) {
@@ -1352,15 +1352,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Table should expose Table.styles", {
 				var styles = mui.core.Table.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(StickyHeader).should.not.be(null);
 				untyped __js__("delete {0}[\"stickyHeader\"]", styles);
 				var remainingFields = Reflect.fields(styles);
@@ -1371,15 +1371,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("TableHead should expose TableHead.styles", {
+		
+			it("TableHead should expose TableHead.styles", {
 				var styles = mui.core.TableHead.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				var remainingFields = Reflect.fields(styles);
 				if (remainingFields.length > 0) {
 					for (f in remainingFields) {
@@ -1388,15 +1388,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("TablePagination should expose TablePagination.styles", {
 				var styles = mui.core.TablePagination.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Toolbar).should.not.be(null);
 				untyped __js__("delete {0}[\"toolbar\"]", styles);
 				styles.resolve(Spacer).should.not.be(null);
@@ -1423,15 +1423,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("TableRow should expose TableRow.styles", {
 				var styles = mui.core.TableRow.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Selected).should.not.be(null);
 				untyped __js__("delete {0}[\"selected\"]", styles);
 				styles.resolve(Hover).should.not.be(null);
@@ -1448,15 +1448,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("TableBody should expose TableBody.styles", {
+		
+			it("TableBody should expose TableBody.styles", {
 				var styles = mui.core.TableBody.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				var remainingFields = Reflect.fields(styles);
 				if (remainingFields.length > 0) {
 					for (f in remainingFields) {
@@ -1465,15 +1465,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("TableCell should expose TableCell.styles", {
 				var styles = mui.core.TableCell.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Head).should.not.be(null);
 				untyped __js__("delete {0}[\"head\"]", styles);
 				styles.resolve(Body).should.not.be(null);
@@ -1504,15 +1504,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("TableSortLabel should expose TableSortLabel.styles", {
 				var styles = mui.core.TableSortLabel.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Active).should.not.be(null);
 				untyped __js__("delete {0}[\"active\"]", styles);
 				styles.resolve(Icon).should.not.be(null);
@@ -1529,15 +1529,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("DialogContent should expose DialogContent.styles", {
 				var styles = mui.core.DialogContent.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Dividers).should.not.be(null);
 				untyped __js__("delete {0}[\"dividers\"]", styles);
 				var remainingFields = Reflect.fields(styles);
@@ -1548,15 +1548,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("DialogContentText should expose DialogContentText.styles", {
+		
+			it("DialogContentText should expose DialogContentText.styles", {
 				var styles = mui.core.DialogContentText.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				var remainingFields = Reflect.fields(styles);
 				if (remainingFields.length > 0) {
 					for (f in remainingFields) {
@@ -1565,15 +1565,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("DialogActions should expose DialogActions.styles", {
+		
+			it("DialogActions should expose DialogActions.styles", {
 				var styles = mui.core.DialogActions.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Spacing).should.not.be(null);
 				untyped __js__("delete {0}[\"spacing\"]", styles);
 				var remainingFields = Reflect.fields(styles);
@@ -1584,15 +1584,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("DialogTitle should expose DialogTitle.styles", {
+		
+			it("DialogTitle should expose DialogTitle.styles", {
 				var styles = mui.core.DialogTitle.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				var remainingFields = Reflect.fields(styles);
 				if (remainingFields.length > 0) {
 					for (f in remainingFields) {
@@ -1601,15 +1601,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("Dialog should expose Dialog.styles", {
+		
+			it("Dialog should expose Dialog.styles", {
 				var styles = mui.core.Dialog.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(ScrollPaper).should.not.be(null);
 				untyped __js__("delete {0}[\"scrollPaper\"]", styles);
 				styles.resolve(ScrollBody).should.not.be(null);
@@ -1633,7 +1633,7 @@ class ComponentsStyleAPI extends SingleSuite {
 				styles.resolve(PaperWidthLG).should.not.be(null);
 				untyped __js__("delete {0}[\"paperWidthLg\"]", styles);
 				styles.resolve(PaperWidthXL).should.not.be(null);
-				untyped __js__("delete {0}[\"paperWidthXL\"]", styles);
+				untyped __js__("delete {0}[\"paperWidthXl\"]", styles);
 				styles.resolve(PaperFullWidth).should.not.be(null);
 				untyped __js__("delete {0}[\"paperFullWidth\"]", styles);
 				styles.resolve(PaperFullScreen).should.not.be(null);
@@ -1646,15 +1646,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Drawer should expose Drawer.styles", {
 				var styles = mui.core.Drawer.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Docked).should.not.be(null);
 				untyped __js__("delete {0}[\"docked\"]", styles);
 				styles.resolve(Paper).should.not.be(null);
@@ -1685,15 +1685,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("ListItemSecondaryAction should expose ListItemSecondaryAction.styles", {
+		
+			it("ListItemSecondaryAction should expose ListItemSecondaryAction.styles", {
 				var styles = mui.core.ListItemSecondaryAction.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				var remainingFields = Reflect.fields(styles);
 				if (remainingFields.length > 0) {
 					for (f in remainingFields) {
@@ -1702,15 +1702,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("ListItem should expose ListItem.styles", {
 				var styles = mui.core.ListItem.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Container).should.not.be(null);
 				untyped __js__("delete {0}[\"container\"]", styles);
 				styles.resolve(FocusVisible).should.not.be(null);
@@ -1739,15 +1739,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Divider should expose Divider.styles", {
 				var styles = mui.core.Divider.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Absolute).should.not.be(null);
 				untyped __js__("delete {0}[\"absolute\"]", styles);
 				styles.resolve(Inset).should.not.be(null);
@@ -1766,15 +1766,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("ListItemIcon should expose ListItemIcon.styles", {
 				var styles = mui.core.ListItemIcon.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(AlignItemsFlexStart).should.not.be(null);
 				untyped __js__("delete {0}[\"alignItemsFlexStart\"]", styles);
 				var remainingFields = Reflect.fields(styles);
@@ -1785,15 +1785,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("ListItemAvatar should expose ListItemAvatar.styles", {
+		
+			it("ListItemAvatar should expose ListItemAvatar.styles", {
 				var styles = mui.core.ListItemAvatar.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(AlignItemsFlexStart).should.not.be(null);
 				untyped __js__("delete {0}[\"alignItemsFlexStart\"]", styles);
 				var remainingFields = Reflect.fields(styles);
@@ -1804,15 +1804,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("ListItemText should expose ListItemText.styles", {
+		
+			it("ListItemText should expose ListItemText.styles", {
 				var styles = mui.core.ListItemText.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Multiline).should.not.be(null);
 				untyped __js__("delete {0}[\"multiline\"]", styles);
 				styles.resolve(Dense).should.not.be(null);
@@ -1831,15 +1831,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("ListSubheader should expose ListSubheader.styles", {
 				var styles = mui.core.ListSubheader.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(ColorPrimary).should.not.be(null);
 				untyped __js__("delete {0}[\"colorPrimary\"]", styles);
 				styles.resolve(ColorInherit).should.not.be(null);
@@ -1858,15 +1858,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("List should expose List.styles", {
+		
+			it("List should expose List.styles", {
 				var styles = mui.core.List.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Padding).should.not.be(null);
 				untyped __js__("delete {0}[\"padding\"]", styles);
 				styles.resolve(Dense).should.not.be(null);
@@ -1881,15 +1881,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Tabs should expose Tabs.styles", {
 				var styles = mui.core.Tabs.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Vertical).should.not.be(null);
 				untyped __js__("delete {0}[\"vertical\"]", styles);
 				styles.resolve(FlexContainer).should.not.be(null);
@@ -1918,15 +1918,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Tab should expose Tab.styles", {
 				var styles = mui.core.Tab.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(LabelIcon).should.not.be(null);
 				untyped __js__("delete {0}[\"labelIcon\"]", styles);
 				styles.resolve(TextColorInherit).should.not.be(null);
@@ -1953,15 +1953,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("LinearProgress should expose LinearProgress.styles", {
 				var styles = mui.core.LinearProgress.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(ColorPrimary).should.not.be(null);
 				untyped __js__("delete {0}[\"colorPrimary\"]", styles);
 				styles.resolve(ColorSecondary).should.not.be(null);
@@ -2004,15 +2004,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("CircularProgress should expose CircularProgress.styles", {
 				var styles = mui.core.CircularProgress.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Static).should.not.be(null);
 				untyped __js__("delete {0}[\"static\"]", styles);
 				styles.resolve(Indeterminate).should.not.be(null);
@@ -2039,15 +2039,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("StepLabel should expose StepLabel.styles", {
 				var styles = mui.core.StepLabel.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Horizontal).should.not.be(null);
 				untyped __js__("delete {0}[\"horizontal\"]", styles);
 				styles.resolve(Vertical).should.not.be(null);
@@ -2076,15 +2076,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("Stepper should expose Stepper.styles", {
+		
+			it("Stepper should expose Stepper.styles", {
 				var styles = mui.core.Stepper.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Horizontal).should.not.be(null);
 				untyped __js__("delete {0}[\"horizontal\"]", styles);
 				styles.resolve(Vertical).should.not.be(null);
@@ -2099,15 +2099,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("StepConnector should expose StepConnector.styles", {
 				var styles = mui.core.StepConnector.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Horizontal).should.not.be(null);
 				untyped __js__("delete {0}[\"horizontal\"]", styles);
 				styles.resolve(Vertical).should.not.be(null);
@@ -2134,15 +2134,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("StepIcon should expose StepIcon.styles", {
 				var styles = mui.core.StepIcon.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Text).should.not.be(null);
 				untyped __js__("delete {0}[\"text\"]", styles);
 				styles.resolve(Active).should.not.be(null);
@@ -2159,15 +2159,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("MobileStepper should expose MobileStepper.styles", {
 				var styles = mui.core.MobileStepper.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(PositionBottom).should.not.be(null);
 				untyped __js__("delete {0}[\"positionBottom\"]", styles);
 				styles.resolve(PositionTop).should.not.be(null);
@@ -2190,15 +2190,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("StepContent should expose StepContent.styles", {
 				var styles = mui.core.StepContent.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Last).should.not.be(null);
 				untyped __js__("delete {0}[\"last\"]", styles);
 				styles.resolve(Transition).should.not.be(null);
@@ -2211,15 +2211,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("StepButton should expose StepButton.styles", {
+		
+			it("StepButton should expose StepButton.styles", {
 				var styles = mui.core.StepButton.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Horizontal).should.not.be(null);
 				untyped __js__("delete {0}[\"horizontal\"]", styles);
 				styles.resolve(Vertical).should.not.be(null);
@@ -2234,15 +2234,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("Step should expose Step.styles", {
+		
+			it("Step should expose Step.styles", {
 				var styles = mui.core.Step.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Horizontal).should.not.be(null);
 				untyped __js__("delete {0}[\"horizontal\"]", styles);
 				styles.resolve(Vertical).should.not.be(null);
@@ -2259,15 +2259,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Snackbar should expose Snackbar.styles", {
 				var styles = mui.core.Snackbar.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(AnchorOriginTopCenter).should.not.be(null);
 				untyped __js__("delete {0}[\"anchorOriginTopCenter\"]", styles);
 				styles.resolve(AnchorOriginBottomCenter).should.not.be(null);
@@ -2288,15 +2288,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("SnackbarContent should expose SnackbarContent.styles", {
 				var styles = mui.core.SnackbarContent.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Message).should.not.be(null);
 				untyped __js__("delete {0}[\"message\"]", styles);
 				styles.resolve(Action).should.not.be(null);
@@ -2309,15 +2309,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("BottomNavigationAction should expose BottomNavigationAction.styles", {
 				var styles = mui.core.BottomNavigationAction.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Selected).should.not.be(null);
 				untyped __js__("delete {0}[\"selected\"]", styles);
 				styles.resolve(IconOnly).should.not.be(null);
@@ -2334,15 +2334,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("BottomNavigation should expose BottomNavigation.styles", {
 				var styles = mui.core.BottomNavigation.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				var remainingFields = Reflect.fields(styles);
 				if (remainingFields.length > 0) {
 					for (f in remainingFields) {
@@ -2351,15 +2351,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("GridListTileBar should expose GridListTileBar.styles", {
 				var styles = mui.core.GridListTileBar.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(TitlePositionBottom).should.not.be(null);
 				untyped __js__("delete {0}[\"titlePositionBottom\"]", styles);
 				styles.resolve(TitlePositionTop).should.not.be(null);
@@ -2388,15 +2388,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("GridListTile should expose GridListTile.styles", {
+		
+			it("GridListTile should expose GridListTile.styles", {
 				var styles = mui.core.GridListTile.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Tile).should.not.be(null);
 				untyped __js__("delete {0}[\"tile\"]", styles);
 				styles.resolve(ImgFullHeight).should.not.be(null);
@@ -2411,15 +2411,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Grid should expose Grid.styles", {
 				var styles = mui.core.Grid.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Container).should.not.be(null);
 				untyped __js__("delete {0}[\"container\"]", styles);
 				styles.resolve(Item).should.not.be(null);
@@ -2520,15 +2520,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("GridList should expose GridList.styles", {
+		
+			it("GridList should expose GridList.styles", {
 				var styles = mui.core.GridList.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				var remainingFields = Reflect.fields(styles);
 				if (remainingFields.length > 0) {
 					for (f in remainingFields) {
@@ -2537,15 +2537,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Avatar should expose Avatar.styles", {
 				var styles = mui.core.Avatar.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(ColorDefault).should.not.be(null);
 				untyped __js__("delete {0}[\"colorDefault\"]", styles);
 				styles.resolve(Fallback).should.not.be(null);
@@ -2566,15 +2566,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("Menu should expose Menu.styles", {
+		
+			it("Menu should expose Menu.styles", {
 				var styles = mui.core.Menu.styles(defaultTheme);
-
+		
 				styles.paper.should.not.be(null);
 				styles.resolve(Paper).should.not.be(null);
 				styles.resolve(Paper).should.be(styles.paper);
 				untyped __js__("delete {0}[\"paper\"]", styles);
-
+			
 				styles.resolve(List).should.not.be(null);
 				untyped __js__("delete {0}[\"list\"]", styles);
 				var remainingFields = Reflect.fields(styles);
@@ -2585,15 +2585,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("MenuItem should expose MenuItem.styles", {
 				var styles = mui.core.MenuItem.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Gutters).should.not.be(null);
 				untyped __js__("delete {0}[\"gutters\"]", styles);
 				styles.resolve(Selected).should.not.be(null);
@@ -2608,15 +2608,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("SvgIcon should expose SvgIcon.styles", {
 				var styles = mui.core.SvgIcon.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(ColorPrimary).should.not.be(null);
 				untyped __js__("delete {0}[\"colorPrimary\"]", styles);
 				styles.resolve(ColorSecondary).should.not.be(null);
@@ -2641,15 +2641,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Typography should expose Typography.styles", {
 				var styles = mui.core.Typography.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Body1).should.not.be(null);
 				untyped __js__("delete {0}[\"body1\"]", styles);
 				styles.resolve(Body2).should.not.be(null);
@@ -2716,15 +2716,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("ExpansionPanelDetails should expose ExpansionPanelDetails.styles", {
+		
+			it("ExpansionPanelDetails should expose ExpansionPanelDetails.styles", {
 				var styles = mui.core.ExpansionPanelDetails.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				var remainingFields = Reflect.fields(styles);
 				if (remainingFields.length > 0) {
 					for (f in remainingFields) {
@@ -2733,15 +2733,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("ExpansionPanelSummary should expose ExpansionPanelSummary.styles", {
 				var styles = mui.core.ExpansionPanelSummary.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Expanded).should.not.be(null);
 				untyped __js__("delete {0}[\"expanded\"]", styles);
 				styles.resolve(Focused).should.not.be(null);
@@ -2760,15 +2760,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("ExpansionPanelActions should expose ExpansionPanelActions.styles", {
+		
+			it("ExpansionPanelActions should expose ExpansionPanelActions.styles", {
 				var styles = mui.core.ExpansionPanelActions.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Spacing).should.not.be(null);
 				untyped __js__("delete {0}[\"spacing\"]", styles);
 				var remainingFields = Reflect.fields(styles);
@@ -2779,15 +2779,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("ExpansionPanel should expose ExpansionPanel.styles", {
 				var styles = mui.core.ExpansionPanel.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Rounded).should.not.be(null);
 				untyped __js__("delete {0}[\"rounded\"]", styles);
 				styles.resolve(Expanded).should.not.be(null);
@@ -2802,15 +2802,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Radio should expose Radio.styles", {
 				var styles = mui.core.Radio.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Checked).should.not.be(null);
 				untyped __js__("delete {0}[\"checked\"]", styles);
 				styles.resolve(Disabled).should.not.be(null);
@@ -2827,19 +2827,19 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 		});
 
 		describe("Lab components style API", {
-
+			
 			it("ToggleButtonGroup should expose ToggleButtonGroup.styles", {
 				var styles = mui.lab.ToggleButtonGroup.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Grouped).should.not.be(null);
 				untyped __js__("delete {0}[\"grouped\"]", styles);
 				styles.resolve(GroupedSizeSmall).should.not.be(null);
@@ -2854,15 +2854,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("ToggleButton should expose ToggleButton.styles", {
 				var styles = mui.lab.ToggleButton.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Disabled).should.not.be(null);
 				untyped __js__("delete {0}[\"disabled\"]", styles);
 				styles.resolve(Selected).should.not.be(null);
@@ -2881,15 +2881,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Autocomplete should expose Autocomplete.styles", {
 				var styles = mui.lab.Autocomplete.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Focused).should.not.be(null);
 				untyped __js__("delete {0}[\"focused\"]", styles);
 				styles.resolve(Tag).should.not.be(null);
@@ -2938,15 +2938,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Rating should expose Rating.styles", {
 				var styles = mui.lab.Rating.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(SizeSmall).should.not.be(null);
 				untyped __js__("delete {0}[\"sizeSmall\"]", styles);
 				styles.resolve(SizeLarge).should.not.be(null);
@@ -2985,15 +2985,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("SpeedDial should expose SpeedDial.styles", {
 				var styles = mui.lab.SpeedDial.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Fab).should.not.be(null);
 				untyped __js__("delete {0}[\"fab\"]", styles);
 				styles.resolve(DirectionUp).should.not.be(null);
@@ -3016,15 +3016,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("SpeedDialAction should expose SpeedDialAction.styles", {
 				var styles = mui.lab.SpeedDialAction.styles(defaultTheme);
-
+		
 				styles.fab.should.not.be(null);
 				styles.resolve(Fab).should.not.be(null);
 				styles.resolve(Fab).should.be(styles.fab);
 				untyped __js__("delete {0}[\"fab\"]", styles);
-
+			
 				styles.resolve(FabClosed).should.not.be(null);
 				untyped __js__("delete {0}[\"fabClosed\"]", styles);
 				styles.resolve(StaticTooltip).should.not.be(null);
@@ -3045,15 +3045,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("SpeedDialIcon should expose SpeedDialIcon.styles", {
 				var styles = mui.lab.SpeedDialIcon.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Icon).should.not.be(null);
 				untyped __js__("delete {0}[\"icon\"]", styles);
 				styles.resolve(IconOpen).should.not.be(null);
@@ -3072,15 +3072,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("Skeleton should expose Skeleton.styles", {
 				var styles = mui.lab.Skeleton.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Text).should.not.be(null);
 				untyped __js__("delete {0}[\"text\"]", styles);
 				styles.resolve(Rect).should.not.be(null);
@@ -3097,15 +3097,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 			it("TreeItem should expose TreeItem.styles", {
 				var styles = mui.lab.TreeItem.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				styles.resolve(Expanded).should.not.be(null);
 				untyped __js__("delete {0}[\"expanded\"]", styles);
 				styles.resolve(Group).should.not.be(null);
@@ -3124,15 +3124,15 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
-			xit("TreeView should expose TreeView.styles", {
+		
+			it("TreeView should expose TreeView.styles", {
 				var styles = mui.lab.TreeView.styles(defaultTheme);
-
+		
 				styles.root.should.not.be(null);
 				styles.resolve(Root).should.not.be(null);
 				styles.resolve(Root).should.be(styles.root);
 				untyped __js__("delete {0}[\"root\"]", styles);
-
+			
 				var remainingFields = Reflect.fields(styles);
 				if (remainingFields.length > 0) {
 					for (f in remainingFields) {
@@ -3141,7 +3141,7 @@ class ComponentsStyleAPI extends SingleSuite {
 					}
 				}
 			});
-
+		
 		});
 	}
 }
