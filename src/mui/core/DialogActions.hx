@@ -13,11 +13,11 @@ typedef DialogActionsProps = {
 
 @:jsRequire('@material-ui/core', 'DialogActions')
 extern class DialogActions extends ReactComponentOfProps<DialogActionsProps> {
-	static inline function styles<TTheme>(theme:TTheme):ClassesDef<DialogActionsClassKey>
-		return DialogActionsStyles.styles(theme);
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<DialogActionsClassKey>
+		return DialogActionsStyles.styles;
 }
 
 @:jsRequire('@material-ui/core/DialogActions/DialogActions.js')
 extern class DialogActionsStyles {
-	static function styles<TTheme>(theme:TTheme):ClassesDef<DialogActionsClassKey>;
+	static var styles:ClassesDef<DialogActionsClassKey>;
 }

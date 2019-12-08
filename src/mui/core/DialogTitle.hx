@@ -13,11 +13,11 @@ typedef DialogTitleProps = {
 
 @:jsRequire('@material-ui/core', 'DialogTitle')
 extern class DialogTitle extends ReactComponentOfProps<DialogTitleProps> {
-	static inline function styles<TTheme>(theme:TTheme):ClassesDef<DialogTitleClassKey>
-		return DialogTitleStyles.styles(theme);
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<DialogTitleClassKey>
+		return DialogTitleStyles.styles;
 }
 
 @:jsRequire('@material-ui/core/DialogTitle/DialogTitle.js')
 extern class DialogTitleStyles {
-	static function styles<TTheme>(theme:TTheme):ClassesDef<DialogTitleClassKey>;
+	static var styles:ClassesDef<DialogTitleClassKey>;
 }

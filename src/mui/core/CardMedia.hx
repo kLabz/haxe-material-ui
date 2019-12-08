@@ -15,11 +15,11 @@ typedef CardMediaProps = {
 
 @:jsRequire('@material-ui/core', 'CardMedia')
 extern class CardMedia extends ReactComponentOfProps<CardMediaProps> {
-	static inline function styles<TTheme>(theme:TTheme):ClassesDef<CardMediaClassKey>
-		return CardMediaStyles.styles(theme);
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<CardMediaClassKey>
+		return CardMediaStyles.styles;
 }
 
 @:jsRequire('@material-ui/core/CardMedia/CardMedia.js')
 extern class CardMediaStyles {
-	static function styles<TTheme>(theme:TTheme):ClassesDef<CardMediaClassKey>;
+	static var styles:ClassesDef<CardMediaClassKey>;
 }

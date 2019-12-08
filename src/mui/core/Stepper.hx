@@ -17,11 +17,11 @@ typedef StepperProps = ForcedOverride<PaperProps, {
 
 @:jsRequire('@material-ui/core', 'Stepper')
 extern class Stepper extends ReactComponentOfProps<StepperProps> {
-	static inline function styles<TTheme>(theme:TTheme):ClassesDef<StepperClassKey>
-		return StepperStyles.styles(theme);
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<StepperClassKey>
+		return StepperStyles.styles;
 }
 
 @:jsRequire('@material-ui/core/Stepper/Stepper.js')
 extern class StepperStyles {
-	static function styles<TTheme>(theme:TTheme):ClassesDef<StepperClassKey>;
+	static var styles:ClassesDef<StepperClassKey>;
 }

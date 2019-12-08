@@ -16,11 +16,11 @@ typedef ListProps = {
 
 @:jsRequire('@material-ui/core', 'List')
 extern class List extends ReactComponentOfProps<ListProps> {
-	static inline function styles<TTheme>(theme:TTheme):ClassesDef<ListClassKey>
-		return ListStyles.styles(theme);
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<ListClassKey>
+		return ListStyles.styles;
 }
 
 @:jsRequire('@material-ui/core/List/List.js')
 extern class ListStyles {
-	static function styles<TTheme>(theme:TTheme):ClassesDef<ListClassKey>;
+	static var styles:ClassesDef<ListClassKey>;
 }

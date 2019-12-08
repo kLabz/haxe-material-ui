@@ -15,11 +15,11 @@ typedef GridListProps = ForcedOverride<StandardDOMAttributes, {
 
 @:jsRequire('@material-ui/core', 'GridList')
 extern class GridList extends ReactComponentOfProps<GridListProps> {
-	static inline function styles<TTheme>(theme:TTheme):ClassesDef<GridListClassKey>
-		return GridListStyles.styles(theme);
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<GridListClassKey>
+		return GridListStyles.styles;
 }
 
 @:jsRequire('@material-ui/core/GridList/GridList.js')
 extern class GridListStyles {
-	static function styles<TTheme>(theme:TTheme):ClassesDef<GridListClassKey>;
+	static var styles:ClassesDef<GridListClassKey>;
 }

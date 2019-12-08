@@ -13,11 +13,11 @@ typedef TableFooterProps = {
 
 @:jsRequire('@material-ui/core', 'TableFooter')
 extern class TableFooter extends ReactComponentOfProps<TableFooterProps> {
-	static inline function styles<TTheme>(theme:TTheme):ClassesDef<TableFooterClassKey>
-		return TableFooterStyles.styles(theme);
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<TableFooterClassKey>
+		return TableFooterStyles.styles;
 }
 
 @:jsRequire('@material-ui/core/TableFooter/TableFooter.js')
 extern class TableFooterStyles {
-	static function styles<TTheme>(theme:TTheme):ClassesDef<TableFooterClassKey>;
+	static var styles:ClassesDef<TableFooterClassKey>;
 }

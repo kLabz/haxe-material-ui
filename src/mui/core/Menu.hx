@@ -18,11 +18,11 @@ typedef MenuProps = ForcedOverride<PopoverProps, {
 
 @:jsRequire('@material-ui/core', 'Menu')
 extern class Menu extends ReactComponentOfProps<MenuProps> {
-	static inline function styles<TTheme>(theme:TTheme):ClassesDef<MenuClassKey>
-		return MenuStyles.styles(theme);
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<MenuClassKey>
+		return MenuStyles.styles;
 }
 
 @:jsRequire('@material-ui/core/Menu/Menu.js')
 extern class MenuStyles {
-	static function styles<TTheme>(theme:TTheme):ClassesDef<MenuClassKey>;
+	static var styles:ClassesDef<MenuClassKey>;
 }

@@ -13,11 +13,11 @@ typedef ExpansionPanelActionsProps = {
 
 @:jsRequire('@material-ui/core', 'ExpansionPanelActions')
 extern class ExpansionPanelActions extends ReactComponentOfProps<ExpansionPanelActionsProps> {
-	static inline function styles<TTheme>(theme:TTheme):ClassesDef<ExpansionPanelActionsClassKey>
-		return ExpansionPanelActionsStyles.styles(theme);
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<ExpansionPanelActionsClassKey>
+		return ExpansionPanelActionsStyles.styles;
 }
 
 @:jsRequire('@material-ui/core/ExpansionPanelActions/ExpansionPanelActions.js')
 extern class ExpansionPanelActionsStyles {
-	static function styles<TTheme>(theme:TTheme):ClassesDef<ExpansionPanelActionsClassKey>;
+	static var styles:ClassesDef<ExpansionPanelActionsClassKey>;
 }

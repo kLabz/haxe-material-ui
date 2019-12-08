@@ -12,11 +12,11 @@ typedef ListItemSecondaryActionProps = {
 
 @:jsRequire('@material-ui/core', 'ListItemSecondaryAction')
 extern class ListItemSecondaryAction extends ReactComponentOfProps<ListItemSecondaryActionProps> {
-	static inline function styles<TTheme>(theme:TTheme):ClassesDef<ListItemSecondaryActionClassKey>
-		return ListItemSecondaryActionStyles.styles(theme);
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<ListItemSecondaryActionClassKey>
+		return ListItemSecondaryActionStyles.styles;
 }
 
 @:jsRequire('@material-ui/core/ListItemSecondaryAction/ListItemSecondaryAction.js')
 extern class ListItemSecondaryActionStyles {
-	static function styles<TTheme>(theme:TTheme):ClassesDef<ListItemSecondaryActionClassKey>;
+	static var styles:ClassesDef<ListItemSecondaryActionClassKey>;
 }

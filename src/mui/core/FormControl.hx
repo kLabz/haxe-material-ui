@@ -26,11 +26,11 @@ typedef FormControlProps = {
 
 @:jsRequire('@material-ui/core', 'FormControl')
 extern class FormControl extends ReactComponentOfProps<FormControlProps> {
-	static inline function styles<TTheme>(theme:TTheme):ClassesDef<FormControlClassKey>
-		return FormControlStyles.styles(theme);
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<FormControlClassKey>
+		return FormControlStyles.styles;
 }
 
 @:jsRequire('@material-ui/core/FormControl/FormControl.js')
 extern class FormControlStyles {
-	static function styles<TTheme>(theme:TTheme):ClassesDef<FormControlClassKey>;
+	static var styles:ClassesDef<FormControlClassKey>;
 }

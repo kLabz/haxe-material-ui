@@ -16,11 +16,11 @@ typedef BackdropProps = {
 
 @:jsRequire('@material-ui/core', 'Backdrop')
 extern class Backdrop extends ReactComponentOfProps<BackdropProps> {
-	static inline function styles<TTheme>(theme:TTheme):ClassesDef<BackdropClassKey>
-		return BackdropStyles.styles(theme);
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<BackdropClassKey>
+		return BackdropStyles.styles;
 }
 
 @:jsRequire('@material-ui/core/Backdrop/Backdrop.js')
 extern class BackdropStyles {
-	static function styles<TTheme>(theme:TTheme):ClassesDef<BackdropClassKey>;
+	static var styles:ClassesDef<BackdropClassKey>;
 }

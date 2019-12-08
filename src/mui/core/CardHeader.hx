@@ -19,11 +19,11 @@ typedef CardHeaderProps = ForcedOverride<StandardDOMAttributes, {
 
 @:jsRequire('@material-ui/core', 'CardHeader')
 extern class CardHeader extends ReactComponentOfProps<CardHeaderProps> {
-	static inline function styles<TTheme>(theme:TTheme):ClassesDef<CardHeaderClassKey>
-		return CardHeaderStyles.styles(theme);
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<CardHeaderClassKey>
+		return CardHeaderStyles.styles;
 }
 
 @:jsRequire('@material-ui/core/CardHeader/CardHeader.js')
 extern class CardHeaderStyles {
-	static function styles<TTheme>(theme:TTheme):ClassesDef<CardHeaderClassKey>;
+	static var styles:ClassesDef<CardHeaderClassKey>;
 }

@@ -26,11 +26,11 @@ typedef ButtonBaseProps = {
 
 @:jsRequire('@material-ui/core', 'ButtonBase')
 extern class ButtonBase extends ReactComponentOfProps<ButtonBaseProps> {
-	static inline function styles<TTheme>(theme:TTheme):ClassesDef<ButtonBaseClassKey>
-		return ButtonBaseStyles.styles(theme);
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<ButtonBaseClassKey>
+		return ButtonBaseStyles.styles;
 }
 
 @:jsRequire('@material-ui/core/ButtonBase/ButtonBase.js')
 extern class ButtonBaseStyles {
-	static function styles<TTheme>(theme:TTheme):ClassesDef<ButtonBaseClassKey>;
+	static var styles:ClassesDef<ButtonBaseClassKey>;
 }

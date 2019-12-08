@@ -17,11 +17,11 @@ typedef BreadcrumbsProps = {
 
 @:jsRequire('@material-ui/core', 'Breadcrumbs')
 extern class Breadcrumbs extends ReactComponentOfProps<BreadcrumbsProps> {
-	static inline function styles<TTheme>(theme:TTheme):ClassesDef<BreadcrumbsClassKey>
-		return BreadcrumbsStyles.styles(theme);
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<BreadcrumbsClassKey>
+		return BreadcrumbsStyles.styles;
 }
 
 @:jsRequire('@material-ui/core/Breadcrumbs/Breadcrumbs.js')
 extern class BreadcrumbsStyles {
-	static function styles<TTheme>(theme:TTheme):ClassesDef<BreadcrumbsClassKey>;
+	static var styles:ClassesDef<BreadcrumbsClassKey>;
 }

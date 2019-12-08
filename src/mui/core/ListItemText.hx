@@ -19,11 +19,11 @@ typedef ListItemTextProps = {
 
 @:jsRequire('@material-ui/core', 'ListItemText')
 extern class ListItemText extends ReactComponentOfProps<ListItemTextProps> {
-	static inline function styles<TTheme>(theme:TTheme):ClassesDef<ListItemTextClassKey>
-		return ListItemTextStyles.styles(theme);
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<ListItemTextClassKey>
+		return ListItemTextStyles.styles;
 }
 
 @:jsRequire('@material-ui/core/ListItemText/ListItemText.js')
 extern class ListItemTextStyles {
-	static function styles<TTheme>(theme:TTheme):ClassesDef<ListItemTextClassKey>;
+	static var styles:ClassesDef<ListItemTextClassKey>;
 }

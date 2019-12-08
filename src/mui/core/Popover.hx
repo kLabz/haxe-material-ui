@@ -38,11 +38,11 @@ typedef PopoverProps = ForcedOverride<ModalProps, {
 
 @:jsRequire('@material-ui/core', 'Popover')
 extern class Popover extends ReactComponentOfProps<PopoverProps> {
-	static inline function styles<TTheme>(theme:TTheme):ClassesDef<PopoverClassKey>
-		return PopoverStyles.styles(theme);
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<PopoverClassKey>
+		return PopoverStyles.styles;
 }
 
 @:jsRequire('@material-ui/core/Popover/Popover.js')
 extern class PopoverStyles {
-	static function styles<TTheme>(theme:TTheme):ClassesDef<PopoverClassKey>;
+	static var styles:ClassesDef<PopoverClassKey>;
 }

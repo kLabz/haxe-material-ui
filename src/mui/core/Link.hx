@@ -19,11 +19,11 @@ typedef LinkProps = ForcedOverride<TypographyProps, {
 
 @:jsRequire('@material-ui/core', 'Link')
 extern class Link extends ReactComponentOfProps<LinkProps> {
-	static inline function styles<TTheme>(theme:TTheme):ClassesDef<LinkClassKey>
-		return LinkStyles.styles(theme);
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<LinkClassKey>
+		return LinkStyles.styles;
 }
 
 @:jsRequire('@material-ui/core/Link/Link.js')
 extern class LinkStyles {
-	static function styles<TTheme>(theme:TTheme):ClassesDef<LinkClassKey>;
+	static var styles:ClassesDef<LinkClassKey>;
 }

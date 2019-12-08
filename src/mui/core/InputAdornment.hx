@@ -19,11 +19,11 @@ typedef InputAdornmentProps = {
 
 @:jsRequire('@material-ui/core', 'InputAdornment')
 extern class InputAdornment extends ReactComponentOfProps<InputAdornmentProps> {
-	static inline function styles<TTheme>(theme:TTheme):ClassesDef<InputAdornmentClassKey>
-		return InputAdornmentStyles.styles(theme);
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<InputAdornmentClassKey>
+		return InputAdornmentStyles.styles;
 }
 
 @:jsRequire('@material-ui/core/InputAdornment/InputAdornment.js')
 extern class InputAdornmentStyles {
-	static function styles<TTheme>(theme:TTheme):ClassesDef<InputAdornmentClassKey>;
+	static var styles:ClassesDef<InputAdornmentClassKey>;
 }

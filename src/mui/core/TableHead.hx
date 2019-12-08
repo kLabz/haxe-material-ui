@@ -13,11 +13,11 @@ typedef TableHeadProps = {
 
 @:jsRequire('@material-ui/core', 'TableHead')
 extern class TableHead extends ReactComponentOfProps<TableHeadProps> {
-	static inline function styles<TTheme>(theme:TTheme):ClassesDef<TableHeadClassKey>
-		return TableHeadStyles.styles(theme);
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<TableHeadClassKey>
+		return TableHeadStyles.styles;
 }
 
 @:jsRequire('@material-ui/core/TableHead/TableHead.js')
 extern class TableHeadStyles {
-	static function styles<TTheme>(theme:TTheme):ClassesDef<TableHeadClassKey>;
+	static var styles:ClassesDef<TableHeadClassKey>;
 }

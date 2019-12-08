@@ -17,11 +17,11 @@ typedef TreeViewProps = {
 
 @:jsRequire('@material-ui/lab', 'TreeView')
 extern class TreeView extends ReactComponentOfProps<TreeViewProps> {
-	static inline function styles<TTheme>(theme:TTheme):ClassesDef<TreeViewClassKey>
-		return TreeViewStyles.styles(theme);
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<TreeViewClassKey>
+		return TreeViewStyles.styles;
 }
 
 @:jsRequire('@material-ui/lab/TreeView/TreeView.js')
 extern class TreeViewStyles {
-	static function styles<TTheme>(theme:TTheme):ClassesDef<TreeViewClassKey>;
+	static var styles:ClassesDef<TreeViewClassKey>;
 }

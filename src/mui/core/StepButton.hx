@@ -14,11 +14,11 @@ typedef StepButtonProps = {
 
 @:jsRequire('@material-ui/core', 'StepButton')
 extern class StepButton extends ReactComponentOfProps<StepButtonProps> {
-	static inline function styles<TTheme>(theme:TTheme):ClassesDef<StepButtonClassKey>
-		return StepButtonStyles.styles(theme);
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<StepButtonClassKey>
+		return StepButtonStyles.styles;
 }
 
 @:jsRequire('@material-ui/core/StepButton/StepButton.js')
 extern class StepButtonStyles {
-	static function styles<TTheme>(theme:TTheme):ClassesDef<StepButtonClassKey>;
+	static var styles:ClassesDef<StepButtonClassKey>;
 }
