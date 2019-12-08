@@ -13,6 +13,7 @@ package mui.core.button;
 	var Contained = "contained";
 	var ContainedPrimary = "containedPrimary";
 	var ContainedSecondary = "containedSecondary";
+	var FocusVisible = "focusVisible";
 	var Disabled = "disabled";
 	var ColorInherit = "colorInherit";
 	var TextSizeSmall = "textSizeSmall";

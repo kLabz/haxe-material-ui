@@ -3,6 +3,7 @@ package mui.core.input;
 @:enum abstract FilledInputClassKey(String) to String {
 	var Root = "root";
 
+	var ColorSecondary = "colorSecondary";
 	var Underline = "underline";
 	var Focused = "focused";
 	var Disabled = "disabled";
@@ -14,7 +15,6 @@ package mui.core.input;
 	var Input = "input";
 	var InputMarginDense = "inputMarginDense";
 	var InputHiddenLabel = "inputHiddenLabel";
-	var InputSelect = "inputSelect";
 	var InputMultiline = "inputMultiline";
 	var InputAdornedStart = "inputAdornedStart";
 	var InputAdornedEnd = "inputAdornedEnd";

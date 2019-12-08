@@ -8,7 +8,7 @@ package mui.core.button;
 	var ColorPrimary = "colorPrimary";
 	var ColorSecondary = "colorSecondary";
 	var Disabled = "disabled";
-	var SizeSmall = "SizeSmall";
+	var SizeSmall = "sizeSmall";
 	var Label = "label";
 }
 

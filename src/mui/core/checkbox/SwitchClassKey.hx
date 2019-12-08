@@ -2,13 +2,16 @@ package mui.core.checkbox;
 
 @:enum abstract SwitchClassKey(String) to String {
 	var Root = "root";
-	var Icon = "icon";
-	var IconChecked = "iconChecked";
+	var EdgeStart = "edgeStart";
+	var EdgeEnd = "edgeEnd";
 	var SwitchBase = "switchBase";
-	var Checked = "checked";
 	var ColorPrimary = "colorPrimary";
 	var ColorSecondary = "colorSecondary";
+	var SizeSmall = "sizeSmall";
+	var Checked = "checked";
 	var Disabled = "disabled";
-	var Bar = "bar";
+	var Input = "input";
+	var Thumb = "thumb";
+	var Track = "track";
 }
 

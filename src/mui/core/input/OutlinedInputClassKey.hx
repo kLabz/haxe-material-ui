@@ -3,6 +3,7 @@ package mui.core.input;
 @:enum abstract OutlinedInputClassKey(String) to String {
 	var Root = "root";
 
+	var ColorSecondary = "colorSecondary";
 	var Focused = "focused";
 	var Disabled = "disabled";
 	var AdornedStart = "adornedStart";
@@ -13,7 +14,6 @@ package mui.core.input;
 	var NotchedOutline = "notchedOutline";
 	var Input = "input";
 	var InputMarginDense = "inputMarginDense";
-	var InputSelect = "inputSelect";
 	var InputMultiline = "inputMultiline";
 	var InputAdornedStart = "inputAdornedStart";
 	var InputAdornedEnd = "inputAdornedEnd";

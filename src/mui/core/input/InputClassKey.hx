@@ -6,6 +6,7 @@ package mui.core.input;
 	var FormControl = "formControl";
 	var Focused = "focused";
 	var Disabled = "disabled";
+	var ColorSecondary = "colorSecondary";
 	var Underline = "underline";
 	var Error = "error";
 	var MarginDense = "marginDense";

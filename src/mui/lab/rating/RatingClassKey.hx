@@ -7,7 +7,7 @@ package mui.lab.rating;
 	var ReadOnly = "readOnly";
 	var Disabled = "disabled";
 	var FocusVisible = "focusVisible";
-	var VisuallyHidden = "visuallyHidden";
+	var VisuallyHidden = "visuallyhidden";
 	var Pristine = "pristine";
 	var Label = "label";
 	var Icon = "icon";
