@@ -1,6 +1,7 @@
 package mui.lab;
 
 import mui.core.common.BoolOrAuto;
+import mui.core.styles.Classes;
 import mui.lab.toggle.ToggleButtonGroupClassKey;
 
 typedef ToggleButtonGroupProps = ForcedOverride<StandardDOMAttributes, {
@@ -13,4 +14,12 @@ typedef ToggleButtonGroupProps = ForcedOverride<StandardDOMAttributes, {
 }>;
 
 @:jsRequire('@material-ui/lab', 'ToggleButtonGroup')
-extern class ToggleButtonGroup extends ReactComponentOfProps<ToggleButtonGroupProps> {}
+extern class ToggleButtonGroup extends ReactComponentOfProps<ToggleButtonGroupProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<ToggleButtonGroupClassKey>
+		return ToggleButtonGroupStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/lab/ToggleButtonGroup/ToggleButtonGroup.js')
+extern class ToggleButtonGroupStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<ToggleButtonGroupClassKey>;
+}

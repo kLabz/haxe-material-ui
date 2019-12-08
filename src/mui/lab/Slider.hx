@@ -1,5 +1,6 @@
 package mui.lab;
 
+import mui.core.styles.Classes;
 import mui.lab.slider.SliderClassKey;
 
 typedef SliderProps = ForcedOverride<StandardDOMAttributes, {
@@ -20,4 +21,12 @@ typedef SliderProps = ForcedOverride<StandardDOMAttributes, {
 }>;
 
 @:jsRequire('@material-ui/lab', 'Slider')
-extern class Slider extends ReactComponentOfProps<SliderProps> {}
+extern class Slider extends ReactComponentOfProps<SliderProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<SliderClassKey>
+		return SliderStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/lab/Slider/Slider.js')
+extern class SliderStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<SliderClassKey>;
+}

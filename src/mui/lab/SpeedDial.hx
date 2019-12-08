@@ -3,6 +3,7 @@ package mui.lab;
 import mui.core.Button.ButtonProps;
 import mui.core.common.Direction;
 import mui.core.common.TransitionDuration;
+import mui.core.styles.Classes;
 import mui.lab.speeddial.SpeedDialClassKey;
 import react.transition.Transition;
 
@@ -25,4 +26,12 @@ typedef SpeedDialProps = {
 }
 
 @:jsRequire('@material-ui/lab', 'SpeedDial')
-extern class SpeedDial extends ReactComponentOfProps<SpeedDialProps> {}
+extern class SpeedDial extends ReactComponentOfProps<SpeedDialProps> {
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<SpeedDialClassKey>
+		return SpeedDialStyles.styles;
+}
+
+@:jsRequire('@material-ui/lab/SpeedDial/SpeedDial.js')
+extern class SpeedDialStyles {
+	static var styles:ClassesDef<SpeedDialClassKey>;
+}

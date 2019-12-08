@@ -1,10 +1,11 @@
 package mui.lab;
 
-import mui.lab.speeddial.SpeedDialActionClassKey;
 import mui.core.Button.ButtonProps;
 import mui.core.Popper.PopperProps;
 import mui.core.popper.PopperPlacement;
 import mui.core.popper.TooltipClassKey;
+import mui.core.styles.Classes;
+import mui.lab.speeddial.SpeedDialActionClassKey;
 import react.transition.Transition;
 
 typedef SpeedDialActionProps = {
@@ -39,4 +40,12 @@ typedef SpeedDialActionProps = {
 }
 
 @:jsRequire('@material-ui/lab', 'SpeedDialAction')
-extern class SpeedDialAction extends ReactComponentOfProps<SpeedDialActionProps> {}
+extern class SpeedDialAction extends ReactComponentOfProps<SpeedDialActionProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<SpeedDialActionClassKey>
+		return SpeedDialActionStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/lab/SpeedDialAction/SpeedDialAction.js')
+extern class SpeedDialActionStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<SpeedDialActionClassKey>;
+}
