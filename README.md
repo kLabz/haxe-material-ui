@@ -70,8 +70,6 @@ on [`haxe-react`'s gitter][gitter] or haxe discord ([invitation link][discord]).
 * Generate documentation from current code
 * Add examples (example project + some guides)
 * Improve CI with more complete tests
-* Cherry pick some fixes and improvements from 4.x.x to `version/3.x` branch
-
 
 [mui-core]: https://www.npmjs.com/package/@material-ui/core
 [mui-icons]: https://www.npmjs.com/package/@material-ui/icons
