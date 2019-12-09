@@ -1,6 +1,7 @@
 package mui.core;
 
 import mui.core.common.Align;
+import mui.core.styles.Classes;
 import mui.core.table.TableSortDirection;
 import mui.core.table.TableCellClassKey;
 import mui.core.table.TableCellPadding;
@@ -23,4 +24,12 @@ typedef TableCellProps = {
 }
 
 @:jsRequire('@material-ui/core', 'TableCell')
-extern class TableCell extends ReactComponentOfProps<TableCellProps> {}
+extern class TableCell extends ReactComponentOfProps<TableCellProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<TableCellClassKey>
+		return TableCellStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/TableCell/TableCell.js')
+extern class TableCellStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<TableCellClassKey>;
+}

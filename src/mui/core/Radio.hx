@@ -7,6 +7,7 @@ import mui.core.checkbox.CheckedStatus;
 import mui.core.input.InputType;
 import mui.core.radio.RadioClassKey;
 import mui.core.radio.RadioValue;
+import mui.core.styles.Classes;
 
 typedef RadioProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var children:Noise;
@@ -26,4 +27,12 @@ typedef RadioProps = ForcedOverride<StandardDOMAttributes, {
 }>;
 
 @:jsRequire('@material-ui/core', 'Radio')
-extern class Radio extends ReactComponentOfProps<RadioProps> {}
+extern class Radio extends ReactComponentOfProps<RadioProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<RadioClassKey>
+		return RadioStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/Radio/Radio.js')
+extern class RadioStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<RadioClassKey>;
+}

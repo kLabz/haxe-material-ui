@@ -4,6 +4,7 @@ import mui.Color;
 import mui.core.badge.BadgeClassKey;
 import mui.core.badge.BadgeVariant;
 import mui.core.common.TransitionDuration;
+import mui.core.styles.Classes;
 
 typedef BadgeProps = {
 	> StandardDOMAttributes,
@@ -20,4 +21,12 @@ typedef BadgeProps = {
 }
 
 @:jsRequire('@material-ui/core', 'Badge')
-extern class Badge extends ReactComponentOfProps<BadgeProps> {}
+extern class Badge extends ReactComponentOfProps<BadgeProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<BadgeClassKey>
+		return BadgeStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/Badge/Badge.js')
+extern class BadgeStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<BadgeClassKey>;
+}

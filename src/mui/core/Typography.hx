@@ -1,6 +1,7 @@
 package mui.core;
 
 import mui.core.common.Align;
+import mui.core.styles.Classes;
 import mui.core.typography.HeadlineMapping;
 import mui.core.typography.TypographyClassKey;
 import mui.core.typography.TypographyVariant;
@@ -22,5 +23,12 @@ typedef TypographyProps = {
 }
 
 @:jsRequire('@material-ui/core', 'Typography')
-extern class Typography extends ReactComponentOfProps<TypographyProps> {}
+extern class Typography extends ReactComponentOfProps<TypographyProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<TypographyClassKey>
+		return TypographyStyles.styles(theme);
+}
 
+@:jsRequire('@material-ui/core/Typography/Typography.js')
+extern class TypographyStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<TypographyClassKey>;
+}

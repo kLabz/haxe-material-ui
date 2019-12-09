@@ -4,6 +4,7 @@ import react.transition.Transition;
 
 import mui.core.common.TransitionDuration;
 import mui.core.collapse.CollapseClassKey;
+import mui.core.styles.Classes;
 
 typedef CollapseProps = ForcedOverride<TransitionProps<Any>, {
 	> StandardDOMAttributes,
@@ -18,4 +19,12 @@ typedef CollapseProps = ForcedOverride<TransitionProps<Any>, {
 
 @:acceptsMoreProps('react.transition.Transition')
 @:jsRequire('@material-ui/core', 'Collapse')
-extern class Collapse extends ReactComponentOfProps<CollapseProps> {}
+extern class Collapse extends ReactComponentOfProps<CollapseProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<CollapseClassKey>
+		return CollapseStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/Collapse/Collapse.js')
+extern class CollapseStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<CollapseClassKey>;
+}

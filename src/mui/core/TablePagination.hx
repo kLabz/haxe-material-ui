@@ -7,6 +7,7 @@ import react.types.SyntheticEvent;
 import mui.core.IconButton.IconButtonProps;
 import mui.core.Select.SelectProps;
 import mui.core.TableCell.TableCellProps;
+import mui.core.styles.Classes;
 import mui.core.table.LabelDisplayedRowsArgs;
 import mui.core.table.TableSortDirection;
 import mui.core.table.TablePaginationClassKey;
@@ -28,4 +29,12 @@ typedef TablePaginationProps = ForcedOverride<TableCellProps, {
 }>;
 
 @:jsRequire('@material-ui/core', 'TablePagination')
-extern class TablePagination extends ReactComponentOfProps<TablePaginationProps> {}
+extern class TablePagination extends ReactComponentOfProps<TablePaginationProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<TablePaginationClassKey>
+		return TablePaginationStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/TablePagination/TablePagination.js')
+extern class TablePaginationStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<TablePaginationClassKey>;
+}

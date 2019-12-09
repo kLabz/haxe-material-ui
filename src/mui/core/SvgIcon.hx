@@ -2,6 +2,7 @@ package mui.core;
 
 import mui.core.icon.SvgIconClassKey;
 import mui.core.icon.SvgIconFontSize;
+import mui.core.styles.Classes;
 
 typedef SvgIconProps = {
 	> StandardDOMAttributes,
@@ -18,4 +19,12 @@ typedef SvgIconProps = {
 }
 
 @:jsRequire('@material-ui/core', 'SvgIcon')
-extern class SvgIcon extends ReactComponentOfProps<SvgIconProps> {}
+extern class SvgIcon extends ReactComponentOfProps<SvgIconProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<SvgIconClassKey>
+		return SvgIconStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/SvgIcon/SvgIcon.js')
+extern class SvgIconStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<SvgIconClassKey>;
+}

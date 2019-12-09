@@ -5,6 +5,7 @@ import mui.core.Paper.PaperProps;
 import mui.core.stepper.MobileStepperClassKey;
 import mui.core.stepper.MobileStepperPosition;
 import mui.core.stepper.MobileStepperVariant;
+import mui.core.styles.Classes;
 
 typedef MobileStepperProps = ForcedOverride<PaperProps, {
 	var steps:Int;
@@ -18,4 +19,12 @@ typedef MobileStepperProps = ForcedOverride<PaperProps, {
 }>;
 
 @:jsRequire('@material-ui/core', 'MobileStepper')
-extern class MobileStepper extends ReactComponentOfProps<MobileStepperProps> {}
+extern class MobileStepper extends ReactComponentOfProps<MobileStepperProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<MobileStepperClassKey>
+		return MobileStepperStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/MobileStepper/MobileStepper.js')
+extern class MobileStepperStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<MobileStepperClassKey>;
+}

@@ -7,6 +7,7 @@ import mui.core.common.TransitionDuration;
 import mui.core.drawer.DrawerAnchor;
 import mui.core.drawer.DrawerClassKey;
 import mui.core.drawer.DrawerVariant;
+import mui.core.styles.Classes;
 
 typedef DrawerProps = {
 	> StandardDOMAttributes,
@@ -25,4 +26,12 @@ typedef DrawerProps = {
 }
 
 @:jsRequire('@material-ui/core', 'Drawer')
-extern class Drawer extends ReactComponentOfProps<DrawerProps> {}
+extern class Drawer extends ReactComponentOfProps<DrawerProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<DrawerClassKey>
+		return DrawerStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/Drawer/Drawer.js')
+extern class DrawerStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<DrawerClassKey>;
+}

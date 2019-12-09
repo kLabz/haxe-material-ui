@@ -4,6 +4,7 @@ import mui.core.Typography.TypographyProps;
 import mui.core.link.LinkClassKey;
 import mui.core.link.LinkTarget;
 import mui.core.link.LinkUnderline;
+import mui.core.styles.Classes;
 import mui.core.typography.TypographyClassKey;
 
 typedef LinkProps = ForcedOverride<TypographyProps, {
@@ -16,4 +17,12 @@ typedef LinkProps = ForcedOverride<TypographyProps, {
 }>;
 
 @:jsRequire('@material-ui/core', 'Link')
-extern class Link extends ReactComponentOfProps<LinkProps> {}
+extern class Link extends ReactComponentOfProps<LinkProps> {
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<LinkClassKey>
+		return LinkStyles.styles;
+}
+
+@:jsRequire('@material-ui/core/Link/Link.js')
+extern class LinkStyles {
+	static var styles:ClassesDef<LinkClassKey>;
+}

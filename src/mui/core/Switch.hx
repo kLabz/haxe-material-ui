@@ -6,6 +6,7 @@ import mui.Color;
 import mui.core.checkbox.CheckedStatus;
 import mui.core.checkbox.SwitchClassKey;
 import mui.core.input.InputType;
+import mui.core.styles.Classes;
 
 typedef SwitchProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var children:Noise;
@@ -25,4 +26,12 @@ typedef SwitchProps = ForcedOverride<StandardDOMAttributes, {
 }>;
 
 @:jsRequire('@material-ui/core', 'Switch')
-extern class Switch extends ReactComponentOfProps<SwitchProps> {}
+extern class Switch extends ReactComponentOfProps<SwitchProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<SwitchClassKey>
+		return SwitchStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/Switch/Switch.js')
+extern class SwitchStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<SwitchClassKey>;
+}

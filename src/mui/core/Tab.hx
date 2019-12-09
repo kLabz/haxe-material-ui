@@ -2,6 +2,7 @@ package mui.core;
 
 import mui.core.ButtonBase.ButtonBaseProps;
 import mui.core.tab.TabClassKey;
+import mui.core.styles.Classes;
 
 typedef TabProps = ForcedOverride<ButtonBaseProps, {
 	@:optional var children:Noise;
@@ -13,4 +14,12 @@ typedef TabProps = ForcedOverride<ButtonBaseProps, {
 }>;
 
 @:jsRequire('@material-ui/core', 'Tab')
-extern class Tab extends ReactComponentOfProps<TabProps> {}
+extern class Tab extends ReactComponentOfProps<TabProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<TabClassKey>
+		return TabStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/Tab/Tab.js')
+extern class TabStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<TabClassKey>;
+}

@@ -1,6 +1,7 @@
 package mui.core;
 
 import mui.core.list.ListItemAvatarClassKey;
+import mui.core.styles.Classes;
 
 typedef ListItemAvatarProps = {
 	> StandardDOMAttributes,
@@ -10,4 +11,12 @@ typedef ListItemAvatarProps = {
 }
 
 @:jsRequire('@material-ui/core', 'ListItemAvatar')
-extern class ListItemAvatar extends ReactComponentOfProps<ListItemAvatarProps> {}
+extern class ListItemAvatar extends ReactComponentOfProps<ListItemAvatarProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<ListItemAvatarClassKey>
+		return ListItemAvatarStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/ListItemAvatar/ListItemAvatar.js')
+extern class ListItemAvatarStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<ListItemAvatarClassKey>;
+}

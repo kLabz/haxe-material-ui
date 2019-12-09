@@ -8,6 +8,7 @@ import mui.core.common.ShirtSize;
 import mui.core.common.TransitionDuration;
 import mui.core.dialog.DialogClassKey;
 import mui.core.dialog.DialogScrollContainer;
+import mui.core.styles.Classes;
 
 typedef DialogProps = ForcedOverride<ModalProps, {
 	var children:ReactFragment;
@@ -30,4 +31,12 @@ typedef DialogProps = ForcedOverride<ModalProps, {
 }>;
 
 @:jsRequire('@material-ui/core', 'Dialog')
-extern class Dialog extends ReactComponentOfProps<DialogProps> {}
+extern class Dialog extends ReactComponentOfProps<DialogProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<DialogClassKey>
+		return DialogStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/Dialog/Dialog.js')
+extern class DialogStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<DialogClassKey>;
+}

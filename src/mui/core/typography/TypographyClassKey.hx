@@ -45,5 +45,6 @@ package mui.core.typography;
 	// Other
 	var GutterBottom = "gutterBottom";
 	var Paragraph = "paragraph";
+	var Inline = "inline";
 }
 

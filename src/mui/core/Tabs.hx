@@ -5,6 +5,7 @@ import mui.core.tab.TabsActions;
 import mui.core.tab.TabsClassKey;
 import mui.core.tab.TabsVariant;
 import mui.core.tab.ScrollButtons;
+import mui.core.styles.Classes;
 
 typedef TabsProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var action:TabsActions->Void;
@@ -25,4 +26,12 @@ typedef TabsProps = ForcedOverride<StandardDOMAttributes, {
 }>;
 
 @:jsRequire('@material-ui/core', 'Tabs')
-extern class Tabs extends ReactComponentOfProps<TabsProps> {}
+extern class Tabs extends ReactComponentOfProps<TabsProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<TabsClassKey>
+		return TabsStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/Tabs/Tabs.js')
+extern class TabsStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<TabsClassKey>;
+}

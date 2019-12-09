@@ -3,6 +3,7 @@ package mui.core;
 import mui.core.ButtonBase.ButtonBaseProps;
 import mui.core.list.ListItemClassKey;
 import mui.core.list.ListAlignItems;
+import mui.core.styles.Classes;
 
 typedef ListItemProps = ForcedOverride<ButtonBaseProps, {
 	@:optional var alignItems:ListAlignItems;
@@ -19,4 +20,12 @@ typedef ListItemProps = ForcedOverride<ButtonBaseProps, {
 }>;
 
 @:jsRequire('@material-ui/core', 'ListItem')
-extern class ListItem extends ReactComponentOfProps<ListItemProps> {}
+extern class ListItem extends ReactComponentOfProps<ListItemProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<ListItemClassKey>
+		return ListItemStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/ListItem/ListItem.js')
+extern class ListItemStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<ListItemClassKey>;
+}

@@ -1,5 +1,6 @@
 package mui.core;
 
+import mui.core.styles.Classes;
 import mui.core.table.TableBodyClassKey;
 
 typedef TableBodyProps = {
@@ -11,4 +12,12 @@ typedef TableBodyProps = {
 }
 
 @:jsRequire('@material-ui/core', 'TableBody')
-extern class TableBody extends ReactComponentOfProps<TableBodyProps> {}
+extern class TableBody extends ReactComponentOfProps<TableBodyProps> {
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<TableBodyClassKey>
+		return TableBodyStyles.styles;
+}
+
+@:jsRequire('@material-ui/core/TableBody/TableBody.js')
+extern class TableBodyStyles {
+	static var styles:ClassesDef<TableBodyClassKey>;
+}

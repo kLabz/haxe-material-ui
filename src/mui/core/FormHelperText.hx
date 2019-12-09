@@ -3,6 +3,7 @@ package mui.core;
 import mui.core.form.FormHelperTextClassKey;
 import mui.core.form.FormHelperTextMargin;
 import mui.core.form.FormControlVariant;
+import mui.core.styles.Classes;
 
 typedef FormHelperTextProps = {
 	> StandardDOMAttributes,
@@ -20,4 +21,12 @@ typedef FormHelperTextProps = {
 }
 
 @:jsRequire('@material-ui/core', 'FormHelperText')
-extern class FormHelperText extends ReactComponentOfProps<FormHelperTextProps> {}
+extern class FormHelperText extends ReactComponentOfProps<FormHelperTextProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<FormHelperTextClassKey>
+		return FormHelperTextStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/FormHelperText/FormHelperText.js')
+extern class FormHelperTextStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<FormHelperTextClassKey>;
+}

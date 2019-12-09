@@ -12,7 +12,7 @@ package mui.core.dialog;
 	var PaperWidthSM = "paperWidthSm";
 	var PaperWidthMD = "paperWidthMd";
 	var PaperWidthLG = "paperWidthLg";
-	var PaperWidthXL = "paperWidthXL";
+	var PaperWidthXL = "paperWidthXl";
 	var PaperFullWidth = "paperFullWidth";
 	var PaperFullScreen = "paperFullScreen";
 }

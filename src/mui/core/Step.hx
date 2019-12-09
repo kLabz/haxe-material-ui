@@ -1,6 +1,7 @@
 package mui.core;
 
 import mui.core.stepper.StepClassKey;
+import mui.core.styles.Classes;
 
 typedef StepProps = {
 	> StandardDOMAttributes,
@@ -13,4 +14,12 @@ typedef StepProps = {
 }
 
 @:jsRequire('@material-ui/core', 'Step')
-extern class Step extends ReactComponentOfProps<StepProps> {}
+extern class Step extends ReactComponentOfProps<StepProps> {
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<StepClassKey>
+		return StepStyles.styles;
+}
+
+@:jsRequire('@material-ui/core/Step/Step.js')
+extern class StepStyles {
+	static var styles:ClassesDef<StepClassKey>;
+}

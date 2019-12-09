@@ -3,6 +3,7 @@ package mui.core;
 import mui.core.button.ButtonBaseActions;
 import mui.core.button.ButtonBaseClassKey;
 import mui.core.button.ButtonType;
+import mui.core.styles.Classes;
 
 typedef ButtonBaseProps = {
 	> StandardDOMAttributes,
@@ -24,4 +25,12 @@ typedef ButtonBaseProps = {
 }
 
 @:jsRequire('@material-ui/core', 'ButtonBase')
-extern class ButtonBase extends ReactComponentOfProps<ButtonBaseProps> {}
+extern class ButtonBase extends ReactComponentOfProps<ButtonBaseProps> {
+	static inline function styles<TTheme>(?_:TTheme):ClassesDef<ButtonBaseClassKey>
+		return ButtonBaseStyles.styles;
+}
+
+@:jsRequire('@material-ui/core/ButtonBase/ButtonBase.js')
+extern class ButtonBaseStyles {
+	static var styles:ClassesDef<ButtonBaseClassKey>;
+}

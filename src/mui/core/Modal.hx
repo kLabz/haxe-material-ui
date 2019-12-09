@@ -4,6 +4,7 @@ import mui.core.Backdrop.BackdropProps;
 import mui.core.modal.ModalClassKey;
 import mui.core.modal.ModalCloseReason;
 import mui.core.modal.ModalManager;
+import mui.core.styles.Classes;
 
 typedef ModalProps = {
 	> StandardDOMAttributes,
@@ -31,4 +32,12 @@ typedef ModalProps = {
 }
 
 @:jsRequire('@material-ui/core', 'Modal')
-extern class Modal extends ReactComponentOfProps<ModalProps> {}
+extern class Modal extends ReactComponentOfProps<ModalProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<ModalClassKey>
+		return ModalStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/Modal/Modal.js')
+extern class ModalStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<ModalClassKey>;
+}

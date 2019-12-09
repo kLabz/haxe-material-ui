@@ -1,6 +1,7 @@
 package mui.core;
 
 import mui.core.form.FormLabelClassKey;
+import mui.core.styles.Classes;
 
 typedef FormLabelProps = {
 	> StandardDOMAttributes,
@@ -17,4 +18,12 @@ typedef FormLabelProps = {
 }
 
 @:jsRequire('@material-ui/core', 'FormLabel')
-extern class FormLabel extends ReactComponentOfProps<FormLabelProps> {}
+extern class FormLabel extends ReactComponentOfProps<FormLabelProps> {
+	static inline function styles<TTheme>(theme:TTheme):ClassesDef<FormLabelClassKey>
+		return FormLabelStyles.styles(theme);
+}
+
+@:jsRequire('@material-ui/core/FormLabel/FormLabel.js')
+extern class FormLabelStyles {
+	static function styles<TTheme>(theme:TTheme):ClassesDef<FormLabelClassKey>;
+}
