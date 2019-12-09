@@ -9,6 +9,13 @@
 
 * Add all icons from `@material-ui/icons` version `3.0.2`
 
+### 3.9.2
+
+* Expose components styles API
+* Add CI for components styles API (and class keys)
+* Fix class keys for some components
+* Remove `TouchRipple`
+
 ## 0.14.0 - 2019-01-29
 
 * Rewrite base props for all components to avoid some blocking issues
