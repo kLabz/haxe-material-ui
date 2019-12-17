@@ -20,6 +20,9 @@ typedef TableCellProps = {
 	@:optional var size:TableSize;
 	@:optional var sortDirection:TableSortDirection;
 	@:optional var variant:TableCellVariant;
+
+	@:optional var colSpan:Int;
+	@:optional var rowSpan:Int;
 }
 
 @:jsRequire('@material-ui/core', 'TableCell')
