@@ -11,7 +11,7 @@ import mui.lab.autocomplete.RenderGroupParams;
 import mui.lab.autocomplete.RenderInputParams;
 import mui.lab.autocomplete.RenderOptionState;
 
-typedef AutocompleteProps = ForcedOverride<StandardDOMAttributes, {
+typedef AutocompleteProps<Data> = ForcedOverride<StandardDOMAttributes, {
 	var renderInput:RenderInputParams->ReactFragment;
 	@:optional var children:Noise;
 	@:optional var classes:Record<AutocompleteClassKey>;
@@ -30,13 +30,13 @@ typedef AutocompleteProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var disableListWrap:Bool;
 	@:optional var disableOpenOnFocus:Bool;
 	@:optional var disablePortal:Bool;
-	@:optional var filterOptions:Array<Any>->Dynamic->Array<Any>; // TODO somehow...
+	@:optional var filterOptions:Array<Data>->Dynamic->Array<Data>; // TODO somehow...
 	@:optional var filterSelectedOptions:Bool;
 	@:optional var freeSolo:Bool;
-	@:optional var getOptionDisabled:Any->Bool;
-	@:optional var getOptionLabel:Any->String; // ReactFragment?
-	@:optional var getOptionSelected:Any->Any->Bool; // (option, value) => isSelected
-	@:optional var groupBy:Any->String;
+	@:optional var getOptionDisabled:Data->Bool;
+	@:optional var getOptionLabel:Data->String; // ReactFragment?
+	@:optional var getOptionSelected:Data->Data->Bool; // (option, value) => isSelected
+	@:optional var groupBy:Data->String;
 	@:optional var id:String;
 	@:optional var includeInputInList:Bool;
 	@:optional var inputValue:String;
@@ -45,25 +45,25 @@ typedef AutocompleteProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var loadingText:ReactFragment;
 	@:optional var multiple:Bool;
 	@:optional var noOptionsText:ReactFragment;
-	@:optional var onChange:HandlerOrVoid<ClassicHandler>;
+	@:optional var onChange:HandlerOrVoid<Event->Data->Void>;
 	@:optional var onClose:HandlerOrVoid<ClassicHandler>;
-	@:optional var onInputChange:HandlerOrVoid<Event->String->Void>;
+	@:optional var onInputChange:HandlerOrVoid<Event->String->String->Void>;
 	@:optional var onOpen:HandlerOrVoid<ClassicHandler>;
 	@:optional var open:Bool;
 	@:optional var openText:String;
-	@:optional var options:Array<Any>;
+	@:optional var options:Array<Data>;
 	@:optional var PaperComponent:ReactType;
 	@:optional var PopperComponent:ReactType;
 	@:optional var popupIcon:ReactFragment;
 	@:optional var renderGroup:RenderGroupParams->ReactFragment;
-	@:optional var renderOption:Any->RenderOptionState->ReactFragment;
+	@:optional var renderOption:Data->RenderOptionState->ReactFragment;
 	@:optional var renderTags:InputValue->GetTagProps->ReactFragment;
 	@:optional var size:AutocompleteSize;
-	@:optional var value:InputValue;
+	@:optional var value:Data;
 }>;
 
 @:jsRequire('@material-ui/lab', 'Autocomplete')
-extern class Autocomplete extends ReactComponentOfProps<AutocompleteProps> {
+extern class Autocomplete<Data> extends ReactComponentOfProps<AutocompleteProps<Data>> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<AutocompleteClassKey>
 		return AutocompleteStyles.styles(theme);
 }
