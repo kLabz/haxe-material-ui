@@ -59,7 +59,7 @@ typedef AutocompleteProps<Data> = ForcedOverride<StandardDOMAttributes, {
 	@:optional var renderOption:Data->RenderOptionState->ReactFragment;
 	@:optional var renderTags:InputValue->GetTagProps->ReactFragment;
 	@:optional var size:AutocompleteSize;
-	@:optional var value:InputValue;
+	@:optional var value:Data;
 }>;
 
 @:jsRequire('@material-ui/lab', 'Autocomplete')
