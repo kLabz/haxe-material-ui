@@ -43,6 +43,12 @@
 * Fix `Component.styles()` API for components not using the theme
 * Fix classkeys for some components
 
+#### 4.0.4
+
+* Add `colSpan` and `rowSpan` props to `TableCell`
+* Parametrize `Autocomplete`'s `data`-related props (#6)
+* Fix `withTheme()` HOC definition
+
 </details>
 
 ## Material UI v3.x
