@@ -55,7 +55,7 @@ extern class Styles {
 
 	// Provide the theme object as a property of the input component so it can
 	// be used in the render method.
-	public static function withTheme():ReactType->ReactType;
+	public static function withTheme(comp:ReactType):ReactType;
 
 	public static inline function mergeJss(jss1:Properties, jss2:Properties):Properties {
 		return Object.assign({}, jss1, jss2);
