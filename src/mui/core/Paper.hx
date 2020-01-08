@@ -1,6 +1,7 @@
 package mui.core;
 
 import mui.core.paper.PaperClassKey;
+import mui.core.paper.PaperVariant;
 import mui.core.styles.Classes;
 
 typedef PaperProps = {
@@ -11,6 +12,8 @@ typedef PaperProps = {
 	@:optional var component:ReactType;
 	@:optional var elevation:Int;
 	@:optional var square:Bool;
+	@:optional var variant:PaperVariant;
+	
 }
 
 @:jsRequire('@material-ui/core', 'Paper')
