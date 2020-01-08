@@ -221,21 +221,7 @@ typedef MuiPaletteText = {
 typedef MuiMixins = {
 	// @:deprecated
 	var gutters:Properties->Properties;
-	var toolbar:MuiToolbarMixin;
-}
-
-@:structInit
-interface MuiToolbarMixin extends ToolbarProperties {
-	@:native("@media (min-width:0px) and (orientation: landscape)")
-	var landscape:ToolbarProperties;
-
-	@:native("@media (min-width:600px)")
-	var sm:ToolbarProperties;
-}
-
-@:structInit
-interface ToolbarProperties {
-	var minHeight:Int;
+	var toolbar:Properties;
 }
 
 typedef MuiBreakpoints = {
