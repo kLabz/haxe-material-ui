@@ -34,6 +34,24 @@ extern class Styles {
 				macro null;
 		};
 	}
+	
+	public static macro function makeStyles(styles:Expr) {
+		var type = switch Context.typeof(styles) {
+			case TAnonymous(_.get() => {fields: fields})
+			| TFun(_, TAnonymous(_.get() => {fields: fields})):
+				TAnonymous([for(f in fields) {
+					name: f.name,
+					kind: FVar(macro:String, null),
+					pos: f.pos,
+				}]);
+			
+			case _:
+				Context.error('Expected an inline object declaration or a function returning an object', styles.pos);
+				macro:Any;
+		}
+		
+		return macro (@:privateAccess mui.core.styles.Styles._makeStyles($styles):Void->$type);
+	}
 
 	#if !macro
 	public static function createGenerateClassName(
@@ -60,6 +78,9 @@ extern class Styles {
 	public static inline function mergeJss(jss1:Properties, jss2:Properties):Properties {
 		return Object.assign({}, jss1, jss2);
 	}
+	
+	@:native('makeStyles')
+	private static function _makeStyles(styles:Any):Any;
 
 	#else
 	static function parseJssNode(styles:Expr):Expr {
