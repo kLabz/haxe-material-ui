@@ -1,6 +1,5 @@
 package mui.core;
 
-import haxe.extern.EitherType;
 import mui.Color;
 import mui.core.common.Orientation;
 import mui.core.tab.TabsActions;
@@ -16,7 +15,7 @@ typedef TabsProps<Data> = ForcedOverride<StandardDOMAttributes, {
 	@:optional var classes:Record<TabsClassKey>;
 	@:optional var component:ReactType;
 	@:optional var indicatorColor:ColorPS;
-	@:optional var onChange:HandlerOrVoid<Event->EitherType<Int,Data>->Void>;
+	@:optional var onChange:HandlerOrVoid<Event->Data->Void>;
 	@:optional var orientation:Orientation;
 	@:optional var ScrollButtonComponent:ReactType;
 	@:optional var scrollButtons:ScrollButtons;
