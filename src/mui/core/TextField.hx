@@ -9,7 +9,7 @@ import mui.core.form.FormControlSize;
 import mui.core.form.FormControlVariant;
 import mui.core.Select.SelectProps;
 
-typedef TextFieldProps = ForcedOverride<FormControlProps, {
+typedef TextFieldProps<TData> = ForcedOverride<FormControlProps, {
 	> InputBaseCommonProps,
 
 	@:optional var children:Noise;
@@ -19,9 +19,9 @@ typedef TextFieldProps = ForcedOverride<FormControlProps, {
 	@:optional var InputProps:Partial<InputProps>;
 	@:optional var label:ReactFragment;
 	@:optional var select:Bool;
-	@:optional var SelectProps:Partial<SelectProps>;
+	@:optional var SelectProps:Partial<SelectProps<TData>>;
 	@:optional var size:FormControlSize;
 }>;
 
 @:jsRequire('@material-ui/core', 'TextField')
-extern class TextField extends ReactComponentOfProps<TextFieldProps> {}
+extern class TextField<TData> extends ReactComponentOfProps<TextFieldProps<TData>> {}

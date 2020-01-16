@@ -27,7 +27,7 @@ typedef TablePaginationProps = ForcedOverride<TableCellProps, {
 	@:optional var nextIconButtonText:String;
 	@:optional var onChangeRowsPerPage:HandlerOrVoid<ChangeEventHandler<DOMElement>>;
 	@:optional var rowsPerPageOptions:Array<Int>;
-	@:optional var SelectProps:Partial<SelectProps>;
+	@:optional var SelectProps:Partial<SelectProps<Int>>;
 }>;
 
 @:jsRequire('@material-ui/core', 'TablePagination')
