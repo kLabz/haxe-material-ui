@@ -24,7 +24,7 @@ typedef ButtonProps = {
 
 	// mui.core.ButtonBase.ButtonBaseProps (w/o overriden fields)
 	@:optional var action:ButtonBaseActions->Void;
-	@:optional var buttonRef:ReactRef<Element>;
+	@:optional var buttonRef:ReactRef<DOMElement>;
 	@:optional var centerRipple:Bool;
 	@:optional var component:ReactType;
 	@:optional var disabled:Bool;

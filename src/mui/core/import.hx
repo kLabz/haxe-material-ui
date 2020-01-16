@@ -2,7 +2,12 @@ package mui.core;
 
 #if !macro
 import js.html.Event;
-import js.html.Element;
+
+#if (react_types_base_element == 'DOMElement')
+import js.html.DOMElement;
+#else
+import js.html.Element as DOMElement;
+#end
 
 import react.Partial;
 import react.ReactComponent;
