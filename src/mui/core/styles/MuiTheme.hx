@@ -206,7 +206,8 @@ typedef MuiPaletteCommon = {
 }
 
 @:structInit
-interface MuiPaletteBackground {
+@:publicFields
+class MuiPaletteBackground {
 	var paper:ColorString;
 	@:native("default") var _default:ColorString;
 }
