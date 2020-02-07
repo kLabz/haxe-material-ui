@@ -6,6 +6,26 @@ package mui.core.common;
 	var MD = 'md';
 	var LG = 'lg';
 	var XL = 'xl';
+
+	@:op(A > B)
+	public function gt(rhs:Breakpoint):Bool {
+		return switch (rhs) {
+			case XS: true;
+			case SM: self != XS && self != SM;
+			case MD: self == LG || self == XL;
+			case LG: self == XL;
+			case XL: false;
+		};
+	}
+
+	@:op(A >= B)
+	public function gte(rhs:Breakpoint):Bool {
+		if (self == rhs) return true;
+		return self.gt(rhs);
+	}
+
+	var self(get, never):Breakpoint;
+	inline function get_self():Breakpoint return cast this;
 }
 
 @:coreType
