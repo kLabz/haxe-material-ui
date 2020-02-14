@@ -24,6 +24,12 @@ package mui.core.common;
 		return self.gt(rhs);
 	}
 
+	@:op(A < B)
+	inline public function lt(rhs:Breakpoint):Bool return rhs.gt(self);
+
+	@:op(A <= B)
+	inline public function lte(rhs:Breakpoint):Bool return rhs.gte(self);
+
 	var self(get, never):Breakpoint;
 	inline function get_self():Breakpoint return cast this;
 }
