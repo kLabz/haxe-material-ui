@@ -28,6 +28,7 @@ typedef ButtonProps = {
 	@:optional var centerRipple:Bool;
 	@:optional var component:ReactType;
 	@:optional var disabled:Bool;
+	@:optional var disableElevation:Bool;
 	@:optional var disableRipple:Bool;
 	@:optional var disableTouchRipple:Bool;
 	@:optional var focusRipple:Bool;
