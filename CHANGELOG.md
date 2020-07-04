@@ -2,6 +2,14 @@
 
 ## Material UI v4.x
 
+### 4.1.0 - 2020-01-27
+
+* Parametrize some components (Select, Tabs)
+* Fix `@:structInit` with latest haxe
+* Fix `theme.mixins.toolbar` type (`css.Properties`)
+* Use `DOMElement` instead of `Element` if `react-types` is configured to do so
+* Add `variant` prop to `Paper`
+
 ### 4.0.0 - 2019-12-05
 
 * Update existing core components and API to `4.7.1`
@@ -42,6 +50,12 @@
 * Auto-generated tests to ensure classkeys and `Component.styles()` are up-to-date
 * Fix `Component.styles()` API for components not using the theme
 * Fix classkeys for some components
+
+#### 4.0.4
+
+* Add `colSpan` and `rowSpan` props to `TableCell`
+* Parametrize `Autocomplete`'s `data`-related props (#6)
+* Fix `withTheme()` HOC definition
 
 </details>
 

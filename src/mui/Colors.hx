@@ -43,7 +43,8 @@ enum EColor {
 }
 
 @:structInit
-interface ColorDefinition {
+@:publicFields
+class ColorDefinition {
 	@:native("50") var _50:ColorString;
 	@:native("100") var _100:ColorString;
 	@:native("200") var _200:ColorString;

@@ -25,8 +25,8 @@ typedef SliderProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var max:Float;
 	@:optional var min:Float;
 	@:optional var name:String;
-	@:optional var onChange:HandlerOrVoid<ChangeEvent<Element>->FloatOrArray->Void>;
-	@:optional var onChangeCommitted:HandlerOrVoid<ChangeEvent<Element>->FloatOrArray->Void>;
+	@:optional var onChange:HandlerOrVoid<ChangeEvent<DOMElement>->FloatOrArray->Void>;
+	@:optional var onChangeCommitted:HandlerOrVoid<ChangeEvent<DOMElement>->FloatOrArray->Void>;
 	@:optional var orientation:Orientation;
 	@:optional var step:Float;
 	@:optional var ThumbComponent:ReactType;

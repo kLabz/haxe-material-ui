@@ -9,7 +9,7 @@ import mui.core.input.InputValue;
 import mui.core.input.SelectClassKey;
 import mui.core.styles.Classes;
 
-typedef SelectProps = ForcedOverride<InputProps, {
+typedef SelectProps<TData> = ForcedOverride<InputProps, {
 	@:optional var autoWidth:Bool;
 	@:optional var children:ReactFragment;
 	@:optional var classes:Record<SelectClassKey>;
@@ -25,14 +25,14 @@ typedef SelectProps = ForcedOverride<InputProps, {
 	@:optional var onClose:HandlerOrVoid<ClassicHandler>;
 	@:optional var onOpen:HandlerOrVoid<ClassicHandler>;
 	@:optional var open:Bool;
-	@:optional var renderValue:Any->ReactFragment;
+	@:optional var renderValue:TData->ReactFragment;
 	@:optional var SelectDisplayProps:Dynamic;
-	@:optional var value:Any;
+	@:optional var value:TData;
 	@:optional var variant:FormControlVariant;
 }>;
 
 @:jsRequire('@material-ui/core', 'Select')
-extern class Select extends ReactComponentOfProps<SelectProps> {
+extern class Select<TData> extends ReactComponentOfProps<SelectProps<TData>> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<SelectClassKey>
 		return SelectStyles.styles(theme);
 }

@@ -16,12 +16,12 @@ typedef DialogProps = ForcedOverride<ModalProps, {
 	@:optional var fullScreen:Bool;
 	@:optional var fullWidth:Bool;
 	@:optional var maxWidth:BreakpointOrFalse;
-	@:optional var onEnter:CallbackOrVoid<Element->Bool->Void>;
-	@:optional var onEntering:CallbackOrVoid<Element->Bool->Void>;
-	@:optional var onEntered:CallbackOrVoid<Element->Bool->Void>;
-	@:optional var onExit:CallbackOrVoid<Element->Void>;
-	@:optional var onExiting:CallbackOrVoid<Element->Void>;
-	@:optional var onExited:CallbackOrVoid<Element->Void>;
+	@:optional var onEnter:CallbackOrVoid<DOMElement->Bool->Void>;
+	@:optional var onEntering:CallbackOrVoid<DOMElement->Bool->Void>;
+	@:optional var onEntered:CallbackOrVoid<DOMElement->Bool->Void>;
+	@:optional var onExit:CallbackOrVoid<DOMElement->Void>;
+	@:optional var onExiting:CallbackOrVoid<DOMElement->Void>;
+	@:optional var onExited:CallbackOrVoid<DOMElement->Void>;
 	@:optional var PaperComponent:ReactType;
 	@:optional var PaperProps:Partial<PaperProps>;
 	@:optional var scroll:DialogScrollContainer;
