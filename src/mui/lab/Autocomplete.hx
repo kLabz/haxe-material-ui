@@ -45,8 +45,8 @@ typedef AutocompleteProps<Data> = ForcedOverride<StandardDOMAttributes, {
 	@:optional var loadingText:ReactFragment;
 	@:optional var multiple:Bool;
 	@:optional var noOptionsText:ReactFragment;
-	@:optional var onChange:HandlerOrVoid<Event->Data->Void>;
-	@:optional var onClose:HandlerOrVoid<ClassicHandler>;
+	@:optional var onChange:HandlerOrVoid<Event->Data->String->Void>;
+	@:optional var onClose:HandlerOrVoid<Event->String->Void>;
 	@:optional var onInputChange:HandlerOrVoid<Event->String->String->Void>;
 	@:optional var onOpen:HandlerOrVoid<ClassicHandler>;
 	@:optional var open:Bool;
