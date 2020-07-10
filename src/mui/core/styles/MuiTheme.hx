@@ -122,7 +122,7 @@ typedef Theme<
 	@:optional var props:TProps;
 	@:optional var shadows:Array<String>;
 	@:optional var typography:TTypography;
-	@:optional var spacing:Float->Float;
+	@:optional var spacing:Float->?Float->?Float->?Float->Float;
 	@:optional var shape:TShape;
 	@:optional var transitions:TTransitions;
 	@:optional var zIndex:TZIndexes;
