@@ -1,5 +1,6 @@
 package mui.core.styles;
 
+import haxe.extern.Rest;
 import haxe.extern.EitherType;
 import css.Properties;
 
@@ -122,7 +123,7 @@ typedef Theme<
 	@:optional var props:TProps;
 	@:optional var shadows:Array<String>;
 	@:optional var typography:TTypography;
-	@:optional var spacing:Float->Float;
+	@:optional var spacing:Rest<Float>->Float;
 	@:optional var shape:TShape;
 	@:optional var transitions:TTransitions;
 	@:optional var zIndex:TZIndexes;
