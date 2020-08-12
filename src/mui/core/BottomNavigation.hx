@@ -12,7 +12,7 @@ typedef BottomNavigationProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var value:Any;
 }>;
 
-@:jsRequire('@material-ui/core', 'BottomNavigation')
+#if mui.global @:native('MaterialUI.BottomNavigation') #else @:jsRequire('@material-ui/core', 'BottomNavigation') #end
 extern class BottomNavigation extends ReactComponentOfProps<BottomNavigationProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<BottomNavigationClassKey>
 		return BottomNavigationStyles.styles(theme);

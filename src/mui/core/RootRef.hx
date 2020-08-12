@@ -8,5 +8,5 @@ private typedef Props<T> = {
 	var rootRef:ReactRef<T>;
 }
 
-@:jsRequire('@material-ui/core', 'RootRef')
+#if mui.global @:native('MaterialUI.RootRef') #else @:jsRequire('@material-ui/core', 'RootRef') #end
 extern class RootRef<T> extends ReactComponentOfProps<Props<T>> {}

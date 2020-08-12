@@ -6,6 +6,6 @@ typedef CssBaselineProps = {
 	@:optional var children:ReactFragment;
 }
 
-@:jsRequire('@material-ui/core', 'CssBaseline')
+#if mui.global @:native('MaterialUI.CssBaseline') #else @:jsRequire('@material-ui/core', 'CssBaseline') #end
 extern class CssBaseline extends ReactComponentOfProps<CssBaselineProps> {}
 

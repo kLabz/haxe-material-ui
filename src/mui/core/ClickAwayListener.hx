@@ -20,5 +20,5 @@ typedef ClickAwayListenerProps = {
 	var None = false;
 }
 
-@:jsRequire('@material-ui/core', 'ClickAwayListener')
+#if mui.global @:native('MaterialUI.ClickAwayListener') #else @:jsRequire('@material-ui/core', 'ClickAwayListener') #end
 extern class ClickAwayListener extends ReactComponentOfProps<ClickAwayListenerProps> {}

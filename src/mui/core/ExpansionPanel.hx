@@ -17,7 +17,7 @@ typedef ExpansionPanelProps = ForcedOverride<PaperProps, {
 	@:optional var TransitionProps:TransitionProps<Any>;
 }>;
 
-@:jsRequire('@material-ui/core', 'ExpansionPanel')
+#if mui.global @:native('MaterialUI.ExpansionPanel') #else @:jsRequire('@material-ui/core', 'ExpansionPanel') #end
 extern class ExpansionPanel extends ReactComponentOfProps<ExpansionPanelProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<ExpansionPanelClassKey>
 		return ExpansionPanelStyles.styles(theme);

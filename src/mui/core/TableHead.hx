@@ -11,7 +11,7 @@ typedef TableHeadProps = {
 	@:optional var component:ReactType;
 }
 
-@:jsRequire('@material-ui/core', 'TableHead')
+#if mui.global @:native('MaterialUI.TableHead') #else @:jsRequire('@material-ui/core', 'TableHead') #end
 extern class TableHead extends ReactComponentOfProps<TableHeadProps> {
 	static inline function styles<TTheme>(?_:TTheme):ClassesDef<TableHeadClassKey>
 		return TableHeadStyles.styles;

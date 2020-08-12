@@ -17,7 +17,7 @@ typedef CardHeaderProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var titleTypographyProps:Partial<TypographyProps>;
 }>;
 
-@:jsRequire('@material-ui/core', 'CardHeader')
+#if mui.global @:native('MaterialUI.CardHeader') #else @:jsRequire('@material-ui/core', 'CardHeader') #end
 extern class CardHeader extends ReactComponentOfProps<CardHeaderProps> {
 	static inline function styles<TTheme>(?_:TTheme):ClassesDef<CardHeaderClassKey>
 		return CardHeaderStyles.styles;

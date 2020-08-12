@@ -14,7 +14,7 @@ typedef NativeSelectProps = ForcedOverride<InputProps, {
 	@:optional var variant:FormControlVariant;
 }>;
 
-@:jsRequire('@material-ui/core', 'NativeSelect')
+#if mui.global @:native('MaterialUI.NativeSelect') #else @:jsRequire('@material-ui/core', 'NativeSelect') #end
 extern class NativeSelect extends ReactComponentOfProps<NativeSelectProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<NativeSelectClassKey>
 		return NativeSelectStyles.styles(theme);

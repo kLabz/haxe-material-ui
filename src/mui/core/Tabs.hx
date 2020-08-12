@@ -25,7 +25,7 @@ typedef TabsProps<Data> = ForcedOverride<StandardDOMAttributes, {
 	@:optional var variant:TabsVariant;
 }>;
 
-@:jsRequire('@material-ui/core', 'Tabs')
+#if mui.global @:native('MaterialUI.Tabs') #else @:jsRequire('@material-ui/core', 'Tabs') #end
 extern class Tabs<Data> extends ReactComponentOfProps<TabsProps<Data>> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<TabsClassKey>
 		return TabsStyles.styles(theme);

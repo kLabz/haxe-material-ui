@@ -36,7 +36,7 @@ typedef PopoverProps = ForcedOverride<ModalProps, {
 	@:optional var TransitionProps:TransitionProps<Any>;
 }>;
 
-@:jsRequire('@material-ui/core', 'Popover')
+#if mui.global @:native('MaterialUI.Popover') #else @:jsRequire('@material-ui/core', 'Popover') #end
 extern class Popover extends ReactComponentOfProps<PopoverProps> {
 	static inline function styles<TTheme>(?_:TTheme):ClassesDef<PopoverClassKey>
 		return PopoverStyles.styles;

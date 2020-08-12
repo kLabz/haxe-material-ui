@@ -17,7 +17,7 @@ typedef DividerProps = {
 	@:optional var variant:DividerVariant;
 }
 
-@:jsRequire('@material-ui/core', 'Divider')
+#if mui.global @:native('MaterialUI.Divider') #else @:jsRequire('@material-ui/core', 'Divider') #end
 extern class Divider extends ReactComponentOfProps<DividerProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<DividerClassKey>
 		return DividerStyles.styles(theme);

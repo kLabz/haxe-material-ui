@@ -11,7 +11,7 @@ typedef DialogContentProps = {
 	@:optional var dividers:Bool;
 }
 
-@:jsRequire('@material-ui/core', 'DialogContent')
+#if mui.global @:native('MaterialUI.DialogContent') #else @:jsRequire('@material-ui/core', 'DialogContent') #end
 extern class DialogContent extends ReactComponentOfProps<DialogContentProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<DialogContentClassKey>
 		return DialogContentStyles.styles(theme);

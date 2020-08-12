@@ -14,7 +14,7 @@ typedef TabProps = ForcedOverride<ButtonBaseProps, {
 	@:optional var wrapped:Bool;
 }>;
 
-@:jsRequire('@material-ui/core', 'Tab')
+#if mui.global @:native('MaterialUI.Tab') #else @:jsRequire('@material-ui/core', 'Tab') #end
 extern class Tab extends ReactComponentOfProps<TabProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<TabClassKey>
 		return TabStyles.styles(theme);

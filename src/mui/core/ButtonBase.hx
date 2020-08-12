@@ -24,7 +24,7 @@ typedef ButtonBaseProps = {
 	@:optional var type:ButtonType;
 }
 
-@:jsRequire('@material-ui/core', 'ButtonBase')
+#if mui.global @:native('MaterialUI.ButtonBase') #else @:jsRequire('@material-ui/core', 'ButtonBase') #end
 extern class ButtonBase extends ReactComponentOfProps<ButtonBaseProps> {
 	static inline function styles<TTheme>(?_:TTheme):ClassesDef<ButtonBaseClassKey>
 		return ButtonBaseStyles.styles;

@@ -8,5 +8,5 @@ private typedef Props = {
 	@:optional var fallback:ReactFragment;
 }
 
-@:jsRequire('@material-ui/core', 'NoSsr')
+#if mui.global @:native('MaterialUI.NoSsr') #else @:jsRequire('@material-ui/core', 'NoSsr') #end
 extern class NoSsr extends ReactComponentOfProps<Props> {}

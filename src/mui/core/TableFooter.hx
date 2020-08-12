@@ -11,7 +11,7 @@ typedef TableFooterProps = {
 	@:optional var component:ReactType;
 }
 
-@:jsRequire('@material-ui/core', 'TableFooter')
+#if mui.global @:native('MaterialUI.TableFooter') #else @:jsRequire('@material-ui/core', 'TableFooter') #end
 extern class TableFooter extends ReactComponentOfProps<TableFooterProps> {
 	static inline function styles<TTheme>(?_:TTheme):ClassesDef<TableFooterClassKey>
 		return TableFooterStyles.styles;

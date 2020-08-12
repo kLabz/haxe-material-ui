@@ -16,7 +16,7 @@ typedef InputLabelProps = ForcedOverride<FormLabelProps, {
 	@:optional var variant:FormControlVariant;
 }>;
 
-@:jsRequire('@material-ui/core', 'InputLabel')
+#if mui.global @:native('MaterialUI.InputLabel') #else @:jsRequire('@material-ui/core', 'InputLabel') #end
 extern class InputLabel extends ReactComponentOfProps<InputLabelProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<InputLabelClassKey>
 		return InputLabelStyles.styles(theme);

@@ -19,7 +19,7 @@ typedef CircularProgressProps = {
 	@:optional var variant:CircularProgressVariant;
 }
 
-@:jsRequire('@material-ui/core', 'CircularProgress')
+#if mui.global @:native('MaterialUI.CircularProgress') #else @:jsRequire('@material-ui/core', 'CircularProgress') #end
 extern class CircularProgress extends ReactComponentOfProps<CircularProgressProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<CircularProgressClassKey>
 		return CircularProgressStyles.styles(theme);

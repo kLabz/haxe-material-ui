@@ -20,7 +20,7 @@ typedef ListItemProps = ForcedOverride<ButtonBaseProps, {
 	@:optional var selected:Bool;
 }>;
 
-@:jsRequire('@material-ui/core', 'ListItem')
+#if mui.global @:native('MaterialUI.ListItem') #else @:jsRequire('@material-ui/core', 'ListItem') #end
 extern class ListItem extends ReactComponentOfProps<ListItemProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<ListItemClassKey>
 		return ListItemStyles.styles(theme);

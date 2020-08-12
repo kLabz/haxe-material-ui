@@ -20,7 +20,7 @@ typedef FormHelperTextProps = {
 	@:optional var variant:FormControlVariant;
 }
 
-@:jsRequire('@material-ui/core', 'FormHelperText')
+#if mui.global @:native('MaterialUI.FormHelperText') #else @:jsRequire('@material-ui/core', 'FormHelperText') #end
 extern class FormHelperText extends ReactComponentOfProps<FormHelperTextProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<FormHelperTextClassKey>
 		return FormHelperTextStyles.styles(theme);

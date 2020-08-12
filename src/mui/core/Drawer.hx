@@ -25,7 +25,7 @@ typedef DrawerProps = {
 	@:optional var variant:DrawerVariant;
 }
 
-@:jsRequire('@material-ui/core', 'Drawer')
+#if mui.global @:native('MaterialUI.Drawer') #else @:jsRequire('@material-ui/core', 'Drawer') #end
 extern class Drawer extends ReactComponentOfProps<DrawerProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<DrawerClassKey>
 		return DrawerStyles.styles(theme);

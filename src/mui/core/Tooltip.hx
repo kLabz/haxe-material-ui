@@ -29,7 +29,7 @@ typedef TooltipProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var TransitionProps:TransitionProps<Any>;
 }>;
 
-@:jsRequire('@material-ui/core', 'Tooltip')
+#if mui.global @:native('MaterialUI.Tooltip') #else @:jsRequire('@material-ui/core', 'Tooltip') #end
 extern class Tooltip extends ReactComponentOfProps<TooltipProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<TooltipClassKey>
 		return TooltipStyles.styles(theme);

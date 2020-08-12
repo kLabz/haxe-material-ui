@@ -29,5 +29,5 @@ typedef ModalProps = {
 	@:optional var onRendered:HandlerOrVoid<ClassicHandler>;
 }
 
-@:jsRequire('@material-ui/core', 'Modal')
+#if mui.global @:native('MaterialUI.Modal') #else @:jsRequire('@material-ui/core', 'Modal') #end
 extern class Modal extends ReactComponentOfProps<ModalProps> {}

@@ -4,5 +4,5 @@ import react.ReactComponent;
 import react.transition.Transition;
 
 @:acceptsMoreProps('react.transition.Transition')
-@:jsRequire('@material-ui/core', 'Zoom')
+#if mui.global @:native('MaterialUI.Zoom') #else @:jsRequire('@material-ui/core', 'Zoom') #end
 extern class Zoom<TChildProps> extends ReactComponentOfProps<TransitionProps<TChildProps>> {}

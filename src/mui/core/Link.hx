@@ -17,7 +17,7 @@ typedef LinkProps = ForcedOverride<TypographyProps, {
 	@:optional var underline:LinkUnderline;
 }>;
 
-@:jsRequire('@material-ui/core', 'Link')
+#if mui.global @:native('MaterialUI.Link') #else @:jsRequire('@material-ui/core', 'Link') #end
 extern class Link extends ReactComponentOfProps<LinkProps> {
 	static inline function styles<TTheme>(?_:TTheme):ClassesDef<LinkClassKey>
 		return LinkStyles.styles;

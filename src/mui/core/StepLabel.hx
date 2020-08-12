@@ -17,7 +17,7 @@ typedef StepLabelProps = {
 	@:optional var StepIconProps:Partial<StepIconProps>;
 }
 
-@:jsRequire('@material-ui/core', 'StepLabel')
+#if mui.global @:native('MaterialUI.StepLabel') #else @:jsRequire('@material-ui/core', 'StepLabel') #end
 extern class StepLabel extends ReactComponentOfProps<StepLabelProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<StepLabelClassKey>
 		return StepLabelStyles.styles(theme);

@@ -33,5 +33,5 @@ typedef PopperProps = {
 	@:optional var transition:Bool;
 }
 
-@:jsRequire('@material-ui/core', 'Popper')
+#if mui.global @:native('MaterialUI.Popper') #else @:jsRequire('@material-ui/core', 'Popper') #end
 extern class Popper extends ReactComponentOfProps<PopperProps> {}

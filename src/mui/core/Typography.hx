@@ -25,7 +25,7 @@ typedef TypographyProps = {
 	@:optional var variantMapping:TypographyVariantMapping;
 }
 
-@:jsRequire('@material-ui/core', 'Typography')
+#if mui.global @:native('MaterialUI.Typography') #else @:jsRequire('@material-ui/core', 'Typography') #end
 extern class Typography extends ReactComponentOfProps<TypographyProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<TypographyClassKey>
 		return TypographyStyles.styles(theme);

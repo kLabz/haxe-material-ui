@@ -12,5 +12,5 @@ typedef MenuListProps = {
 	@:optional var variant:MenuVariant;
 }
 
-@:jsRequire('@material-ui/core', 'MenuList')
+#if mui.global @:native('MaterialUI.MenuList') #else @:jsRequire('@material-ui/core', 'MenuList') #end
 extern class MenuList extends ReactComponentOfProps<MenuListProps> {}

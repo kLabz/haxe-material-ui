@@ -22,5 +22,5 @@ private typedef Props = {
 	@:optional var className:String;
 }
 
-@:jsRequire('@material-ui/core', 'Hidden')
+#if mui.global @:native('MaterialUI.Hidden') #else @:jsRequire('@material-ui/core', 'Hidden') #end
 extern class Hidden extends ReactComponentOfProps<Props> {}
