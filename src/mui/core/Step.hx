@@ -13,7 +13,7 @@ typedef StepProps = {
 	@:optional var disabled:Bool;
 }
 
-@:jsRequire('@material-ui/core', 'Step')
+#if mui.global @:native('MaterialUI.Step') #else @:jsRequire('@material-ui/core', 'Step') #end
 extern class Step extends ReactComponentOfProps<StepProps> {
 	static inline function styles<TTheme>(?_:TTheme):ClassesDef<StepClassKey>
 		return StepStyles.styles;

@@ -30,7 +30,7 @@ typedef TablePaginationProps = ForcedOverride<TableCellProps, {
 	@:optional var SelectProps:Partial<SelectProps<Int>>;
 }>;
 
-@:jsRequire('@material-ui/core', 'TablePagination')
+#if mui.global @:native('MaterialUI.TablePagination') #else @:jsRequire('@material-ui/core', 'TablePagination') #end
 extern class TablePagination extends ReactComponentOfProps<TablePaginationProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<TablePaginationClassKey>
 		return TablePaginationStyles.styles(theme);

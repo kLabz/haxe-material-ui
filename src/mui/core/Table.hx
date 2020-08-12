@@ -16,7 +16,7 @@ typedef TableProps = {
 	@:optional var stickyHeader:Bool;
 }
 
-@:jsRequire('@material-ui/core', 'Table')
+#if mui.global @:native('MaterialUI.Table') #else @:jsRequire('@material-ui/core', 'Table') #end
 extern class Table extends ReactComponentOfProps<TableProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<TableClassKey>
 		return TableStyles.styles(theme);

@@ -16,7 +16,7 @@ typedef FabProps = ForcedOverride<ButtonBaseProps, {
 	@:optional var variant:FabVariant;
 }>;
 
-@:jsRequire('@material-ui/core', 'Fab')
+#if mui.global @:native('MaterialUI.Fab') #else @:jsRequire('@material-ui/core', 'Fab') #end
 extern class Fab extends ReactComponentOfProps<FabProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<FabClassKey>
 		return FabStyles.styles(theme);

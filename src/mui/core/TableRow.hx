@@ -13,7 +13,7 @@ typedef TableRowProps = {
 	@:optional var component:ReactType;
 }
 
-@:jsRequire('@material-ui/core', 'TableRow')
+#if mui.global @:native('MaterialUI.TableRow') #else @:jsRequire('@material-ui/core', 'TableRow') #end
 extern class TableRow extends ReactComponentOfProps<TableRowProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<TableRowClassKey>
 		return TableRowStyles.styles(theme);

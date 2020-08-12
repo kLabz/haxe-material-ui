@@ -10,7 +10,7 @@ typedef FilledInputProps = ForcedOverride<InputBaseProps, {
 	@:optional var disableUnderline:Bool;
 }>;
 
-@:jsRequire('@material-ui/core', 'FilledInput')
+#if mui.global @:native('MaterialUI.FilledInput') #else @:jsRequire('@material-ui/core', 'FilledInput') #end
 extern class FilledInput extends ReactComponentOfProps<FilledInputProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<FilledInputClassKey>
 		return FilledInputStyles.styles(theme);

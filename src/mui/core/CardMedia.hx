@@ -13,7 +13,7 @@ typedef CardMediaProps = {
 	@:optional var src:String;
 }
 
-@:jsRequire('@material-ui/core', 'CardMedia')
+#if mui.global @:native('MaterialUI.CardMedia') #else @:jsRequire('@material-ui/core', 'CardMedia') #end
 extern class CardMedia extends ReactComponentOfProps<CardMediaProps> {
 	static inline function styles<TTheme>(?_:TTheme):ClassesDef<CardMediaClassKey>
 		return CardMediaStyles.styles;

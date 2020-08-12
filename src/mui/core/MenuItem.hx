@@ -10,7 +10,7 @@ typedef MenuItemProps = ForcedOverride<ListItemProps, {
 	@:optional var value:Any;
 }>;
 
-@:jsRequire('@material-ui/core', 'MenuItem')
+#if mui.global @:native('MaterialUI.MenuItem') #else @:jsRequire('@material-ui/core', 'MenuItem') #end
 extern class MenuItem extends ReactComponentOfProps<MenuItemProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<MenuItemClassKey>
 		return MenuItemStyles.styles(theme);

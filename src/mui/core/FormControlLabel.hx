@@ -22,7 +22,7 @@ typedef FormControlLabelProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var value:String;
 }>;
 
-@:jsRequire('@material-ui/core', 'FormControlLabel')
+#if mui.global @:native('MaterialUI.FormControlLabel') #else @:jsRequire('@material-ui/core', 'FormControlLabel') #end
 extern class FormControlLabel extends ReactComponentOfProps<FormControlLabelProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<FormControlLabelClassKey>
 		return FormControlLabelStyles.styles(theme);

@@ -12,7 +12,7 @@ typedef StepButtonProps = {
 	@:optional var optional:ReactFragment;
 }
 
-@:jsRequire('@material-ui/core', 'StepButton')
+#if mui.global @:native('MaterialUI.StepButton') #else @:jsRequire('@material-ui/core', 'StepButton') #end
 extern class StepButton extends ReactComponentOfProps<StepButtonProps> {
 	static inline function styles<TTheme>(?_:TTheme):ClassesDef<StepButtonClassKey>
 		return StepButtonStyles.styles;

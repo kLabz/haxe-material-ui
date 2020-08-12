@@ -20,7 +20,7 @@ typedef ButtonGroupProps = {
 	@:optional var variant:ButtonVariant;
 }
 
-@:jsRequire('@material-ui/core', 'ButtonGroup')
+#if mui.global @:native('MaterialUI.ButtonGroup') #else @:jsRequire('@material-ui/core', 'ButtonGroup') #end
 extern class ButtonGroup extends ReactComponentOfProps<ButtonGroupProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<ButtonGroupClassKey>
 		return ButtonGroupStyles.styles(theme);

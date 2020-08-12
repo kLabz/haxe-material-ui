@@ -10,7 +10,7 @@ typedef ListItemSecondaryActionProps = {
 	@:optional var classes:Record<ListItemSecondaryActionClassKey>;
 }
 
-@:jsRequire('@material-ui/core', 'ListItemSecondaryAction')
+#if mui.global @:native('MaterialUI.ListItemSecondaryAction') #else @:jsRequire('@material-ui/core', 'ListItemSecondaryAction') #end
 extern class ListItemSecondaryAction extends ReactComponentOfProps<ListItemSecondaryActionProps> {
 	static inline function styles<TTheme>(?_:TTheme):ClassesDef<ListItemSecondaryActionClassKey>
 		return ListItemSecondaryActionStyles.styles;

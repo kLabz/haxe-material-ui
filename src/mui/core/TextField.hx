@@ -23,5 +23,5 @@ typedef TextFieldProps<TData> = ForcedOverride<FormControlProps, {
 	@:optional var size:FormControlSize;
 }>;
 
-@:jsRequire('@material-ui/core', 'TextField')
+#if mui.global @:native('MaterialUI.TextField') #else @:jsRequire('@material-ui/core', 'TextField') #end
 extern class TextField<TData> extends ReactComponentOfProps<TextFieldProps<TData>> {}

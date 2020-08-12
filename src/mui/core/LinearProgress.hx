@@ -16,7 +16,7 @@ typedef LinearProgressProps = {
 	@:optional var variant:LinearProgressVariant;
 }
 
-@:jsRequire('@material-ui/core', 'LinearProgress')
+#if mui.global @:native('MaterialUI.LinearProgress') #else @:jsRequire('@material-ui/core', 'LinearProgress') #end
 extern class LinearProgress extends ReactComponentOfProps<LinearProgressProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<LinearProgressClassKey>
 		return LinearProgressStyles.styles(theme);

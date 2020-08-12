@@ -18,7 +18,7 @@ typedef CollapseProps = ForcedOverride<TransitionProps<Any>, {
 }>;
 
 @:acceptsMoreProps('react.transition.Transition')
-@:jsRequire('@material-ui/core', 'Collapse')
+#if mui.global @:native('MaterialUI.Collapse') #else @:jsRequire('@material-ui/core', 'Collapse') #end
 extern class Collapse extends ReactComponentOfProps<CollapseProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<CollapseClassKey>
 		return CollapseStyles.styles(theme);

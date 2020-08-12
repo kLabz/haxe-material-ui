@@ -41,7 +41,7 @@ typedef ButtonProps = {
 	@:optional var tabIndex:Int;
 }
 
-@:jsRequire('@material-ui/core', 'Button')
+#if mui.global @:native('MaterialUI.Button') #else @:jsRequire('@material-ui/core', 'Button') #end
 extern class Button extends ReactComponentOfProps<ButtonProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<ButtonClassKey>
 		return ButtonStyles.styles(theme);

@@ -17,7 +17,7 @@ typedef InputAdornmentProps = {
 	@:optional var variant:FormControlVariant;
 }
 
-@:jsRequire('@material-ui/core', 'InputAdornment')
+#if mui.global @:native('MaterialUI.InputAdornment') #else @:jsRequire('@material-ui/core', 'InputAdornment') #end
 extern class InputAdornment extends ReactComponentOfProps<InputAdornmentProps> {
 	static inline function styles<TTheme>(?_:TTheme):ClassesDef<InputAdornmentClassKey>
 		return InputAdornmentStyles.styles;

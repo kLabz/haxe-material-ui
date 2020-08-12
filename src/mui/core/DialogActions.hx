@@ -11,7 +11,7 @@ typedef DialogActionsProps = {
 	@:optional var disableSpacing:Bool;
 }
 
-@:jsRequire('@material-ui/core', 'DialogActions')
+#if mui.global @:native('MaterialUI.DialogActions') #else @:jsRequire('@material-ui/core', 'DialogActions') #end
 extern class DialogActions extends ReactComponentOfProps<DialogActionsProps> {
 	static inline function styles<TTheme>(?_:TTheme):ClassesDef<DialogActionsClassKey>
 		return DialogActionsStyles.styles;

@@ -18,7 +18,7 @@ typedef AvatarProps = {
 	@:optional var variant:AvatarVariant;
 }
 
-@:jsRequire('@material-ui/core', 'Avatar')
+#if mui.global @:native('MaterialUI.Avatar') #else @:jsRequire('@material-ui/core', 'Avatar') #end
 extern class Avatar extends ReactComponentOfProps<AvatarProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<AvatarClassKey>
 		return AvatarStyles.styles(theme);

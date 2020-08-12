@@ -10,7 +10,7 @@ typedef InputProps = ForcedOverride<InputBaseProps, {
 	@:optional var disableUnderline:Bool;
 }>;
 
-@:jsRequire('@material-ui/core', 'Input')
+#if mui.global @:native('MaterialUI.Input') #else @:jsRequire('@material-ui/core', 'Input') #end
 extern class Input extends ReactComponentOfProps<InputProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<InputClassKey>
 		return InputStyles.styles(theme);

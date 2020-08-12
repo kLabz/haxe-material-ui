@@ -33,7 +33,7 @@ typedef GridProps = {
 	@:optional var zeroMinWidth:Bool;
 }
 
-@:jsRequire('@material-ui/core', 'Grid')
+#if mui.global @:native('MaterialUI.Grid') #else @:jsRequire('@material-ui/core', 'Grid') #end
 extern class Grid extends ReactComponentOfProps<GridProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<GridClassKey>
 		return GridStyles.styles(theme);

@@ -10,7 +10,7 @@ typedef ListItemIconProps = {
 	@:optional var classes:Record<ListItemIconClassKey>;
 }
 
-@:jsRequire('@material-ui/core', 'ListItemIcon')
+#if mui.global @:native('MaterialUI.ListItemIcon') #else @:jsRequire('@material-ui/core', 'ListItemIcon') #end
 extern class ListItemIcon extends ReactComponentOfProps<ListItemIconProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<ListItemIconClassKey>
 		return ListItemIconStyles.styles(theme);

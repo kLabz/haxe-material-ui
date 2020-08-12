@@ -11,7 +11,7 @@ typedef CardActionsProps = {
 	@:optional var disableSpacing:Bool;
 }
 
-@:jsRequire('@material-ui/core', 'CardActions')
+#if mui.global @:native('MaterialUI.CardActions') #else @:jsRequire('@material-ui/core', 'CardActions') #end
 extern class CardActions extends ReactComponentOfProps<CardActionsProps> {
 	static inline function styles<TTheme>(?_:TTheme):ClassesDef<CardActionsClassKey>
 		return CardActionsStyles.styles;

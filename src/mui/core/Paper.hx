@@ -16,7 +16,7 @@ typedef PaperProps = {
 	
 }
 
-@:jsRequire('@material-ui/core', 'Paper')
+#if mui.global @:native('MaterialUI.Paper') #else @:jsRequire('@material-ui/core', 'Paper') #end
 extern class Paper extends ReactComponentOfProps<PaperProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<PaperClassKey>
 		return PaperStyles.styles(theme);

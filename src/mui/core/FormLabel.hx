@@ -19,7 +19,7 @@ typedef FormLabelProps = {
 	@:optional var htmlFor:String;
 }
 
-@:jsRequire('@material-ui/core', 'FormLabel')
+#if mui.global @:native('MaterialUI.FormLabel') #else @:jsRequire('@material-ui/core', 'FormLabel') #end
 extern class FormLabel extends ReactComponentOfProps<FormLabelProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<FormLabelClassKey>
 		return FormLabelStyles.styles(theme);

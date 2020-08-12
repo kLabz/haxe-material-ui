@@ -37,7 +37,7 @@ typedef SliderProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var valueLabelFormat:EitherType<String, {value:Float, index:Int}->ReactFragment>;
 }>;
 
-@:jsRequire('@material-ui/core', 'Slider')
+#if mui.global @:native('MaterialUI.Slider') #else @:jsRequire('@material-ui/core', 'Slider') #end
 extern class Slider extends ReactComponentOfProps<SliderProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<SliderClassKey>
 		return SliderStyles.styles(theme);

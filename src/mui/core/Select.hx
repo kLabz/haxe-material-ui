@@ -31,7 +31,7 @@ typedef SelectProps<TData> = ForcedOverride<InputProps, {
 	@:optional var variant:FormControlVariant;
 }>;
 
-@:jsRequire('@material-ui/core', 'Select')
+#if mui.global @:native('MaterialUI.Select') #else @:jsRequire('@material-ui/core', 'Select') #end
 extern class Select<TData> extends ReactComponentOfProps<SelectProps<TData>> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<SelectClassKey>
 		return SelectStyles.styles(theme);

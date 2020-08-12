@@ -15,7 +15,7 @@ typedef TableSortLabelProps = {
 	@:optional var IconComponent:ReactType;
 }
 
-@:jsRequire('@material-ui/core', 'TableSortLabel')
+#if mui.global @:native('MaterialUI.TableSortLabel') #else @:jsRequire('@material-ui/core', 'TableSortLabel') #end
 extern class TableSortLabel extends ReactComponentOfProps<TableSortLabelProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<TableSortLabelClassKey>
 		return TableSortLabelStyles.styles(theme);
