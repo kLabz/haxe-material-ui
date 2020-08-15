@@ -16,7 +16,7 @@ typedef ListSubheaderProps = {
 	@:optional var inset:Bool;
 }
 
-@:jsRequire('@material-ui/core', 'ListSubheader')
+#if mui.global @:native('MaterialUI.ListSubheader') #else @:jsRequire('@material-ui/core', 'ListSubheader') #end
 extern class ListSubheader extends ReactComponentOfProps<ListSubheaderProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<ListSubheaderClassKey>
 		return ListSubheaderStyles.styles(theme);

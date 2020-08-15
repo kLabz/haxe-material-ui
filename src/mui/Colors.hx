@@ -1,6 +1,6 @@
 package mui;
 
-@:jsRequire('@material-ui/core', 'colors')
+#if mui.global @:native('MaterialUI.colors') #else @:jsRequire('@material-ui/core', 'colors') #end
 extern class Colors {
 	static var amber:ColorDefinition;
 	static var blue:ColorDefinition;

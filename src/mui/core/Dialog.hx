@@ -30,7 +30,7 @@ typedef DialogProps = ForcedOverride<ModalProps, {
 	@:optional var TransitionProps:TransitionProps<Any>;
 }>;
 
-@:jsRequire('@material-ui/core', 'Dialog')
+#if mui.global @:native('MaterialUI.Dialog') #else @:jsRequire('@material-ui/core', 'Dialog') #end
 extern class Dialog extends ReactComponentOfProps<DialogProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<DialogClassKey>
 		return DialogStyles.styles(theme);

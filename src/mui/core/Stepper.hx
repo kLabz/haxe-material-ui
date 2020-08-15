@@ -15,7 +15,7 @@ typedef StepperProps = ForcedOverride<PaperProps, {
 	@:optional var orientation:Orientation;
 }>;
 
-@:jsRequire('@material-ui/core', 'Stepper')
+#if mui.global @:native('MaterialUI.Stepper') #else @:jsRequire('@material-ui/core', 'Stepper') #end
 extern class Stepper extends ReactComponentOfProps<StepperProps> {
 	static inline function styles<TTheme>(?_:TTheme):ClassesDef<StepperClassKey>
 		return StepperStyles.styles;

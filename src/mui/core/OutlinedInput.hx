@@ -11,7 +11,7 @@ typedef OutlinedInputProps = ForcedOverride<InputBaseProps, {
 	@:optional var notched:Bool;
 }>;
 
-@:jsRequire('@material-ui/core', 'OutlinedInput')
+#if mui.global @:native('MaterialUI.OutlinedInput') #else @:jsRequire('@material-ui/core', 'OutlinedInput') #end
 extern class OutlinedInput extends ReactComponentOfProps<OutlinedInputProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<OutlinedInputClassKey>
 		return OutlinedInputStyles.styles(theme);

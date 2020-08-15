@@ -25,7 +25,7 @@ typedef TableCellProps = {
 	@:optional var rowSpan:Int;
 }
 
-@:jsRequire('@material-ui/core', 'TableCell')
+#if mui.global @:native('MaterialUI.TableCell') #else @:jsRequire('@material-ui/core', 'TableCell') #end
 extern class TableCell extends ReactComponentOfProps<TableCellProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<TableCellClassKey>
 		return TableCellStyles.styles(theme);

@@ -11,7 +11,7 @@ typedef TableBodyProps = {
 	@:optional var component:ReactType;
 }
 
-@:jsRequire('@material-ui/core', 'TableBody')
+#if mui.global @:native('MaterialUI.TableBody') #else @:jsRequire('@material-ui/core', 'TableBody') #end
 extern class TableBody extends ReactComponentOfProps<TableBodyProps> {
 	static inline function styles<TTheme>(?_:TTheme):ClassesDef<TableBodyClassKey>
 		return TableBodyStyles.styles;

@@ -11,5 +11,5 @@ typedef GrowProps = ForcedOverride<TransitionProps<Any>, {
 }>;
 
 @:acceptsMoreProps('react.transition.Transition')
-@:jsRequire('@material-ui/core', 'Grow')
+#if mui.global @:native('MaterialUI.Grow') #else @:jsRequire('@material-ui/core', 'Grow') #end
 extern class Grow extends ReactComponentOfProps<GrowProps> {}

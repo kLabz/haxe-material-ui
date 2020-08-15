@@ -17,7 +17,7 @@ typedef ListItemTextProps = {
 	@:optional var secondaryTypographyProps:Partial<TypographyProps>;
 }
 
-@:jsRequire('@material-ui/core', 'ListItemText')
+#if mui.global @:native('MaterialUI.ListItemText') #else @:jsRequire('@material-ui/core', 'ListItemText') #end
 extern class ListItemText extends ReactComponentOfProps<ListItemTextProps> {
 	static inline function styles<TTheme>(?_:TTheme):ClassesDef<ListItemTextClassKey>
 		return ListItemTextStyles.styles;

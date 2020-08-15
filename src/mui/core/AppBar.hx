@@ -12,7 +12,7 @@ typedef AppBarProps = ForcedOverride<PaperProps, {
 	@:optional var position:CSSPosition;
 }>;
 
-@:jsRequire('@material-ui/core', 'AppBar')
+#if mui.global @:native('MaterialUI.AppBar') #else @:jsRequire('@material-ui/core', 'AppBar') #end
 extern class AppBar extends ReactComponentOfProps<AppBarProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<AppBarClassKey>
 		return AppBarStyles.styles(theme);

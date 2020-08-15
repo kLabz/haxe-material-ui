@@ -14,7 +14,7 @@ typedef StepIconProps = {
 	@:optional var error:Bool;
 }
 
-@:jsRequire('@material-ui/core', 'StepIcon')
+#if mui.global @:native('MaterialUI.StepIcon') #else @:jsRequire('@material-ui/core', 'StepIcon') #end
 extern class StepIcon extends ReactComponentOfProps<StepIconProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<StepIconClassKey>
 		return StepIconStyles.styles(theme);

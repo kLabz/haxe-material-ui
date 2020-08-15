@@ -10,5 +10,5 @@ typedef RadioGroupProps = ForcedOverride<FormGroupProps, {
 	@:optional var defaultValue:RadioValue;
 }>;
 
-@:jsRequire('@material-ui/core', 'RadioGroup')
+#if mui.global @:native('MaterialUI.RadioGroup') #else @:jsRequire('@material-ui/core', 'RadioGroup') #end
 extern class RadioGroup extends ReactComponentOfProps<RadioGroupProps> {}

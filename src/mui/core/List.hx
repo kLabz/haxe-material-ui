@@ -14,7 +14,7 @@ typedef ListProps = {
 	@:optional var subheader:ReactFragment;
 }
 
-@:jsRequire('@material-ui/core', 'List')
+#if mui.global @:native('MaterialUI.List') #else @:jsRequire('@material-ui/core', 'List') #end
 extern class List extends ReactComponentOfProps<ListProps> {
 	static inline function styles<TTheme>(?_:TTheme):ClassesDef<ListClassKey>
 		return ListStyles.styles;

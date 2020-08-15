@@ -13,7 +13,7 @@ typedef ExpansionPanelSummaryProps = {
 	@:optional var IconButtonProps:Partial<IconButtonProps>;
 }
 
-@:jsRequire('@material-ui/core', 'ExpansionPanelSummary')
+#if mui.global @:native('MaterialUI.ExpansionPanelSummary') #else @:jsRequire('@material-ui/core', 'ExpansionPanelSummary') #end
 extern class ExpansionPanelSummary extends ReactComponentOfProps<ExpansionPanelSummaryProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<ExpansionPanelSummaryClassKey>
 		return ExpansionPanelSummaryStyles.styles(theme);

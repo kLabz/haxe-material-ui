@@ -44,7 +44,7 @@ typedef InputBaseCommonProps = {
 	@:optional var value:InputValue;
 }
 
-@:jsRequire('@material-ui/core', 'InputBase')
+#if mui.global @:native('MaterialUI.InputBase') #else @:jsRequire('@material-ui/core', 'InputBase') #end
 extern class InputBase extends ReactComponentOfProps<InputBaseProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<InputBaseClassKey>
 		return InputBaseStyles.styles(theme);

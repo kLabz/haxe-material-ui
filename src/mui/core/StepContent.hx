@@ -16,7 +16,7 @@ typedef StepContentProps = {
 	@:optional var TransitionProps:TransitionProps<Any>;
 }
 
-@:jsRequire('@material-ui/core', 'StepContent')
+#if mui.global @:native('MaterialUI.StepContent') #else @:jsRequire('@material-ui/core', 'StepContent') #end
 extern class StepContent extends ReactComponentOfProps<StepContentProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<StepContentClassKey>
 		return StepContentStyles.styles(theme);

@@ -15,7 +15,7 @@ typedef BreadcrumbsProps = {
 	@:optional var separator:ReactSingleFragment;
 }
 
-@:jsRequire('@material-ui/core', 'Breadcrumbs')
+#if mui.global @:native('MaterialUI.Breadcrumbs') #else @:jsRequire('@material-ui/core', 'Breadcrumbs') #end
 extern class Breadcrumbs extends ReactComponentOfProps<BreadcrumbsProps> {
 	static inline function styles<TTheme>(?_:TTheme):ClassesDef<BreadcrumbsClassKey>
 		return BreadcrumbsStyles.styles;

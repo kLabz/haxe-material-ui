@@ -11,7 +11,7 @@ typedef FormGroupProps = {
 	@:optional var row:Bool;
 }
 
-@:jsRequire('@material-ui/core', 'FormGroup')
+#if mui.global @:native('MaterialUI.FormGroup') #else @:jsRequire('@material-ui/core', 'FormGroup') #end
 extern class FormGroup extends ReactComponentOfProps<FormGroupProps> {
 	static inline function styles<TTheme>(?_:TTheme):ClassesDef<FormGroupClassKey>
 		return FormGroupStyles.styles;

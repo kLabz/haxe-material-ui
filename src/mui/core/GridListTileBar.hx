@@ -14,7 +14,7 @@ typedef GridListTileBarProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var titlePosition:TopOrBottom;
 }>;
 
-@:jsRequire('@material-ui/core', 'GridListTileBar')
+#if mui.global @:native('MaterialUI.GridListTileBar') #else @:jsRequire('@material-ui/core', 'GridListTileBar') #end
 extern class GridListTileBar extends ReactComponentOfProps<GridListTileBarProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<GridListTileBarClassKey>
 		return GridListTileBarStyles.styles(theme);

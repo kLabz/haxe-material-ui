@@ -8,7 +8,7 @@ typedef DialogContentTextProps = ForcedOverride<TypographyProps, {
 	@:optional var classes:Record<DialogContentTextClassKey>;
 }>;
 
-@:jsRequire('@material-ui/core', 'DialogContentText')
+#if mui.global @:native('MaterialUI.DialogContentText') #else @:jsRequire('@material-ui/core', 'DialogContentText') #end
 extern class DialogContentText extends ReactComponentOfProps<DialogContentTextProps> {
 	static inline function styles<TTheme>(?_:TTheme):ClassesDef<DialogContentTextClassKey>
 		return DialogContentTextStyles.styles;

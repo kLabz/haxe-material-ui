@@ -14,7 +14,7 @@ typedef IconButtonProps = ForcedOverride<ButtonBaseProps, {
 	@:optional var size:IconButtonSize;
 }>;
 
-@:jsRequire('@material-ui/core', 'IconButton')
+#if mui.global @:native('MaterialUI.IconButton') #else @:jsRequire('@material-ui/core', 'IconButton') #end
 extern class IconButton extends ReactComponentOfProps<IconButtonProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<IconButtonClassKey>
 		return IconButtonStyles.styles(theme);

@@ -11,7 +11,7 @@ typedef ExpansionPanelActionsProps = {
 	@:optional var disableSpacing:Bool;
 }
 
-@:jsRequire('@material-ui/core', 'ExpansionPanelActions')
+#if mui.global @:native('MaterialUI.ExpansionPanelActions') #else @:jsRequire('@material-ui/core', 'ExpansionPanelActions') #end
 extern class ExpansionPanelActions extends ReactComponentOfProps<ExpansionPanelActionsProps> {
 	static inline function styles<TTheme>(?_:TTheme):ClassesDef<ExpansionPanelActionsClassKey>
 		return ExpansionPanelActionsStyles.styles;

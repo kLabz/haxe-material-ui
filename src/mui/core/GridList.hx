@@ -13,7 +13,7 @@ typedef GridListProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var spacing:Int;
 }>;
 
-@:jsRequire('@material-ui/core', 'GridList')
+#if mui.global @:native('MaterialUI.GridList') #else @:jsRequire('@material-ui/core', 'GridList') #end
 extern class GridList extends ReactComponentOfProps<GridListProps> {
 	static inline function styles<TTheme>(?_:TTheme):ClassesDef<GridListClassKey>
 		return GridListStyles.styles;

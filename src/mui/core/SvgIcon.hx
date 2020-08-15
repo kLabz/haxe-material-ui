@@ -18,7 +18,7 @@ typedef SvgIconProps = {
 	@:optional var viewBox:String;
 }
 
-@:jsRequire('@material-ui/core', 'SvgIcon')
+#if mui.global @:native('MaterialUI.SvgIcon') #else @:jsRequire('@material-ui/core', 'SvgIcon') #end
 extern class SvgIcon extends ReactComponentOfProps<SvgIconProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<SvgIconClassKey>
 		return SvgIconStyles.styles(theme);

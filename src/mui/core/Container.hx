@@ -14,7 +14,7 @@ typedef ContainerProps = {
 	@:optional var maxWidth:BreakpointOrFalse;
 };
 
-@:jsRequire('@material-ui/core', 'Container')
+#if mui.global @:native('MaterialUI.Container') #else @:jsRequire('@material-ui/core', 'Container') #end
 extern class Container extends ReactComponentOfProps<ContainerProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<ContainerClassKey>
 		return ContainerStyles.styles(theme);

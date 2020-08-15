@@ -24,7 +24,7 @@ typedef FormControlProps = {
 	@:optional var variant:FormControlVariant;
 }
 
-@:jsRequire('@material-ui/core', 'FormControl')
+#if mui.global @:native('MaterialUI.FormControl') #else @:jsRequire('@material-ui/core', 'FormControl') #end
 extern class FormControl extends ReactComponentOfProps<FormControlProps> {
 	static inline function styles<TTheme>(?_:TTheme):ClassesDef<FormControlClassKey>
 		return FormControlStyles.styles;

@@ -36,7 +36,7 @@ typedef SnackbarProps = {
 	@:optional var TransitionProps:TransitionProps<Any>;
 }
 
-@:jsRequire('@material-ui/core', 'Snackbar')
+#if mui.global @:native('MaterialUI.Snackbar') #else @:jsRequire('@material-ui/core', 'Snackbar') #end
 extern class Snackbar extends ReactComponentOfProps<SnackbarProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<SnackbarClassKey>
 		return SnackbarStyles.styles(theme);

@@ -23,7 +23,7 @@ typedef ChipProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var variant:ChipVariant;
 }>;
 
-@:jsRequire('@material-ui/core', 'Chip')
+#if mui.global @:native('MaterialUI.Chip') #else @:jsRequire('@material-ui/core', 'Chip') #end
 extern class Chip extends ReactComponentOfProps<ChipProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<ChipClassKey>
 		return ChipStyles.styles(theme);

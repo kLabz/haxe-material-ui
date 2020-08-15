@@ -10,7 +10,7 @@ typedef ExpansionPanelDetailsProps = {
 	@:optional var classes:Record<ExpansionPanelDetailsClassKey>;
 }
 
-@:jsRequire('@material-ui/core', 'ExpansionPanelDetails')
+#if mui.global @:native('MaterialUI.ExpansionPanelDetails') #else @:jsRequire('@material-ui/core', 'ExpansionPanelDetails') #end
 extern class ExpansionPanelDetails extends ReactComponentOfProps<ExpansionPanelDetailsProps> {
 	static inline function styles<TTheme>(?_:TTheme):ClassesDef<ExpansionPanelDetailsClassKey>
 		return ExpansionPanelDetailsStyles.styles;

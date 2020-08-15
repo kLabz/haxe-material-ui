@@ -10,7 +10,7 @@ typedef StepConnectorProps = {
 	@:optional var classes:Record<StepConnectorClassKey>;
 }
 
-@:jsRequire('@material-ui/core', 'StepConnector')
+#if mui.global @:native('MaterialUI.StepConnector') #else @:jsRequire('@material-ui/core', 'StepConnector') #end
 extern class StepConnector extends ReactComponentOfProps<StepConnectorProps> {
 	static inline function styles<TTheme>(theme:TTheme):ClassesDef<StepConnectorClassKey>
 		return StepConnectorStyles.styles(theme);

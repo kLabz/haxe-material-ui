@@ -5,7 +5,7 @@ typedef ModalManagerOptions = {
 	@:optional var handleContainerOverflow:Bool;
 }
 
-@:jsRequire('@material-ui/core', 'ModalManager')
+#if mui.global @:native('MaterialUI.ModalManager') #else @:jsRequire('@material-ui/core', 'ModalManager') #end
 extern class ModalManager {
 	public function new(options:ModalManagerOptions);
 	public function add(modal:Any, container:Any):Int;
