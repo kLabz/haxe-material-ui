@@ -6,7 +6,7 @@ import haxe.extern.EitherType;
 import react.ReactComponent;
 
 typedef MuiThemeProviderProps = {
-	var children:ReactSingleFragment;
+	var children:ReactFragment;
 	var theme:EitherType<Function, Dynamic>; // TODO
 }
 
