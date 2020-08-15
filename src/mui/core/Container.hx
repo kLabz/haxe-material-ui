@@ -10,6 +10,7 @@ typedef ContainerProps = {
 	var children:ReactFragment;
 	@:optional var classes:Record<ContainerClassKey>;
 	@:optional var component:ReactType;
+	@:optional var disableGutters:Bool;
 	@:optional var fixed:Bool;
 	@:optional var maxWidth:BreakpointOrFalse;
 };
