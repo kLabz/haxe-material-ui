@@ -66,7 +66,7 @@ extern class Styles {
 		switch (styles.expr) {
 			case EObjectDecl(fields):
 				for (f in fields)
-					if (f.quotes == Quoted) {
+					if (f.quotes == Quoted && !StringTools.startsWith(f.field, "--")) {
 						f.expr = {
 							expr: ECheckType(parseJssNode(f.expr), macro :css.Properties),
 							pos: f.expr.pos
