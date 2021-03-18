@@ -10,6 +10,23 @@
 * Use `DOMElement` instead of `Element` if `react-types` is configured to do so
 * Add `variant` prop to `Paper`
 
+<details>
+  <summary>Patch versions</summary>
+
+#### 4.1.1
+
+* Button: add disableElevation
+* ListItemAvatar: fix children type
+* Autocomplete: add "reason" parameter to callbacks
+* Theme: Allow multiple `Float` parameters for spacing
+* Styles: add ColorManipulator
+* ThemeProvider allows multiple children
+* Tab: accept more props
+* Breakpoint: add operator overloading
+* Styles: allow setting css variables in parseJss
+
+</details>
+
 ### 4.0.0 - 2019-12-05
 
 * Update existing core components and API to `4.7.1`
