@@ -1,6 +1,7 @@
 package mui.core;
 
 import js.html.InputElement;
+import react.types.SyntheticEvent;
 
 import mui.core.checkbox.CheckedStatus;
 import mui.core.form.FormControlLabelClassKey;
@@ -17,8 +18,8 @@ typedef FormControlLabelProps = ForcedOverride<StandardDOMAttributes, {
 	@:optional var label:ReactFragment;
 	@:optional var labelPlacement:FormLabelPlacement;
 	@:optional var name:String;
-	// Notel second argument will depend on control component
-	@:optional var onChange:HandlerOrVoid<Event->Bool->Void>;
+	// Note: second argument will depend on control component
+	@:optional var onChange:HandlerOrVoid<ChangeEvent<DOMElement>->Bool->Void>;
 	@:optional var value:String;
 }>;
 
