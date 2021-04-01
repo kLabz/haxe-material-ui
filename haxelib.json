@@ -3,7 +3,7 @@
   "description": "Material UI - React components that implement Google's Material Design",
   "version": "4.1.1",
   "releasenote": "Some fixes, more styles utils (See CHANGELOG.md)",
-  "url": "https://gitlab.com/k-labz/haxe-oss/haxe-material-ui",
+  "url": "https://github.com/kLabz/haxe-material-ui",
   "license": "MIT",
   "tags": [],
   "classPath": "src",
