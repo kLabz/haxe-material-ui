@@ -2,6 +2,7 @@ package mui.core;
 
 import js.html.InputElement;
 import react.types.StringOrInt;
+import react.types.event.SyntheticEvent.ChangeEvent;
 
 import mui.core.form.FormControlMargin;
 import mui.core.input.InputBaseClassKey;
@@ -35,7 +36,7 @@ typedef InputBaseCommonProps = {
 	@:optional var inputRef:ReactRef<InputElement>;
 	@:optional var margin:FormControlMarginNoneDense;
 	@:optional var multiline:Bool;
-	@:optional var onChange:HandlerOrVoid<ClassicHandler>;
+	@:optional var onChange:HandlerOrVoid<ChangeEvent<InputElement>->Void>;
 	@:optional var placeholder:String;
 	@:optional var rows:StringOrInt;
 	@:optional var rowsMax:StringOrInt;
