@@ -1,9 +1,10 @@
--lib react-next:1.118.1
+-lib react-next:1.122.0
 
 # Testing
--lib buddy:2.10.3
+-lib buddy:2.13.0
 -lib asynctools:0.1.0
 -lib promhx:1.1.0
+-lib hxnodejs:12.1.0
 
 # React-next dependencies
 # See also tink libs below
@@ -11,16 +12,16 @@
 -lib html-entities:1.0.0
 
 # Other Material UI dependencies
--lib css-types:0.2.3
+-lib css-types:0.9.3
 -lib js-object:0.0.7
--lib react-types:0.10.0
+-lib react-types:0.12.1
 -lib react-event-listener:0.1.1
 -lib react-transition-group:0.1.0
 
 # Tink libs
 # Listed here only to ensure the versions are locked
--lib tink_anon:0.4.0
--lib tink_core:1.24.0
--lib tink_hxx:0.22.1
--lib tink_macro:0.18.0
--lib tink_parse:0.3.0
+-lib tink_anon:0.7.0
+-lib tink_core:1.27.1
+-lib tink_hxx:0.25.0
+-lib tink_macro:0.24.0
+-lib tink_parse:0.4.1

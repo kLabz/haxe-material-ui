@@ -1,5 +1,6 @@
 # Testing libs
 -lib buddy
+-lib hxnodejs
 
 # Material UI dependencies
 -lib react-next
@@ -14,6 +15,7 @@
 
 -D nodejs
 -D buddy-colors
+-D no-deprecation-warnings
 
 -main Tests
 -js .build/test.js
