@@ -10,32 +10,58 @@ import react.ReactType;
 #else
 import haxe.macro.Context;
 import haxe.macro.Expr;
+import haxe.macro.TypeTools;
 #end
 
 @:jsRequire('@material-ui/core/styles')
 extern class Styles {
 	public static inline macro function jss(styles:Expr) {
-		return switch (styles.expr) {
-			case EObjectDecl(fields):
-				for (f in fields) {
-					if (f.quotes != Unquoted)
-						Context.error('Field ${f.field} should not be quoted', f.expr.pos);
+		return typeJss(styles);
+	}
 
-					f.expr = parseJssNode(f.expr);
-				}
+	public static macro function makeStyles(styles:Expr) {
+		var themeType:Null<ComplexType> = null;
+		styles = typeJss(styles, true);
 
-				{expr: EObjectDecl(fields), pos: styles.pos};
+		var type = switch Context.typeof(styles) {
+			case TAnonymous(_.get() => {fields: fields})
+			| TFun([], TAnonymous(_.get() => {fields: fields})):
+				TAnonymous([for(f in fields) {
+					name: f.name,
+					kind: FVar(macro:String, null),
+					pos: f.pos,
+				}]);
 
-			case EBlock([]):
-				{expr: EObjectDecl([]), pos: styles.pos};
+			case TFun([{t: theme}], TAnonymous(_.get() => {fields: fields})):
+				themeType = TypeTools.toComplexType(theme);
 
-			default:
-				Context.error('Expected an inline object declaration', styles.pos);
-				macro null;
+				TAnonymous([for(f in fields) {
+					name: f.name,
+					kind: FVar(macro:String, null),
+					pos: f.pos,
+				}]);
+
+			case _:
+				Context.error('Expected an inline object declaration or a function returning an object', styles.pos);
+				null;
 		};
+
+		if (themeType != null) {
+			return macro (
+				@:privateAccess mui.core.styles.Styles._makeStylesWithTheme($styles):$themeType->$type
+			);
+		}
+
+		return macro (@:privateAccess mui.core.styles.Styles._makeStyles($styles):Void->$type);
 	}
 
 	#if !macro
+	@:native('makeStyles')
+	private static function _makeStyles<TClasses, TClassesDef>(styles:TClassesDef):Void->TClasses;
+
+	@:native('makeStyles')
+	private static function _makeStylesWithTheme<TTheme, TClasses, TClassesDef>(styles:TTheme->TClassesDef):TTheme->TClasses;
+
 	public static function createGenerateClassName(
 		options:{?disableGlobal:Bool, ?productionPrefix:String, ?seed:String}
 	):GenerateId;
@@ -62,6 +88,27 @@ extern class Styles {
 	}
 
 	#else
+	static function typeJss(styles:Expr, allowFail:Bool = false):Expr {
+		return switch (styles.expr) {
+			case EObjectDecl(fields):
+				for (f in fields) {
+					if (f.quotes != Unquoted)
+						Context.error('Field ${f.field} should not be quoted', f.expr.pos);
+
+					f.expr = macro (${parseJssNode(f.expr)} :css.Properties);
+				}
+
+				{expr: EObjectDecl(fields), pos: styles.pos};
+
+			case EBlock([]):
+				{expr: EObjectDecl([]), pos: styles.pos};
+
+			default:
+				if (!allowFail) Context.error('Expected an inline object declaration', styles.pos);
+				styles;
+		};
+	}
+
 	static function parseJssNode(styles:Expr):Expr {
 		switch (styles.expr) {
 			case EObjectDecl(fields):
