@@ -14,6 +14,7 @@ import haxe.macro.Expr;
 
 @:jsRequire('@material-ui/core/styles')
 extern class Styles {
+	extern static function alpha(color:ColorString, opacity:Float):ColorString;
 	public static inline macro function jss(styles:Expr) {
 		return switch (styles.expr) {
 			case EObjectDecl(fields):
