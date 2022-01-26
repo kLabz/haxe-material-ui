@@ -1,5 +1,6 @@
 package mui.core.styles;
 
+import mui.Colors.ColorString;
 #if !macro
 import haxe.extern.EitherType;
 import js.Object;
