@@ -20,6 +20,7 @@ typedef RadioProps = ForcedOverride<IconButtonProps, {
 	@:optional var disableRipple:Bool;
 	@:optional var icon:ReactFragment;
 	@:optional var id:String;
+	@:optional var name:String;
 	@:optional var inputProps:{}; // TODO
 	@:optional var inputRef:ReactRef<InputElement>;
 	@:optional var onChange:HandlerOrVoid<Event->Bool->Void>;
